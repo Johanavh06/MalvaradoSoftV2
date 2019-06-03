@@ -17,16 +17,21 @@ public class ClassSection {
     private String name;
     private ArrayList<Student> students;
     private ArrayList<Course> courses;
-
+    private int tableStatus;
+    
     public ClassSection() {
+        this.students = new ArrayList<>();
+        this.courses = new ArrayList<>();
+        this.tableStatus = 1;
     }
 
-    public ClassSection(int total, int id, ArrayList<Student> students, ArrayList<CourseXSchedule> courses, String name) {
+    public ClassSection(int total, int id, ArrayList<Student> students, ArrayList<Course> courses, String name) {
         this.total = total;
-        this.id = id;
+        this.idClassSection = id;
         this.students = students;
         this.courses = courses;
         this.name = name;
+        this.tableStatus = 1;
     }
 
     public int getTotal() {
@@ -37,14 +42,6 @@ public class ClassSection {
         this.total = total;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public ArrayList<Student> getStudents() {
         return students;
     }
@@ -53,11 +50,11 @@ public class ClassSection {
         this.students = students;
     }
 
-    public ArrayList<CourseXSchedule> getCourses() {
+    public ArrayList<Course> getCourses() {
         return courses;
     }
 
-    public void setCourses(ArrayList<CourseXSchedule> courses) {
+    public void setCourses(ArrayList<Course> courses) {
         this.courses = courses;
     }
 
@@ -69,5 +66,20 @@ public class ClassSection {
         this.name = name;
     }
 
+    public int getIdClassSection() {
+        return idClassSection;
+    }
+
+    public void setIdClassSection(int idClassSection) {
+        this.idClassSection = idClassSection;
+    }
+
+    public int getTableStatus() {
+        return tableStatus;
+    }
+
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
+    }
     
 }

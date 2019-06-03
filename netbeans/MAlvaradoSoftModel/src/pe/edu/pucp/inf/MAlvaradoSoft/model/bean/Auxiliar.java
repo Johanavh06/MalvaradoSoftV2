@@ -11,11 +11,17 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  */
 public class Auxiliar extends User{
     private int tableStatus;    
-    public Auxiliar(String name, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, boolean active, int id, String nickname, String password) {
-        super(name, firstLastName, secondLastName, dni, adress, phone, email, active, id, nickname, password);
+    
+    public Auxiliar() {
+            this.tableStatus =1;
+    }
+    
+    public int getTableStatus() {
+        return tableStatus;
     }
 
-    public Auxiliar() {
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
     }
     
 }

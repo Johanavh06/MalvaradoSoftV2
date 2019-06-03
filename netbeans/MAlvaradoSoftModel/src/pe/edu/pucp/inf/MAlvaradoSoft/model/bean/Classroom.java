@@ -16,20 +16,14 @@ public class Classroom {
     private int tableStatus;
     
     public Classroom(int id, String name, int capacity) {
-        this.id = id;
+        this.idClassroom = id;
         this.name = name;
         this.capacity = capacity;
+        this.tableStatus = 1;
     }
 
     public Classroom() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.tableStatus = 1;
     }
 
     public String getName() {
@@ -48,7 +42,20 @@ public class Classroom {
         this.capacity = capacity;
     }
 
-    
-    
-    
+    public int getIdClassroom() {
+        return idClassroom;
+    }
+
+    public void setIdClassroom(int idClassroom) {
+        this.idClassroom = idClassroom;
+    }
+
+    public int getTableStatus() {
+        return tableStatus;
+    }
+
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
+    }
+
 }

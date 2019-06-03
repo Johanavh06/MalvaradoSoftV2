@@ -15,4 +15,39 @@ public class Attendance {
     private int idAttendance;
     private Date dateTime;
     private int tableStatus;
+
+    public Attendance(int idAttendance, Date dateTime) {
+        this.idAttendance = idAttendance;
+        this.dateTime = dateTime;
+        this.tableStatus = 1;
+    }
+
+    public Attendance() {
+        this.tableStatus = 1;
+    }
+
+    public int getIdAttendance() {
+        return idAttendance;
+    }
+
+    public void setIdAttendance(int idAttendance) {
+        this.idAttendance = idAttendance;
+    }
+
+    public Date getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public int getTableStatus() {
+        return tableStatus;
+    }
+
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
+    }
+    
 }

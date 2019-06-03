@@ -21,7 +21,7 @@ public class School {
     private ArrayList<Teacher> teachers;
     private ArrayList<Exam> examens;
     private Principal principal;
-    private int TableStatus = 1;
+    private int TableStatus;
 
     public School(String name, String adress, ArrayList<ClassSection> classes, ArrayList<Secretary> secretary, Auxiliar auxiliar, ArrayList<Guardian> guardian, ArrayList<Teacher> teachers, ArrayList<Exam> examens, Principal principal) {
         this.name = name;
@@ -33,9 +33,17 @@ public class School {
         this.teachers = teachers;
         this.examens = examens;
         this.principal = principal;
+        this.TableStatus = 1;
     }
 
     public School() {
+        this.TableStatus = 1;
+        this.classes = new ArrayList<>();
+        this.secretary = new ArrayList<>();
+        this.guardian = new ArrayList<>();
+        this.teachers = new ArrayList<>();
+        this.examens = new ArrayList<>();
+        this.TableStatus = 1;
     }
 
     public String getName() {
