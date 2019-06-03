@@ -10,20 +10,19 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class Course {
+    private int idCourse;
     private String name;
     private int _class;
-    private int id;
+    private int tableStatus;
 
-    public int getId() {
-        return id;
+    public int getIdCourse() {
+        return idCourse;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdCourse(int idCourse) {
+        this.idCourse = idCourse;
     }
     
-    
-
     public Course(String name, int _class) {
         this.name = name;
         this._class = _class;

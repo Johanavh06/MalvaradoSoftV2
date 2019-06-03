@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class Guardian {
-    private int idGuardian;
     private ArrayList<Student> students;
-
+    private int tableStatus;
+    
     public Guardian(ArrayList<Student> students) {
         this.students = students;
     }

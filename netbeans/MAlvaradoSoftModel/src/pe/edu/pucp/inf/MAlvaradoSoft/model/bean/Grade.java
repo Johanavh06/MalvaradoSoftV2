@@ -13,13 +13,12 @@ import java.util.Date;
  */
 public class Grade {
     private int idGrade;
-    private double value;
+    private Student student;
+    private CourseXSchedule coursexschedule;
     private String description;
     private double weight;
-    private int idStudent;
-    private Date registerDate;
-    private int idCourseSchedule;
-
+    private int tableStatus;
+    
     public Grade(double value, String description, double weight, int codStudent, Date registerDate) {
         this.value = value;
         this.description = description;

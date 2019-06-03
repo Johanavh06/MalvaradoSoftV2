@@ -33,7 +33,7 @@ public class MySQLCourse implements DAOCourse {
             
             while(rs.next()){
                 Course c = new Course();
-                c.setId(rs.getInt("idCourse"));
+                c.setIdCourse(rs.getInt("idCourse"));
                 c.setName(rs.getString("name"));
                 c.setClass(rs.getInt("class"));
                                 
@@ -99,7 +99,7 @@ public class MySQLCourse implements DAOCourse {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call deleteCourse(?,?)}");
-            cs.setInt(1, course.getId());
+            cs.setInt(1, course.getIdCourse());
                      
             
             result = cs.executeUpdate();

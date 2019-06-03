@@ -12,20 +12,20 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class Workshop {
-    private int codWorkshop;
-    private int codCourse;
-    private int codTeacher;
+    private int idWorkshop;
+    private Course course;
+    private Teacher teacher;
     private Schedule schedule;
     private ArrayList<Student> students;
     private String description;
-    private int active;
-    private int idSchedule;
+    private int tableStatus;
+
     public Workshop() {
     }
 
     public Workshop(int codWorkshop, int codCourse, int codTeacher, Schedule schedule, 
             ArrayList<Student> students, String description, int active, int idSchedule) {
-        this.codWorkshop = codWorkshop;
+        this.idWorkshop = codWorkshop;
         this.codCourse = codCourse;
         this.codTeacher = codTeacher;
         this.schedule = schedule;
@@ -52,12 +52,12 @@ public class Workshop {
         this.active = active;
     }
     
-    public int getCodWorkshop() {
-        return codWorkshop;
+    public int getIdWorkshop() {
+        return idWorkshop;
     }
 
-    public void setCodWorkshop(int codWorkshop) {
-        this.codWorkshop = codWorkshop;
+    public void setIdWorkshop(int idWorkshop) {
+        this.idWorkshop = idWorkshop;
     }
 
     public int getCodCourse() {

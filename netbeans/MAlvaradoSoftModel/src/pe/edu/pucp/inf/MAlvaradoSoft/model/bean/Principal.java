@@ -10,7 +10,7 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class Principal extends User {
-
+    private int tableStatus;
 
     public Principal(String name, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, boolean active, int id,
     String nickname, String password) {

@@ -10,7 +10,7 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class User {
-    private int id;
+    private int idUser;
     private String name;
     private String firstLastName;
     private String secondLastName;
@@ -18,10 +18,10 @@ public class User {
     private String adress;
     private int phone;
     private String email;
-    private boolean active;
     private String userName;
     private String password;
-
+    private int tableStatus;
+    
     public User(String name, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, boolean active, int id, 
             String userName, String password) {
         this.id=id;

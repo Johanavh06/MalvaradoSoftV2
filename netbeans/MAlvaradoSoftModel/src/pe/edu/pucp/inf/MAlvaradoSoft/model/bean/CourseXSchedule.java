@@ -12,14 +12,14 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class CourseXSchedule {
-    private int idCourseSchedule;
-    private int idClassSection;
+    private int idCourseXSchedule;
+    private ClassSection classSection;
     private Schedule schedule;
-    private ArrayList<Grade> grades;
-    private int codTeacher;
+    private Teacher teacher;
     private Course course;
-    private char section;
-
+    private ArrayList<Grade> grades;
+    private int tableStatus;
+    
     public CourseXSchedule(Schedule schedule, ArrayList<Grade> grades, int codTeacher, Course course, char section) {
         this.schedule = schedule;
         this.grades = grades;

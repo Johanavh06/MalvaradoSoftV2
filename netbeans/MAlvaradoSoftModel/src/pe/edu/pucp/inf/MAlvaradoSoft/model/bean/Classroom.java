@@ -10,10 +10,11 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class Classroom {
-    private int id;
+    private int idClassroom;
     private String name;
     private int capacity;
-
+    private int tableStatus;
+    
     public Classroom(int id, String name, int capacity) {
         this.id = id;
         this.name = name;

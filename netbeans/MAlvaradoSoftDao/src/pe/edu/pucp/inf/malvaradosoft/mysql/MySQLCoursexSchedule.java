@@ -41,7 +41,7 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
                 cxs.setSchedule(new Schedule());
                 cxs.getSchedule().setIdSchedule(rs.getInt("idSchedule"));
                 cxs.setCourse(new Course());
-                cxs.getCourse().setId(rs.getInt("idCourse"));
+                cxs.getCourse().setIdCourse(rs.getInt("idCourse"));
                 cxs.setCodTeacher(rs.getInt("idTeacher"));
                 courseXSchedules.add(cxs);
             }
@@ -66,7 +66,7 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
             cs.setInt(1, 1);
             cs.setInt(2,coursexSchedule.getIdClassSection());
             cs.setInt(3,coursexSchedule.getSchedule().getIdSchedule());
-            cs.setInt(4,coursexSchedule.getCourse().getId());
+            cs.setInt(4,coursexSchedule.getCourse().getIdCourse());
             cs.setInt(5,coursexSchedule.getCodTeacher());
             result = cs.executeUpdate();
             con.close();
@@ -90,7 +90,7 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
             cs.setInt(1,coursexSchedule.getIdCourseSchedule());
             cs.setInt(2,coursexSchedule.getIdClassSection());
             cs.setInt(3,coursexSchedule.getSchedule().getIdSchedule());
-            cs.setInt(4,coursexSchedule.getCourse().getId());
+            cs.setInt(4,coursexSchedule.getCourse().getIdCourse());
             cs.setInt(5,coursexSchedule.getCodTeacher());
             result = cs.executeUpdate();
             con.close();

@@ -14,15 +14,16 @@ import java.util.ArrayList;
 public class School {
     private String name;
     private String adress;
-    private ArrayList<Class> classes;
+    private ArrayList<ClassSection> classes;
     private ArrayList<Secretary> secretary;
     private Auxiliar auxiliar;
     private ArrayList<Guardian> guardian;
     private ArrayList<Teacher> teachers;
     private ArrayList<Exam> examens;
     private Principal principal;
+    private int TableStatus = 1;
 
-    public School(String name, String adress, ArrayList<Class> classes, ArrayList<Secretary> secretary, Auxiliar auxiliar, ArrayList<Guardian> guardian, ArrayList<Teacher> teachers, ArrayList<Exam> examens, Principal principal) {
+    public School(String name, String adress, ArrayList<ClassSection> classes, ArrayList<Secretary> secretary, Auxiliar auxiliar, ArrayList<Guardian> guardian, ArrayList<Teacher> teachers, ArrayList<Exam> examens, Principal principal) {
         this.name = name;
         this.adress = adress;
         this.classes = classes;
@@ -33,8 +34,6 @@ public class School {
         this.examens = examens;
         this.principal = principal;
     }
-
-    
 
     public School() {
     }
@@ -55,11 +54,11 @@ public class School {
         this.adress = adress;
     }
 
-    public ArrayList<Class> getClasses() {
+    public ArrayList<ClassSection> getClasses() {
         return classes;
     }
 
-    public void setClasses(ArrayList<Class> classes) {
+    public void setClasses(ArrayList<ClassSection> classes) {
         this.classes = classes;
     }
 

@@ -33,7 +33,7 @@ public class MySQLWorkshop implements DAOWorkshop{
             
             while(rs.next()){
                 Workshop w = new Workshop();
-                w.setCodWorkshop(rs.getInt("codWorkshop"));           
+                w.setIdWorkshop(rs.getInt("codWorkshop"));           
                 workshops.add(w);
             }
             con.close();
@@ -55,7 +55,7 @@ public class MySQLWorkshop implements DAOWorkshop{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertWorkshop(?,?,?,?,?)}");
-            cs.setInt(1, workshop.getCodWorkshop());
+            cs.setInt(1, workshop.getIdWorkshop());
             cs.setString(2, workshop.getDescription());
             cs.setInt(3, workshop.getCodTeacher());
             cs.setInt(4, workshop.getCodCourse());
@@ -80,7 +80,7 @@ public class MySQLWorkshop implements DAOWorkshop{
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call updateWorkshop(?,?,?,?,?)}");
-            cs.setInt(1, workshop.getCodWorkshop());
+            cs.setInt(1, workshop.getIdWorkshop());
             cs.setString(2, workshop.getDescription());
             cs.setInt(3, workshop.getCodTeacher());
             cs.setInt(4, workshop.getCodCourse());
@@ -101,7 +101,7 @@ public class MySQLWorkshop implements DAOWorkshop{
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteWorkshop(?)}");
-            cs.setInt(1, workshop.getCodWorkshop());
+            cs.setInt(1, workshop.getIdWorkshop());
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

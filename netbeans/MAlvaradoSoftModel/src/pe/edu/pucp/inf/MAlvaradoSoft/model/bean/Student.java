@@ -12,13 +12,12 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class Student extends User {
-    private int idStudent;
+    private Guardian guardian;
+    private int condition;
+    private ClassSection classSection;
     private ArrayList<CourseXSchedule> courses;
-    private String condition;
-    private int _class;
-    private String section;
-    private int idGuardian;
-    private int idClassSection;
+    private int tableStatus;
+    //private int _class;
     
     public Student(ArrayList<CourseXSchedule> courses, String condition, int _class, String section, 
             String name, String firstLastName, String secondLastName, String dni, String adress, 

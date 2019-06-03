@@ -12,14 +12,15 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class Teacher {
-    private ArrayList<CourseXSchedule> classes;
+    private ArrayList<Course> courses;
     private ArrayList<Workshop> workshops;
-    private int idTeacher;
+    private int tableStatus;
     
     public Teacher() {
     }
 
     public Teacher(ArrayList<CourseXSchedule> classes, ArrayList<Workshop> workshops, int idTeacher) {
+        super();
         this.classes = classes;
         this.workshops = workshops;
         this.idTeacher = idTeacher;

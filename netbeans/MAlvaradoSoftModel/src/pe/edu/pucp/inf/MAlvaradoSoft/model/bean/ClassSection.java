@@ -12,11 +12,11 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class ClassSection {
+    private int idClassSection;
     private int total;
-    private int id;
-    private ArrayList<Student> students;
-    private ArrayList<CourseXSchedule> courses;
     private String name;
+    private ArrayList<Student> students;
+    private ArrayList<Course> courses;
 
     public ClassSection() {
     }

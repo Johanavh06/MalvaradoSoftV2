@@ -15,10 +15,12 @@ import java.util.Date;
  */
 public class Schedule {
     private int idSchedule;
+    private Classroom classroom;
+    private ArrayList<Event> events;
     private ArrayList<Date> days;
     private Time startTime;
     private Time endTime;
-    private String classroomName;
+    private int tableStatus;
 
     public Schedule(ArrayList<Date> days, Time startTime, Time endTime, String classroomName, int idSchedule) {
         this.days = days;

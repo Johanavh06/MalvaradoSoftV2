@@ -11,10 +11,11 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  */
 public class Exam {
     private int idExam;
-    private int idCourse;
+    private Course course;
+    private Teacher teacher;
     private String description;
-    private String state;
-    private int idTeacher;
+    private int state;
+    private int tableStatus;
 
     public Exam() {
     }
