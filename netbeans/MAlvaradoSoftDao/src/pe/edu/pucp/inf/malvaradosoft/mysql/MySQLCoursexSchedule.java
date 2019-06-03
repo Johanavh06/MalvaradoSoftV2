@@ -101,14 +101,14 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
     }
 
     @Override
-    public int delete(CourseXSchedule coursexSchedule) {
+    public int delete(int id) {
       int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteSchedulexCourse(?)}");
-            cs.setInt(1,coursexSchedule.getIdCourseSchedule());          
+            cs.setInt(1,id);          
             result= cs.executeUpdate();
             con.close();
             

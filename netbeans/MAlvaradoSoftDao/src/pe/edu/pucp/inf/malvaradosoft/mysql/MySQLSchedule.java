@@ -31,7 +31,7 @@ public class MySQLSchedule implements DAOSchedule{
     }
 
     @Override
-    public int delete(Schedule schedule) {
+    public int delete(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

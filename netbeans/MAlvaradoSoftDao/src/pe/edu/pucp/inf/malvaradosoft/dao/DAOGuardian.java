@@ -16,7 +16,7 @@ public interface DAOGuardian {
     ArrayList <Guardian> queryAll();
     int insert(Guardian guardian);
     int update(Guardian guardian);
-    int delete(Guardian guardian);
+    int delete(int id);
     
     
 }

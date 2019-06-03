@@ -57,9 +57,9 @@ public class MySQLWorkshop implements DAOWorkshop{
             CallableStatement cs = con.prepareCall("" + "{call insertWorkshop(?,?,?,?,?)}");
             cs.setInt(1, workshop.getIdWorkshop());
             cs.setString(2, workshop.getDescription());
-            cs.setInt(3, workshop.getCodTeacher());
-            cs.setInt(4, workshop.getCodCourse());
-            cs.setInt(5, workshop.getIdSchedule());
+            cs.setInt(3, workshop.getTeacher().getIdUser());
+            cs.setInt(4, workshop.getCourse().getIdCourse());
+            cs.setInt(5, workshop.getSchedule().getIdSchedule());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -82,9 +82,9 @@ public class MySQLWorkshop implements DAOWorkshop{
                     + "{call updateWorkshop(?,?,?,?,?)}");
             cs.setInt(1, workshop.getIdWorkshop());
             cs.setString(2, workshop.getDescription());
-            cs.setInt(3, workshop.getCodTeacher());
-            cs.setInt(4, workshop.getCodCourse());
-            cs.setInt(5, workshop.getIdSchedule());            
+            cs.setInt(3, workshop.getTeacher().getIdUser());
+            cs.setInt(4, workshop.getCourse().getIdCourse());
+            cs.setInt(5, workshop.getSchedule().getIdSchedule());
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -94,14 +94,14 @@ public class MySQLWorkshop implements DAOWorkshop{
     }
 
     @Override
-    public int delete(Workshop workshop) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteWorkshop(?)}");
-            cs.setInt(1, workshop.getIdWorkshop());
+            cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

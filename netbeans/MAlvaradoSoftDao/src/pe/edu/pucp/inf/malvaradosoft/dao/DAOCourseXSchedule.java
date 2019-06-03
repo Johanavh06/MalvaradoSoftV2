@@ -16,5 +16,5 @@ public interface DAOCourseXSchedule {
     ArrayList <CourseXSchedule> queryAll();
     int insert(CourseXSchedule coursexSchedule);
     int update(CourseXSchedule coursexSchedule);
-    int delete(CourseXSchedule coursexSchedule);
+    int delete(int id);
 }

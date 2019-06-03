@@ -16,6 +16,6 @@ public interface DAOSecretary {
     ArrayList <Secretary> queryAll();
     int insert(Secretary secretary);
     int update(Secretary secretary);
-    int delete(Secretary secretary);
+    int delete(int id);
     
 }

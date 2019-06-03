@@ -96,14 +96,14 @@ public class MySQLStudent implements DAOStudent{
     }
 
     @Override
-    public int delete(Student student) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteStudent(?)}");
-            cs.setInt(1, student.getIdStudent());
+            cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

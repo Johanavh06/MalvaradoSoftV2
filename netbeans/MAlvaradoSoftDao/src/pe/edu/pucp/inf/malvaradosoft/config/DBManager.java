@@ -63,7 +63,7 @@ public class DBManager {
         this.password = password;
     }
 
-    public static DBManager getdbManager() {
+    public static DBManager getDbManager() {
         return dbManager;
     }
     

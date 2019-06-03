@@ -16,5 +16,5 @@ public interface DAOStudent {
     ArrayList <Student> queryAll();
     int insert(Student student);
     int update(Student student);
-    int delete(Student student);
+    int delete(int id);
 }

@@ -16,5 +16,5 @@ public interface DAOExam {
     ArrayList <Exam> queryAll();
     int insert(Exam exam);
     int update(Exam exam);
-    int delete(Exam exam);
+    int delete(int id);
 }

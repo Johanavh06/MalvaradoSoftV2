@@ -16,5 +16,5 @@ public interface DAOPrincipal {
     ArrayList <Principal> queryAll();
     int insert(Principal principal);
     int update(Principal principal);
-    int delete(Principal principal);
+    int delete(int id);
 }

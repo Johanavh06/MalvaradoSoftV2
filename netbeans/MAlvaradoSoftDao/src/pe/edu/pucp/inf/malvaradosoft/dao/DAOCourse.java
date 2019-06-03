@@ -16,5 +16,5 @@ public interface DAOCourse {
     ArrayList <Course> queryAll();
     int insert(Course course);
     int update(Course course);
-    int delete(Course course);
+    int delete(int id);
 }

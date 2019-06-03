@@ -86,7 +86,7 @@ public class MySQLClassroom implements DAOClassroom{
     }
 
     @Override
-    public int delete(Classroom classroom) {
+    public int delete(int id) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -95,7 +95,7 @@ public class MySQLClassroom implements DAOClassroom{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call deleteClassroom(?)}");
-            cs.setInt(1, classroom.getId());
+            cs.setInt(1, id);
             result = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

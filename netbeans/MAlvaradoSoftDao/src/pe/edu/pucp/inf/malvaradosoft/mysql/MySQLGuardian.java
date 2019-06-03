@@ -69,14 +69,14 @@ public class MySQLGuardian implements DAOGuardian {
     }
 
     @Override
-    public int delete(Guardian guardian) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteGuardian(?)}");
-            cs.setInt(1,guardian.getIdGuardian());          
+            cs.setInt(1,id);          
             result= cs.executeUpdate();
             con.close();
             

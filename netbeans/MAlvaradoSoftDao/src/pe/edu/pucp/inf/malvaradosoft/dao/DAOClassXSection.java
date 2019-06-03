@@ -16,5 +16,5 @@ public interface DAOClassXSection {
     ArrayList <ClassSection> queryAll();
     int insert(ClassSection classXSection);
     int update(ClassSection classXSection);
-    int delete(ClassSection classXSection);
+    int delete(int id);
 }

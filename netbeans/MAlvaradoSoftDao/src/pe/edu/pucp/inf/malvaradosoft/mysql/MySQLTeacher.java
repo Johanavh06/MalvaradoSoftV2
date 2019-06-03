@@ -33,7 +33,7 @@ public class MySQLTeacher implements DAOTeacher {
             
             while(rs.next()){
                 Teacher t = new Teacher();
-                t.setIdTeacher(rs.getInt("User_idTeacher"));           
+                t.setIdUser(rs.getInt("User_idTeacher"));           
                 teachers.add(t);
             }
             con.close();
@@ -55,7 +55,7 @@ public class MySQLTeacher implements DAOTeacher {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertTeacher(?)}");
-            cs.setInt(1, teacher.getIdTeacher());
+            cs.setInt(1, teacher.getIdUser());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -73,14 +73,14 @@ public class MySQLTeacher implements DAOTeacher {
     }
 
     @Override
-    public int delete(Teacher teacher) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteTeacher(?)}");
-            cs.setInt(1, teacher.getIdTeacher());
+            cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

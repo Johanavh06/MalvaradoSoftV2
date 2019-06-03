@@ -33,7 +33,7 @@ public class MySQLUser implements DAOUser{
             
             while(rs.next()){
                 User u = new User();
-                u.setId(rs.getInt("id"));           
+                u.setIdUser(rs.getInt("id"));           
                 users.add(u);
             }
             con.close();
@@ -55,8 +55,8 @@ public class MySQLUser implements DAOUser{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertStudent(?,?,?,?,?,?,?,?,?,?)}");
-            cs.setInt(1, user.getId());
-            cs.setString(2, user.getName());
+            cs.setInt(1, user.getIdUser());
+            cs.setString(2, user.getNames());
             cs.setString(3, user.getFirstLastName());
             cs.setString(4, user.getSecondLastName());
             cs.setString(5, user.getDni());
@@ -86,8 +86,8 @@ public class MySQLUser implements DAOUser{
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call updateUser(?,?,?,?,?,?,?,?,?,?)}");
-            cs.setInt(1, user.getId());
-            cs.setString(2, user.getName());
+            cs.setInt(1, user.getIdUser());
+            cs.setString(2, user.getNames());
             cs.setString(3, user.getFirstLastName());
             cs.setString(4, user.getSecondLastName());
             cs.setString(5, user.getDni());
@@ -104,14 +104,14 @@ public class MySQLUser implements DAOUser{
     }
 
     @Override
-    public int delete(User user) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteUser(?)}");
-            cs.setInt(1, user.getId());
+            cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

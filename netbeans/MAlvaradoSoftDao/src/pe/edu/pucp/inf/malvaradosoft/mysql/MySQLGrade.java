@@ -100,14 +100,14 @@ public class MySQLGrade implements DAOGrade{
     }
 
     @Override
-    public int delete(Grade g) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteGrade(?)}");
-            cs.setInt(1, g.getIdGrade());
+            cs.setInt(1, id);
             cs.setInt(2, 0);    
             cs.setDouble(4, 0);
             cs.setInt(6, 0);

@@ -16,5 +16,5 @@ public interface DAOClassroom {
     ArrayList <Classroom> queryAll();
     int insert(Classroom classroom);
     int update(Classroom classroom);
-    int delete(Classroom classroom);
+    int delete(int id);
 }

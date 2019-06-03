@@ -88,9 +88,8 @@ public class MySQLCourse implements DAOCourse {
         }
         return result;
     }
-
-    @Override
-    public int delete(Course course) {
+    
+    public int delete(int id) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -99,7 +98,7 @@ public class MySQLCourse implements DAOCourse {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call deleteCourse(?,?)}");
-            cs.setInt(1, course.getIdCourse());
+            cs.setInt(1, id);
                      
             
             result = cs.executeUpdate();

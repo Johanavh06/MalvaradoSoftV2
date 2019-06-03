@@ -96,14 +96,14 @@ public class MySQLExam implements DAOExam{
     }
 
     @Override
-    public int delete(Exam exam) {
+    public int delete(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteExam(?)}");
-			cs.setInt(1, exam.getIdExam());
+			cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

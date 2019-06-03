@@ -16,5 +16,5 @@ public interface DAOAuxiliar {
     ArrayList <Auxiliar> queryAll();
     int insert(Auxiliar auxiliar);
     int update(Auxiliar auxiliar);
-    int delete(Auxiliar auxiliar);
+    int delete(int id);
 }

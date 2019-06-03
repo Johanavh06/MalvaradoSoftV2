@@ -33,7 +33,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             
             while(rs.next()){
                 Auxiliar a = new Auxiliar();
-                a.setId(rs.getInt("User_idPerson"));
+                a.setIdUser(rs.getInt("User_idPerson"));
                 
                 auxiliars.add(a);
             }
@@ -55,7 +55,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call insertAuxilliar(?)}");
-            cs.setInt(1, auxiliar.getId());            
+            cs.setInt(1, auxiliar.getIdUser());   
             result = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -67,9 +67,8 @@ public class MySQLAuxiliar implements DAOAuxiliar{
     public int update(Auxiliar auxiliar) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public int delete(Auxiliar auxiliar) {
+    
+    public int delete(int id) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -78,7 +77,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call deleteAuxiliar(?)}");
-            cs.setInt(1, auxiliar.getId());            
+            cs.setInt(1, id);            
             result = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

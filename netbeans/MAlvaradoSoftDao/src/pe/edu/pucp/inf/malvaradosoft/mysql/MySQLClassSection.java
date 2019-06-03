@@ -85,8 +85,7 @@ public class MySQLClassSection implements DAOClassXSection{
         return result;
     }
 
-    @Override
-    public int delete(ClassSection classSection) {
+    public int delete(int id) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -95,7 +94,7 @@ public class MySQLClassSection implements DAOClassXSection{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call deleteClassSection(?)}");
-            cs.setInt(1, classSection.getId() );
+            cs.setInt(1, id);
             
             result = cs.executeUpdate();
         }catch(Exception ex){

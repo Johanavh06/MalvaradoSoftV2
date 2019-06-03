@@ -16,5 +16,5 @@ public interface DAOSchedule {
     ArrayList <Schedule> queryAll();
     int insert(Schedule schedule);
     int update(Schedule schedule);
-    int delete(Schedule schedule);
+    int delete(int id);
 }

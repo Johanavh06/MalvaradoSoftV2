@@ -16,5 +16,5 @@ public interface DAOGrade {
     ArrayList <Grade> queryAll();
     int insert(Grade g);
     int update(Grade g);
-    int delete(Grade g);
+    int delete(int id);
 }
