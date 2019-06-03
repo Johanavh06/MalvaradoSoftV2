@@ -6,7 +6,6 @@
 package pe.edu.pucp.inf.malvaradosoft.config;
 
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOAuxiliar;
-import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassXSection;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOCourse;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOCourseXSchedule;
@@ -37,6 +36,7 @@ import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLStudentXWorkshop;
 import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLTeacher;
 import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLUser;
 import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLWorkshop;
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassSection;
 
 /**
  *
@@ -72,7 +72,7 @@ public class MySQLDAOFactory extends DAOFactory {
     }
 
     @Override
-    public DAOClassXSection getClassXSectionDAO() {
+    public DAOClassSection getClassXSectionDAO() {
         return new MySQLClassSection();
     }
 

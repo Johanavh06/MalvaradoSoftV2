@@ -11,19 +11,18 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Auxiliar;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
-import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassXSection;
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassSection;
 
 /**
  *
  * @author alulab14
  */
-public class MySQLClassSection implements DAOClassXSection{
+public class MySQLClassSection implements DAOClassSection{
 
     @Override
-    public ArrayList<ClassSection> queryAll() {
+    public ArrayList<ClassSection> queryAllClassSection() {
         ArrayList<ClassSection> classesSection = new ArrayList<ClassSection>();
         try{
             DBManager dbManager= DBManager.getDbManager();
@@ -34,7 +33,7 @@ public class MySQLClassSection implements DAOClassXSection{
             
             while(rs.next()){
                 ClassSection cxs = new ClassSection();
-                cxs.setId(rs.getInt("idSection"));
+                cxs.setIdClassSection(rs.getInt("idSection"));
                 cxs.setTotal(rs.getInt("total"));
                 cxs.setName(rs.getString("name"));
                 classesSection.add(cxs);
@@ -44,11 +43,29 @@ public class MySQLClassSection implements DAOClassXSection{
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-    return classesSection;
+        return classesSection;
     }
 
     @Override
-    public int insert(ClassSection classSection) {
+    public ArrayList<ClassSection> queryAllByIDClassSection(int id) {
+        int result = 0;
+        try{
+            DBManager dbManager = DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(
+            dbManager.getUrl(), 
+            dbManager.getUser(), 
+            dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call queryAllByIDClassSection(?)}");
+            cs.setInt(1, id );
+            result = cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
+
+    @Override
+    public int insertClassSection(ClassSection classSection) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -67,7 +84,7 @@ public class MySQLClassSection implements DAOClassXSection{
     }
 
     @Override
-    public int update(ClassSection classSection) {
+    public int updateClassSection(ClassSection classSection) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -85,7 +102,8 @@ public class MySQLClassSection implements DAOClassXSection{
         return result;
     }
 
-    public int delete(int id) {
+    @Override
+    public int deleteClassSection(int id) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -102,5 +120,5 @@ public class MySQLClassSection implements DAOClassXSection{
         }
         return result;
     }
-    
+
 }

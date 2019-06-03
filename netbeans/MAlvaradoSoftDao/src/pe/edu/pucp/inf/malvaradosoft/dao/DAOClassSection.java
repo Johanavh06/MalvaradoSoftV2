@@ -12,9 +12,10 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
  *
  * @author alulab14
  */
-public interface DAOClassXSection {
-    ArrayList <ClassSection> queryAll();
-    int insert(ClassSection classXSection);
-    int update(ClassSection classXSection);
-    int delete(int id);
+public interface DAOClassSection {
+    ArrayList <ClassSection> queryAllClassSection();
+    ArrayList <ClassSection> queryAllByIDClassSection(int id);
+    int insertClassSection(ClassSection classSection);
+    int updateClassSection(ClassSection classSection);
+    int deleteClassSection(int id);
 }

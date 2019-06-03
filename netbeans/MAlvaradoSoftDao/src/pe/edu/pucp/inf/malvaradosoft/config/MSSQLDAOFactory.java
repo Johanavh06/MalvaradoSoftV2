@@ -6,7 +6,6 @@
 package pe.edu.pucp.inf.malvaradosoft.config;
 
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOAuxiliar;
-import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassXSection;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOCourse;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOCourseXSchedule;
@@ -21,6 +20,7 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOStudentXWorkshop;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOTeacher;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOWorkshop;
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassSection;
 
 /**
  *
@@ -57,7 +57,7 @@ public class MSSQLDAOFactory extends DAOFactory{
     }
 
     @Override
-    public DAOClassXSection getClassXSectionDAO() {
+    public DAOClassSection getClassXSectionDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -87,7 +87,7 @@ public class MySQLAttendance implements DAOAttendance {
     }
 
     @Override
-    public int insertAtendance(Attendance attendance) {
+    public int insertAttendance(Attendance attendance) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();

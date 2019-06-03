@@ -13,8 +13,9 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Auxiliar;
  * @author alulab14
  */
 public interface DAOAuxiliar {
-    ArrayList <Auxiliar> queryAll();
-    int insert(Auxiliar auxiliar);
-    int update(Auxiliar auxiliar);
-    int delete(int id);
+    ArrayList <Auxiliar> queryAllAuxiliar();
+    Auxiliar queryAllByIDAuxiliar(int id);
+    int insertAuxiliar(Auxiliar auxiliar);
+    int updateAuxiliar(Auxiliar auxiliar);
+    int deleteAuxiliar(int id);
 }
