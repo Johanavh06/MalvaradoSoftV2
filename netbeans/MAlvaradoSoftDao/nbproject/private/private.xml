@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/SEBASTIAN%20SANCHEZ%20HERRERA/PUCP/LP2/gitLP2/ta_V1/MalvaradoSoftV2/netbeans/MAlvaradoSoftDao/src/pe/edu/pucp/inf/malvaradosoft/mysql/MySQLTeacher.java</file>
-            <file>file:/E:/SEBASTIAN%20SANCHEZ%20HERRERA/PUCP/LP2/gitLP2/ta_V1/MalvaradoSoftV2/netbeans/MAlvaradoSoftDao/src/pe/edu/pucp/inf/malvaradosoft/mysql/MySQLWorkshop.java</file>
-            <file>file:/E:/SEBASTIAN%20SANCHEZ%20HERRERA/PUCP/LP2/gitLP2/ta_V1/MalvaradoSoftV2/netbeans/MAlvaradoSoftDao/src/pe/edu/pucp/inf/malvaradosoft/mysql/MySQLUser.java</file>
+            <file>file:/E:/johana/Cursos/Séptimo%20ciclo/LP2/TA/lab8/aqui/MalvaradoSoftV2/netbeans/MAlvaradoSoftDao/src/pe/edu/pucp/inf/malvaradosoft/mysql/MySQLExam.java</file>
+            <file>file:/E:/johana/Cursos/Séptimo%20ciclo/LP2/TA/lab8/aqui/MalvaradoSoftV2/netbeans/MAlvaradoSoftDao/src/pe/edu/pucp/inf/malvaradosoft/mysql/MySQLAttendance.java</file>
+            <file>file:/E:/johana/Cursos/Séptimo%20ciclo/LP2/TA/lab8/aqui/MalvaradoSoftV2/netbeans/MAlvaradoSoftDao/src/pe/edu/pucp/inf/malvaradosoft/dao/DAOAttendance.java</file>
         </group>
     </open-files>
 </project-private>
