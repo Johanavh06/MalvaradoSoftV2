@@ -42,7 +42,6 @@ public class MySQLWorkshop implements DAOWorkshop{
             System.out.println(ex.getMessage());
         }
         return workshops;
-        
     }
 
     @Override
@@ -66,7 +65,6 @@ public class MySQLWorkshop implements DAOWorkshop{
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
 
     @Override
@@ -90,7 +88,6 @@ public class MySQLWorkshop implements DAOWorkshop{
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
 
     @Override

@@ -21,6 +21,22 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOStudentXWorkshop;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOTeacher;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOWorkshop;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLAuxiliar;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLClassSection;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLClassroom;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLCourse;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLCoursexSchedule;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLExam;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLGrade;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLGuardian;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLPrincipal;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLSchedule;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLSecretary;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLStudent;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLStudentXWorkshop;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLTeacher;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLUser;
+import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLWorkshop;
 
 /**
  *
@@ -33,82 +49,81 @@ public class MySQLDAOFactory extends DAOFactory {
 
     @Override
     public DAOWorkshop getWorkshopDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLWorkshop();
     }
 
     @Override
     public DAOTeacher getTeacherDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLTeacher();
     }
 
-    @Override
     public DAOStudentXWorkshop getStudentXWorkshopDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLStudentXWorkshop();
     }
 
     @Override
     public DAOUser getUserDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLUser();
     }
 
     @Override
     public DAOAuxiliar getAuxiliarDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLAuxiliar();
     }
 
     @Override
     public DAOClassXSection getClassXSectionDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLClassSection();
     }
 
     @Override
     public DAOClassroom getClassroomDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLClassroom();
     }
 
     @Override
     public DAOCourse getCourseDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLCourse();
     }
 
     @Override
     public DAOCourseXSchedule getCourseXScheduleDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLCoursexSchedule();
     }
 
     @Override
     public DAOExam getExamDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLExam();
     }
 
     @Override
     public DAOGrade getGradeDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLGrade();
     }
 
     @Override
     public DAOGuardian getGuardianDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLGuardian();
     }
 
     @Override
     public DAOPrincipal getPrincipalDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLPrincipal();
     }
 
     @Override
     public DAOSchedule getScheduleDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLSchedule();
     }
 
     @Override
     public DAOSecretary getSecretaryDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLSecretary();
     }
 
     @Override
     public DAOStudent getStudentDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new MySQLStudent();
     }
     
 }
