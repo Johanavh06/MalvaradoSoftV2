@@ -16,5 +16,5 @@ public interface DAOTeacher {
     ArrayList <Teacher> queryAll();
     int insert(Teacher teacher);
     int update(Teacher teacher);
-    int delete(Teacher teacher);
+    int delete(int id);
 }

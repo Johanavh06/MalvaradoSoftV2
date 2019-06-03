@@ -20,38 +20,21 @@ public class Workshop {
     private String description;
     private int tableStatus;
 
-    public Workshop() {
-    }
-
-    public Workshop(int codWorkshop, int codCourse, int codTeacher, Schedule schedule, 
-            ArrayList<Student> students, String description, int active, int idSchedule) {
-        this.idWorkshop = codWorkshop;
-        this.codCourse = codCourse;
-        this.codTeacher = codTeacher;
+    public Workshop(int idWorkshop, Course course, Teacher teacher, Schedule schedule, ArrayList<Student> students, String description) {
+        super();
+        this.idWorkshop = idWorkshop;
+        this.course = course;
+        this.teacher = teacher;
         this.schedule = schedule;
         this.students = students;
         this.description = description;
-        this.active=active;
-        this.idSchedule=idSchedule;
+        this.tableStatus = 1;
+    }
+    
+    public Workshop(){
+        this.tableStatus = 1;
     }
 
-    public int getIdSchedule() {
-        return idSchedule;
-    }
-
-    public void setIdSchedule(int idSchedule) {
-        this.idSchedule = idSchedule;
-    }
-    
-    
-    public int getActive() {
-        return active;
-    }
-    
-    public void setActive(int active) {
-        this.active = active;
-    }
-    
     public int getIdWorkshop() {
         return idWorkshop;
     }
@@ -60,20 +43,20 @@ public class Workshop {
         this.idWorkshop = idWorkshop;
     }
 
-    public int getCodCourse() {
-        return codCourse;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setCodCourse(int codCourse) {
-        this.codCourse = codCourse;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
-    public int getCodTeacher() {
-        return codTeacher;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setCodTeacher(int codTeacher) {
-        this.codTeacher = codTeacher;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     public Schedule getSchedule() {
@@ -99,5 +82,12 @@ public class Workshop {
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
+    public int getTableStatus() {
+        return tableStatus;
+    }
+
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
+    }
 }

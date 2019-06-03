@@ -11,43 +11,19 @@ import java.util.ArrayList;
  *
  * @author alulab14
  */
-public class Teacher {
-    private ArrayList<Course> courses;
-    private ArrayList<Workshop> workshops;
+public class Teacher extends User{
     private int tableStatus;
-    
+
     public Teacher() {
-    }
-
-    public Teacher(ArrayList<CourseXSchedule> classes, ArrayList<Workshop> workshops, int idTeacher) {
         super();
-        this.classes = classes;
-        this.workshops = workshops;
-        this.idTeacher = idTeacher;
+        tableStatus = 1;
     }
 
-    public int getIdTeacher() {
-        return idTeacher;
+    public int getTableStatus() {
+        return tableStatus;
     }
 
-    public void setIdTeacher(int idTeacher) {
-        this.idTeacher = idTeacher;
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
     }
- 
-    public ArrayList<CourseXSchedule> getClasses() {
-        return classes;
-    }
-
-    public void setClasses(ArrayList<CourseXSchedule> classes) {
-        this.classes = classes;
-    }
-
-    public ArrayList<Workshop> getWorkshops() {
-        return workshops;
-    }
-
-    public void setWorkshops(ArrayList<Workshop> workshops) {
-        this.workshops = workshops;
-    }
-    
 }

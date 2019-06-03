@@ -10,8 +10,9 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class User {
+
     private int idUser;
-    private String name;
+    private String names;
     private String firstLastName;
     private String secondLastName;
     private String dni;
@@ -22,46 +23,35 @@ public class User {
     private String password;
     private int tableStatus;
     
-    public User(String name, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, boolean active, int id, 
-            String userName, String password) {
-        this.id=id;
-        this.name = name;
+    public User(){
+    }
+    public User(int idUser, String names, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, String userName, String password) {
+        this.idUser = idUser;
+        this.names = names;
         this.firstLastName = firstLastName;
         this.secondLastName = secondLastName;
         this.dni = dni;
         this.adress = adress;
         this.phone = phone;
         this.email = email;
-        this.active = active;
-        this.userName=userName;
-        this.password=password;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
     }
     
-    public User() {
+    public int getIdUser() {
+        return idUser;
     }
 
-    public String getName() {
-        return name;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getNames() {
+        return names;
+    }
+
+    public void setNames(String names) {
+        this.names = names;
     }
 
     public String getFirstLastName() {
@@ -112,20 +102,28 @@ public class User {
         this.email = email;
     }
 
-    public boolean isActive() {
-        return active;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public int getId() {
-        return id;
+    public String getPassword() {
+        return password;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getTableStatus() {
+        return tableStatus;
+    }
+
+    public void setTableStatus(int tableStatus) {
+        this.tableStatus = tableStatus;
     }
     
 }
