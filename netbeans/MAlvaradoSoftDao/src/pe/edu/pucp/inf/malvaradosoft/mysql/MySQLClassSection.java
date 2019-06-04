@@ -91,24 +91,13 @@ public class MySQLClassSection implements DAOClassSection{
                 CourseXSchedule cxs = new CourseXSchedule();
                 cxs.setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
                 Schedule sche= new Schedule();
-                sche.setIdSchedule(id);
-                cxs.setSchedule(rs.getInt(string));
-                
-                ArrayList<CourseXSchedule> css = DBController.queryAllByIDCourseXSchedule(id);
-                c.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
-                classSection.getCourses().add(c);
-                
-                
-                for(int i=0; i<students.size() ;i++){
-                    if(students.get(i).getIdClassSection() == classSection.getIdClassSection())
-                        classSection.addStudents(students.get(i));
+                sche.setIdSchedule(rs.getInt("idSchedule"));
+                if(!classSection.getCourses().contains(cxs)){
+                    classSection.addCourses(cxs);
                 }
-                for(int i=0; i<courses.size() ;i++){
-                    if(courses.get(i).getIdClassSection() == classSection.getIdClassSection())
-                        classSection.addCourses(courses.get(i));
-                }
-                i++;
-                classesSections.add(classSection);
+                //ArrayList<CourseXSchedule> css = DBController.queryAllByIDCourseXSchedule(id);
+                //c.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
+                //classSection.getCourses().add(c);
             }
             con.close();
         }catch(Exception ex){
