@@ -21,18 +21,20 @@ public class MSSQLStudentXWorkshop implements DAOStudentXWorkshop{
     }
 
     @Override
-    public int insert(StudentXWorkshop workshop) {
+    public int insertStudentXWorkshop(StudentXWorkshop workshop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int update(StudentXWorkshop workshop) {
+    public int updateStudentXWorkshop(StudentXWorkshop workshop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int delete(int id) {
+    public int deleteStudentXWorkshop(int idStudent, int idWorkshop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
 }

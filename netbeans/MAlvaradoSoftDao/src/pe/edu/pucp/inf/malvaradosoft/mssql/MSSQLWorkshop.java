@@ -21,18 +21,17 @@ public class MSSQLWorkshop implements DAOWorkshop{
     }
 
     @Override
-    public int insert(Workshop workshop) {
+    public int insertWorkshop(Workshop workshop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int update(Workshop workshop) {
+    public int updateWorkshop(Workshop workshop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int delete(int id) {
+    public int deleteWorkshop(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
