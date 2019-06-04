@@ -30,19 +30,45 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM SchedulexCourse";
+            String sql = "SELECT * FROM SchedulexCourse WHERE active=1";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
                 CourseXSchedule cxs = new CourseXSchedule();
-                cxs.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
-                cxs.setIdClassSection(rs.getInt("idClassSection"));
-                cxs.setSchedule(new Schedule());
+                cxs.setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
+                cxs.getClassSection().setIdClassSection(rs.getInt("idClassSection"));
                 cxs.getSchedule().setIdSchedule(rs.getInt("idSchedule"));
-                cxs.setCourse(new Course());
-                cxs.getCourse().setIdCourse(rs.getInt("idCourse"));
-                cxs.setCodTeacher(rs.getInt("idTeacher"));
+                cxs.getTeacher().setIdUser(rs.getInt("idTeacher"));
+                cxs.getCourse().setIdCourse(rs.getInt("idCourse"));                
+                courseXSchedules.add(cxs);
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    return courseXSchedules;
+    }
+    
+    @Override
+    public ArrayList<CourseXSchedule> queryById(int id) {
+         ArrayList<CourseXSchedule> courseXSchedules = new ArrayList<CourseXSchedule>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            String sql = "SELECT * FROM SchedulexCourse WHERE active=1 AND idCourseXSchedule=" + ""+id;
+            Statement st = con.createStatement();
+            
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                CourseXSchedule cxs = new CourseXSchedule();
+                cxs.setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
+                cxs.getClassSection().setIdClassSection(rs.getInt("idClassSection"));
+                cxs.getSchedule().setIdSchedule(rs.getInt("idSchedule"));
+                cxs.getTeacher().setIdUser(rs.getInt("idTeacher"));
+                cxs.getCourse().setIdCourse(rs.getInt("idCourse"));                
                 courseXSchedules.add(cxs);
             }
             con.close();
@@ -62,13 +88,17 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertSchedulexCourse(?,?,?,?)}");
-            cs.setInt(1, 1);
-            cs.setInt(2,coursexSchedule.getIdClassSection());
-            cs.setInt(3,coursexSchedule.getSchedule().getIdSchedule());
-            cs.setInt(4,coursexSchedule.getCourse().getIdCourse());
-            cs.setInt(5,coursexSchedule.getCodTeacher());
+            CallableStatement cs = con.prepareCall( "{call insertCourseSchedule(?,?,?,?,?)}");
+            cs.registerOutParameter("_id", java.sql.Types.INTEGER);
+            cs.setInt("_idClassSection", coursexSchedule.getClassSection().getIdClassSection());
+            cs.setInt("_idSchedule", coursexSchedule.getSchedule().getIdSchedule());
+            cs.setInt("_idTeacher", coursexSchedule.getTeacher().getIdUser());
+            cs.setInt("_idCourse", coursexSchedule.getCourse().getIdCourse());
+            
             result = cs.executeUpdate();
+            
+            coursexSchedule.setIdCourseXSchedule(cs.getInt("_id"));
+                        
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -85,13 +115,12 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call updateSchedulexCourse(?,?,?,?,?)}");
-            cs.setInt(1,coursexSchedule.getIdCourseSchedule());
-            cs.setInt(2,coursexSchedule.getIdClassSection());
-            cs.setInt(3,coursexSchedule.getSchedule().getIdSchedule());
-            cs.setInt(4,coursexSchedule.getCourse().getIdCourse());
-            cs.setInt(5,coursexSchedule.getCodTeacher());
+            CallableStatement cs = con.prepareCall("{call updatecoursexSchedule(?,?,?,?)}");
+            cs.setInt("_idClassSection", coursexSchedule.getClassSection().getIdClassSection());
+            cs.setInt("_idSchedule", coursexSchedule.getSchedule().getIdSchedule());
+            cs.setInt("_idTeacher", coursexSchedule.getTeacher().getIdUser());
+            cs.setInt("_idCourse", coursexSchedule.getCourse().getIdCourse());
+            
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -106,12 +135,11 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call deleteSchedulexCourse(?)}");
-            cs.setInt(1,id);          
+            CallableStatement cs = con.prepareCall("{call deleteSchedulexCourse(?)}");
+            cs.setInt(1,id);   
+            
             result= cs.executeUpdate();
             con.close();
-            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

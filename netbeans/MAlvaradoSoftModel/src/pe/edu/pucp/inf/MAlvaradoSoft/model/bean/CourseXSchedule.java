@@ -17,36 +17,31 @@ public class CourseXSchedule {
     private Schedule schedule;
     private Teacher teacher;
     private Course course;
-    private ArrayList<Grade> grades;
-    private int tableStatus;
-    
-    public CourseXSchedule(Schedule schedule, ArrayList<Grade> grades, int codTeacher, Course course, char section) {
-        this.schedule = schedule;
-        this.grades = grades;
-        this.codTeacher = codTeacher;
-        this.course = course;
-        this.section = section;
-    }
-
-    public int getIdCourseSchedule() {
-        return idCourseSchedule;
-    }
-
-    public void setIdCourseSchedule(int idCourseSchedule) {
-        this.idCourseSchedule = idCourseSchedule;
-    }
-
-    public int getIdClassSection() {
-        return idClassSection;
-    }
-
-    public void setIdClassSection(int idClassSection) {
-        this.idClassSection = idClassSection;
-    }
-
-    
+    private ArrayList<Grade> grades;    
 
     public CourseXSchedule() {
+        classSection = new ClassSection();
+        schedule = new Schedule();
+        teacher = new Teacher();
+        course = new Course();
+        grades = new ArrayList<>();
+        
+    }
+
+    public int getIdCourseXSchedule() {
+        return idCourseXSchedule;
+    }
+
+    public void setIdCourseXSchedule(int idCourseXSchedule) {
+        this.idCourseXSchedule = idCourseXSchedule;
+    }
+
+    public ClassSection getClassSection() {
+        return classSection;
+    }
+
+    public void setClassSection(ClassSection classSection) {
+        this.classSection = classSection;
     }
 
     public Schedule getSchedule() {
@@ -57,22 +52,12 @@ public class CourseXSchedule {
         this.schedule = schedule;
     }
 
-    public ArrayList<Grade> getGrades() {
-        return grades;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setGrades(ArrayList<Grade> grades) {
-        this.grades = grades;
-    }
-
-    
-
-    public int getCodTeacher() {
-        return codTeacher;
-    }
-
-    public void setCodTeacher(int codTeacher) {
-        this.codTeacher = codTeacher;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     public Course getCourse() {
@@ -83,12 +68,14 @@ public class CourseXSchedule {
         this.course = course;
     }
 
-    public char getSection() {
-        return section;
+    public ArrayList<Grade> getGrades() {
+        return grades;
     }
 
-    public void setSection(char section) {
-        this.section = section;
+    public void addGrade(Grade grade) {
+        this.grades.add(grade);
     }
+    
+    
     
 }

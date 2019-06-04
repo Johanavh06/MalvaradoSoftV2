@@ -34,12 +34,13 @@ public class MySQLExam implements DAOExam{
             
             while(rs.next()){
                 Exam s = new Exam();
+
                 s.setIdExam(rs.getInt("idExam"));
+                s.getCourse().setIdCourse(rs.getInt("idCourse"));
+                s.getTeacher().setIdUser(rs.getInt("idTeacher"));
                 s.setDescription(rs.getString("description"));
-                s.setState(rs.getString("state"));
-                s.setIdTeacher(rs.getInt("idTeacher"));
-                s.setIdCourse(rs.getInt("idCourse"));                
-                
+                s.setState(rs.getInt("state"));
+                                
                 exams.add(s);
             }
             con.close();
@@ -56,14 +57,16 @@ public class MySQLExam implements DAOExam{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertExam(?,?,?,?,?,?,?)}");
-            cs.setInt(1, 1);
-            cs.setString(2, exam.getDescription());
-            cs.setString(3, exam.getState());
-            cs.setInt(4,4);
-            cs.setInt(5, exam.getIdTeacher());
-            cs.setInt(6, exam.getIdCourse());
+            CallableStatement cs = con.prepareCall("{call insertExam(?,?,?,?,?)}");
+            cs.registerOutParameter("_id", java.sql.Types.INTEGER);
+            cs.setInt("_idCourse", exam.getCourse().getIdCourse());
+            cs.setInt("_idTeacher", exam.getTeacher().getIdUser());
+            cs.setInt("_sate", exam.getState());
+            
             result= cs.executeUpdate();
+            
+            exam.setIdExam(cs.getInt("_id"));
+                        
             con.close();            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -80,13 +83,11 @@ public class MySQLExam implements DAOExam{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call updateExam(?,?,?,?,?,?)}");
-            cs.setInt(1, exam.getIdExam());
-            cs.setString(2, exam.getDescription());
-            cs.setString(3, exam.getState());
-            cs.setInt(4, exam.getIdTeacher());
-            cs.setInt(5, exam.getIdCourse());
+            CallableStatement cs = con.prepareCall("{call updateExam(?,?,?,?)}");
+            cs.setInt("_idCourse", exam.getCourse().getIdCourse());
+            cs.setInt("_idTeacher", exam.getTeacher().getIdUser());
+            cs.setInt("_sate", exam.getState());
+            
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -103,7 +104,7 @@ public class MySQLExam implements DAOExam{
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteExam(?)}");
-			cs.setInt(1, id);
+			cs.setInt("_id", id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){

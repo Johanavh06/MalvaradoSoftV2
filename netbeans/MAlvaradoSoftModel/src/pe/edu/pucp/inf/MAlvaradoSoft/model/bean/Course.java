@@ -13,18 +13,18 @@ public class Course {
     private int idCourse;
     private String name;
     private int _class;
-    private int tableStatus;
+    
 
 
     public Course(int idCourse, String name, int _class) {
         this.idCourse = idCourse;
         this.name = name;
         this._class = _class;
-        this.tableStatus = 1;
+        
     }
     
     public Course() {
-        tableStatus = 1;
+        
     }
     
     public int getIdCourse() {
@@ -49,14 +49,6 @@ public class Course {
 
     public void setClass(int _class) {
         this._class = _class;
-    }
-    
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
     }
     
 }

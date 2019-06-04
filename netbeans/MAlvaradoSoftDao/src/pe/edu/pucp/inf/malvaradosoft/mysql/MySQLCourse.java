@@ -27,7 +27,7 @@ public class MySQLCourse implements DAOCourse {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Course";
+            String sql = "SELECT * FROM Course WHERE active=1";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
@@ -56,12 +56,15 @@ public class MySQLCourse implements DAOCourse {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call insertCourse(?,?)}");
-            cs.setString(1, course.getName());  
-            cs.setInt(2, course.get_Class());
-                     
+            CallableStatement cs = con.prepareCall("{call insertCourse(?,?,?)}");
+            
+            cs.registerOutParameter("_id", java.sql.Types.INTEGER);
+            cs.setString("_name", course.getName());
+            cs.setInt("_class", course.get_Class());                     
             
             result = cs.executeUpdate();
+            
+            course.setIdCourse(cs.getInt("_id"));
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -78,9 +81,8 @@ public class MySQLCourse implements DAOCourse {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call updateCourse(?,?)}");
-            cs.setString(1, course.getName());  
-            cs.setInt(2, course.get_Class());
-                     
+            cs.setString("_name", course.getName());  
+            cs.setInt("_class", course.get_Class());   
             
             result = cs.executeUpdate();
         }catch(Exception ex){
@@ -97,11 +99,11 @@ public class MySQLCourse implements DAOCourse {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call deleteCourse(?,?)}");
-            cs.setInt(1, id);
-                     
+            CallableStatement cs = con.prepareCall("{call deleteCourse(?)}");
+            cs.setInt("_id", id);
             
             result = cs.executeUpdate();
+            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

@@ -15,15 +15,11 @@ public class Exam {
     private Teacher teacher;
     private String description;
     private int state;
-    private int tableStatus;
 
     public Exam() {
-    }
-
-    public Exam(int codCourse, String description, String state) {
-        this.idCourse = codCourse;
-        this.description = description;
-        this.state = state;
+        course = new Course();
+        teacher = new Teacher();
+        state = 0;
     }
 
     public int getIdExam() {
@@ -34,20 +30,20 @@ public class Exam {
         this.idExam = idExam;
     }
 
-    public int getIdTeacher() {
-        return idTeacher;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setIdTeacher(int idTeacher) {
-        this.idTeacher = idTeacher;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
-    public int getIdCourse() {
-        return idCourse;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setIdCourse(int idCourse) {
-        this.idCourse = idCourse;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     public String getDescription() {
@@ -58,12 +54,13 @@ public class Exam {
         this.description = description;
     }
 
-    public String getState() {
+    public int getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(int state) {
         this.state = state;
     }
+    
     
 }
