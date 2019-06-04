@@ -22,7 +22,7 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOAttendance;
  */
 public class MySQLAttendance implements DAOAttendance {
 
-    public ArrayList<Attendance> queryAllAttendance() {
+    public ArrayList<Attendance> queryAll() {
         ArrayList<Attendance> attendances = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
@@ -35,7 +35,6 @@ public class MySQLAttendance implements DAOAttendance {
                 Attendance a = new Attendance();
                 a.setIdAttendance(rs.getInt("User_idPerson"));
                 a.setDateTime(rs.getDate("Attendance_dateTime"));
-                a.setTableStatus(rs.getInt("Attendance_status"));
                 attendances.add(a);
             }
             con.close();
@@ -59,7 +58,6 @@ public class MySQLAttendance implements DAOAttendance {
                     + "{call updateAttendance(?,?,?)}");
             cs.setInt(1, attendance.getIdAttendance());
             cs.setDate(2, (Date) attendance.getDateTime());
-            cs.setInt(3, attendance.getTableStatus());
          
             result = cs.executeUpdate();
             con.close();

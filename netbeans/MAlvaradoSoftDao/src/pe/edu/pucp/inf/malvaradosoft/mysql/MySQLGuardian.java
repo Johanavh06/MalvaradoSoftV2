@@ -33,7 +33,7 @@ public class MySQLGuardian implements DAOGuardian {
             
             while(rs.next()){
                 Guardian g = new Guardian();
-                g.setIdGuardian(rs.getInt("idGuardian"));
+                g.setIdUser(rs.getInt("idGuardian"));
                 guardians.add(g);
             }
             con.close();
@@ -54,7 +54,7 @@ public class MySQLGuardian implements DAOGuardian {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertGuardian(?)}");
-            cs.setInt(1, guardian.getIdGuardian());
+            cs.setInt(1, guardian.getIdUser());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){

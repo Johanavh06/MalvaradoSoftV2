@@ -5,25 +5,14 @@
  */
 package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
 
-import java.util.ArrayList;
 
 /**
  *
  * @author alulab14
  */
-public class Teacher extends User{
-    private int tableStatus;
+public class Teacher extends User{    
 
     public Teacher() {
         super();
-        tableStatus = 1;
-    }
-
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
     }
 }

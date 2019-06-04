@@ -9,7 +9,6 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.User;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
@@ -23,17 +22,25 @@ public class MySQLUser implements DAOUser{
 
     @Override
     public ArrayList<User> queryAll() {
-        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM User";
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
+            CallableStatement cs = con.prepareCall("{call queryAllUser()}");
+            ResultSet rs = cs.executeQuery();
             
             while(rs.next()){
                 User u = new User();
-                u.setIdUser(rs.getInt("id"));           
+                u.setIdUser(rs.getInt("_idUser"));
+                u.setDni(rs.getString("_dni"));
+                u.setEmail(rs.getString("_email"));
+                u.setNames(rs.getString("_names"));
+                u.setFirstLastName(rs.getString("_firstLast Name"));
+                u.setSecondLastName(rs.getString("_secondLast Name"));
+                u.setPassword(rs.getString("_password"));
+                u.setUserName(rs.getString("_userName"));
+                u.setPhone(rs.getInt("_phone"));
+                u.setAdress(rs.getString("_adress"));
                 users.add(u);
             }
             con.close();
@@ -46,7 +53,7 @@ public class MySQLUser implements DAOUser{
     }
 
     @Override
-    public int insert(User user) {
+    public int insertUser(User user) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -54,7 +61,7 @@ public class MySQLUser implements DAOUser{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertStudent(?,?,?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("" + "{call insertTeacher(?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt(1, user.getIdUser());
             cs.setString(2, user.getNames());
             cs.setString(3, user.getFirstLastName());
@@ -76,16 +83,12 @@ public class MySQLUser implements DAOUser{
     }
 
     @Override
-    public int update(User user) {
+    public int updateUser(User user) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(
-            dbManager.getUrl(), 
-            dbManager.getUser(), 
-            dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call updateUser(?,?,?,?,?,?,?,?,?,?)}");
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("" + "{call updateUser(?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt(1, user.getIdUser());
             cs.setString(2, user.getNames());
             cs.setString(3, user.getFirstLastName());
@@ -104,13 +107,12 @@ public class MySQLUser implements DAOUser{
     }
 
     @Override
-    public int delete(int id) {
+    public int deleteUser(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call deleteUser(?)}");
+            CallableStatement cs = con.prepareCall("" + "{call deleteUser(?)}");
             cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            

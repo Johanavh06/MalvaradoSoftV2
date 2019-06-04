@@ -10,18 +10,8 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class Auxiliar extends User{
-    private int tableStatus;    
     
     public Auxiliar() {
-            this.tableStatus =1;
-    }
-    
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
     }
     
 }

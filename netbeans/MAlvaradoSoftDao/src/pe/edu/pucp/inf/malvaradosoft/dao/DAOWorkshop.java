@@ -14,7 +14,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
  */
 public interface DAOWorkshop {
     ArrayList <Workshop > queryAll();
-    int insert(Workshop workshop);
-    int update(Workshop workshop);
-    int delete(int id);
+    int insertWorkshop(Workshop workshop);
+    int updateWorkshop(Workshop workshop);
+    int deleteWorkshop(int id);
 }

@@ -57,6 +57,7 @@ public class MySQLDAOFactory extends DAOFactory {
         return new MySQLTeacher();
     }
 
+    @Override
     public DAOStudentXWorkshop getStudentXWorkshopDAO() {
         return new MySQLStudentXWorkshop();
     }

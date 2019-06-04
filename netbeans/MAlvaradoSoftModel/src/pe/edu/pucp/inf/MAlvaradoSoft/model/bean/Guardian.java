@@ -11,31 +11,29 @@ import java.util.ArrayList;
  *
  * @author alulab14
  */
-public class Guardian {
+public class Guardian extends User{
     private ArrayList<Student> students;
-    private int tableStatus;
+
+    public Guardian() {
+        students = new ArrayList<>();
+    }
+
+    public Guardian(ArrayList<Student> students, int idUser, String names, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, String userName, String password) {
+        super(idUser, names, firstLastName, secondLastName, dni, adress, phone, email, userName, password);
+        this.students = students;
+    }
     
     public Guardian(ArrayList<Student> students) {
         this.students = students;
-    }
-
-    public Guardian() {
-    }
-
-    public int getIdGuardian() {
-        return idGuardian;
-    }
-
-    public void setIdGuardian(int idGuardian) {
-        this.idGuardian = idGuardian;
     }
 
     public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    public void addStudent(Student student) {
+        students.add(student);
     }
     
+       
 }

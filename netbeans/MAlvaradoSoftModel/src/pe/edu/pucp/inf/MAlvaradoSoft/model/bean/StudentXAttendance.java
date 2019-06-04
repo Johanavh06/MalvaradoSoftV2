@@ -13,5 +13,4 @@ public class StudentXAttendance {
     private int idStudent;
     private Attendance attendance;
     private String observation;
-    private int tableStatus;
 }
