@@ -12,7 +12,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.StudentXWorkshop;
-import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOStudentXWorkshop;
 
@@ -24,7 +23,7 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
 
     @Override
     public ArrayList<StudentXWorkshop> queryAll() {
-        ArrayList<StudentXWorkshop> studentWorkshops = new ArrayList<StudentXWorkshop>();
+        ArrayList<StudentXWorkshop> studentWorkshops = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
@@ -34,7 +33,6 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
             
             while(rs.next()){
                 StudentXWorkshop w = new StudentXWorkshop();
-                w.setId(rs.getInt("_idWorkshop"));
                 w.getStudent().setIdUser(rs.getInt("_idStudent"));
                 w.getWorkshop().setIdWorkshop(rs.getInt("_idWorkshop"));
                 studentWorkshops.add(w);
@@ -56,8 +54,7 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertStudentXWorkshop(?,?,?)}");
-            cs.setInt(1, sxworkshop.getId());
+            CallableStatement cs = con.prepareCall("" + "{call insertStudentXWorkshop(?,?)}");
             cs.setInt(2, sxworkshop.getStudent().getIdUser());
             cs.setInt(3, sxworkshop.getWorkshop().getIdWorkshop());
             result = cs.executeUpdate();
@@ -78,28 +75,27 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
-                    + "{call updateStudentXWorkshop(?,?,?)}");
-            cs.setInt(1, sxworkshop.getId());
-            cs.setInt(2, sxworkshop.getStudent().getIdUser());
-            cs.setInt(3, sxworkshop.getWorkshop().getIdWorkshop());
+                    + "{call updateStudentXWorkshop(?,?)}");
+            cs.setInt(1, sxworkshop.getStudent().getIdUser());
+            cs.setInt(2, sxworkshop.getWorkshop().getIdWorkshop());
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return result;
     }
-
-    @Override
-    public int delete(int id) {
+    
+    public int delete(int idStudent, int idWorkshop) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
-                    + "{call deleteStudentXWorkshop(?)}");
-            cs.setInt(1, id);
+                    + "{call deleteStudentXWorkshop(?,?)}");
+            cs.setInt(1, idStudent);
+            cs.setInt(2, idWorkshop);
             result= cs.executeUpdate();
-            con.close();            
+            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

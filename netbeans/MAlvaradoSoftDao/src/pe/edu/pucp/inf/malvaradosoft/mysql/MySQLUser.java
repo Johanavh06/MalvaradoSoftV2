@@ -23,7 +23,7 @@ public class MySQLUser implements DAOUser{
 
     @Override
     public ArrayList<User> queryAll() {
-        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());

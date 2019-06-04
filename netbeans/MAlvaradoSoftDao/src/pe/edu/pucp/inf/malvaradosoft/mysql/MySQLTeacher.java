@@ -23,7 +23,7 @@ public class MySQLTeacher implements DAOTeacher {
 
     @Override
     public ArrayList<Teacher> queryAll() {
-        ArrayList<Teacher> teachers = new ArrayList<Teacher>();
+        ArrayList<Teacher> teachers = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());

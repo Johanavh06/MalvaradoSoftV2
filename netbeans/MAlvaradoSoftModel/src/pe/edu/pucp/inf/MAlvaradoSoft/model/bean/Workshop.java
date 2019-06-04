@@ -18,7 +18,6 @@ public class Workshop {
     private Schedule schedule;
     private ArrayList<Student> students;
     private String description;
-    private int tableStatus;
 
     public Workshop(int idWorkshop, Course course, Teacher teacher, Schedule schedule, ArrayList<Student> students, String description) {
         super();
@@ -28,11 +27,9 @@ public class Workshop {
         this.schedule = schedule;
         this.students = students;
         this.description = description;
-        this.tableStatus = 1;
     }
     
     public Workshop(){
-        this.tableStatus = 1;
     }
 
     public int getIdWorkshop() {
@@ -81,13 +78,5 @@ public class Workshop {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
     }
 }

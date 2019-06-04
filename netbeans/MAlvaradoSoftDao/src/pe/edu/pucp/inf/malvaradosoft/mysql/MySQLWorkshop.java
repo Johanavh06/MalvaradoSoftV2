@@ -23,7 +23,7 @@ public class MySQLWorkshop implements DAOWorkshop{
 
     @Override
     public ArrayList<Workshop> queryAll() {
-        ArrayList<Workshop> workshops = new ArrayList<Workshop>();
+        ArrayList<Workshop> workshops = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());

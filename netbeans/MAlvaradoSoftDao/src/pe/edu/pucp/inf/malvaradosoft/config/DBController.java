@@ -17,8 +17,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
  * @author Sebastian Sanchez Herrera 20143071
  */
 public abstract class DBController {
-    private static DAOFactory daoFactory = 
-            DAOFactory.getDAOFactory();
+    private static DAOFactory daoFactory = DAOFactory.getDAOFactory();
     
     public static int insertTeacher(Teacher teacher){
         return daoFactory.getTeacherDAO().insert(teacher);
@@ -62,8 +61,8 @@ public abstract class DBController {
     public static int updateStudentXWorkshop(StudentXWorkshop studentXWorkshop){
         return daoFactory.getStudentXWorkshopDAO().update(studentXWorkshop);
     }
-    public static int deleteStudentXWorkshop(int id){
-        return daoFactory.getStudentXWorkshopDAO().delete(id);
+    public static int deleteStudentXWorkshop(int idStudent, int idWorkshop){
+        return daoFactory.getStudentXWorkshopDAO().delete(idStudent,idWorkshop);
     }
     public static ArrayList<StudentXWorkshop> queryAllStudentXWorkshop(){
         return daoFactory.getStudentXWorkshopDAO().queryAll();

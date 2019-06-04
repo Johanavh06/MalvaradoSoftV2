@@ -16,5 +16,5 @@ public interface DAOStudentXWorkshop {
     ArrayList <StudentXWorkshop > queryAll();
     int insert(StudentXWorkshop workshop);
     int update(StudentXWorkshop workshop);
-    int delete(int id);    
+    int delete(int idStudent, int idWorkshop);    
 }
