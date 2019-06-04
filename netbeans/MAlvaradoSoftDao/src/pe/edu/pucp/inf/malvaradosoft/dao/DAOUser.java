@@ -14,7 +14,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.User;
  */
 public interface DAOUser {
     ArrayList <User> queryAll();
-    int insert(User user);
-    int update(User user);
-    int delete(int id);
+    int insertUser(User user);
+    int updateUser(User user);
+    int deleteUser(int id);
 }

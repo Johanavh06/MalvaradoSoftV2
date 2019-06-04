@@ -27,14 +27,15 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM StudentXWorkshop";
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
+            CallableStatement cs = con.prepareCall("{call queryAllUser()}");
+            ResultSet rs = cs.executeQuery();
             
             while(rs.next()){
                 StudentXWorkshop w = new StudentXWorkshop();
                 w.getStudent().setIdUser(rs.getInt("_idStudent"));
+                w.getStudent().setNames(rs.getString("_names"));
                 w.getWorkshop().setIdWorkshop(rs.getInt("_idWorkshop"));
+                w.getWorkshop().setDescription(rs.getString("_description"));
                 studentWorkshops.add(w);
             }
             con.close();
@@ -46,7 +47,7 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
     }
 
     @Override
-    public int insert(StudentXWorkshop sxworkshop) {
+    public int insertStudentXWorkshop(StudentXWorkshop sxworkshop) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -55,8 +56,8 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertStudentXWorkshop(?,?)}");
-            cs.setInt(2, sxworkshop.getStudent().getIdUser());
-            cs.setInt(3, sxworkshop.getWorkshop().getIdWorkshop());
+            cs.setInt(1, sxworkshop.getStudent().getIdUser());
+            cs.setInt(2, sxworkshop.getWorkshop().getIdWorkshop());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -66,7 +67,7 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
     }
 
     @Override
-    public int update(StudentXWorkshop sxworkshop) {
+    public int updateStudentXWorkshop(StudentXWorkshop sxworkshop) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
@@ -84,8 +85,8 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
         }
         return result;
     }
-    
-    public int delete(int idStudent, int idWorkshop) {
+
+    public int deleteStudentXWorkshop(int idStudent, int idWorkshop) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();

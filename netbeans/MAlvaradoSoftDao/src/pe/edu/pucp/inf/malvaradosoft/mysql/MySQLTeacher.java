@@ -23,17 +23,24 @@ public class MySQLTeacher implements DAOTeacher {
 
     @Override
     public ArrayList<Teacher> queryAll() {
-        ArrayList<Teacher> teachers = new ArrayList<>();
+       ArrayList<Teacher> teachers = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Teacher";
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            
+            CallableStatement cs = con.prepareCall("{call queryAllTeacher()}");
+            ResultSet rs = cs.executeQuery();
             while(rs.next()){
                 Teacher t = new Teacher();
-                t.setIdUser(rs.getInt("User_idTeacher"));           
+                t.setIdUser(rs.getInt("_idUser"));
+                t.setDni(rs.getString("_dni"));
+                t.setEmail(rs.getString("_email"));
+                t.setNames(rs.getString("_names"));
+                t.setFirstLastName(rs.getString("_firstLast Name"));
+                t.setSecondLastName(rs.getString("_secondLast Name"));
+                t.setPassword(rs.getString("_password"));
+                t.setUserName(rs.getString("_userName"));
+                t.setPhone(rs.getInt("_phone"));
+                t.setAdress(rs.getString("_adress"));
                 teachers.add(t);
             }
             con.close();
@@ -46,40 +53,35 @@ public class MySQLTeacher implements DAOTeacher {
     }
 
     @Override
-    public int insert(Teacher teacher) {
+    public int insertTeacher(Teacher teacher) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(
-            dbManager.getUrl(), 
-            dbManager.getUser(), 
-            dbManager.getPassword());
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertTeacher(?)}");
             cs.setInt(1, teacher.getIdUser());
+            
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
 
     @Override
-    public int update(Teacher teacher) {
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
+    public int updateTeacher(Teacher teacher) {
+        int result = 0;
+        return result;
     }
 
     @Override
-    public int delete(int id) {
+    public int deleteTeacher(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call deleteTeacher(?)}");
+            CallableStatement cs = con.prepareCall("" + "{call deleteTeacher(?)}");
             cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
@@ -87,7 +89,6 @@ public class MySQLTeacher implements DAOTeacher {
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
     
 }

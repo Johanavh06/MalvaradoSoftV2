@@ -14,6 +14,8 @@ public class StudentXWorkshop {
     private Workshop workshop;
     
     public StudentXWorkshop(){
+        student = new Student();
+        workshop = new Workshop();
     }
     public StudentXWorkshop(int id, Student student, Workshop workshop) {
         super();
