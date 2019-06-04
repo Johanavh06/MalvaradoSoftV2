@@ -21,18 +21,18 @@ public class MSSQLTeacher implements DAOTeacher{
     }
 
     @Override
-    public int insert(Teacher teacher) {
+    public int insertTeacher(Teacher teacher) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int update(Teacher teacher) {
+    public int updateTeacher(Teacher teacher) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int delete(int id) {
+    public int deleteTeacher(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
