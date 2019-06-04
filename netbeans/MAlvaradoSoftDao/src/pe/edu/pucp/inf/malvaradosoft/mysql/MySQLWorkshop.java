@@ -32,13 +32,13 @@ public class MySQLWorkshop implements DAOWorkshop{
             
             while(rs.next()){
                 Workshop w = new Workshop();
-                w.setIdWorkshop(rs.getInt("_idWorkshop"));
-                w.setDescription(rs.getString("_description"));
-                w.getCourse().setName(rs.getString("_nameCourse"));
-                w.getCourse().setIdCourse(rs.getInt("_idCourse"));
-                w.getSchedule().setIdSchedule(rs.getInt("_idSchedule"));
-                w.getTeacher().setIdUser(rs.getInt("_idUser"));
-                w.getTeacher().setNames((rs.getString("_namesTeacher")));
+                w.setIdWorkshop(rs.getInt("idWorkshop"));
+                w.setDescription(rs.getString("description"));
+                w.getCourse().setName(rs.getString("nameCourse"));
+                w.getCourse().setIdCourse(rs.getInt("idCourse"));
+                w.getSchedule().setIdSchedule(rs.getInt("Schedule_idSchedule"));
+                w.getTeacher().setIdUser(rs.getInt("idTeacher"));
+                w.getTeacher().setNames((rs.getString("namesTeacher")));
                 workshops.add(w);
             }
             con.close();
