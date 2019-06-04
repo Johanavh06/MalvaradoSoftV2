@@ -6,6 +6,9 @@
 package pe.edu.pucp.inf.malvaradosoft.config;
 
 import java.util.ArrayList;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Grade;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Principal;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.StudentXWorkshop;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Teacher;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.User;
@@ -67,5 +70,32 @@ public abstract class DBController {
     }
     public static ArrayList<StudentXWorkshop> queryAllStudentXWorkshop(){
         return daoFactory.getStudentXWorkshopDAO().queryAll();
-    }    
+    }  
+    public static ArrayList<Grade> queryAllGrade(){
+        return daoFactory.getGradeDAO().queryAll();
+    }
+    public static int updateGrade(Grade grade){
+        return daoFactory.getGradeDAO().update(grade);
+    }
+    public static int deleteGrade(int id){
+        return daoFactory.getGradeDAO().delete(id);
+    }
+    public static ArrayList<Guardian> queryAllGuardian(){
+        return daoFactory.getGuardianDAO().queryAll();
+    }
+    public static int updateGuardian(Guardian guardian){
+        return daoFactory.getGuardianDAO().update(guardian);
+    }
+    public static int deleteGuardian(int id){
+        return daoFactory.getGuardianDAO().delete(id);
+    }
+    public static ArrayList<Principal> queryAllPrincipal(){
+        return daoFactory.getPrincipalDAO().queryAll();
+    }
+    public static int updatePrincipal(Principal principal){
+        return daoFactory.getPrincipalDAO().update(principal);
+    }
+    public static int deletePrincipal(int id){
+        return daoFactory.getPrincipalDAO().delete(id);
+    }
 }

@@ -13,22 +13,19 @@ import java.util.Date;
  */
 public class Grade {
     private int idGrade;
-    private Student student;
     private CourseXSchedule coursexschedule;
     private String description;
     private double weight;
-    private int tableStatus;
-    
-    public Grade(double value, String description, double weight, int codStudent, Date registerDate) {
-        this.value = value;
-        this.description = description;
-        this.weight = weight;
-        this.idStudent = codStudent;
-        this.registerDate = registerDate;
-        this.idCourseSchedule= idCourseSchedule;
-    }
 
     public Grade() {
+        coursexschedule = new CourseXSchedule();
+    }
+    
+    public Grade(int idGrade, CourseXSchedule coursexschedule, String description, double weight) {
+        this.idGrade = idGrade;
+        this.coursexschedule = coursexschedule;
+        this.description = description;
+        this.weight = weight;
     }
 
     public int getIdGrade() {
@@ -39,20 +36,12 @@ public class Grade {
         this.idGrade = idGrade;
     }
 
-    public int getIdCourseSchedule() {
-        return idCourseSchedule;
+    public CourseXSchedule getCoursexschedule() {
+        return coursexschedule;
     }
 
-    public void setIdCourseSchedule(int idCourseSchedule) {
-        this.idCourseSchedule = idCourseSchedule;
-    }
-
-    public double getValue() {
-        return value;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
+    public void setCoursexschedule(CourseXSchedule coursexschedule) {
+        this.coursexschedule = coursexschedule;
     }
 
     public String getDescription() {
@@ -70,21 +59,7 @@ public class Grade {
     public void setWeight(double weight) {
         this.weight = weight;
     }
-
-    public int getIdStudent() {
-        return idStudent;
-    }
-
-    public void setIdStudent(int idStudent) {
-        this.idStudent = idStudent;
-    }
-
-    public Date getRegisterDate() {
-        return registerDate;
-    }
-
-    public void setRegisterDate(Date registerDate) {
-        this.registerDate = registerDate;
-    }
     
+    
+      
 }

@@ -28,19 +28,16 @@ public class MySQLGrade implements DAOGrade{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Grade";
+            String sql = "SELECT * FROM Grade where active = 1";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
                 Grade g = new Grade();
                 g.setIdGrade(rs.getInt("idGrade"));
-                g.setValue(rs.getDouble("value"));
+                g.getCoursexschedule().setIdCourseSchedule(rs.getInt("idCourseXSchedule"));
                 g.setDescription(rs.getString("description"));
                 g.setWeight(rs.getDouble("weight"));
-                g.setRegisterDate(rs.getDate("registerDate"));
-                g.setIdStudent(rs.getInt("idStudent"));
-                g.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
                 grades.add(g);
             }
             con.close();
@@ -57,15 +54,12 @@ public class MySQLGrade implements DAOGrade{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call insertGrade(?,?,?,?,?,?,?)}");
-            cs.setInt(1, 1);
-            cs.setDouble(2, g.getValue());
-            cs.setString(3, g.getDescription());
-            cs.setDouble(4, g.getWeight());
-            cs.setDate(5, (Date) g.getRegisterDate());
-            cs.setInt(6, g.getIdStudent());
-            cs.setInt(7, g.getIdCourseSchedule());
+            CallableStatement cs = con.prepareCall("{call insertGrade(?,?,?,?,?)}");
+            cs.registerOutParameter(1,  java.sql.Types.INTEGER);
+            cs.setString(2, g.getDescription());
+            cs.setDouble(3, g.getWeight());
+            cs.setInt(4, g.getCoursexschedule().getIdCourseXSchedule());
+            cs.setInt(5, 1);
             result= cs.executeUpdate();
             con.close();
             
@@ -82,14 +76,11 @@ public class MySQLGrade implements DAOGrade{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
-                    + "{call updateGrade(?,?,?,?,?,?,?)}");
+                    + "{call updateGrade(?,?,?,?)}");
             cs.setInt(1, g.getIdGrade());
-            cs.setDouble(2, g.getValue());
-            cs.setString(3, g.getDescription());
-            cs.setDouble(4, g.getWeight());
-            cs.setDate(5, (Date) g.getRegisterDate());
-            cs.setInt(6, g.getIdStudent());
-            cs.setInt(7, g.getIdCourseSchedule());
+            cs.setString(2, g.getDescription());
+            cs.setDouble(3, g.getWeight());
+            cs.setInt(4, g.getCoursexschedule().getIdCourseXSchedule());
             result= cs.executeUpdate();
             con.close();
             
@@ -108,10 +99,6 @@ public class MySQLGrade implements DAOGrade{
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteGrade(?)}");
             cs.setInt(1, id);
-            cs.setInt(2, 0);    
-            cs.setDouble(4, 0);
-            cs.setInt(6, 0);
-            cs.setInt(7, 0);
             result= cs.executeUpdate();
             con.close();
         }catch(Exception ex){
