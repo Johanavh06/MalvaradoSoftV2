@@ -15,8 +15,6 @@ public class Student extends User {
     private Guardian guardian;
     private int condition;
     private ClassSection classSection;
-    private ArrayList<CourseXSchedule> courses;
-    private int tableStatus;
     //private int _class;
     
     public Student(ArrayList<CourseXSchedule> courses, String condition, int _class, String section, 

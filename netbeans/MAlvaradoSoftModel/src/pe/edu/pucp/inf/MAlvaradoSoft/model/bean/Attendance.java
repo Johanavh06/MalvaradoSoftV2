@@ -14,16 +14,13 @@ import java.util.Date;
 public class Attendance {
     private int idAttendance;
     private Date dateTime;
-    private int tableStatus;
 
     public Attendance(int idAttendance, Date dateTime) {
         this.idAttendance = idAttendance;
         this.dateTime = dateTime;
-        this.tableStatus = 1;
     }
 
     public Attendance() {
-        this.tableStatus = 1;
     }
 
     public int getIdAttendance() {
@@ -42,12 +39,4 @@ public class Attendance {
         this.dateTime = dateTime;
     }
 
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
-    }
-    
 }
