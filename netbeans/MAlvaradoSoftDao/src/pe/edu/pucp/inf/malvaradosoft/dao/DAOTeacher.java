@@ -14,7 +14,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Teacher;
  */
 public interface DAOTeacher {
     ArrayList <Teacher> queryAll();
-    int insert(Teacher teacher);
-    int update(Teacher teacher);
-    int delete(int id);
+    int insertTeacher(Teacher teacher);
+    int updateTeacher(Teacher teacher);
+    int deleteTeacher(int id);
 }

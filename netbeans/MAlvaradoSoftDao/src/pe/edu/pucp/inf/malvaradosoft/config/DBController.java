@@ -17,53 +17,52 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
  * @author Sebastian Sanchez Herrera 20143071
  */
 public abstract class DBController {
-    private static DAOFactory daoFactory = 
-            DAOFactory.getDAOFactory();
+    private static DAOFactory daoFactory = DAOFactory.getDAOFactory();
     
     public static int insertTeacher(Teacher teacher){
-        return daoFactory.getTeacherDAO().insert(teacher);
+        return daoFactory.getTeacherDAO().insertTeacher(teacher);
     }
     public static int updateTeacher(Teacher teacher){
-        return daoFactory.getTeacherDAO().update(teacher);
+        return daoFactory.getTeacherDAO().updateTeacher(teacher);
     }
     public static int deleteTeacher(int id){
-        return daoFactory.getTeacherDAO().delete(id);
+        return daoFactory.getTeacherDAO().deleteTeacher(id);
     }
     public static ArrayList<Teacher> queryAllTeacher(){
         return daoFactory.getTeacherDAO().queryAll();
     }
     public static int insertUser(User user){
-        return daoFactory.getUserDAO().insert(user);
+        return daoFactory.getUserDAO().insertUser(user);
     }
     public static int updateUser(User user){
-        return daoFactory.getUserDAO().update(user);
+        return daoFactory.getUserDAO().updateUser(user);
     }
     public static int deleteUser(int id){
-        return daoFactory.getUserDAO().delete(id);
+        return daoFactory.getUserDAO().deleteUser(id);
     }
     public static ArrayList<User> queryAllUser(){
         return daoFactory.getUserDAO().queryAll();
     }
     public static int insertWorkshop(Workshop workshop){
-        return daoFactory.getWorkshopDAO().insert(workshop);
+        return daoFactory.getWorkshopDAO().insertWorkshop(workshop);
     }
     public static int updateWorkshop(Workshop workshop){
-        return daoFactory.getWorkshopDAO().update(workshop);
+        return daoFactory.getWorkshopDAO().updateWorkshop(workshop);
     }
     public static int deleteWorkshop(int id){
-        return daoFactory.getWorkshopDAO().delete(id);
+        return daoFactory.getWorkshopDAO().deleteWorkshop(id);
     }
     public static ArrayList<Workshop> queryAllWorkshop(){
         return daoFactory.getWorkshopDAO().queryAll();
     }
     public static int insertStudentXWorkshop(StudentXWorkshop studentXWorkshop){
-        return daoFactory.getStudentXWorkshopDAO().insert(studentXWorkshop);
+        return daoFactory.getStudentXWorkshopDAO().insertStudentXWorkshop(studentXWorkshop);
     }
     public static int updateStudentXWorkshop(StudentXWorkshop studentXWorkshop){
-        return daoFactory.getStudentXWorkshopDAO().update(studentXWorkshop);
+        return daoFactory.getStudentXWorkshopDAO().updateStudentXWorkshop(studentXWorkshop);
     }
-    public static int deleteStudentXWorkshop(int id){
-        return daoFactory.getStudentXWorkshopDAO().delete(id);
+    public static int deleteStudentXWorkshop(int idStudent, int idWorkshop){
+        return daoFactory.getStudentXWorkshopDAO().deleteStudentXWorkshop(idStudent,idWorkshop);
     }
     public static ArrayList<StudentXWorkshop> queryAllStudentXWorkshop(){
         return daoFactory.getStudentXWorkshopDAO().queryAll();
