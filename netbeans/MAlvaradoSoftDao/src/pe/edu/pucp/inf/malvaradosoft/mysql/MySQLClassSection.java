@@ -13,6 +13,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.CourseXSchedule;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Schedule;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Student;
 import pe.edu.pucp.inf.malvaradosoft.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
@@ -45,7 +46,7 @@ public class MySQLClassSection implements DAOClassSection{
                         cxs.addStudents(students.get(i));
                 }
                 for(int i=0; i<courses.size() ;i++){
-                    if(courses.get(i).getIdClassSection() == cxs.getIdClassSection())
+                    if(courses.get(i).getClassSection().getIdClassSection() == cxs.getIdClassSection())
                         cxs.addCourses(courses.get(i));
                 }
                 classesSections.add(cxs);
@@ -61,6 +62,7 @@ public class MySQLClassSection implements DAOClassSection{
     @Override
     public ClassSection queryAllByIDClassSection(int id) {
         int result = 0;
+        ClassSection classSection = new ClassSection();
         try{
             DBManager dbManager = DBManager.getDbManager();
             Connection con = DriverManager.getConnection(
@@ -71,42 +73,48 @@ public class MySQLClassSection implements DAOClassSection{
             cs.setInt(1, id );
             result = cs.executeUpdate();
             ResultSet rs = cs.executeQuery();
-            ClassSection cxs = new ClassSection();
             int i=0;
             while(rs.next()){
-                cxs.setIdClassSection(id);
-                cxs.setTotal(rs.getInt("total"));
-                cxs.setName(rs.getString("name"));
+                classSection.setIdClassSection(id);
+                classSection.setTotal(rs.getInt("total"));
+                classSection.setName(rs.getString("name"));
+                //se llenan datos para un estudiante
                 Student s = new Student();
                 s.setIdUser(rs.getInt("idUser"));
                 s.setNames(rs.getString("name_Student"));
                 s.setFirstLastName(rs.getString("FirstLastName_Student"));
                 s.setSecondLastName(rs.getString("SecondLastName_Student"));
-                if(cxs.getStudents().contains(s)){
-                    
+                if(!classSection.getStudents().contains(s)){
+                    classSection.addStudents(s);
                 }
-                CourseXSchedule c = new CourseXSchedule();
+                //se llenan datos para un CourseXSchedule
+                CourseXSchedule cxs = new CourseXSchedule();
+                cxs.setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
+                Schedule sche= new Schedule();
+                sche.setIdSchedule(id);
+                cxs.setSchedule(rs.getInt(string));
+                
                 ArrayList<CourseXSchedule> css = DBController.queryAllByIDCourseXSchedule(id);
                 c.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
-                cxs.getCourses().add(c);
+                classSection.getCourses().add(c);
                 
                 
                 for(int i=0; i<students.size() ;i++){
-                    if(students.get(i).getIdClassSection() == cxs.getIdClassSection())
-                        cxs.addStudents(students.get(i));
+                    if(students.get(i).getIdClassSection() == classSection.getIdClassSection())
+                        classSection.addStudents(students.get(i));
                 }
                 for(int i=0; i<courses.size() ;i++){
-                    if(courses.get(i).getIdClassSection() == cxs.getIdClassSection())
-                        cxs.addCourses(courses.get(i));
+                    if(courses.get(i).getIdClassSection() == classSection.getIdClassSection())
+                        classSection.addCourses(courses.get(i));
                 }
                 i++;
-                classesSections.add(cxs);
+                classesSections.add(classSection);
             }
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        return result;
+        return classSection;
     }
 
     @Override
