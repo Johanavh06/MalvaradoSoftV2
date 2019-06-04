@@ -77,11 +77,20 @@ public class MySQLClassSection implements DAOClassSection{
                 cxs.setIdClassSection(id);
                 cxs.setTotal(rs.getInt("total"));
                 cxs.setName(rs.getString("name"));
+                Student s = new Student();
+                s.setIdUser(rs.getInt("idUser"));
+                s.setNames(rs.getString("name_Student"));
+                s.setFirstLastName(rs.getString("FirstLastName_Student"));
+                s.setSecondLastName(rs.getString("SecondLastName_Student"));
+                if(cxs.getStudents().contains(s)){
+                    
+                }
                 CourseXSchedule c = new CourseXSchedule();
                 ArrayList<CourseXSchedule> css = DBController.queryAllByIDCourseXSchedule(id);
                 c.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
                 cxs.getCourses().add(c);
-
+                
+                
                 for(int i=0; i<students.size() ;i++){
                     if(students.get(i).getIdClassSection() == cxs.getIdClassSection())
                         cxs.addStudents(students.get(i));
