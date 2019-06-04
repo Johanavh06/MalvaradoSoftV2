@@ -10,13 +10,12 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author alulab14
  */
 public class Secretary extends User{
-    
-    public Secretary(String name, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, boolean active, int id, String nickname, String password) {
-        super(name, firstLastName, secondLastName, dni, adress, phone, email, active, id, nickname, password);
-    }
 
     public Secretary() {
     }
-    
-    
+
+    public Secretary(int idUser, String names, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, String userName, String password) {
+        super(idUser, names, firstLastName, secondLastName, dni, adress, phone, email, userName, password);
+    }
+
 }
