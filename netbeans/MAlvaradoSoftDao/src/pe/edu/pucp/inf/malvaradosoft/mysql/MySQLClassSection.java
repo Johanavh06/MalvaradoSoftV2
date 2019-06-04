@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Course;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.CourseXSchedule;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Schedule;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Student;
@@ -90,14 +91,13 @@ public class MySQLClassSection implements DAOClassSection{
                 //se llenan datos para un CourseXSchedule
                 CourseXSchedule cxs = new CourseXSchedule();
                 cxs.setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
-                Schedule sche= new Schedule();
-                sche.setIdSchedule(rs.getInt("idSchedule"));
+                Course course= new Course();
+                course.setIdCourse(rs.getInt("idCourse"));
+                course.setName(rs.getString("name_Course"));
+                cxs.setCourse(course);
                 if(!classSection.getCourses().contains(cxs)){
                     classSection.addCourses(cxs);
                 }
-                //ArrayList<CourseXSchedule> css = DBController.queryAllByIDCourseXSchedule(id);
-                //c.setIdCourseSchedule(rs.getInt("idCourseSchedule"));
-                //classSection.getCourses().add(c);
             }
             con.close();
         }catch(Exception ex){
