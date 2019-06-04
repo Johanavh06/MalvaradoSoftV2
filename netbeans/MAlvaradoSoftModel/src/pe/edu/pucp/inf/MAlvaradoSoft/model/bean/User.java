@@ -21,7 +21,6 @@ public class User {
     private String email;
     private String userName;
     private String password;
-    private int tableStatus;
     
     public User(){
     }
@@ -116,14 +115,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
-    }
-    
+    }    
 }

@@ -22,7 +22,7 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOAuxiliar;
 public class MySQLAuxiliar implements DAOAuxiliar{
 
     @Override
-    public ArrayList<Auxiliar> queryAllAuxiliar() {
+    public ArrayList<Auxiliar> queryAll() {
         ArrayList<Auxiliar> auxiliars = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
@@ -80,6 +80,34 @@ public class MySQLAuxiliar implements DAOAuxiliar{
         return auxiliar;
     }
 
+    @Override
+    public Auxiliar queryAllByNameAuxiliar(String name) {
+        Auxiliar auxiliar = new Auxiliar();
+        int result = 0;
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call queryAllByNameAuxiliar(?,?,?,?,?,?,?,?,?,?,?)}");
+            cs.setString(1, name); 
+            cs.setInt(1, auxiliar.getIdUser());
+            cs.setString(2, auxiliar.getNames());
+            cs.setString(3, auxiliar.getFirstLastName());
+            cs.setString(4, auxiliar.getSecondLastName());
+            cs.setString(5, auxiliar.getDni());
+            cs.setString(6, auxiliar.getAdress());
+            cs.setInt(7, auxiliar.getPhone());
+            cs.setString(8, auxiliar.getEmail());
+            cs.setString(9, auxiliar.getUserName());
+            cs.setString(10, auxiliar.getPassword());
+            result = cs.executeUpdate();
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return auxiliar;
+    }
+    
     @Override
     public int insertAuxiliar(Auxiliar auxiliar) {
         int result = 0;

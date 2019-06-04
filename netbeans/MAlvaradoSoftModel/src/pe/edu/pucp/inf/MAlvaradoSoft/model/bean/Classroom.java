@@ -13,17 +13,14 @@ public class Classroom {
     private int idClassroom;
     private String name;
     private int capacity;
-    private int tableStatus;
     
     public Classroom(int id, String name, int capacity) {
         this.idClassroom = id;
         this.name = name;
         this.capacity = capacity;
-        this.tableStatus = 1;
     }
 
     public Classroom() {
-        this.tableStatus = 1;
     }
 
     public String getName() {
@@ -48,14 +45,6 @@ public class Classroom {
 
     public void setIdClassroom(int idClassroom) {
         this.idClassroom = idClassroom;
-    }
-
-    public int getTableStatus() {
-        return tableStatus;
-    }
-
-    public void setTableStatus(int tableStatus) {
-        this.tableStatus = tableStatus;
     }
 
 }

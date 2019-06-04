@@ -16,5 +16,4 @@ public class StudentXGrade {
     private Student student;
     private double value;
     private Date registerDate;
-    private int tableStatus;
 }

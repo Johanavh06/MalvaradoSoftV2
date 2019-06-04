@@ -23,17 +23,22 @@ public class MySQLWorkshop implements DAOWorkshop{
 
     @Override
     public ArrayList<Workshop> queryAll() {
-        ArrayList<Workshop> workshops = new ArrayList<Workshop>();
+        ArrayList<Workshop> workshops = new ArrayList<>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Workshop";
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
+            CallableStatement cs = con.prepareCall("{call queryAllWorkshop()}");
+            ResultSet rs = cs.executeQuery();
             
             while(rs.next()){
                 Workshop w = new Workshop();
-                w.setIdWorkshop(rs.getInt("codWorkshop"));           
+                w.setIdWorkshop(rs.getInt("_idWorkshop"));
+                w.setDescription(rs.getString("_description"));
+                w.getCourse().setName(rs.getString("_nameCourse"));
+                w.getCourse().setIdCourse(rs.getInt("_idCourse"));
+                w.getSchedule().setIdSchedule(rs.getInt("_idSchedule"));
+                w.getTeacher().setIdUser(rs.getInt("_idUser"));
+                w.getTeacher().setNames((rs.getString("_namesTeacher")));
                 workshops.add(w);
             }
             con.close();
@@ -45,20 +50,17 @@ public class MySQLWorkshop implements DAOWorkshop{
     }
 
     @Override
-    public int insert(Workshop workshop) {
+    public int insertWorkshop(Workshop workshop) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(
-            dbManager.getUrl(), 
-            dbManager.getUser(), 
-            dbManager.getPassword());
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertWorkshop(?,?,?,?,?)}");
             cs.setInt(1, workshop.getIdWorkshop());
-            cs.setString(2, workshop.getDescription());
+            cs.setInt(2, workshop.getCourse().getIdCourse());
             cs.setInt(3, workshop.getTeacher().getIdUser());
-            cs.setInt(4, workshop.getCourse().getIdCourse());
-            cs.setInt(5, workshop.getSchedule().getIdSchedule());
+            cs.setInt(4, workshop.getSchedule().getIdSchedule());
+            cs.setString(5, workshop.getDescription());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -68,16 +70,12 @@ public class MySQLWorkshop implements DAOWorkshop{
     }
 
     @Override
-    public int update(Workshop workshop) {
+    public int updateWorkshop(Workshop workshop) {
         int result = 0;
         try{
             DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(
-            dbManager.getUrl(), 
-            dbManager.getUser(), 
-            dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call updateWorkshop(?,?,?,?,?)}");
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("" + "{call updateWorkshop(?,?,?,?,?)}");
             cs.setInt(1, workshop.getIdWorkshop());
             cs.setString(2, workshop.getDescription());
             cs.setInt(3, workshop.getTeacher().getIdUser());
@@ -91,21 +89,19 @@ public class MySQLWorkshop implements DAOWorkshop{
     }
 
     @Override
-    public int delete(int id) {
+    public int deleteWorkshop(int id) {
         int result= 0;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call deleteWorkshop(?)}");
+            CallableStatement cs = con.prepareCall("" + "{call deleteWorkshop(?)}");
             cs.setInt(1, id);
             result= cs.executeUpdate();
-            con.close();            
+            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
     
 }
