@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.config;
 
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOAttendance;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOAuxiliar;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOCourse;
@@ -37,13 +38,15 @@ public abstract class DAOFactory {
             
     }
     
+    public abstract DAOAttendance getAttendanceDAO();
+    public abstract DAOAuxiliar getAuxiliarDAO();
+    public abstract DAOClassSection getClassSectionDAO();
+    public abstract DAOClassroom getClassroomDAO();
     public abstract DAOWorkshop getWorkshopDAO();
     public abstract DAOTeacher getTeacherDAO();
     public abstract DAOStudentXWorkshop getStudentXWorkshopDAO();
     public abstract DAOUser getUserDAO();
-    public abstract DAOAuxiliar getAuxiliarDAO();
     public abstract DAOClassSection getClassXSectionDAO();
-    public abstract DAOClassroom getClassroomDAO();
     public abstract DAOCourse getCourseDAO();
     public abstract DAOCourseXSchedule getCourseXScheduleDAO();
     public abstract DAOExam getExamDAO();

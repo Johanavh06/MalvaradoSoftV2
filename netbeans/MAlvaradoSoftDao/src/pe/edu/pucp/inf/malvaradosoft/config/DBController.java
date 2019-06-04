@@ -6,6 +6,9 @@
 package pe.edu.pucp.inf.malvaradosoft.config;
 
 import java.util.ArrayList;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Attendance;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Auxiliar;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Grade;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Principal;
@@ -22,6 +25,51 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
 public abstract class DBController {
     private static DAOFactory daoFactory = DAOFactory.getDAOFactory();
     
+    public static ArrayList<Attendance> queryAllAttendance(){
+        return daoFactory.getAttendanceDAO().queryAll();
+    }
+    public static int insertAttendance(Attendance attendance){
+        return daoFactory.getAttendanceDAO().insertAttendance(attendance);
+    }
+    public static int updateAttendance(Attendance attendance){
+        return daoFactory.getAttendanceDAO().updateAttendance(attendance);
+    }
+    public static int deleteAttendance(int idAttendance){
+        return daoFactory.getAttendanceDAO().deleteAttendance(idAttendance);
+    }
+    public static ArrayList<Auxiliar> queryAllAuxiliar(){
+        return daoFactory.getAuxiliarDAO().queryAll();
+    }
+    public static Auxiliar queryAllByIDAuxiliar(int idAuxiliar){
+        return daoFactory.getAuxiliarDAO().queryAllByIDAuxiliar(idAuxiliar);
+    }
+    public static Auxiliar queryAllByNameAuxiliar(String auxiliarName){
+        return daoFactory.getAuxiliarDAO().queryAllByNameAuxiliar(auxiliarName);
+    }
+    public static int insertAuxiliar(Auxiliar auxiliar){
+        return daoFactory.getAuxiliarDAO().insertAuxiliar(auxiliar);
+    }
+    public static int updateAuxiliar(Auxiliar auxiliar){
+        return daoFactory.getAuxiliarDAO().updateAuxiliar(auxiliar);
+    }
+    public static int deleteAuxiliar(int idAuxiliar){
+        return daoFactory.getAuxiliarDAO().deleteAuxiliar(idAuxiliar);
+    }
+    public static ArrayList<ClassSection> queryAllClassSection(){
+        return daoFactory.getClassSectionDAO().queryAll();
+    }
+    public static ClassSection queryAllByIDClassSection(int idClassSection){
+        return daoFactory.getClassSectionDAO().queryAllByIDClassSection(idClassSection);
+    }
+    public static int insertClassSection(ClassSection classSection){
+        return daoFactory.getClassSectionDAO().insertClassSection(classSection);
+    }
+    public static int updateClassSection(ClassSection classSection){
+        return daoFactory.getClassSectionDAO().updateClassSection(classSection);
+    }
+    public static int deleteClassSection(int idClassSection){
+        return daoFactory.getClassSectionDAO().deleteClassSection(idClassSection);
+    }
     public static int insertTeacher(Teacher teacher){
         return daoFactory.getTeacherDAO().insertTeacher(teacher);
     }
