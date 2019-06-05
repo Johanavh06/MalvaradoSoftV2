@@ -62,6 +62,7 @@ public class MySQLExam implements DAOExam{
             cs.setInt("_idCourse", exam.getCourse().getIdCourse());
             cs.setInt("_idTeacher", exam.getTeacher().getIdUser());
             cs.setInt("_sate", exam.getState());
+            cs.setString("_description", exam.getDescription());
             
             result= cs.executeUpdate();
             
@@ -83,10 +84,12 @@ public class MySQLExam implements DAOExam{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call updateExam(?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call updateExam(?,?,?,?,?)}");
+            cs.setInt("_id", exam.getIdExam());
             cs.setInt("_idCourse", exam.getCourse().getIdCourse());
             cs.setInt("_idTeacher", exam.getTeacher().getIdUser());
             cs.setInt("_sate", exam.getState());
+            cs.setString("_description", exam.getDescription());
             
             result = cs.executeUpdate();
             con.close();

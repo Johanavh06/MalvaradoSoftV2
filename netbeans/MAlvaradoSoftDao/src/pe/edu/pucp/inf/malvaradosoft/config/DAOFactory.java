@@ -22,6 +22,7 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOTeacher;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOWorkshop;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassSection;
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOEvent;
 
 /**
  *
@@ -50,6 +51,7 @@ public abstract class DAOFactory {
     public abstract DAOCourse getCourseDAO();
     public abstract DAOCourseXSchedule getCourseXScheduleDAO();
     public abstract DAOExam getExamDAO();
+    public abstract DAOEvent getEventDAO();
     public abstract DAOGrade getGradeDAO();
     public abstract DAOGuardian getGuardianDAO();
     public abstract DAOPrincipal getPrincipalDAO();
