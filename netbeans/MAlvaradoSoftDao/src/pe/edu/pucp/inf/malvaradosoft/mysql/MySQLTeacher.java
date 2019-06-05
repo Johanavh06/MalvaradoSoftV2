@@ -31,16 +31,16 @@ public class MySQLTeacher implements DAOTeacher {
             ResultSet rs = cs.executeQuery();
             while(rs.next()){
                 Teacher t = new Teacher();
-                t.setIdUser(rs.getInt("_idUser"));
-                t.setDni(rs.getString("_dni"));
-                t.setEmail(rs.getString("_email"));
-                t.setNames(rs.getString("_names"));
-                t.setFirstLastName(rs.getString("_firstLast Name"));
-                t.setSecondLastName(rs.getString("_secondLast Name"));
-                t.setPassword(rs.getString("_password"));
-                t.setUserName(rs.getString("_userName"));
-                t.setPhone(rs.getInt("_phone"));
-                t.setAdress(rs.getString("_adress"));
+                t.setIdUser(rs.getInt("idUser"));
+                t.setDni(rs.getString("dni"));
+                t.setEmail(rs.getString("email"));
+                t.setNames(rs.getString("names"));
+                t.setFirstLastName(rs.getString("firstLastName"));
+                t.setSecondLastName(rs.getString("secondLastName"));
+                t.setPassword(rs.getString("password"));
+                t.setUserName(rs.getString("userName"));
+                t.setPhone(rs.getInt("phone"));
+                t.setAdress(rs.getString("address"));
                 teachers.add(t);
             }
             con.close();
