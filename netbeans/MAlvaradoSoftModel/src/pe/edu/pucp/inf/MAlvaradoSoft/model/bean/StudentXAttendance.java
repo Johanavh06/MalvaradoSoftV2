@@ -10,7 +10,7 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
  * @author WIN10
  */
 public class StudentXAttendance {
-    private int idStudent;
+    private Student student;
     private Attendance attendance;
     private String observation;
 }

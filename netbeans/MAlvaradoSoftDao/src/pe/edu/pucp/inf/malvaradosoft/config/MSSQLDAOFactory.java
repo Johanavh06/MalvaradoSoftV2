@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.config;
 
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOAttendance;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOAuxiliar;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOCourse;
@@ -108,6 +109,16 @@ public class MSSQLDAOFactory extends DAOFactory{
 
     @Override
     public DAOStudent getStudentDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DAOAttendance getAttendanceDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DAOClassSection getClassSectionDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
