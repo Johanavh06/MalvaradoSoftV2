@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author alulab14
  */
 public class CourseXSchedule {
-    private int idCourseXSchedule;
+    // el primary key de esta clase esta compuesto por el idCourse y idSchedule
     private ClassSection classSection;
     private Schedule schedule;
     private Teacher teacher;
@@ -26,14 +26,6 @@ public class CourseXSchedule {
         course = new Course();
         grades = new ArrayList<>();
         
-    }
-
-    public int getIdCourseXSchedule() {
-        return idCourseXSchedule;
-    }
-
-    public void setIdCourseXSchedule(int idCourseXSchedule) {
-        this.idCourseXSchedule = idCourseXSchedule;
     }
 
     public ClassSection getClassSection() {
@@ -74,8 +66,6 @@ public class CourseXSchedule {
 
     public void addGrade(Grade grade) {
         this.grades.add(grade);
-    }
-    
-    
+    }   
     
 }
