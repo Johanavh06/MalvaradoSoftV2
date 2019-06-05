@@ -45,7 +45,7 @@ public class ClassSection {
 
     public int addStudents(Student student) {
         students.add(student);
-        return student.getIdStudent();
+        return student.getIdUser();
     }
 
     public ArrayList<CourseXSchedule> getCourses() {

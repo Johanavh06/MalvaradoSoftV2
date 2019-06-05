@@ -16,80 +16,17 @@ public class Student extends User {
     private int condition;
     private ClassSection classSection;
     //private int _class;
-    
-    public Student(ArrayList<CourseXSchedule> courses, String condition, int _class, String section, 
-            String name, String firstLastName, String secondLastName, String dni, String adress, 
-            int phone, String email, boolean active, int id, String nickname, String password, int idStudent,
-            int idGuardian, int idClassSection) {
-        super(name, firstLastName, secondLastName, dni, adress, phone, email, active, id, nickname, password);
-        this.courses = courses;
-        this.condition = condition;
-        this._class = _class;
-        this.section = section;
-        this.idStudent=idStudent;
-        this.idGuardian=idGuardian;
-        this.idClassSection=idClassSection;
-    }
-
-    public int getIdClassSection() {
-        return idClassSection;
-    }
-
-    public void setIdClassSection(int idClassSection) {
-        this.idClassSection = idClassSection;
-    }
-        
-    public int getIdGuardian() {
-        return idGuardian;
-    }
-
-    public void setIdGuardian(int idGuardian) {
-        this.idGuardian = idGuardian;
-    }
-    
-    public int getIdStudent() {
-        return idStudent;
-    }
-
-    public void setIdStudent(int idStudent) {
-        this.idStudent = idStudent;
-    }
-
 
     public Student() {
+        
     }
 
-    public ArrayList<CourseXSchedule> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(ArrayList<CourseXSchedule> courses) {
-        this.courses = courses;
-    }
-
-    
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
+    public Student(Guardian guardian, int condition, ClassSection classSection, int idUser, String names, String firstLastName, String secondLastName, String dni, String adress, int phone, String email, String userName, String password) {
+        super(idUser, names, firstLastName, secondLastName, dni, adress, phone, email, userName, password);
+        this.guardian = guardian;
         this.condition = condition;
-    }
-
-    public int get_Class() {
-        return _class;
-    }
-
-    public void setClass(int _class) {
-        this._class = _class;
-    }
-
-    public String getSection() {
-        return section;
-    }
-
-    public void setSection(String section) {
-        this.section = section;
+        this.classSection = classSection;
     }
     
+  
 }
