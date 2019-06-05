@@ -38,6 +38,7 @@ public class MySQLEvent implements DAOEvent {
                 e.setIdEvent(rs.getInt("idEvent"));
                 e.setStartTime(rs.getDate("sartTime"));
                 e.setEndTime(rs.getDate("endTime"));
+                e.getSchedule().setIdSchedule(rs.getInt("idSchedule"));
                                 
                 events.add(e);
             }
@@ -55,12 +56,12 @@ public class MySQLEvent implements DAOEvent {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call insertEvent(?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call insertEvent(?,?,?,?)}");
             cs.registerOutParameter("_id", java.sql.Types.INTEGER);
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             cs.setString("_startTime", formato.format(event.getStartTime()));
             cs.setString("_endTime", formato.format(event.getEndTime()));
-            
+            cs.setInt("_idSchedule", event.getSchedule().getIdSchedule());
             result= cs.executeUpdate();
             
             event.setIdEvent(cs.getInt("_id"));
@@ -81,13 +82,13 @@ public class MySQLEvent implements DAOEvent {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call updateEvent(?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call updateEvent(?,?,?,?)}");
             
             cs.setInt("_id", event.getIdEvent());
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             cs.setString("_startTime", formato.format(event.getStartTime()));
             cs.setString("_endTime", formato.format(event.getEndTime()));
-            
+            cs.setInt("_idSchedule", event.getSchedule().getIdSchedule());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){

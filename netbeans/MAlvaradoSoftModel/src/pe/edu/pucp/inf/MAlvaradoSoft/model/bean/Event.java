@@ -15,11 +15,23 @@ public class Event {
     private int idEvent;
     private Date startTime;
     private Date endTime;
+    private Schedule schedule;
 
     public Event() {
         startTime = new Date();
         endTime = new Date();
+        schedule = new Schedule();
     }
+
+    public Schedule getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(Schedule schedule) {
+        this.schedule = schedule;
+    }
+    
+    
 
     public int getIdEvent() {
         return idEvent;
