@@ -28,14 +28,14 @@ public class MySQLGrade implements DAOGrade{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Grade where active = 1";
+            String sql = "SELECT * FROM grade where active = 1";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
                 Grade g = new Grade();
                 g.setIdGrade(rs.getInt("idGrade"));
-                g.getCoursexschedule().setIdCourseSchedule(rs.getInt("idCourseXSchedule"));
+                g.getCoursexschedule().setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
                 g.setDescription(rs.getString("description"));
                 g.setWeight(rs.getDouble("weight"));
                 grades.add(g);

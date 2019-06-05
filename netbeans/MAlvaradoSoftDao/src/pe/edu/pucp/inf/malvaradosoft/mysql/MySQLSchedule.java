@@ -27,7 +27,7 @@ public class MySQLSchedule implements DAOSchedule{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Schedule";
+            String sql = "SELECT * FROM schedule";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             

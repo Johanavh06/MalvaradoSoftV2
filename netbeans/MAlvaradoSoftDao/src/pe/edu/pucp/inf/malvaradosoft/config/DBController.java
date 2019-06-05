@@ -16,6 +16,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Exam;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Grade;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Principal;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Schedule;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Secretary;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.StudentXWorkshop;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Teacher;
@@ -218,7 +219,15 @@ public abstract class DBController {
     public static int deletePrincipal(int id){
         return daoFactory.getPrincipalDAO().delete(id);
     }
-    
+    public static ArrayList<Schedule> queryAllSchedule(){
+        return daoFactory.getScheduleDAO().queryAll();
+    }
+    public static int updateSchedule(Schedule schedule){
+        return daoFactory.getScheduleDAO().update(schedule);
+    }
+    public static int deleteSchedule(int id){
+        return daoFactory.getScheduleDAO().delete(id);
+    }
     public static ArrayList <Secretary> queryAllSecretary(){
         return daoFactory.getSecretaryDAO().queryAll();
     }

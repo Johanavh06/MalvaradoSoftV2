@@ -27,7 +27,7 @@ public class MySQLPrincipal implements DAOPrincipal{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Principal";
+            String sql = "SELECT * FROM principal";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             

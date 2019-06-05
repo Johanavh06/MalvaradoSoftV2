@@ -27,7 +27,7 @@ public class MySQLGuardian implements DAOGuardian {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Guardian";
+            String sql = "SELECT * FROM guardian";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
