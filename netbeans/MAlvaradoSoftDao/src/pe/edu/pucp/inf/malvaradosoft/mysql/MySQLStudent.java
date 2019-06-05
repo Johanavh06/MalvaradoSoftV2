@@ -33,7 +33,7 @@ public class MySQLStudent implements DAOStudent{
             
             while(rs.next()){
                 Student s = new Student();
-                s.setIdStudent(rs.getInt("User_idStudent"));           
+                s.setIdUser(rs.getInt("User_idStudent"));           
                 students.add(s);
             }
             con.close();
