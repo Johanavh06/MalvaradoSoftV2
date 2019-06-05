@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
@@ -56,12 +57,14 @@ public class MySQLWorkshop implements DAOWorkshop{
             DBManager dbManager = DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall("" + "{call insertWorkshop(?,?,?,?,?)}");
-            cs.setInt(1, workshop.getIdWorkshop());
+            cs.registerOutParameter(1, Types.INTEGER);
             cs.setInt(2, workshop.getCourse().getIdCourse());
             cs.setInt(3, workshop.getTeacher().getIdUser());
             cs.setInt(4, workshop.getSchedule().getIdSchedule());
             cs.setString(5, workshop.getDescription());
-            result = cs.executeUpdate();
+            cs.executeUpdate();
+            
+            result = cs.getInt(1);
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

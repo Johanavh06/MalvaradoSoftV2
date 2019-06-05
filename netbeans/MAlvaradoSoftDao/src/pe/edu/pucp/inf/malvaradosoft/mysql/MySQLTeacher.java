@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Teacher;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
@@ -31,18 +32,7 @@ public class MySQLTeacher implements DAOTeacher {
             ResultSet rs = cs.executeQuery();
             while(rs.next()){
                 Teacher t = new Teacher();
-<<<<<<< HEAD
-                t.setIdUser(rs.getInt("_idUser"));
-                t.setDni(rs.getString("_dni"));
-                t.setEmail(rs.getString("_email"));
-                t.setNames(rs.getString("_names"));
-                t.setFirstLastName(rs.getString("_firstLast Name"));
-                t.setSecondLastName(rs.getString("_secondLast Name"));
-                t.setPassword(rs.getString("_password"));
-                t.setUserName(rs.getString("_userName"));
-                t.setPhone(rs.getInt("_phone"));
-                t.setAddress(rs.getString("_adress"));
-=======
+
                 t.setIdUser(rs.getInt("idUser"));
                 t.setDni(rs.getString("dni"));
                 t.setEmail(rs.getString("email"));
@@ -52,8 +42,7 @@ public class MySQLTeacher implements DAOTeacher {
                 t.setPassword(rs.getString("password"));
                 t.setUserName(rs.getString("userName"));
                 t.setPhone(rs.getInt("phone"));
-                t.setAdress(rs.getString("address"));
->>>>>>> 973c0187b675bb0673a29b063678efe1c7a8c86e
+                t.setAddress(rs.getString("address"));
                 teachers.add(t);
             }
             con.close();
@@ -71,10 +60,22 @@ public class MySQLTeacher implements DAOTeacher {
         try{
             DBManager dbManager = DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertTeacher(?)}");
-            cs.setInt(1, teacher.getIdUser());
+            CallableStatement cs = con.prepareCall("" + "{call insertTeacher(?,?,?,?,?,?,?,?,?,?)}");
             
-            result = cs.executeUpdate();
+            cs.registerOutParameter(1, Types.INTEGER);
+            cs.setString(2, teacher.getNames());
+            cs.setString(3, teacher.getFirstLastName());
+            cs.setString(4, teacher.getSecondLastName());
+            cs.setString(5, teacher.getDni());
+            cs.setString(6, teacher.getAddress());
+            cs.setInt(7, teacher.getPhone());
+            cs.setString(8, teacher.getEmail());
+            cs.setString(9, teacher.getUserName());
+            cs.setString(10, teacher.getPassword());
+            
+            cs.executeUpdate();
+            
+            result = cs.getInt(1);
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -84,8 +85,7 @@ public class MySQLTeacher implements DAOTeacher {
 
     @Override
     public int updateTeacher(Teacher teacher) {
-        int result = 0;
-        return result;
+        return 1;
     }
 
     @Override
