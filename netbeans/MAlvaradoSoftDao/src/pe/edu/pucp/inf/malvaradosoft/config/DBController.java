@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Attendance;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Auxiliar;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Course;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.CourseXSchedule;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Event;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Exam;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Grade;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Principal;
@@ -24,6 +28,74 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Workshop;
  */
 public abstract class DBController {
     private static DAOFactory daoFactory = DAOFactory.getDAOFactory();
+    
+    public static ArrayList<Course> queryAllCourse(){
+        return daoFactory.getCourseDAO().queryAll();
+    }
+    
+    public static int insertCourse(Course course){
+        return daoFactory.getCourseDAO().insert(course);
+    }
+    
+    public static int updateCourse(Course course){
+        return daoFactory.getCourseDAO().update(course);
+    }
+    
+    public static int deleteCourse (int id){
+        return daoFactory.getCourseDAO().delete(id);
+    }
+    
+    public static ArrayList<CourseXSchedule> queryAllCourseXSchedule(){
+        return daoFactory.getCourseXScheduleDAO().queryAll();
+    }
+    
+    public static ArrayList<CourseXSchedule> queryByIdCourseXSchedule(int id){
+        return daoFactory.getCourseXScheduleDAO().queryById(id);
+    }
+    
+    public static int insertCourseXSchedule(CourseXSchedule courseXSchedule){
+        return daoFactory.getCourseXScheduleDAO().insert(courseXSchedule);
+    }
+    
+    public static int updateCourseXSchedule(CourseXSchedule courseXSchedule){
+        return daoFactory.getCourseXScheduleDAO().update(courseXSchedule);
+    }
+    
+    public static int deleteCourseXSchedule(int id){
+        return daoFactory.getCourseXScheduleDAO().delete(id);
+    }
+    
+    public static ArrayList<Event> queryAllEvent(){
+        return daoFactory.getEventDAO().queryAll();
+    }
+    
+    public static int insertEvent(Event event){
+        return daoFactory.getEventDAO().insert(event);
+    }
+    
+    public static int updateEvent(Event event){
+        return daoFactory.getEventDAO().update(event);
+    }
+    
+    public static int deleteEvent(int id){
+        return daoFactory.getEventDAO().delete(id);
+    }
+    
+    public static ArrayList<Exam> queryAllExam(){
+        return daoFactory.getExamDAO().queryAll();
+    }
+    
+    public static int insertExam(Exam exam){
+        return daoFactory.getExamDAO().insert(exam);
+    }
+    
+    public static int updateExam(Exam exam){
+        return daoFactory.getExamDAO().update(exam);
+    }
+    
+    public static int deleteExam(int id){
+        return daoFactory.getExamDAO().delete(id);
+    }
     
     public static ArrayList<Attendance> queryAllAttendance(){
         return daoFactory.getAttendanceDAO().queryAll();

@@ -115,7 +115,8 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call updatecoursexSchedule(?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call updateCoursexSchedule(?,?,?,?,?)}");
+            cs.setInt("_id", coursexSchedule.getIdCourseXSchedule());
             cs.setInt("_idClassSection", coursexSchedule.getClassSection().getIdClassSection());
             cs.setInt("_idSchedule", coursexSchedule.getSchedule().getIdSchedule());
             cs.setInt("_idTeacher", coursexSchedule.getTeacher().getIdUser());
@@ -135,7 +136,7 @@ public class MySQLCoursexSchedule implements DAOCourseXSchedule {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call deleteSchedulexCourse(?)}");
+            CallableStatement cs = con.prepareCall("{call deleteCoursexSchedule(?)}");
             cs.setInt(1,id);   
             
             result= cs.executeUpdate();
