@@ -31,6 +31,18 @@ public class MySQLUser implements DAOUser{
             
             while(rs.next()){
                 User u = new User();
+<<<<<<< HEAD
+                u.setIdUser(rs.getInt("_idUser"));
+                u.setDni(rs.getString("_dni"));
+                u.setEmail(rs.getString("_email"));
+                u.setNames(rs.getString("_names"));
+                u.setFirstLastName(rs.getString("_firstLast Name"));
+                u.setSecondLastName(rs.getString("_secondLast Name"));
+                u.setPassword(rs.getString("_password"));
+                u.setUserName(rs.getString("_userName"));
+                u.setPhone(rs.getInt("_phone"));
+                u.setAddress(rs.getString("_adress"));
+=======
                 u.setIdUser(rs.getInt("idUser"));
                 u.setDni(rs.getString("dni"));
                 u.setEmail(rs.getString("email"));
@@ -41,6 +53,7 @@ public class MySQLUser implements DAOUser{
                 u.setUserName(rs.getString("userName"));
                 u.setPhone(rs.getInt("phone"));
                 u.setAdress(rs.getString("address"));
+>>>>>>> 973c0187b675bb0673a29b063678efe1c7a8c86e
                 users.add(u);
             }
             con.close();
@@ -61,6 +74,19 @@ public class MySQLUser implements DAOUser{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
+<<<<<<< HEAD
+            CallableStatement cs = con.prepareCall("" + "{call insertTeacher(?,?,?,?,?,?,?,?,?,?)}");
+            cs.setInt(1, user.getIdUser());
+            cs.setString(2, user.getNames());
+            cs.setString(3, user.getFirstLastName());
+            cs.setString(4, user.getSecondLastName());
+            cs.setString(5, user.getDni());
+            cs.setString(6, user.getAddress());
+            cs.setInt(7, user.getPhone());
+            cs.setString(8, user.getEmail());
+            cs.setString(9, user.getUserName());
+            cs.setString(10, user.getPassword());
+=======
             CallableStatement cs = con.prepareCall("" + "{call insertUser(?,?,?,?,?,?,?,?,?)}");            
             cs.setString(1, user.getNames());
             cs.setString(2, user.getFirstLastName());
@@ -71,6 +97,7 @@ public class MySQLUser implements DAOUser{
             cs.setString(7, user.getEmail());
             cs.setString(8, user.getUserName());
             cs.setString(9, user.getPassword());
+>>>>>>> 973c0187b675bb0673a29b063678efe1c7a8c86e
             
             result = cs.executeUpdate();
             con.close();
@@ -93,7 +120,7 @@ public class MySQLUser implements DAOUser{
             cs.setString(3, user.getFirstLastName());
             cs.setString(4, user.getSecondLastName());
             cs.setString(5, user.getDni());
-            cs.setString(6, user.getAdress());
+            cs.setString(6, user.getAddress());
             cs.setInt(7, user.getPhone());
             cs.setString(8, user.getEmail());
             cs.setString(9, user.getUserName());

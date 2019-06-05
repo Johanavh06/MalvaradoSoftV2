@@ -43,7 +43,7 @@ public class MySQLClassSection implements DAOClassSection{
                 cxs.setTotal(rs.getInt("total"));
                 cxs.setName(rs.getString("name"));
                 for(int i=0; i<students.size() ;i++){
-                    if(students.get(i).getIdClassSection() == cxs.getIdClassSection())
+                    if(students.get(i).getIdClassSection().getIdClassSection() == cxs.getIdClassSection())
                         cxs.addStudents(students.get(i));
                 }
                 for(int i=0; i<courses.size() ;i++){
@@ -115,9 +115,10 @@ public class MySQLClassSection implements DAOClassSection{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call insertClassSection(?,?)}");
-            cs.setInt(1, classSection.getTotal() );
-            cs.setString(2, classSection.getName() );
+            CallableStatement cs = con.prepareCall("{call insertClassSection(?,?,?)}");
+            cs.setInt(1, classSection.getIdClassSection() );
+            cs.setInt(2, classSection.getTotal() );
+            cs.setString(3, classSection.getName() );
             result = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

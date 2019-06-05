@@ -16,7 +16,7 @@ public class User {
     private String firstLastName;
     private String secondLastName;
     private String dni;
-    private String adress;
+    private String address;
     private int phone;
     private String email;
     private String userName;
@@ -30,7 +30,7 @@ public class User {
         this.firstLastName = firstLastName;
         this.secondLastName = secondLastName;
         this.dni = dni;
-        this.adress = adress;
+        this.address = adress;
         this.phone = phone;
         this.email = email;
         this.userName = userName;
@@ -77,12 +77,12 @@ public class User {
         this.dni = dni;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getPhone() {

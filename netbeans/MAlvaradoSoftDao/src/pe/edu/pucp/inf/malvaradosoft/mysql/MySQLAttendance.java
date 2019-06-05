@@ -55,7 +55,7 @@ public class MySQLAttendance implements DAOAttendance {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
-                    + "{call updateAttendance(?,?,?)}");
+                    + "{call updateAttendance(?,?)}");
             cs.setInt(1, attendance.getIdAttendance());
             cs.setDate(2,new java.sql.Date(attendance.getDateTime().getTime()));
          
