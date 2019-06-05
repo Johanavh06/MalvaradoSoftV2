@@ -80,7 +80,8 @@ public class MySQLCourse implements DAOCourse {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call updateCourse(?,?)}");
+            CallableStatement cs = con.prepareCall("{call updateCourse(?,?,?)}");
+            cs.setInt("_id", course.getIdCourse());
             cs.setString("_name", course.getName());  
             cs.setInt("_class", course.get_Class());   
             

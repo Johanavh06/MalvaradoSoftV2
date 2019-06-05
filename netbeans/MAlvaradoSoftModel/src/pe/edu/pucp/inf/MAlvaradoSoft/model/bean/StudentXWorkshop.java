@@ -12,15 +12,27 @@ package pe.edu.pucp.inf.MAlvaradoSoft.model.bean;
 public class StudentXWorkshop {
     private Student student;
     private Workshop workshop;
+    private String numberTicket;
+
+    public String getNumberTicket() {
+        return numberTicket;
+    }
+
+    public void setNumberTicket(String numberTicket) {
+        this.numberTicket = numberTicket;
+    }
+
+ 
     
     public StudentXWorkshop(){
         student = new Student();
         workshop = new Workshop();
     }
-    public StudentXWorkshop(int id, Student student, Workshop workshop) {
+    public StudentXWorkshop(int id, Student student, Workshop workshop, String nticket) {
         super();
         this.student = student;
         this.workshop = workshop;
+        this.numberTicket = nticket;
     }    
 
     public Student getStudent() {

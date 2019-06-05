@@ -74,12 +74,43 @@ public class MySQLEvent implements DAOEvent {
 
     @Override
     public int update(Event event) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result = 0;
+        try{
+            DBManager dbManager = DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(
+            dbManager.getUrl(), 
+            dbManager.getUser(), 
+            dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call updateEvent(?,?,?)}");
+            
+            cs.setInt("_id", event.getIdEvent());
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+            cs.setString("_startTime", formato.format(event.getStartTime()));
+            cs.setString("_endTime", formato.format(event.getEndTime()));
+            
+            result = cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
 
     @Override
     public int delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result= 0;
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall(""
+                    + "{call deleteEvent(?)}");
+			cs.setInt("_id", id);
+            result= cs.executeUpdate();
+            con.close();            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
     
 }

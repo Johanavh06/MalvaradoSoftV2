@@ -27,15 +27,15 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call queryAllUser()}");
+            CallableStatement cs = con.prepareCall("{call queryAllStudentXWorkshop()}");
             ResultSet rs = cs.executeQuery();
             
             while(rs.next()){
                 StudentXWorkshop w = new StudentXWorkshop();
-                w.getStudent().setIdUser(rs.getInt("_idStudent"));
-                w.getStudent().setNames(rs.getString("_names"));
-                w.getWorkshop().setIdWorkshop(rs.getInt("_idWorkshop"));
-                w.getWorkshop().setDescription(rs.getString("_description"));
+                w.getStudent().setIdUser(rs.getInt("idStudent"));
+                w.getStudent().setNames(rs.getString("names"));
+                w.getWorkshop().setIdWorkshop(rs.getInt("idWorkshop"));
+                w.getWorkshop().setDescription(rs.getString("description"));
                 studentWorkshops.add(w);
             }
             con.close();
@@ -55,9 +55,10 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertStudentXWorkshop(?,?)}");
+            CallableStatement cs = con.prepareCall("" + "{call insertStudentXWorkshop(?,?,?)}");
             cs.setInt(1, sxworkshop.getStudent().getIdUser());
             cs.setInt(2, sxworkshop.getWorkshop().getIdWorkshop());
+            cs.setString(3, sxworkshop.getNumberTicket());
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -76,9 +77,10 @@ public class MySQLStudentXWorkshop implements DAOStudentXWorkshop{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
-                    + "{call updateStudentXWorkshop(?,?)}");
+                    + "{call updateStudentXWorkshop(?,?,?)}");
             cs.setInt(1, sxworkshop.getStudent().getIdUser());
             cs.setInt(2, sxworkshop.getWorkshop().getIdWorkshop());
+            cs.setString(3, sxworkshop.getNumberTicket());
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
