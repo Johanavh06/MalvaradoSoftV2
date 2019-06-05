@@ -27,14 +27,14 @@ public class MySQLAttendance implements DAOAttendance {
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Attendance";
+            String sql = "SELECT * FROM Attendance WHERE active = 1";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
                 Attendance a = new Attendance();
-                a.setIdAttendance(rs.getInt("User_idPerson"));
-                a.setDateTime(rs.getDate("Attendance_dateTime"));
+                a.setIdAttendance(rs.getInt("idAttendance"));
+                a.setDateTime(rs.getDate("dateTime"));
                 attendances.add(a);
             }
             con.close();
@@ -56,8 +56,8 @@ public class MySQLAttendance implements DAOAttendance {
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call updateAttendance(?,?)}");
-            cs.setInt(1, attendance.getIdAttendance());
-            cs.setDate(2,new java.sql.Date(attendance.getDateTime().getTime()));
+            cs.setInt("_idAttendance", attendance.getIdAttendance());
+            cs.setDate("_date",new java.sql.Date(attendance.getDateTime().getTime()));
          
             result = cs.executeUpdate();
             con.close();
@@ -75,7 +75,7 @@ public class MySQLAttendance implements DAOAttendance {
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
                     + "{call deleteAttedance(?)}");
-			cs.setInt(1, id);
+            cs.setInt("_idAttendance", id);
             result= cs.executeUpdate();
             con.close();            
         }catch(Exception ex){
@@ -94,8 +94,8 @@ public class MySQLAttendance implements DAOAttendance {
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call insertAttendance(?,?)}");
-            cs.setInt(1, attendance.getIdAttendance());   
-            cs.setDate(2,new java.sql.Date(attendance.getDateTime().getTime()));   
+            cs.registerOutParameter("_idAttendance", java.sql.Types.INTEGER);
+            cs.setDate("_date",new java.sql.Date(attendance.getDateTime().getTime()));   
             result = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

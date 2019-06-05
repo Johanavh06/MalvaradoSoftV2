@@ -116,7 +116,8 @@ public class MySQLClassSection implements DAOClassSection{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call insertClassSection(?,?,?)}");
-            cs.setInt(1, classSection.getIdClassSection() );
+            cs.registerOutParameter("_idClassSection", java.sql.Types.INTEGER);
+            //cs.setInt(1, classSection.getIdClassSection() );
             cs.setInt(2, classSection.getTotal() );
             cs.setString(3, classSection.getName() );
             result = cs.executeUpdate();

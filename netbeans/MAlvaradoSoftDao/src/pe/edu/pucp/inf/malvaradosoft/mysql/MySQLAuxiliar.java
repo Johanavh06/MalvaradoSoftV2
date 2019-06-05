@@ -33,16 +33,16 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             
             while(rs.next()){
                 Auxiliar a = new Auxiliar();
-                a.setIdUser(rs.getInt("User_idPerson"));
-                a.setNames(rs.getString("User_Name"));
-                a.setFirstLastName(rs.getString("User_FirstLastName"));
-                a.setSecondLastName(rs.getString("User_FirstLastName"));
+                a.setIdUser(rs.getInt("idUser"));
+                a.setNames(rs.getString("name"));
+                a.setFirstLastName(rs.getString("firstLastName"));
+                a.setSecondLastName(rs.getString("secondLastName"));
                 a.setDni(rs.getString("User_DNI"));
-                a.setAddress(rs.getString("User_Adress"));
-                a.setPhone(rs.getInt("User_Phone"));
-                a.setEmail(rs.getString("User_Email"));
-                a.setUserName(rs.getString("User_Name"));
-                a.setPassword(rs.getString("User_Password"));
+                a.setAddress(rs.getString("address"));
+                a.setPhone(rs.getInt("phone"));
+                a.setEmail(rs.getString("email"));
+                a.setUserName(rs.getString("userName"));
+                a.setPassword(rs.getString("password"));
                 auxiliars.add(a);
             }
             con.close();
@@ -118,7 +118,8 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             dbManager.getUser(), 
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call insertAuxilliar(?,?,?,?,?,?,?,?,?,?)}");
-            cs.setInt(1, auxiliar.getIdUser());
+            cs.registerOutParameter("_idUser", java.sql.Types.INTEGER);
+            //cs.setInt(1, auxiliar.getIdUser());
             cs.setString(2, auxiliar.getNames());
             cs.setString(3, auxiliar.getFirstLastName());
             cs.setString(4, auxiliar.getSecondLastName());
