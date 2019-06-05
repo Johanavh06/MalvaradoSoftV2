@@ -40,7 +40,7 @@ public class MySQLTeacher implements DAOTeacher {
                 t.setPassword(rs.getString("_password"));
                 t.setUserName(rs.getString("_userName"));
                 t.setPhone(rs.getInt("_phone"));
-                t.setAdress(rs.getString("_adress"));
+                t.setAddress(rs.getString("_adress"));
                 teachers.add(t);
             }
             con.close();

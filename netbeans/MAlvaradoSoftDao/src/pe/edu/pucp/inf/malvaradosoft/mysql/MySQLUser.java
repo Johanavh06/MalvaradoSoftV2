@@ -40,7 +40,7 @@ public class MySQLUser implements DAOUser{
                 u.setPassword(rs.getString("_password"));
                 u.setUserName(rs.getString("_userName"));
                 u.setPhone(rs.getInt("_phone"));
-                u.setAdress(rs.getString("_adress"));
+                u.setAddress(rs.getString("_adress"));
                 users.add(u);
             }
             con.close();
@@ -67,7 +67,7 @@ public class MySQLUser implements DAOUser{
             cs.setString(3, user.getFirstLastName());
             cs.setString(4, user.getSecondLastName());
             cs.setString(5, user.getDni());
-            cs.setString(6, user.getAdress());
+            cs.setString(6, user.getAddress());
             cs.setInt(7, user.getPhone());
             cs.setString(8, user.getEmail());
             cs.setString(9, user.getUserName());
@@ -94,7 +94,7 @@ public class MySQLUser implements DAOUser{
             cs.setString(3, user.getFirstLastName());
             cs.setString(4, user.getSecondLastName());
             cs.setString(5, user.getDni());
-            cs.setString(6, user.getAdress());
+            cs.setString(6, user.getAddress());
             cs.setInt(7, user.getPhone());
             cs.setString(8, user.getEmail());
             cs.setString(9, user.getUserName());

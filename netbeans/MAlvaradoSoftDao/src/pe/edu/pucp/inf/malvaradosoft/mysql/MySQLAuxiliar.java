@@ -27,7 +27,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Auxiliar";
+            String sql = "SELECT * FROM Auxiliar A, user U WHERE U.idUser = A.idAuxiliar";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
@@ -38,7 +38,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
                 a.setFirstLastName(rs.getString("User_FirstLastName"));
                 a.setSecondLastName(rs.getString("User_FirstLastName"));
                 a.setDni(rs.getString("User_DNI"));
-                a.setAdress(rs.getString("User_Adress"));
+                a.setAddress(rs.getString("User_Adress"));
                 a.setPhone(rs.getInt("User_Phone"));
                 a.setEmail(rs.getString("User_Email"));
                 a.setUserName(rs.getString("User_Name"));
@@ -59,14 +59,14 @@ public class MySQLAuxiliar implements DAOAuxiliar{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call queryAllByIDAuxilliar(?,?,?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call queryAllByNameAuxiliar(?)}");//,?,?,?,?,?,?,?,?,?)}");
             cs.setInt(1, idAux); 
-            cs.setInt(1, auxiliar.getIdUser());
+            //cs.setInt(1, auxiliar.getIdUser());
             cs.setString(2, auxiliar.getNames());
             cs.setString(3, auxiliar.getFirstLastName());
             cs.setString(4, auxiliar.getSecondLastName());
             cs.setString(5, auxiliar.getDni());
-            cs.setString(6, auxiliar.getAdress());
+            cs.setString(6, auxiliar.getAddress());
             cs.setInt(7, auxiliar.getPhone());
             cs.setString(8, auxiliar.getEmail());
             cs.setString(9, auxiliar.getUserName());
@@ -94,7 +94,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             cs.setString(3, auxiliar.getFirstLastName());
             cs.setString(4, auxiliar.getSecondLastName());
             cs.setString(5, auxiliar.getDni());
-            cs.setString(6, auxiliar.getAdress());
+            cs.setString(6, auxiliar.getAddress());
             cs.setInt(7, auxiliar.getPhone());
             cs.setString(8, auxiliar.getEmail());
             cs.setString(9, auxiliar.getUserName());
@@ -123,7 +123,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             cs.setString(3, auxiliar.getFirstLastName());
             cs.setString(4, auxiliar.getSecondLastName());
             cs.setString(5, auxiliar.getDni());
-            cs.setString(6, auxiliar.getAdress());
+            cs.setString(6, auxiliar.getAddress());
             cs.setInt(7, auxiliar.getPhone());
             cs.setString(8, auxiliar.getEmail());
             cs.setString(9, auxiliar.getUserName());
@@ -151,7 +151,7 @@ public class MySQLAuxiliar implements DAOAuxiliar{
             cs.setString(3, auxiliar.getFirstLastName());
             cs.setString(4, auxiliar.getSecondLastName());
             cs.setString(5, auxiliar.getDni());
-            cs.setString(6, auxiliar.getAdress());
+            cs.setString(6, auxiliar.getAddress());
             cs.setInt(7, auxiliar.getPhone());
             cs.setString(8, auxiliar.getEmail());
             cs.setString(9, auxiliar.getUserName());
