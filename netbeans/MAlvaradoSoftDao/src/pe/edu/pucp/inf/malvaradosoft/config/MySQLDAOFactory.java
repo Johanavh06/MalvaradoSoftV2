@@ -38,6 +38,7 @@ import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLTeacher;
 import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLUser;
 import pe.edu.pucp.inf.malvaradosoft.mysql.MySQLWorkshop;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassSection;
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOEvent;
 
 /**
  *
@@ -135,6 +136,11 @@ public class MySQLDAOFactory extends DAOFactory {
 
     @Override
     public DAOClassSection getClassSectionDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DAOEvent getEventDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

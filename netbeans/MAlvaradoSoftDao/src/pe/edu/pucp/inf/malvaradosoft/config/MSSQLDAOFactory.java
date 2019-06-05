@@ -22,6 +22,7 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOTeacher;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOWorkshop;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOClassSection;
+import pe.edu.pucp.inf.malvaradosoft.dao.DAOEvent;
 
 /**
  *
@@ -119,6 +120,11 @@ public class MSSQLDAOFactory extends DAOFactory{
 
     @Override
     public DAOClassSection getClassSectionDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DAOEvent getEventDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
