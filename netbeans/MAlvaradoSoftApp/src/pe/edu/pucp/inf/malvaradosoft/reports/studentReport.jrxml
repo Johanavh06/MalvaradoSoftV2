@@ -27,52 +27,189 @@
 			<style backcolor="#FFF7EF"/>
 		</conditionalStyle>
 	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
 	<subDataset name="dataset1" uuid="4fea0479-b350-4237-b2fd-70aaff52a5ec"/>
 	<subDataset name="dataset2" uuid="49b481b4-3cfb-44d9-b80d-84fe99e0a5e4"/>
 	<subDataset name="dataset3" uuid="3dae6c15-9895-48a2-a0d0-fe921ac9ebbf"/>
-	<subDataset name="ListaDeSecciones" uuid="d2d7c621-0672-4b7a-b37d-1d2d39afca44">
-		<parameter name="idClassSection" class="java.lang.Integer"/>
-		<queryString>
-			<![CDATA[call inf282g8.queryAllByIDClassSection($P{idClassSection});]]>
+	<subDataset name="ListaNotasConCurso" uuid="602a8a2c-0cfa-41a2-ac51-58f14616aafa">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     grade.`description` AS grade_description,
+     grade.`weight` AS grade_weight,
+     gradexstudent.`value` AS gradexstudent_value,
+     course.`name` AS course_name,
+     gradexstudent.`idCourse` AS gradexstudent_idCourse
+FROM
+     `grade` grade INNER JOIN `gradexstudent` gradexstudent ON grade.`idGrade` = gradexstudent.`idGrade`
+     INNER JOIN `student` student ON gradexstudent.`idStudent` = student.`idStudent`
+     INNER JOIN `course` course ON gradexstudent.`idCourse` = course.`idCourse`
+     INNER JOIN `classsection` classsection ON student.`idClassSection` = classsection.`idClassSection`]]>
 		</queryString>
-		<field name="idClassSection" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="active" class="java.lang.Boolean">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="total" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="name" class="java.lang.String">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="condition" class="java.lang.String">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="idStudent" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="idGuardian" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="ticketNumerEnrollment" class="java.lang.String">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="idCourseXSchedule" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="idCourse" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="idTeacher" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
-		<field name="idSchedule" class="java.lang.Integer">
-			<fieldDescription><![CDATA[]]></fieldDescription>
-		</field>
+		<field name="grade_description" class="java.lang.String"/>
+		<field name="grade_weight" class="java.lang.Double"/>
+		<field name="gradexstudent_value" class="java.lang.Float"/>
+		<field name="course_name" class="java.lang.String"/>
+		<field name="gradexstudent_idCourse" class="java.lang.Integer"/>
+		<group name="gradexstudent_idCourse">
+			<groupExpression><![CDATA[$F{gradexstudent_idCourse}]]></groupExpression>
+		</group>
 	</subDataset>
 	<parameter name="ms_seccion" class="java.lang.Integer"/>
+	<parameter name="ms_idAlumno" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Users\\TEMP\\Documents\\lp2\\MalvaradoSoftV2\\netbeans\\MAlvaradoSoftApp\\src\\pe\\edu\\pucp\\inf\\malvaradosoft\\reports\\"]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT
      *,
@@ -126,6 +263,9 @@ FROM
 	<field name="active" class="java.lang.Boolean">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
+	<field name="idCourse" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
 	<field name="idUser" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
@@ -165,9 +305,6 @@ FROM
 	<field name="idCourseXSchedule" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="idCourse" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
 	<field name="idTeacher" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
@@ -199,6 +336,26 @@ FROM
 	<variable name="user_names_1" class="java.lang.Integer" calculation="Count">
 		<variableExpression><![CDATA[$F{user_names}]]></variableExpression>
 	</variable>
+	<group name="ReportGradesListxCourse">
+		<groupExpression><![CDATA[$F{condition}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<frame>
+					<reportElement mode="Opaque" x="11" y="10" width="259" height="24" forecolor="#B89F7D" backcolor="#70A9C6" uuid="35de74ed-e47b-48f2-b249-4cfe75780272"/>
+				</frame>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="SubTitle" isPrintRepeatedValues="false" x="10" y="10" width="259" height="23" forecolor="#FFFFFF" uuid="cf83ac78-5e36-427d-b11f-d8d4abd9cca5"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{idGrade}+" "+$F{course_name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
 	<background>
 		<band/>
 	</background>
@@ -218,76 +375,66 @@ FROM
 					<textElement textAlignment="Right">
 						<font size="14" isBold="false"/>
 					</textElement>
-					<text><![CDATA[Add a description here]]></text>
+					<text><![CDATA[]]></text>
 				</staticText>
 			</frame>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="23"/>
+		<band height="58">
+			<staticText>
+				<reportElement x="0" y="12" width="40" height="20" uuid="69869a9f-2260-4bed-a387-f8e83d722916"/>
+				<textElement markup="none"/>
+				<text><![CDATA[Alumno]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="76" y="12" width="228" height="20" uuid="8743002c-4968-4e31-839d-af9193635b4c"/>
+				<textFieldExpression><![CDATA[$F{user_names}+" "+$F{user_firstLastName}+" "+$F{user_secondLastName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="32" width="64" height="20" uuid="f53b6d4e-df2a-4c58-8295-a7b7a6c3fafb"/>
+				<textElement markup="none"/>
+				<text><![CDATA[ID Alumno]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="76" y="32" width="228" height="20" uuid="20c1284e-b916-4cdb-ab32-a54cd18e243f"/>
+				<textFieldExpression><![CDATA[$F{idUser}]]></textFieldExpression>
+			</textField>
+		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="90" splitType="Immediate">
-			<componentElement>
-				<reportElement key="table" style="table" x="19" y="46" width="351" height="27" uuid="3a6d4ffd-50f9-4f1c-8f2d-9f7eb9ae92aa"/>
-				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="ListaDeSecciones" uuid="1ff0c617-2697-43eb-b437-da2a99e92f90">
-						<datasetParameter name="idClassSection">
-							<datasetParameterExpression><![CDATA[$P{ms_seccion}]]></datasetParameterExpression>
-						</datasetParameter>
-						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-					</datasetRun>
-					<jr:column width="90" uuid="63a85596-3807-4f95-9662-ae88de0575d4">
-						<jr:columnHeader style="table_CH" height="30">
-							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="9a726645-1c71-4191-b738-5cf10c1ad214"/>
-								<text><![CDATA[idStudent]]></text>
-							</staticText>
-						</jr:columnHeader>
-						<jr:columnFooter style="table_CH" height="30"/>
-						<jr:detailCell style="table_TD" height="20">
-							<textField>
-								<reportElement x="0" y="0" width="90" height="20" uuid="4eb79276-5f2d-45c4-b725-ca0e2e03f33f"/>
-								<textFieldExpression><![CDATA[$F{idStudent}]]></textFieldExpression>
-							</textField>
-						</jr:detailCell>
-					</jr:column>
-					<jr:column width="90" uuid="05e1915c-f120-4380-ad0e-0f95bb6955ce">
-						<jr:columnHeader style="table_CH" height="30">
-							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="f7635b51-ea3d-4ac3-b879-a1401ff0a703"/>
-								<text><![CDATA[name]]></text>
-							</staticText>
-						</jr:columnHeader>
-						<jr:columnFooter style="table_CH" height="30"/>
-						<jr:detailCell style="table_TD" height="20">
-							<textField>
-								<reportElement x="0" y="0" width="90" height="20" uuid="2f0bbb3e-bad6-47f6-816d-7489767dfe35"/>
-								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
-							</textField>
-						</jr:detailCell>
-					</jr:column>
-					<jr:column width="90" uuid="4db50d49-95db-42fe-9c38-b80633095d66">
-						<jr:columnHeader style="table_CH" height="30">
-							<staticText>
-								<reportElement x="0" y="0" width="90" height="30" uuid="884324c1-5717-4d11-afcb-03bf94e9bf70"/>
-								<text><![CDATA[total]]></text>
-							</staticText>
-						</jr:columnHeader>
-						<jr:columnFooter style="table_CH" height="30"/>
-						<jr:detailCell style="table_TD" height="20">
-							<textField>
-								<reportElement x="0" y="0" width="90" height="20" uuid="9bec0f7e-d0ea-404f-b2eb-d8a8612f01dd"/>
-								<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
-							</textField>
-						</jr:detailCell>
-					</jr:column>
-				</jr:table>
-			</componentElement>
-		</band>
+		<band height="34" splitType="Immediate"/>
 	</columnHeader>
 	<detail>
-		<band height="56"/>
+		<band height="50">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="31" width="257" height="1" uuid="c36518c8-dfef-4024-bfaa-4cac7cda7e93"/>
+			</line>
+			<frame>
+				<reportElement x="10" y="12" width="259" height="20" uuid="27d4faaa-0299-4112-871b-0e0b6619da8b"/>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="10" y="10" width="82" height="18" uuid="43c0bbb4-ffbd-401b-b848-c9bb7de8be6a"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="187" y="10" width="82" height="18" uuid="81952c65-a8b8-419b-a505-c71254358b57"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gradexstudent_value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="92" y="10" width="82" height="18" uuid="aa37daf8-f7d7-4cc3-81f1-da3f13f3313f"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grade_weight}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 	<columnFooter>
 		<band/>

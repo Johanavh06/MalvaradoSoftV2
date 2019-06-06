@@ -51,8 +51,8 @@ public abstract class DBController {
         return daoFactory.getCourseXScheduleDAO().queryAll();
     }
     
-    public static ArrayList<CourseXSchedule> queryByIdCourseXSchedule(int id){
-        return daoFactory.getCourseXScheduleDAO().queryById(id);
+    public static ArrayList<CourseXSchedule> queryByIdCourseXSchedule(int id, int id2){
+        return daoFactory.getCourseXScheduleDAO().queryById(id,id2);
     }
     
     public static int insertCourseXSchedule(CourseXSchedule courseXSchedule){
@@ -63,8 +63,8 @@ public abstract class DBController {
         return daoFactory.getCourseXScheduleDAO().update(courseXSchedule);
     }
     
-    public static int deleteCourseXSchedule(int id){
-        return daoFactory.getCourseXScheduleDAO().delete(id);
+    public static int deleteCourseXSchedule(int id, int id2){
+        return daoFactory.getCourseXScheduleDAO().delete(id,id2);
     }
     
     public static ArrayList<Event> queryAllEvent(){
