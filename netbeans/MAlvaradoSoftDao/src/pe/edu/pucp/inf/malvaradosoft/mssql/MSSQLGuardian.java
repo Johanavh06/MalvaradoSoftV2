@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.edu.pucp.inf.malvaradosoft.mysql;
+package pe.edu.pucp.inf.malvaradosoft.mssql;
 
+import pe.edu.pucp.inf.malvaradosoft.mssql.*;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,7 +20,7 @@ import pe.edu.pucp.inf.malvaradosoft.dao.DAOGuardian;
  *
  * @author alulab14
  */
-public class MySQLGuardian implements DAOGuardian {
+public class MSSQLGuardian implements DAOGuardian {
 
     @Override
     public ArrayList<Guardian> queryAll() {
@@ -43,37 +44,11 @@ public class MySQLGuardian implements DAOGuardian {
         }
     return guardians;
     }
-
+    
     @Override
     public Guardian queryGuardianById(int _idGuardian) {
-        Guardian guardian = new Guardian();
-        try{
-            DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "{CALL queryGuardianById(" + _idGuardian + ");";
-            CallableStatement cs = con.prepareCall(sql);
-            ResultSet rs = cs.executeQuery();
-            
-            //Sacamos los datos de Guardian.
-            guardian.setIdUser(rs.getInt("@idGuardian"));
-            guardian.setNames(rs.getString("@names"));
-            guardian.setFirstLastName(rs.getString("firstLastName"));
-            guardian.setSecondLastName(rs.getString("secondLastName"));
-            guardian.setDni(rs.getString("dni"));
-            guardian.setAddress(rs.getString("address"));
-            guardian.setPhone(rs.getInt("phone"));
-            guardian.setEmail(rs.getString("email"));
-            guardian.setUserName(rs.getString("userName"));
-            guardian.setPassword(rs.getString("password"));
-            
-            con.close();
-        } catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        return guardian;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 
     @Override
     public int insert(Guardian guardian) {

@@ -32,9 +32,7 @@ public class MySQLStudent implements DAOStudent{
             ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
-                Student s = new Student();
-                s.setIdUser(rs.getInt("User_idStudent"));           
-                students.add(s);
+                //ADD ACTUAL CODE
             }
             con.close();
             

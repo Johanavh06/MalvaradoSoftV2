@@ -204,6 +204,9 @@ public abstract class DBController {
     public static ArrayList<Guardian> queryAllGuardian(){
         return daoFactory.getGuardianDAO().queryAll();
     }
+    public static Guardian queryGuardianById(int _idGuardian){
+        return daoFactory.getGuardianDAO().queryGuardianById(_idGuardian);
+    }
     public static int updateGuardian(Guardian guardian){
         return daoFactory.getGuardianDAO().update(guardian);
     }
