@@ -66,7 +66,7 @@ public class MySQLSecretary implements DAOSecretary{
                 u.setPassword(rs2.getString("_password"));
                 u.setUserName(rs2.getString("_userName"));
                 u.setPhone(rs2.getInt("_phone"));
-                u.setAdress(rs2.getString("_adress"));
+                u.setAddress(rs2.getString("_adress"));
                 secretaries.add(u);
             }
             con.close();
@@ -92,7 +92,7 @@ public class MySQLSecretary implements DAOSecretary{
             cs.setString(3, secretary.getFirstLastName());
             cs.setString(4, secretary.getSecondLastName());
             cs.setString(5, secretary.getDni());
-            cs.setString(6, secretary.getAdress());
+            cs.setString(6, secretary.getAddress());
             cs.setInt(7, secretary.getPhone());
             cs.setString(8, secretary.getEmail());
             cs.setString(9, secretary.getUserName());
@@ -110,7 +110,7 @@ public class MySQLSecretary implements DAOSecretary{
 
     @Override
     public int update(Secretary secretary) {
-        int result = 0;
+        int result = secretary.getIdUser();
         try{
             DBManager dbManager = DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
@@ -120,11 +120,14 @@ public class MySQLSecretary implements DAOSecretary{
             cs.setString(3, secretary.getFirstLastName());
             cs.setString(4, secretary.getSecondLastName());
             cs.setString(5, secretary.getDni());
-            cs.setString(6, secretary.getAdress());
+            cs.setString(6, secretary.getAddress());
             cs.setInt(7, secretary.getPhone());
             cs.setString(8, secretary.getEmail());
             cs.setString(9, secretary.getUserName());
             cs.setString(10, secretary.getPassword());
+            
+            cs.executeQuery();
+            
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

@@ -18,6 +18,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Principal;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Schedule;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Secretary;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Student;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.StudentXWorkshop;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Teacher;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.User;
@@ -51,8 +52,13 @@ public abstract class DBController {
         return daoFactory.getCourseXScheduleDAO().queryAll();
     }
     
+<<<<<<< HEAD
     public static ArrayList<CourseXSchedule> queryByIdCourseXSchedule(int id, int id2){
         return daoFactory.getCourseXScheduleDAO().queryById(id,id2);
+=======
+    public static ArrayList<CourseXSchedule> queryByIdCourseXSchedule(int idCourse, int idSchedule){
+        return daoFactory.getCourseXScheduleDAO().queryById(idCourse, idSchedule);
+>>>>>>> eb73917c9e20ad7c33afea1061942559ed5ec1f0
     }
     
     public static int insertCourseXSchedule(CourseXSchedule courseXSchedule){
@@ -63,8 +69,13 @@ public abstract class DBController {
         return daoFactory.getCourseXScheduleDAO().update(courseXSchedule);
     }
     
+<<<<<<< HEAD
     public static int deleteCourseXSchedule(int id, int id2){
         return daoFactory.getCourseXScheduleDAO().delete(id,id2);
+=======
+    public static int deleteCourseXSchedule(int idCourse, int idSchedule){
+        return daoFactory.getCourseXScheduleDAO().delete(idCourse, idSchedule);
+>>>>>>> eb73917c9e20ad7c33afea1061942559ed5ec1f0
     }
     
     public static ArrayList<Event> queryAllEvent(){
@@ -204,6 +215,9 @@ public abstract class DBController {
     public static ArrayList<Guardian> queryAllGuardian(){
         return daoFactory.getGuardianDAO().queryAll();
     }
+    public static Guardian queryGuardianById(int _idGuardian){
+        return daoFactory.getGuardianDAO().queryGuardianById(_idGuardian);
+    }
     public static int updateGuardian(Guardian guardian){
         return daoFactory.getGuardianDAO().update(guardian);
     }
@@ -232,16 +246,32 @@ public abstract class DBController {
         return daoFactory.getSecretaryDAO().queryAll();
     }
     
-    public int insertSecretary(Secretary secretary){
+    public static int insertSecretary(Secretary secretary){
         return daoFactory.getSecretaryDAO().insert(secretary);
     }
     
-    public int updateSecretary(Secretary secretary){
+    public static int updateSecretary(Secretary secretary){
         return daoFactory.getSecretaryDAO().update(secretary);
     }
     
-    public int deleteSecretary(int id){
+    public static int deleteSecretary(int id){
         return daoFactory.getSecretaryDAO().delete(id);
+    }
+    
+    public static ArrayList <Student> queryAllStudents(){
+        return daoFactory.getStudentDAO().queryAll();
+    }
+    
+    public static int insertStudent(Student student){
+        return daoFactory.getStudentDAO().insert(student);
+    }
+    
+    public static int updateStudent(Student student){
+        return daoFactory.getStudentDAO().update(student);
+    }
+    
+    public static int deleteStudent(int _id){
+        return daoFactory.getStudentDAO().delete(_id);
     }
 }
 

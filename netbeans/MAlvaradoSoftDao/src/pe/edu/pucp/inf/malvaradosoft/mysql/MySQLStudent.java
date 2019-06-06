@@ -10,8 +10,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.ClassSection;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Student;
+import pe.edu.pucp.inf.malvaradosoft.config.DAOFactory;
 import pe.edu.pucp.inf.malvaradosoft.config.DBManager;
 import pe.edu.pucp.inf.malvaradosoft.dao.DAOStudent;
 
@@ -27,14 +31,30 @@ public class MySQLStudent implements DAOStudent{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM Student";
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
+            String sql = "{CALL queryAllStudents()}";
+            CallableStatement cs = con.prepareCall(sql);
+            ResultSet rs = cs.executeQuery();
             
             while(rs.next()){
-                Student s = new Student();
-                s.setIdUser(rs.getInt("User_idStudent"));           
-                students.add(s);
+                Student student = new Student();
+                student.setCondition(rs.getString("condition"));
+                student.setIdUser(rs.getInt("idStudent"));
+                DAOFactory factory = DAOFactory.getDAOFactory();
+                Guardian guardian = factory.getGuardianDAO().queryGuardianById(rs.getInt("idGuardian"));
+                student.setGuardian(guardian);
+                ClassSection classSection = factory.getClassSectionDAO().queryAllByIDClassSection(rs.getInt("idClassSection"));
+                student.setClassSection(classSection);
+                student.setTicketNumerEnrollment(rs.getString("ticketNumerEnrollment"));
+                student.setNames(rs.getString("names"));
+                student.setSecondLastName(rs.getString("_secondLast Name"));
+                student.setDni(rs.getString("dni"));
+                student.setAddress(rs.getString("_adress"));
+                student.setPhone(rs.getInt("_phone"));
+                student.setEmail(rs.getString("email"));
+                student.setUserName(rs.getString("_userName"));
+                student.setPassword(rs.getString("_password"));
+                
+                students.add(student);
             }
             con.close();
             
@@ -46,53 +66,74 @@ public class MySQLStudent implements DAOStudent{
 
     @Override
     public int insert(Student student) {
-        int result = 0;
+        int result = student.getIdUser();
         try{
             DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(
-            dbManager.getUrl(), 
-            dbManager.getUser(), 
-            dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("" + "{call insertStudent(?,?,?,?,?,?)}");
-            cs.setInt(1, student.get_Class());
-            cs.setString(2, student.getSection());
-            cs.setString(3, student.getCondition());
-            cs.setInt(4, student.getIdStudent());
-            cs.setInt(5, student.getIdGuardian());
-            cs.setInt(6, student.getIdClassSection());
-            result = cs.executeUpdate();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("" + "{call INSERT_SECRETARY(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs.registerOutParameter(1, Types.INTEGER);
+            cs.setString(2, student.getNames());
+            cs.setString(3, student.getFirstLastName());
+            cs.setString(4, student.getSecondLastName());
+            cs.setString(5, student.getDni());
+            cs.setString(6, student.getAddress());
+            cs.setInt(7, student.getPhone());
+            cs.setString(8, student.getEmail());
+            cs.setString(9, student.getUserName());
+            cs.setString(10, student.getPassword());
+            cs.setString(11, student.getCondition());
+            cs.setInt(12, student.getGuardian().getIdUser());
+            cs.setInt(13, student.getClassSection().getIdClassSection());
+            cs.setString(14, student.getTicketNumerEnrollment());
+            
+            cs.executeUpdate();
+            
+            result = cs.getInt(1);
             con.close();
-        }catch(Exception ex){
+            con.close();
+        } catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
 
     @Override
     public int update(Student student) {
-        int result = 0;
+        int result = student.getIdUser();
         try{
             DBManager dbManager = DBManager.getDbManager();
-            Connection con = DriverManager.getConnection(
-            dbManager.getUrl(), 
-            dbManager.getUser(), 
-            dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call updateStudent(?,?,?,?,?,?)}");
-            cs.setInt(1, student.getIdStudent());
-            cs.setInt(2, student.get_Class());
-            cs.setString(3, student.getSection());
-            cs.setString(4, student.getCondition());
-            cs.setInt(5, student.getIdGuardian());
-            cs.setInt(6, student.getIdClassSection());
-            result = cs.executeUpdate();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("" + "{call updateUser(?,?,?,?,?,?,?,?,?,?)}");
+            cs.setInt(1, student.getIdUser());
+            cs.setString(2, student.getNames());
+            cs.setString(3, student.getFirstLastName());
+            cs.setString(4, student.getSecondLastName());
+            cs.setString(5, student.getDni());
+            cs.setString(6, student.getAddress());
+            cs.setInt(7, student.getPhone());
+            cs.setString(8, student.getEmail());
+            cs.setString(9, student.getUserName());
+            cs.setString(10, student.getPassword());
+            
+            cs.executeQuery();
+            
+            Connection con2 = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            String sql = "{CALL updateStudent(?,?);}";
+            CallableStatement cs2 = con2.prepareCall(sql);
+            cs2.setInt("idStudent", student.getIdUser());
+            cs2.setString(2, student.getCondition());
+            cs2.executeQuery();
+            
+            DAOFactory factory = DAOFactory.getDAOFactory();
+            factory.getGuardianDAO().update(student.getGuardian());
+            factory.getClassSectionDAO().updateClassSection(student.getClassSection());
+            
             con.close();
+            con2.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
 
     @Override
@@ -101,8 +142,7 @@ public class MySQLStudent implements DAOStudent{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall(""
-                    + "{call deleteStudent(?)}");
+            CallableStatement cs = con.prepareCall("" + "{call deleteUser(?)}");
             cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();            
@@ -110,7 +150,6 @@ public class MySQLStudent implements DAOStudent{
             System.out.println(ex.getMessage());
         }
         return result;
-        
     }
     
 }

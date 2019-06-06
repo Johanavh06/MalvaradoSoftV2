@@ -35,7 +35,7 @@ public class MySQLClassSection implements DAOClassSection{
             String sql = "SELECT * FROM ClassSection";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
-            ArrayList<Student> students = DBController.queryAllStudent();
+            ArrayList<Student> students = DBController.queryAllStudents();
             ArrayList<CourseXSchedule> courses = DBController.queryAllCourseXSchedule();
             while(rs.next()){
                 ClassSection cxs = new ClassSection();
@@ -43,7 +43,7 @@ public class MySQLClassSection implements DAOClassSection{
                 cxs.setTotal(rs.getInt("total"));
                 cxs.setName(rs.getString("name"));
                 for(int i=0; i<students.size() ;i++){
-                    if(students.get(i).getIdClassSection().getIdClassSection() == cxs.getIdClassSection())
+                    if(students.get(i).getClassSection().getIdClassSection() == cxs.getIdClassSection())
                         cxs.addStudents(students.get(i));
                 }
                 for(int i=0; i<courses.size() ;i++){
@@ -90,7 +90,7 @@ public class MySQLClassSection implements DAOClassSection{
                 }
                 //se llenan datos para un CourseXSchedule
                 CourseXSchedule cxs = new CourseXSchedule();
-                cxs.setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
+                cxs.setCourseXScheduleID(rs.getInt("idCourseXSchedule"));
                 Course course= new Course();
                 course.setIdCourse(rs.getInt("idCourse"));
                 course.setName(rs.getString("name_Course"));

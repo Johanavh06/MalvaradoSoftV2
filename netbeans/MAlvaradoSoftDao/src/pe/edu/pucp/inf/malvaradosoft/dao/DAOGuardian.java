@@ -14,6 +14,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
  */
 public interface DAOGuardian {
     ArrayList <Guardian> queryAll();
+    Guardian queryGuardianById(int _idGuardian);
     int insert(Guardian guardian);
     int update(Guardian guardian);
     int delete(int id);
