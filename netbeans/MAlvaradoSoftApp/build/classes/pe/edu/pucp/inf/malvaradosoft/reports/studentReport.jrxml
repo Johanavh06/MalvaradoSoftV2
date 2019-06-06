@@ -212,7 +212,7 @@ FROM
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["T:\\Temp\\LP2\\MalvaradoSoftV2\\netbeans\\MAlvaradoSoftApp\\src\\pe\\edu\\pucp\\inf\\malvaradosoft\\reports\\"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["T:\\Temp\\TA\\MalvaradoSoftV2\\netbeans\\MAlvaradoSoftApp\\src\\pe\\edu\\pucp\\inf\\malvaradosoft\\reports\\"]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
@@ -395,9 +395,7 @@ FROM
 	<detail>
 		<band height="115">
 			<subreport>
-				<reportElement x="45" y="13" width="815" height="83" uuid="930c4e25-ca2f-444a-ae1e-421248ffb6a9">
-					<printWhenExpression><![CDATA[$V{REPORT_COUNT} == 1]]></printWhenExpression>
-				</reportElement>
+				<reportElement x="18" y="15" width="815" height="83" uuid="930c4e25-ca2f-444a-ae1e-421248ffb6a9"/>
 				<subreportParameter name="CLASS_SECTION_ID">
 					<subreportParameterExpression><![CDATA[$F{idClassSection}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -413,7 +411,7 @@ FROM
 		<band/>
 	</columnFooter>
 	<pageFooter>
-		<band height="158"/>
+		<band height="17"/>
 	</pageFooter>
 	<summary>
 		<band/>

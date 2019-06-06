@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d5360449-ee70-4052-9910-7915eddc1e3e">
+	<property name="ireport.zoom" value="1.4641000000000033"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="106"/>
+	<parameter name="PAR_ID_COURSE" class="java.lang.Integer"/>
+	<parameter name="PAR_TIPO_EVAL" class="java.lang.String"/>
+	<parameter name="PAR_ID_CLASS_SECTION" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     gradexstudent.`idCourse` AS gradexstudent_idCourse,
+     classsection.`idClassSection` AS gradexstudent_idCourse,
+     grade.`description` AS grade_description,
+     gradexstudent.`value` AS gradexstudent_value,
+     course.`name` AS course_name,
+     student.`idStudent` AS gradexstudent_idStudent,
+     user.names AS nombre_alumno,
+     user.firstLastName AS ap1,
+     user.secondLastName AS ap2
+FROM
+     `grade` grade INNER JOIN `gradexstudent` gradexstudent ON grade.`idGrade` = gradexstudent.`idGrade`
+     INNER JOIN `student` student ON gradexstudent.`idStudent` = student.`idStudent`
+     INNER JOIN `course` course ON gradexstudent.`idCourse` = course.`idCourse`
+     INNER JOIN `classsection` classsection ON student.`idClassSection` = classsection.`idClassSection`
+     INNER JOIN `user` user ON student.`idStudent` = user.`idUser`
+WHERE
+     course.idCourse = $P{PAR_ID_COURSE}
+     and (grade.`description` LIKE $P{PAR_TIPO_EVAL})
+     and classsection.`idClassSection` = $P{PAR_ID_CLASS_SECTION}]]>
+	</queryString>
+	<field name="gradexstudent_idCourse" class="java.lang.Integer"/>
+	<field name="grade_description" class="java.lang.String"/>
+	<field name="gradexstudent_value" class="java.lang.Float"/>
+	<field name="course_name" class="java.lang.String"/>
+	<field name="gradexstudent_idStudent" class="java.lang.Integer"/>
+	<field name="nombre_alumno" class="java.lang.String"/>
+	<field name="ap1" class="java.lang.String"/>
+	<field name="ap2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="95" backcolor="#006699" uuid="f9ec229d-907f-46e6-9043-178341bd7fb5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="19" width="435" height="43" forecolor="#FFFFFF" uuid="068ff8ad-8ecf-4811-aff5-c35514d722f6"/>
+				<textElement>
+					<font size="28" pdfEncoding="Cp1250"/>
+					<paragraph lineSpacing="Single" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Reporte de notas por evaluacion]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="6" width="49" height="20" uuid="c751c811-fe77-485f-a325-b9d8e75e9707"/>
+				<text><![CDATA[Curso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="26" width="49" height="20" uuid="9ccaf6e4-9223-418e-883b-c4e0f50c527c"/>
+				<text><![CDATA[ID Curso:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="6" width="100" height="20" uuid="4be2afac-eee6-408e-8dd9-f8d199008965"/>
+				<textFieldExpression><![CDATA[$F{course_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="26" width="100" height="20" uuid="5822cd3b-69cc-421e-bf66-e519804d1951"/>
+				<textFieldExpression><![CDATA[$F{gradexstudent_idCourse}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="363" y="10" width="54" height="20" uuid="4617b6f4-b876-4642-bdcb-51d240443a31"/>
+				<text><![CDATA[Seccion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="417" y="10" width="100" height="20" uuid="a354feae-5bc9-4f0e-9fd1-40b9c4e69b5a"/>
+				<textFieldExpression><![CDATA[$P{PAR_TIPO_EVAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="7" width="100" height="20" uuid="66769bd2-7b11-4cbc-89d3-68b3d28968a5"/>
+				<text><![CDATA[Notas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="7" width="100" height="20" uuid="00167be1-0939-4f5b-9016-19fd5e44a330"/>
+				<text><![CDATA[Alumno]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="131" y="2" width="70" height="20" uuid="dec9b103-a4e0-4367-8ff9-ef7f840c46b1"/>
+				<textFieldExpression><![CDATA[$F{gradexstudent_value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="2" width="146" height="20" uuid="481cf147-d4dc-44f1-991a-1932bd44aa5b"/>
+				<textFieldExpression><![CDATA[$F{gradexstudent_idStudent}+" "+$F{nombre_alumno}+" "+$F{ap1}+" "+$F{ap2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="120" y="25" width="257" height="1" uuid="5807d313-a345-4d15-a3e6-bd419c78dabe"/>
+			</line>
+		</band>
+		<band height="45"/>
+	</detail>
+	<columnFooter>
+		<band height="111" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="21" y="11" width="511" height="100" uuid="3510a81d-b8bc-4df2-b169-e652f79f6487"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{gradexstudent_value}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{nombre_alumno}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{gradexstudent_value}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

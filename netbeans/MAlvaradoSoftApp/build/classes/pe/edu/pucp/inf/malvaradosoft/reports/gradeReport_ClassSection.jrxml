@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d5360449-ee70-4052-9910-7915eddc1e3e">
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-24" y="0" width="602" height="86" backcolor="#006699" uuid="64f74972-51b4-459b-afe5-9f78e4062476"/>
+				<staticText>
+					<reportElement x="20" y="20" width="414" height="43" forecolor="#FFFFFF" uuid="32a812ea-4389-4b97-bfd8-873bbfca8f44"/>
+					<textElement>
+						<font fontName= "Arial" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Reporte de tipo de evaluacion de Curso]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
