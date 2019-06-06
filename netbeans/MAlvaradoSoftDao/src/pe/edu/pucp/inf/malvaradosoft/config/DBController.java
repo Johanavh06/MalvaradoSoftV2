@@ -18,6 +18,7 @@ import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Guardian;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Principal;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Schedule;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Secretary;
+import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Student;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.StudentXWorkshop;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.Teacher;
 import pe.edu.pucp.inf.MAlvaradoSoft.model.bean.User;
@@ -235,16 +236,32 @@ public abstract class DBController {
         return daoFactory.getSecretaryDAO().queryAll();
     }
     
-    public int insertSecretary(Secretary secretary){
+    public static int insertSecretary(Secretary secretary){
         return daoFactory.getSecretaryDAO().insert(secretary);
     }
     
-    public int updateSecretary(Secretary secretary){
+    public static int updateSecretary(Secretary secretary){
         return daoFactory.getSecretaryDAO().update(secretary);
     }
     
-    public int deleteSecretary(int id){
+    public static int deleteSecretary(int id){
         return daoFactory.getSecretaryDAO().delete(id);
+    }
+    
+    public static ArrayList <Student> queryAllStudents(){
+        return daoFactory.getStudentDAO().queryAll();
+    }
+    
+    public static int insertStudent(Student student){
+        return daoFactory.getStudentDAO().insert(student);
+    }
+    
+    public static int updateStudent(Student student){
+        return daoFactory.getStudentDAO().update(student);
+    }
+    
+    public static int deleteStudent(int _id){
+        return daoFactory.getStudentDAO().delete(_id);
     }
 }
 

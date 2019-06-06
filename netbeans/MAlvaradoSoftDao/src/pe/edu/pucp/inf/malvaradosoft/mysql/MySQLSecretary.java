@@ -110,7 +110,7 @@ public class MySQLSecretary implements DAOSecretary{
 
     @Override
     public int update(Secretary secretary) {
-        int result = 0;
+        int result = secretary.getIdUser();
         try{
             DBManager dbManager = DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
@@ -125,6 +125,9 @@ public class MySQLSecretary implements DAOSecretary{
             cs.setString(8, secretary.getEmail());
             cs.setString(9, secretary.getUserName());
             cs.setString(10, secretary.getPassword());
+            
+            cs.executeQuery();
+            
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
