@@ -205,14 +205,10 @@ FROM
 			<groupExpression><![CDATA[$F{gradexstudent_idCourse}]]></groupExpression>
 		</group>
 	</subDataset>
-	<parameter name="ms_seccion" class="java.lang.Integer">
-		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-	</parameter>
-	<parameter name="ms_idAlumno" class="java.lang.String">
-		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-	</parameter>
+	<parameter name="ms_seccion" class="java.lang.Integer"/>
+	<parameter name="ms_idAlumno" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["T:\\Temp\\TA\\MalvaradoSoftV2\\netbeans\\MAlvaradoSoftApp\\src\\pe\\edu\\pucp\\inf\\malvaradosoft\\reports\\"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["D:\\Users\\TEMP\\Documents\\lp2\\MalvaradoSoftV2\\netbeans\\MAlvaradoSoftApp\\src\\pe\\edu\\pucp\\inf\\malvaradosoft\\reports\\"]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
@@ -232,16 +228,13 @@ FROM
      coursexschedule.`idCourseXSchedule` AS coursexschedule_idCourseXSchedule,
      coursexschedule.`idCourse` AS coursexschedule_idCourse,
      course.`idCourse` AS course_idCourse,
-     course.`name` AS course_name,
-     student.`idClassSection` AS idClassSection
+     course.`name` AS course_name
 FROM
      `student` student INNER JOIN `gradexstudent` gradexstudent ON student.`idStudent` = gradexstudent.`idStudent`
      INNER JOIN `user` user ON student.`idStudent` = user.`idUser`
      INNER JOIN `grade` grade ON gradexstudent.`idGrade` = grade.`idGrade`
      INNER JOIN `coursexschedule` coursexschedule ON grade.`idCourseXSchedule` = coursexschedule.`idCourseXSchedule`
-     INNER JOIN `course` course ON coursexschedule.`idCourse` = course.`idCourse`
-   WHERE student.`idStudent` = $P{ms_idAlumno}
-     AND student.`idClassSection` = $P{ms_seccion}]]>
+     INNER JOIN `course` course ON coursexschedule.`idCourse` = course.`idCourse`]]>
 	</queryString>
 	<field name="condition" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -343,6 +336,26 @@ FROM
 	<variable name="user_names_1" class="java.lang.Integer" calculation="Count">
 		<variableExpression><![CDATA[$F{user_names}]]></variableExpression>
 	</variable>
+	<group name="ReportGradesListxCourse">
+		<groupExpression><![CDATA[$F{condition}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<frame>
+					<reportElement mode="Opaque" x="11" y="10" width="259" height="24" forecolor="#B89F7D" backcolor="#70A9C6" uuid="35de74ed-e47b-48f2-b249-4cfe75780272"/>
+				</frame>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="SubTitle" isPrintRepeatedValues="false" x="10" y="10" width="259" height="23" forecolor="#FFFFFF" uuid="cf83ac78-5e36-427d-b11f-d8d4abd9cca5"/>
+					<textElement>
+						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{idGrade}+" "+$F{course_name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
 	<background>
 		<band/>
 	</background>
@@ -393,18 +406,34 @@ FROM
 		<band height="34" splitType="Immediate"/>
 	</columnHeader>
 	<detail>
-		<band height="115">
-			<subreport>
-				<reportElement x="18" y="15" width="815" height="83" uuid="930c4e25-ca2f-444a-ae1e-421248ffb6a9"/>
-				<subreportParameter name="CLASS_SECTION_ID">
-					<subreportParameterExpression><![CDATA[$F{idClassSection}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="STUDENT_ID">
-					<subreportParameterExpression><![CDATA[$F{student_idStudent}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "studentReport_notas.jasper"]]></subreportExpression>
-			</subreport>
+		<band height="50">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="31" width="257" height="1" uuid="c36518c8-dfef-4024-bfaa-4cac7cda7e93"/>
+			</line>
+			<frame>
+				<reportElement x="10" y="12" width="259" height="20" uuid="27d4faaa-0299-4112-871b-0e0b6619da8b"/>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="10" y="10" width="82" height="18" uuid="43c0bbb4-ffbd-401b-b848-c9bb7de8be6a"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="187" y="10" width="82" height="18" uuid="81952c65-a8b8-419b-a505-c71254358b57"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gradexstudent_value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="92" y="10" width="82" height="18" uuid="aa37daf8-f7d7-4cc3-81f1-da3f13f3313f"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grade_weight}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>

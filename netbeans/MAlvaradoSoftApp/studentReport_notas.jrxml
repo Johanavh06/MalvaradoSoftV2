@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentReport_notas" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="03fb7065-6316-44a6-91b8-4a3d9a4a724f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="STUDENT_ID" class="java.lang.Integer"/>
+	<parameter name="CLASS_SECTION_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     grade.`description` AS grade_description,
+     grade.`weight` AS grade_weight,
+     gradexstudent.`value` AS gradexstudent_value,
+     course.`name` AS course_name,
+     gradexstudent.`idCourse` AS gradexstudent_idCourse
+FROM
+     `grade` grade INNER JOIN `gradexstudent` gradexstudent ON grade.`idGrade` = gradexstudent.`idGrade`
+     INNER JOIN `student` student ON gradexstudent.`idStudent` = student.`idStudent`
+     INNER JOIN `course` course ON gradexstudent.`idCourse` = course.`idCourse`
+     INNER JOIN `classsection` classsection ON student.`idClassSection` = classsection.`idClassSection`
+WHERE
+	classsection.`idClassSection` = $P{CLASS_SECTION_ID} AND
+	student.`idStudent` = $P{STUDENT_ID}]]>
+	</queryString>
+	<field name="grade_description" class="java.lang.String"/>
+	<field name="grade_weight" class="java.lang.Double"/>
+	<field name="gradexstudent_value" class="java.lang.Float"/>
+	<field name="course_name" class="java.lang.String"/>
+	<field name="gradexstudent_idCourse" class="java.lang.Integer"/>
+	<group name="gradexstudent_idCourse">
+		<groupExpression><![CDATA[$F{gradexstudent_idCourse}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="4" width="100" height="20" uuid="2c771427-03b2-42a8-b59e-cf8532f97b1e"/>
+				<textFieldExpression><![CDATA[$F{course_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="4" width="134" height="20" uuid="8dbfb047-7ff7-47d0-b60b-ce7d1c0503e8"/>
+				<textFieldExpression><![CDATA[$F{gradexstudent_value}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
