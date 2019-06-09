@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02523B74-BB17-4600-8D64-3277571615ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistemas_Malvarado</RootNamespace>
+    <AssemblyName>Sistemas_Malvarado</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EstadosR.cs" />
+    <Compile Include="FormGestionarCursoPorHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionarCursoPorHorario.Designer.cs">
+      <DependentUpon>FormGestionarCursoPorHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionarHijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionarHijos.Designer.cs">
+      <DependentUpon>FormGestionarHijos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionarProfesor.Designer.cs">
+      <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeccionesACargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeccionesACargo.Designer.cs">
+      <DependentUpon>FormSeccionesACargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionarCursos.Designer.cs">
+      <DependentUpon>FormGestionarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarAlumno.Designer.cs">
+      <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarApoderado.Designer.cs">
+      <DependentUpon>FormBuscarApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarUsuario.Designer.cs">
+      <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInscribirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInscribirUsuario.Designer.cs">
+      <DependentUpon>FormInscribirUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsistencia.Designer.cs">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarTaller.Designer.cs">
+      <DependentUpon>frmBuscarTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeedback.Designer.cs">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarAsistencia.Designer.cs">
+      <DependentUpon>frmGestionarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarTaller.Designer.cs">
+      <DependentUpon>frmGestionarTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInscripcionTalleres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInscripcionTalleres.Designer.cs">
+      <DependentUpon>frmInscripcionTalleres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarNotas.Designer.cs">
+      <DependentUpon>frmRegistrarNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTalleresxAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTalleresxAlumno.Designer.cs">
+      <DependentUpon>frmTalleresxAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarRepositorioExamenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarRepositorioExamenes.Designer.cs">
+      <DependentUpon>GestionarRepositorioExamenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormGestionarCursoPorHorario.resx">
+      <DependentUpon>FormGestionarCursoPorHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionarHijos.resx">
+      <DependentUpon>FormGestionarHijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionarProfesor.resx">
+      <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeccionesACargo.resx">
+      <DependentUpon>FormSeccionesACargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionarCursos.resx">
+      <DependentUpon>FormGestionarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarAlumno.resx">
+      <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarApoderado.resx">
+      <DependentUpon>FormBuscarApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarUsuario.resx">
+      <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInscribirUsuario.resx">
+      <DependentUpon>FormInscribirUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsistencia.resx">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarTaller.resx">
+      <DependentUpon>frmBuscarTaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeedback.resx">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarAsistencia.resx">
+      <DependentUpon>frmGestionarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarTaller.resx">
+      <DependentUpon>frmGestionarTaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInscripcionTalleres.resx">
+      <DependentUpon>frmInscripcionTalleres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarNotas.resx">
+      <DependentUpon>frmRegistrarNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTalleresxAlumno.resx">
+      <DependentUpon>frmTalleresxAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarRepositorioExamenes.resx">
+      <DependentUpon>GestionarRepositorioExamenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
