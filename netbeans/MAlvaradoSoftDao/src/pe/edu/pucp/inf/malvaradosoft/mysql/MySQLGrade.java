@@ -35,7 +35,7 @@ public class MySQLGrade implements DAOGrade{
             while(rs.next()){
                 Grade g = new Grade();
                 g.setIdGrade(rs.getInt("idGrade"));
-                g.getCoursexschedule().setIdCourseXSchedule(rs.getInt("idCourseXSchedule"));
+                g.getCoursexschedule().setCourseXScheduleID(rs.getInt("idCourseXSchedule"));
                 g.setDescription(rs.getString("description"));
                 g.setWeight(rs.getDouble("weight"));
                 grades.add(g);
@@ -58,7 +58,7 @@ public class MySQLGrade implements DAOGrade{
             cs.registerOutParameter(1,  java.sql.Types.INTEGER);
             cs.setString(2, g.getDescription());
             cs.setDouble(3, g.getWeight());
-            cs.setInt(4, g.getCoursexschedule().getIdCourseXSchedule());
+            cs.setInt(4, g.getCoursexschedule().getCourseXScheduleID());
             cs.setInt(5, 1);
             result= cs.executeUpdate();
             con.close();
@@ -80,7 +80,7 @@ public class MySQLGrade implements DAOGrade{
             cs.setInt(1, g.getIdGrade());
             cs.setString(2, g.getDescription());
             cs.setDouble(3, g.getWeight());
-            cs.setInt(4, g.getCoursexschedule().getIdCourseXSchedule());
+            cs.setInt(4, g.getCoursexschedule().getCourseXScheduleID());
             result= cs.executeUpdate();
             con.close();
             

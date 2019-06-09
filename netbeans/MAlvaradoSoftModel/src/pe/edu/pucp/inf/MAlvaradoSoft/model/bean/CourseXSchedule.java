@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class CourseXSchedule {
     // el primary key de esta clase esta compuesto por el idCourse y idSchedule
+    private int courseXScheduleID;
     private ClassSection classSection;
     private Schedule schedule;
     private Teacher teacher;
@@ -20,6 +21,10 @@ public class CourseXSchedule {
     private ArrayList<Grade> grades;    
 
     public CourseXSchedule() {
+        String tempString = "";
+        tempString = tempString + course.getIdCourse() + schedule.getIdSchedule();
+        int tempInt = Integer.parseInt(tempString);
+        courseXScheduleID = tempInt;
         classSection = new ClassSection();
         schedule = new Schedule();
         teacher = new Teacher();
@@ -28,6 +33,14 @@ public class CourseXSchedule {
         
     }
 
+    public int getCourseXScheduleID() {
+        return courseXScheduleID;
+    }
+
+    public void setCourseXScheduleID(int courseXScheduleID) {
+        this.courseXScheduleID = courseXScheduleID;
+    }
+    
     public ClassSection getClassSection() {
         return classSection;
     }

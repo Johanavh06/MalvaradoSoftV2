@@ -54,7 +54,7 @@ public class ClassSection {
 
     public int addCourses(CourseXSchedule c) {
         courses.add(c);
-        return c.getIdCourseXSchedule();
+        return c.getCourseXScheduleID();
     }
 
     public String getName() {
