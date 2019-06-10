@@ -64,7 +64,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(95, 27);
+            this.textBox1.Location = new System.Drawing.Point(128, 27);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 20);
             this.textBox1.TabIndex = 2;
@@ -102,9 +102,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Tipo de nota:";
+            this.label4.Text = "Descripcion nota:";
             // 
             // label5
             // 
@@ -127,7 +127,7 @@
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(95, 61);
+            this.textBox3.Location = new System.Drawing.Point(128, 61);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 9;
@@ -135,7 +135,7 @@
             // textBox4
             // 
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(95, 96);
+            this.textBox4.Location = new System.Drawing.Point(128, 96);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 10;
@@ -143,7 +143,7 @@
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(95, 128);
+            this.textBox5.Location = new System.Drawing.Point(128, 128);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 11;
@@ -151,7 +151,7 @@
             // textBox6
             // 
             this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(95, 160);
+            this.textBox6.Location = new System.Drawing.Point(128, 160);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 12;
