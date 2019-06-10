@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistemas_Malvarado
 {
-    public partial class frmBuscarTaller : Form
+    public partial class frmMatricularAlumnos_secretario_ : Form
     {
-        public frmBuscarTaller()
+        public frmMatricularAlumnos_secretario_()
         {
             InitializeComponent();
-        }
-
-        private void FrmBuscarTaller_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

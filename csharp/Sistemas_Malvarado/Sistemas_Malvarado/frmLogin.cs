@@ -11,11 +11,11 @@ using System.Runtime.InteropServices;
 
 namespace Sistemas_Malvarado
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
         String user, password;
         public int usuarioPermiso;
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -113,7 +113,7 @@ namespace Sistemas_Malvarado
                 MessageBox.Show("Usuario incorrecto");
                 return;
             }
-            MenuPrincipal menu = new MenuPrincipal();
+            frmMenuPrincipal menu = new frmMenuPrincipal();
             menu.permiso = usuarioPermiso;
             if (usuarioPermiso == 1) menu.DarPermiso(Permiso.Secretario);
             else if (usuarioPermiso == 2) menu.DarPermiso(Permiso.Auxiliar);

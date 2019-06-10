@@ -11,10 +11,10 @@ using System.Runtime.InteropServices;
 
 namespace Sistemas_Malvarado
 {
-    public partial class MenuPrincipal : Form
+    public partial class frmMenuPrincipal : Form
     {
         public int permiso;
-        public MenuPrincipal()
+        public frmMenuPrincipal()
         {
             InitializeComponent();
             
@@ -130,7 +130,7 @@ namespace Sistemas_Malvarado
 
         private void btnInscribir_Click(object sender, EventArgs e)
         {            
-            OpenForm<FormInscribirUsuario>();
+            OpenForm<frmInscribirUsuario>();
         }
 
         private void btnRepositorio_Click(object sender, EventArgs e)

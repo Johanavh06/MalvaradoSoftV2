@@ -1,6 +1,6 @@
 ﻿namespace Sistemas_Malvarado
 {
-    partial class MenuPrincipal
+    partial class frmMenuPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnInscribir = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();

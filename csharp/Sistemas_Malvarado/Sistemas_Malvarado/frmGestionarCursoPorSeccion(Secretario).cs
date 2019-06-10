@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistemas_Malvarado
 {
-    public partial class FormSeccionesACargo : Form
+    public partial class frmGestionarCursoPorSeccion : Form
     {
         FormGestionarCursos refParent;
 
-        public FormSeccionesACargo()
+        public frmGestionarCursoPorSeccion()
         {
             InitializeComponent();
         }
@@ -23,6 +23,8 @@ namespace Sistemas_Malvarado
         {
             refParent = form;
         }
+
+
 
         public class tempGrado
         {
@@ -92,6 +94,8 @@ namespace Sistemas_Malvarado
             private int id;
             private String nombre;
             private int grado;
+            private DateTime horaInicio;
+            private DateTime horaFin;
 
             public tempCurso(string nombre, int grado)
             {
@@ -135,85 +139,54 @@ namespace Sistemas_Malvarado
                 }
             }
 
+            public DateTime HoraInicio
+            {
+                get
+                {
+                    return horaInicio;
+                }
+                set
+                {
+                    horaInicio = value;
+                }
+            }
+
+            public DateTime HoraFin
+            {
+                get
+                {
+                    return horaFin;
+                }
+                set
+                {
+                    horaFin = value;
+                }
+            }
         }
 
-        public class tempAlumn
+
+
+        private void comboBoxGrado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            private int id;
-            private String nombre;
-            private int claseSeccionID;
-            private float nota1;
-            private float nota2;
+            string selected = comboBoxGrado.GetItemText(comboBoxGrado.SelectedItem);
+            //MessageBox.Show(selected);
 
-            public tempAlumn(int id, string nombre, int claseSeccionID)
+            if (selected == "1")
             {
-                this.id = id;
-                this.nombre = nombre;
-                this.claseSeccionID = claseSeccionID;
+                comboBoxSeccion.Items.Clear();
+                comboBoxSeccion.ResetText();
+                comboBoxSeccion.Items.Add("A");
+                comboBoxSeccion.Items.Add("B");
             }
-
-            public int ID
+            if (selected == "2")
             {
-                get
-                {
-                    return id;
-                }
-                set
-                {
-                    id = value;
-                }
-            }
-
-            public String Nombre
-            {
-                get
-                {
-                    return nombre;
-                }
-                set
-                {
-                    nombre = value;
-                }
-            }
-
-            public int ClaseSeccionID
-            {
-                get
-                {
-                    return claseSeccionID;
-                }
-                set
-                {
-                    claseSeccionID = value;
-                }
-            }
-
-            public float Nota1
-            {
-                get
-                {
-                    return nota1;
-                }
-                set
-                {
-                    nota1 = value;
-                }
-            }
-
-            public float Nota2
-            {
-                get
-                {
-                    return nota2;
-                }
-                set
-                {
-                    nota2 = value;
-                }
+                comboBoxSeccion.Items.Clear();
+                comboBoxSeccion.ResetText();
+                comboBoxSeccion.Items.Add("-"); //Indica solo hay una seccion.
             }
         }
 
-        private void FormSeccionesACargo_Load(object sender, EventArgs e)
+        private void FormGestionarCursoPorHorario_Load(object sender, EventArgs e)
         {
             //Cargando datos prueba.
             tempGrado primerGradoA = new tempGrado(1, 27, "A");
@@ -231,34 +204,20 @@ namespace Sistemas_Malvarado
             comboBoxGrado.Items.Add(segundoGrado.Grado);
         }
 
-        private void comboBoxGrado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selected = comboBoxGrado.GetItemText(comboBoxGrado.SelectedItem);
-            //MessageBox.Show(selected);
-            
-            if(selected == "1")
-            {
-                comboBoxSeccion.Items.Clear();
-                comboBoxSeccion.ResetText();
-                comboBoxSeccion.Items.Add("A");
-                comboBoxSeccion.Items.Add("B");
-            }
-            if(selected == "2")
-            {
-                comboBoxSeccion.Items.Clear();
-                comboBoxSeccion.ResetText();
-                comboBoxSeccion.Items.Add("-"); //Indica solo hay una seccion.
-            }
-        }
-
         private void comboBoxSeccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             tempCurso curso1 = new tempCurso("Historia", 1);
             curso1.ID = 1;
+            curso1.HoraInicio = new DateTime(2019, 5, 3, 8, 0, 0);
+            curso1.HoraFin = new DateTime(2019, 5, 3, 10, 0, 0);
             tempCurso curso2 = new tempCurso("Mate 1", 1);
             curso2.ID = 2;
+            curso2.HoraInicio = new DateTime(2019, 5, 3, 10, 0, 0);
+            curso2.HoraFin = new DateTime(2019, 5, 3, 12, 0, 0);
             tempCurso curso3 = new tempCurso("Geografia", 2);
             curso3.ID = 3;
+            curso3.HoraInicio = new DateTime(2019, 5, 3, 1, 0, 0);
+            curso3.HoraFin = new DateTime(2019, 5, 3, 3, 0, 0);
             List<tempCurso> listaCursos1 = new List<tempCurso>();
             listaCursos1.Add(curso1);
             listaCursos1.Add(curso2);
@@ -266,50 +225,28 @@ namespace Sistemas_Malvarado
             listaCursos2.Add(curso3);
 
             string selected = comboBoxSeccion.GetItemText(comboBoxSeccion.SelectedItem);
-            if(selected == "A")
+            if (selected == "A")
             {
                 dataGridViewCursos.DataSource = listaCursos1;
             }
-            else if(selected == "B")
+            else if (selected == "B")
             {
                 dataGridViewCursos.DataSource = listaCursos1;
             }
-            else if(selected == "-")
+            else if (selected == "-")
             {
                 dataGridViewCursos.DataSource = listaCursos2;
             }
         }
 
-        private void dataGridViewCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            tempAlumn alumno1 = new tempAlumn(1, "Renato", 1);
-            tempAlumn alumno2 = new tempAlumn(2, "Johanna", 1);
-            tempAlumn alumno3 = new tempAlumn(3, "Joel", 2);
-            tempAlumn alumno4 = new tempAlumn(4, "Sebastian", 3);
-            tempAlumn alumno5 = new tempAlumn(5, "Jaco", 3);
-            List<tempAlumn> listaPrimeroA = new List<tempAlumn>();
-            listaPrimeroA.Add(alumno1);
-            listaPrimeroA.Add(alumno2);
-            List<tempAlumn> listaPrimeroB = new List<tempAlumn>();
-            listaPrimeroB.Add(alumno3);
-            List<tempAlumn> listaSegundo = new List<tempAlumn>();
-            listaSegundo.Add(alumno4);
-            listaSegundo.Add(alumno5);
+            MessageBox.Show("Por implementar debido a estructura no compatible con ejemplo.");
+        }
 
-            //Aqui se verificaria la lista de alumnos del curso
-            string selected = comboBoxSeccion.GetItemText(comboBoxSeccion.SelectedItem);
-            if (selected == "A")
-            {
-                dataGridViewAlumnos.DataSource = listaPrimeroA;
-            }
-            else if (selected == "B")
-            {
-                dataGridViewAlumnos.DataSource = listaPrimeroB;
-            }
-            else if (selected == "-")
-            {
-                dataGridViewAlumnos.DataSource = listaSegundo;
-            }
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Por implementar debido a estructura no compatible con ejemplo.");
         }
     }
 }

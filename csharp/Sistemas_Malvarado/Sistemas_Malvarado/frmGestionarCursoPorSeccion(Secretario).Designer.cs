@@ -1,6 +1,6 @@
 ﻿namespace Sistemas_Malvarado
 {
-    partial class FormGestionarCursoPorHorario
+    partial class frmGestionarCursoPorSeccion
     {
         /// <summary>
         /// Required designer variable.

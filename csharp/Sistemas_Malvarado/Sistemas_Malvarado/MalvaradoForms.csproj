@@ -56,17 +56,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EstadosR.cs" />
-    <Compile Include="FormGestionarCursoPorHorario.cs">
+    <Compile Include="frmEditarAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGestionarCursoPorHorario.Designer.cs">
-      <DependentUpon>FormGestionarCursoPorHorario.cs</DependentUpon>
+    <Compile Include="frmEditarAlumno%28apoderado%29.Designer.cs">
+      <DependentUpon>frmEditarAlumno%28apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGestionarHijos.cs">
+    <Compile Include="frmGestionarCursoPorSeccion%28Secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGestionarHijos.Designer.cs">
-      <DependentUpon>FormGestionarHijos.cs</DependentUpon>
+    <Compile Include="frmGestionarCursoPorSeccion%28Secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGestionarProfesor.cs">
       <SubType>Form</SubType>
@@ -74,17 +74,11 @@
     <Compile Include="FormGestionarProfesor.Designer.cs">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSeccionesACargo.cs">
+    <Compile Include="frmGestionarCursos%28secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSeccionesACargo.Designer.cs">
-      <DependentUpon>FormSeccionesACargo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGestionarCursos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGestionarCursos.Designer.cs">
-      <DependentUpon>FormGestionarCursos.cs</DependentUpon>
+    <Compile Include="frmGestionarCursos%28secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarCursos%28secretario%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscarAlumno.cs">
       <SubType>Form</SubType>
@@ -98,100 +92,118 @@
     <Compile Include="FormBuscarApoderado.Designer.cs">
       <DependentUpon>FormBuscarApoderado.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscarUsuario.cs">
+    <Compile Include="frmBuscarUsuario%28todos%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuscarUsuario.Designer.cs">
-      <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
+    <Compile Include="frmBuscarUsuario%28todos%29.Designer.cs">
+      <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInscribirUsuario.cs">
+    <Compile Include="frmGestionarSeccion%28secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInscribirUsuario.Designer.cs">
-      <DependentUpon>FormInscribirUsuario.cs</DependentUpon>
+    <Compile Include="frmGestionarSeccion%28secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarSeccion%28secretario%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAsistencia.cs">
+    <Compile Include="frmGestionarTipoNota%28secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAsistencia.Designer.cs">
-      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarTaller.cs">
+    <Compile Include="frmInscribirUsuario%28secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscarTaller.Designer.cs">
-      <DependentUpon>frmBuscarTaller.cs</DependentUpon>
+    <Compile Include="frmInscribirUsuario%28secretario%29.Designer.cs">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFeedback.cs">
+    <Compile Include="frmAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFeedback.Designer.cs">
-      <DependentUpon>frmFeedback.cs</DependentUpon>
+    <Compile Include="frmAsistencia%28auxiliar%29.Designer.cs">
+      <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarAsistencia.cs">
+    <Compile Include="frmFeedback%28profesor%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarAsistencia.Designer.cs">
-      <DependentUpon>frmGestionarAsistencia.cs</DependentUpon>
+    <Compile Include="frmFeedback%28profesor%29.Designer.cs">
+      <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarTaller.cs">
+    <Compile Include="frmGestionarAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarTaller.Designer.cs">
-      <DependentUpon>frmGestionarTaller.cs</DependentUpon>
+    <Compile Include="frmGestionarAsistencia%28auxiliar%29.Designer.cs">
+      <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInscripcionTalleres.cs">
+    <Compile Include="frmInscribirAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInscripcionTalleres.Designer.cs">
-      <DependentUpon>frmInscripcionTalleres.cs</DependentUpon>
+    <Compile Include="frmInscribirAlumno%28apoderado%29.Designer.cs">
+      <DependentUpon>frmInscribirAlumno%28apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarNotas.cs">
+    <Compile Include="frmListarAlumnos%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarNotas.Designer.cs">
-      <DependentUpon>frmRegistrarNotas.cs</DependentUpon>
+    <Compile Include="frmListarAlumnos%28apoderado%29.Designer.cs">
+      <DependentUpon>frmListarAlumnos%28apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTalleresxAlumno.cs">
+    <Compile Include="frmListarCursos%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTalleresxAlumno.Designer.cs">
-      <DependentUpon>frmTalleresxAlumno.cs</DependentUpon>
+    <Compile Include="frmListarCursos%28apoderado%29.Designer.cs">
+      <DependentUpon>frmListarCursos%28apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarRepositorioExamenes.cs">
+    <Compile Include="frmListarNotas%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarRepositorioExamenes.Designer.cs">
-      <DependentUpon>GestionarRepositorioExamenes.cs</DependentUpon>
+    <Compile Include="frmListarNotas%28apoderado%29.Designer.cs">
+      <DependentUpon>frmListarNotas%28apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
+    <Compile Include="frmMatricularAlumno%28Apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <Compile Include="frmMatricularAlumno%28Apoderado%29.Designer.cs">
+      <DependentUpon>frmMatricularAlumno%28Apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="frmMatricularAlumnos%28secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frmMatricularAlumnos%28secretario%29.Designer.cs">
+      <DependentUpon>frmMatricularAlumnos%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarNotas%28profesor%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarNotas%28profesor%29.Designer.cs">
+      <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.Designer.cs">
+      <DependentUpon>frmResportEstadisticoEvaluacion%28profesor%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormGestionarCursoPorHorario.resx">
-      <DependentUpon>FormGestionarCursoPorHorario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGestionarHijos.resx">
-      <DependentUpon>FormGestionarHijos.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionarCursoPorSeccion%28Secretario%29.resx">
+      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestionarProfesor.resx">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSeccionesACargo.resx">
-      <DependentUpon>FormSeccionesACargo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGestionarCursos.resx">
-      <DependentUpon>FormGestionarCursos.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionarCursos%28secretario%29.resx">
+      <DependentUpon>frmGestionarCursos%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarAlumno.resx">
       <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
@@ -199,44 +211,29 @@
     <EmbeddedResource Include="FormBuscarApoderado.resx">
       <DependentUpon>FormBuscarApoderado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscarUsuario.resx">
-      <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscarUsuario%28todos%29.resx">
+      <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInscribirUsuario.resx">
-      <DependentUpon>FormInscribirUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAsistencia.resx">
-      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    <EmbeddedResource Include="frmAsistencia%28auxiliar%29.resx">
+      <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarTaller.resx">
-      <DependentUpon>frmBuscarTaller.cs</DependentUpon>
+    <EmbeddedResource Include="frmFeedback%28profesor%29.resx">
+      <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFeedback.resx">
-      <DependentUpon>frmFeedback.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionarAsistencia%28auxiliar%29.resx">
+      <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarAsistencia.resx">
-      <DependentUpon>frmGestionarAsistencia.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
+      <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarTaller.resx">
-      <DependentUpon>frmGestionarTaller.cs</DependentUpon>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInscripcionTalleres.resx">
-      <DependentUpon>frmInscripcionTalleres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarNotas.resx">
-      <DependentUpon>frmRegistrarNotas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTalleresxAlumno.resx">
-      <DependentUpon>frmTalleresxAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionarRepositorioExamenes.resx">
-      <DependentUpon>GestionarRepositorioExamenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

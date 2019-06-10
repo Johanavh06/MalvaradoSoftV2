@@ -57,7 +57,7 @@ namespace Sistemas_Malvarado
 
         private void gestionarCursoPorHorarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormGestionarCursoPorHorario ventanaCursosXHorario = new FormGestionarCursoPorHorario();
+            frmGestionarCursoPorSeccion ventanaCursosXHorario = new frmGestionarCursoPorSeccion();
             ventanaCursosXHorario.Show();
         }
 

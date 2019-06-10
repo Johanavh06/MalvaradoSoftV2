@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Sistemas_Malvarado
 {
-    public partial class FormInscribirUsuario : Form
+    public partial class frmInscribirUsuario : Form
     {
         int nCb = 0;
         private int permiso;
 
         public int Permiso { get => permiso; set => permiso = value; }
 
-        public FormInscribirUsuario()
+        public frmInscribirUsuario()
         {
             InitializeComponent();
             nCb = 0;
@@ -25,7 +25,7 @@ namespace Sistemas_Malvarado
             this.tabAlumno.Parent = null;
             this.tabProfesor.Parent = null;            
         }
-        public FormInscribirUsuario(int permiso)
+        public frmInscribirUsuario(int permiso)
         {
             InitializeComponent();
             nCb = 0;
