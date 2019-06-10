@@ -135,12 +135,12 @@ namespace Sistemas_Malvarado
 
         private void btnRepositorio_Click(object sender, EventArgs e)
         {
-            OpenForm<frmGestionarRepositorioExamenes>();
+            //OpenForm<frmGestionarRepositorioExamenes>();
         }
 
         private void btnTalleres_Click(object sender, EventArgs e)
         {
-            OpenForm<frmGestionarTaller>();
+            //OpenForm<frmGestionarTaller>();
         }
 
         private void btnAlumnos_Click(object sender, EventArgs e)
@@ -155,7 +155,7 @@ namespace Sistemas_Malvarado
             }
             else if  (permiso == 3) //apoderado
             {
-                OpenForm<FormGestionarHijos>();
+                //OpenForm<FormGestionarHijos>();
             }
                 
         }

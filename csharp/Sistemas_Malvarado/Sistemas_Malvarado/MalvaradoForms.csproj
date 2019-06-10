@@ -214,6 +214,9 @@
     <EmbeddedResource Include="frmBuscarUsuario%28todos%29.resx">
       <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
+      <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
       <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +228,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarAlumnos%28apoderado%29.resx">
+      <DependentUpon>frmListarAlumnos%28apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarCursos%28apoderado%29.resx">
+      <DependentUpon>frmListarCursos%28apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarNotas%28apoderado%29.resx">
+      <DependentUpon>frmListarNotas%28apoderado%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
       <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>

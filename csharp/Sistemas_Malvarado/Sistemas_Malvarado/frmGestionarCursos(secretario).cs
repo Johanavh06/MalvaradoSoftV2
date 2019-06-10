@@ -32,8 +32,8 @@ namespace Sistemas_Malvarado
 
         private void seccionesACargoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormSeccionesACargo seccionesACargo = new FormSeccionesACargo();
-            seccionesACargo.Show();
+            //FormSeccionesACargo seccionesACargo = new FormSeccionesACargo();
+            //seccionesACargo.Show();
         }
 
         private void btnAgregarGestionarCurso_Click(object sender, EventArgs e)

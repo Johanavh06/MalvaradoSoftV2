@@ -12,9 +12,18 @@ namespace Sistemas_Malvarado
 {
     public partial class frmRegistrarNotas : Form
     {
+
+        private frmFeedback feed;
+
         public frmRegistrarNotas()
         {
             InitializeComponent();
+        }
+
+        private void ingresarFeedback(object sender, DataGridViewCellEventArgs e)
+        {
+            feed = new frmFeedback();
+            feed.ShowDialog();
         }
     }
 }
