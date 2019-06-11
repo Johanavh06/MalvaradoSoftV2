@@ -84,5 +84,10 @@ namespace Sistemas_Malvarado
         {
             DialogResult result = MessageBox.Show("En esta opción se debe subir el archivo de certificado de nacimiento, el sistema solo acepta los archivos en formato PDF", "Mensaje de ayuda", MessageBoxButtons.OK);
         }
+
+        private void btnHelpBoleta_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("En esta opción se debe colocar el número del recibo de la boleta de pago para la próxima Matrícula del alumno", "Mensaje de ayuda", MessageBoxButtons.OK);
+        }
     }
 }

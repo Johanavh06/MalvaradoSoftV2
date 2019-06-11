@@ -55,11 +55,18 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnHelpBoleta = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
             // 
+            this.gbDatosGenerales.Controls.Add(this.comboBox1);
+            this.gbDatosGenerales.Controls.Add(this.label10);
             this.gbDatosGenerales.Controls.Add(this.txtEmail);
             this.gbDatosGenerales.Controls.Add(this.txtTel);
             this.gbDatosGenerales.Controls.Add(this.txtApMat);
@@ -90,7 +97,7 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(124, 155);
+            this.txtTel.Location = new System.Drawing.Point(359, 154);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(182, 20);
             this.txtTel.TabIndex = 9;
@@ -114,7 +121,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 158);
+            this.label7.Location = new System.Drawing.Point(260, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 7;
@@ -130,7 +137,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 193);
+            this.label6.Location = new System.Drawing.Point(17, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 6;
@@ -152,7 +159,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(360, 155);
+            this.txtDNI.Location = new System.Drawing.Point(359, 190);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(181, 20);
             this.txtDNI.TabIndex = 4;
@@ -187,7 +194,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(319, 158);
+            this.label2.Location = new System.Drawing.Point(327, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 0;
@@ -294,11 +301,59 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(241, 317);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(136, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Número de boleta de pago:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(384, 315);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 20);
+            this.textBox1.TabIndex = 36;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 157);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Grado";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(124, 154);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // btnHelpBoleta
+            // 
+            this.btnHelpBoleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHelpBoleta.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpBoleta.Image = ((System.Drawing.Image)(resources.GetObject("btnHelpBoleta.Image")));
+            this.btnHelpBoleta.Location = new System.Drawing.Point(615, 314);
+            this.btnHelpBoleta.Name = "btnHelpBoleta";
+            this.btnHelpBoleta.Size = new System.Drawing.Size(24, 24);
+            this.btnHelpBoleta.TabIndex = 37;
+            this.btnHelpBoleta.UseVisualStyleBackColor = true;
+            this.btnHelpBoleta.Click += new System.EventHandler(this.btnHelpBoleta_Click);
+            // 
             // frmInscribirAlumno_apoderado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 435);
+            this.Controls.Add(this.btnHelpBoleta);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -347,5 +402,10 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnHelpBoleta;
     }
 }

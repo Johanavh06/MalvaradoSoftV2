@@ -22,7 +22,7 @@ namespace Sistemas_Malvarado
             tempCurso curso = new tempCurso("Historia", 4);
             BindingList<tempCurso> listaCursos = new BindingList<tempCurso>();
             listaCursos.Add(curso);
-            dataGridViewGestionarCursos.DataSource = listaCursos;
+            //dataGridViewGestionarCursos.DataSource = listaCursos;
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,20 +39,20 @@ namespace Sistemas_Malvarado
         private void btnAgregarGestionarCurso_Click(object sender, EventArgs e)
         {
             BindingList<tempCurso> listaCursos = new BindingList<tempCurso>();
-            listaCursos = (BindingList<tempCurso>)dataGridViewGestionarCursos.DataSource;
-            tempCurso curso = new tempCurso(textBoxCursoNombre.Text, Int32.Parse(comboBoxGrado.Text));
-            listaCursos.Add(curso);
-            dataGridViewGestionarCursos.DataSource = listaCursos;
+            //listaCursos = (BindingList<tempCurso>)dataGridViewGestionarCursos.DataSource;
+            //tempCurso curso = new tempCurso(textBoxCursoNombre.Text, Int32.Parse(comboBoxGrado.Text));
+            //listaCursos.Add(curso);
+            //dataGridViewGestionarCursos.DataSource = listaCursos;
         }
 
         private void btmEliminar_Click(object sender, EventArgs e)
         {
             int count;
-            count = dataGridViewGestionarCursos.CurrentCell.RowIndex;
+            //count = dataGridViewGestionarCursos.CurrentCell.RowIndex;
             BindingList<tempCurso> listaCursos = new BindingList<tempCurso>();
-            listaCursos = (BindingList<tempCurso>)dataGridViewGestionarCursos.DataSource;
-            listaCursos.RemoveAt(count);
-            dataGridViewGestionarCursos.DataSource = listaCursos;
+            //listaCursos = (BindingList<tempCurso>)dataGridViewGestionarCursos.DataSource;
+            //listaCursos.RemoveAt(count);
+            //dataGridViewGestionarCursos.DataSource = listaCursos;
         }
 
         private void gestionarCursoPorHorarioToolStripMenuItem_Click(object sender, EventArgs e)

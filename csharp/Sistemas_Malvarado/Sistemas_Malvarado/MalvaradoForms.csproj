@@ -109,15 +109,17 @@
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuInscribirAlumno_Apoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuInscribirAlumno_Apoderado.Designer.cs">
+      <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmIniciarTipoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\frmIniciarTipoUsuario.Designer.cs">
       <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmInscribirUsuario%28secretario%29.cs" />
-    <Compile Include="frmInscribirUsuario_secretario.Designer.cs">
-      <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
     </Compile>
     <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
@@ -259,9 +261,6 @@
     <EmbeddedResource Include="frmInscribirAlumno_apoderado.resx">
       <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInscribirUsuario_secretario.resx">
-      <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Asistencia\frmAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarNotas%28apoderado%29.resx">
       <DependentUpon>frmListarNotas%28apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuInscribirAlumno_Apoderado.resx">
+      <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
       <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
@@ -315,6 +317,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -330,6 +333,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Apoderado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,7 +12,7 @@ namespace Sistemas_Malvarado
 {
     public partial class frmListarNotas_apoderado_ : Form
     {
-        frmVerFeedbak_apoderado_ frmFeed;
+        //frmVerFeedbak_apoderado_ frmFeed;
 
         public frmListarNotas_apoderado_()
         {
@@ -21,8 +21,8 @@ namespace Sistemas_Malvarado
 
         private void verFeedback(object sender, DataGridViewCellEventArgs e)
         {
-            frmFeed = new frmVerFeedbak_apoderado_();
-            frmFeed.ShowDialog();
+            //frmFeed = new frmVerFeedbak_apoderado_();
+            //frmFeed.ShowDialog();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
