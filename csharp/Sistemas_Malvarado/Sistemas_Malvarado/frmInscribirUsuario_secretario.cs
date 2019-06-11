@@ -10,28 +10,31 @@ using System.Windows.Forms;
 
 namespace Sistemas_Malvarado
 {
-    public partial class frmInscribirUsuario : Form
+    public partial class frmInscribirUsuario_secretario : Form
     {
         int nCb = 0;
         private int permiso;
-
+        
         public int Permiso { get => permiso; set => permiso = value; }
 
-        public frmInscribirUsuario()
+        public frmInscribirUsuario_secretario()
         {
             InitializeComponent();
             nCb = 0;
             this.tabApoderado.Parent = null;
             this.tabAlumno.Parent = null;
-            this.tabProfesor.Parent = null;            
+            //this.tabProfesor.Parent = null;  
+            this.Height = 410;
         }
-        public frmInscribirUsuario(int permiso)
+
+      
+        public frmInscribirUsuario_secretario(int permiso)
         {
             InitializeComponent();
             nCb = 0;
             this.tabApoderado.Parent = null;
             this.tabAlumno.Parent = null;
-            this.tabProfesor.Parent = null;
+            //this.tabProfesor.Parent = null;
             if (permiso == 3)
             {
                 ckAuxiliar.Enabled = false;
@@ -40,6 +43,7 @@ namespace Sistemas_Malvarado
                 ckSecretaria.Enabled = false;
                 ckApoderado.Enabled = false;
             }
+            this.Height = 410;
         }
 
         private void createComboBox()
@@ -53,7 +57,7 @@ namespace Sistemas_Malvarado
                 //cb.autos
                 //cb.DisplayMember = "Name";
                 //cb.ValueMember = "IdCourse";
-                flpCursos.Controls.Add(cb);
+                //flpCursos.Controls.Add(cb);
             }
             else
             {
@@ -91,10 +95,14 @@ namespace Sistemas_Malvarado
             if (ckApoderado.Checked == true)
             {
                 this.tabApoderado.Parent = this.tabUsers;
+                ckAlumno.Enabled = false;
+                this.Height = 764;
             }
             else
             {
+                ckAlumno.Enabled = true;
                 this.tabApoderado.Parent = null;
+                this.Height = 410;
             }
         }
 
@@ -103,10 +111,22 @@ namespace Sistemas_Malvarado
             if(ckAlumno.Checked == true)
             {
                 this.tabAlumno.Parent = this.tabUsers;
+                ckApoderado.Enabled = false;
+                ckAuxiliar.Enabled = false;
+                ckPrincipal.Enabled = false;
+                ckProfesor.Enabled = false;
+                ckSecretaria.Enabled = false;
+                this.Height = 764;
             }
             else
             {
+                ckApoderado.Enabled = true;
+                ckAuxiliar.Enabled = true;
+                ckPrincipal.Enabled = true;
+                ckProfesor.Enabled = true;
+                ckSecretaria.Enabled = true;
                 this.tabAlumno.Parent = null;
+                this.Height = 410;
             }
         }
 
@@ -114,11 +134,21 @@ namespace Sistemas_Malvarado
         {
             if(ckProfesor.Checked == true)
             {
-                this.tabProfesor.Parent = this.tabUsers;
+                //this.tabProfesor.Parent = this.tabUsers;
+                ckAlumno.Enabled = false;
+                if(ckApoderado.Checked == true)
+                {
+                    this.Height = 764;
+                }
+                else
+                {
+                    this.Height = 410;
+                }
             }
             else
             {
-                this.tabProfesor.Parent = null;
+                ckAlumno.Enabled = true;
+                //this.tabProfesor.Parent = null;
             }
         }
 

@@ -110,11 +110,11 @@
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInscribirUsuario%28secretario%29.cs">
+    <Compile Include="frmInscribirUsuario_secretario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInscribirUsuario%28secretario%29.Designer.cs">
-      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+    <Compile Include="frmInscribirUsuario_secretario.Designer.cs">
+      <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
@@ -134,11 +134,11 @@
     <Compile Include="frmGestionarAsistencia%28auxiliar%29.Designer.cs">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInscribirAlumno%28apoderado%29.cs">
+    <Compile Include="frmInscribirAlumno_apoderado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInscribirAlumno%28apoderado%29.Designer.cs">
-      <DependentUpon>frmInscribirAlumno%28apoderado%29.cs</DependentUpon>
+    <Compile Include="frmInscribirAlumno_apoderado.Designer.cs">
+      <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListarAlumnos%28apoderado%29.cs">
       <SubType>Form</SubType>
@@ -217,8 +217,11 @@
     <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
-      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+    <EmbeddedResource Include="frmInscribirAlumno_apoderado.resx">
+      <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInscribirUsuario_secretario.resx">
+      <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
@@ -270,5 +273,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

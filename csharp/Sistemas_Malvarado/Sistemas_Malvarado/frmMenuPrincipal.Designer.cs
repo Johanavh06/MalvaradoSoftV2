@@ -289,7 +289,7 @@
             this.panelFormularios.Size = new System.Drawing.Size(800, 600);
             this.panelFormularios.TabIndex = 4;
             // 
-            // MenuPrincipal
+            // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -299,7 +299,7 @@
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(650, 400);
-            this.Name = "MenuPrincipal";
+            this.Name = "frmMenuPrincipal";
             this.Text = "Form1";
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

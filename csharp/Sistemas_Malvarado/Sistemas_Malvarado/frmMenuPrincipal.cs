@@ -130,7 +130,7 @@ namespace Sistemas_Malvarado
 
         private void btnInscribir_Click(object sender, EventArgs e)
         {            
-            OpenForm<frmInscribirUsuario>();
+            OpenForm<frmInscribirUsuario_secretario>();
         }
 
         private void btnRepositorio_Click(object sender, EventArgs e)

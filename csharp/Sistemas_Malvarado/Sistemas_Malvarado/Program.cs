@@ -16,8 +16,9 @@ namespace Sistemas_Malvarado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormInscribirUsuario());
-            Application.Run(new frmGestionarTipoNota_secretario_());
+            //Application.Run(new frmInscribirAlumno_apoderado());
+            Application.Run(new frmInscribirUsuario_secretario());
+            //Application.Run(new frmGestionarTipoNota_secretario_());
             //Application.Run(new FormSeccionesACargo());
         }
     }
