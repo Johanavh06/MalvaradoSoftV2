@@ -55,7 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EstadosR.cs" />
     <Compile Include="frmEditarAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,16 +109,26 @@
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmInscribirUsuario_secretario.cs">
+=======
+    <Compile Include="Login\frmIniciarTipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmIniciarTipoUsuario.Designer.cs">
+      <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInscribirUsuario%28secretario%29.cs">
+>>>>>>> cc85d15c29a88cc43768e3a6ab7960c2834858dc
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInscribirUsuario_secretario.Designer.cs">
       <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAsistencia%28auxiliar%29.cs">
+    <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAsistencia%28auxiliar%29.Designer.cs">
+    <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.Designer.cs">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFeedback%28profesor%29.cs">
@@ -128,10 +137,10 @@
     <Compile Include="frmFeedback%28profesor%29.Designer.cs">
       <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarAsistencia%28auxiliar%29.cs">
+    <Compile Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarAsistencia%28auxiliar%29.Designer.cs">
+    <Compile Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.Designer.cs">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInscribirAlumno_apoderado.cs">
@@ -182,17 +191,61 @@
     <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.Designer.cs">
       <DependentUpon>frmResportEstadisticoEvaluacion%28profesor%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuPrincipal.cs">
+    <Compile Include="MenuPrincipal\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuPrincipal.Designer.cs">
+    <Compile Include="MenuPrincipal\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAlumno.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalApoderado.Designer.cs">
+      <DependentUpon>frmMenuPrincipalApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAuxiliar.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAuxiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalProfesor.Designer.cs">
+      <DependentUpon>frmMenuPrincipalProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.Designer.cs">
+      <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
+=======
+    <Compile Include="frmVerFeedbak%28apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerFeedbak%28apoderado%29.Designer.cs">
+      <DependentUpon>frmVerFeedbak%28apoderado%29.cs</DependentUpon>
+>>>>>>> bc45394686b48398d05bb848985ed87d85f02753
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -217,19 +270,27 @@
     <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmInscribirAlumno_apoderado.resx">
       <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInscribirUsuario_secretario.resx">
       <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Login\frmIniciarTipoUsuario.resx">
+      <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAsistencia%28auxiliar%29.resx">
+    <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+>>>>>>> cc85d15c29a88cc43768e3a6ab7960c2834858dc
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia\frmAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFeedback%28profesor%29.resx">
       <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarAsistencia%28auxiliar%29.resx">
+    <EmbeddedResource Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarAlumnos%28apoderado%29.resx">
@@ -244,11 +305,34 @@
     <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
       <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuPrincipal.resx">
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAdministrador.resx">
+      <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAlumno.resx">
+      <DependentUpon>frmMenuPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalApoderado.resx">
+      <DependentUpon>frmMenuPrincipalApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAuxiliar.resx">
+      <DependentUpon>frmMenuPrincipalAuxiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalProfesor.resx">
+      <DependentUpon>frmMenuPrincipalProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalSecretario.resx">
+      <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmVerFeedbak%28apoderado%29.resx">
+      <DependentUpon>frmVerFeedbak%28apoderado%29.cs</DependentUpon>
+>>>>>>> bc45394686b48398d05bb848985ed87d85f02753
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

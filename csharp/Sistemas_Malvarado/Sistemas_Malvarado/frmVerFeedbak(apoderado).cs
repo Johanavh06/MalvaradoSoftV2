@@ -10,23 +10,16 @@ using System.Windows.Forms;
 
 namespace Sistemas_Malvarado
 {
-    public partial class frmAsistencia : Form
+    public partial class frmVerFeedbak_apoderado_ : Form
     {
-        public frmAsistencia()
+        public frmVerFeedbak_apoderado_()
         {
             InitializeComponent();
         }
 
-
-        private void Button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-        }
-
-        private void Button2_Click_1(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
-
- }
+}

@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblSegundos = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblMinutos = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -40,6 +46,8 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMostrarContraseña = new System.Windows.Forms.PictureBox();
             this.btnOcultarContraseña = new System.Windows.Forms.PictureBox();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -58,6 +66,61 @@
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.IndianRed;
+            this.label6.Location = new System.Drawing.Point(343, 303);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(10, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = ":";
+            this.label6.Visible = false;
+            // 
+            // lblSegundos
+            // 
+            this.lblSegundos.AutoSize = true;
+            this.lblSegundos.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblSegundos.Location = new System.Drawing.Point(355, 303);
+            this.lblSegundos.Name = "lblSegundos";
+            this.lblSegundos.Size = new System.Drawing.Size(13, 13);
+            this.lblSegundos.TabIndex = 14;
+            this.lblSegundos.Text = "0";
+            this.lblSegundos.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.IndianRed;
+            this.label4.Location = new System.Drawing.Point(374, 303);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "seg";
+            this.label4.Visible = false;
+            // 
+            // lblMinutos
+            // 
+            this.lblMinutos.AutoSize = true;
+            this.lblMinutos.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblMinutos.Location = new System.Drawing.Point(324, 303);
+            this.lblMinutos.Name = "lblMinutos";
+            this.lblMinutos.Size = new System.Drawing.Size(13, 13);
+            this.lblMinutos.TabIndex = 12;
+            this.lblMinutos.Text = "0";
+            this.lblMinutos.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.IndianRed;
+            this.label2.Location = new System.Drawing.Point(266, 277);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Su cuenta esta bloqueado";
+            this.label2.Visible = false;
             // 
             // pictureBox1
             // 
@@ -176,15 +239,39 @@
             this.btnOcultarContraseña.TabStop = false;
             this.btnOcultarContraseña.Click += new System.EventHandler(this.btnOcultarContraseña_Click);
             // 
-            // Login
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMessage.ForeColor = System.Drawing.Color.DimGray;
+            this.lblErrorMessage.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorMessage.Image")));
+            this.lblErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblErrorMessage.Location = new System.Drawing.Point(326, 180);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(0, 18);
+            this.lblErrorMessage.TabIndex = 10;
+            this.lblErrorMessage.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblErrorMessage);
+            this.Controls.Add(this.lblSegundos);
             this.Controls.Add(this.btnOcultarContraseña);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnMostrarContraseña);
+            this.Controls.Add(this.lblMinutos);
             this.Controls.Add(this.btnMinimizar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnAcceder);
@@ -193,7 +280,8 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.KeyPreview = true;
+            this.Name = "frmLogin";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -222,6 +310,13 @@
         private System.Windows.Forms.PictureBox btnMostrarContraseña;
         private System.Windows.Forms.PictureBox btnOcultarContraseña;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblErrorMessage;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblSegundos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMinutos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
