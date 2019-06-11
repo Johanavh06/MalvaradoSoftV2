@@ -116,10 +116,10 @@
     <Compile Include="frmInscribirUsuario%28secretario%29.Designer.cs">
       <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAsistencia%28auxiliar%29.cs">
+    <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAsistencia%28auxiliar%29.Designer.cs">
+    <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.Designer.cs">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFeedback%28profesor%29.cs">
@@ -128,10 +128,10 @@
     <Compile Include="frmFeedback%28profesor%29.Designer.cs">
       <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarAsistencia%28auxiliar%29.cs">
+    <Compile Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarAsistencia%28auxiliar%29.Designer.cs">
+    <Compile Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.Designer.cs">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInscribirAlumno%28apoderado%29.cs">
@@ -226,13 +226,13 @@
     <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
       <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAsistencia%28auxiliar%29.resx">
+    <EmbeddedResource Include="Asistencia\frmAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFeedback%28profesor%29.resx">
       <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarAsistencia%28auxiliar%29.resx">
+    <EmbeddedResource Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarAlumnos%28apoderado%29.resx">

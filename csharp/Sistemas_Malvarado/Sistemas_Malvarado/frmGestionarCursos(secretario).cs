@@ -65,6 +65,8 @@ namespace Sistemas_Malvarado
         {
             this.Close();
         }
+
+  
     }
 
     public class tempCurso
