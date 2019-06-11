@@ -199,6 +199,7 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.Designer.cs">
       <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
+=======
+    <Compile Include="frmVerFeedbak%28apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerFeedbak%28apoderado%29.Designer.cs">
+      <DependentUpon>frmVerFeedbak%28apoderado%29.cs</DependentUpon>
+>>>>>>> bc45394686b48398d05bb848985ed87d85f02753
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -291,6 +299,7 @@
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAdministrador.resx">
       <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +317,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalSecretario.resx">
       <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmVerFeedbak%28apoderado%29.resx">
+      <DependentUpon>frmVerFeedbak%28apoderado%29.cs</DependentUpon>
+>>>>>>> bc45394686b48398d05bb848985ed87d85f02753
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

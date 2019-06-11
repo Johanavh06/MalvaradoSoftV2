@@ -12,9 +12,22 @@ namespace Sistemas_Malvarado
 {
     public partial class frmListarAlumnos : Form
     {
+        frmListarCursos_apoderado_ listarCursos;
+
         public frmListarAlumnos()
         {
             InitializeComponent();
+        }
+
+        private void listarCursos_alumno(object sender, DataGridViewCellEventArgs e)
+        {
+            listarCursos = new frmListarCursos_apoderado_();
+            listarCursos.ShowDialog();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
