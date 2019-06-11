@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistemas_Malvarado.MenuPrincipal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace Sistemas_Malvarado
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormInscribirUsuario());
-            Application.Run(new frmGestionarTipoNota_secretario_());
+            Application.Run(new frmLogin());
             //Application.Run(new FormSeccionesACargo());
         }
     }

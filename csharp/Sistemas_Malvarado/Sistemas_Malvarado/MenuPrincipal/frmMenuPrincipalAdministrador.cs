@@ -4,21 +4,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
-namespace Sistemas_Malvarado
+namespace Sistemas_Malvarado.MenuPrincipal
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmMenuPrincipalAdministrador : Form
     {
-        public int permiso;
-        public frmMenuPrincipal()
+        public frmMenuPrincipalAdministrador()
         {
             InitializeComponent();
-            
         }
+
         #region Funcionalidades del formulario
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
         private int tolerance = 12;
@@ -62,9 +61,9 @@ namespace Sistemas_Malvarado
             //base.OnPaint(e);
             //ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent , sizeGripRectangle);
         }
-        
 
-        
+
+
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -107,7 +106,7 @@ namespace Sistemas_Malvarado
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        
+
 
         //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -117,53 +116,15 @@ namespace Sistemas_Malvarado
         {
             Application.Exit();
         }
-
-        private void btnCursos_Click(object sender, EventArgs e)
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
-            OpenForm<FormGestionarCursos>();
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnInscribir_Click(object sender, EventArgs e)
-        {            
-            OpenForm<frmInscribirUsuario>();
-        }
-
-        private void btnRepositorio_Click(object sender, EventArgs e)
-        {
-            //OpenForm<frmGestionarRepositorioExamenes>();
-        }
-
-        private void btnTalleres_Click(object sender, EventArgs e)
-        {
-            //OpenForm<frmGestionarTaller>();
-        }
-
-        private void btnAlumnos_Click(object sender, EventArgs e)
-        {
-            if (permiso == 1) //secretario
-            {
-                OpenForm<FormBuscarAlumno>();
-            }
-            else if (permiso == 2)// auxiliar
-            {
-                OpenForm<frmGestionarAsistencia>();
-            }
-            else if  (permiso == 3) //apoderado
-            {
-                //OpenForm<FormGestionarHijos>();
-            }
-                
-        }
-
-        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnProfesores_Click(object sender, EventArgs e)
@@ -173,10 +134,12 @@ namespace Sistemas_Malvarado
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         #endregion
 
+
         //Metodo para abrir formularios dentro del panel
-        private void OpenForm<MiForm>() where  MiForm : Form , new()
+        private void OpenForm<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
             formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault(); //Busca en la coleccion  el formulario
@@ -185,7 +148,7 @@ namespace Sistemas_Malvarado
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
-                panelFormularios.Controls.Add(formulario) ;
+                panelFormularios.Controls.Add(formulario);
                 formulario.Dock = DockStyle.Fill;
                 panelFormularios.Tag = formulario;
                 formulario.Show();
@@ -196,47 +159,6 @@ namespace Sistemas_Malvarado
             {
                 formulario.BringToFront();
             }
-        } 
-        public void DarPermiso(Permiso permiso)
-        {
-            switch (permiso)
-            {
-                case Permiso.Secretario:
-                    btnAlumnos.Enabled = true;
-                    btnCursos.Enabled = true;
-                    btnInscribir.Enabled = true;
-                    btnTalleres.Enabled = true;
-                    btnRepositorio.Enabled = true;
-                    btnTalleres.Enabled = true;
-                    break;
-                case Permiso.Auxiliar:
-                    btnAlumnos.Enabled = true;
-                    btnCursos.Enabled = false;
-                    btnInscribir.Enabled = false;
-                    btnTalleres.Enabled = false;
-                    btnRepositorio.Enabled = false;
-                    btnProfesores.Enabled = false;
-                    break;
-                case Permiso.Hijo:
-                    btnAlumnos.Enabled = false;
-                    btnCursos.Enabled = false;
-                    btnInscribir.Enabled = false;
-                    btnTalleres.Enabled = false;
-                    btnRepositorio.Enabled = false;
-                    break;
-                case Permiso.Padre:
-                    btnAlumnos.Enabled = true;
-                    btnCursos.Enabled = false;
-                    btnInscribir.Enabled = false;
-                    btnTalleres.Enabled = false;
-                    btnRepositorio.Enabled = false;
-                    btnProfesores.Enabled = false;
-                    break;
-            }
         }
-    }
-    public enum Permiso
-    {
-        Secretario, Auxiliar, Padre, Hijo,
     }
 }

@@ -55,7 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EstadosR.cs" />
     <Compile Include="frmEditarAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +108,12 @@
     </Compile>
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmIniciarTipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmIniciarTipoUsuario.Designer.cs">
+      <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInscribirUsuario%28secretario%29.cs">
       <SubType>Form</SubType>
@@ -182,17 +187,53 @@
     <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.Designer.cs">
       <DependentUpon>frmResportEstadisticoEvaluacion%28profesor%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuPrincipal.cs">
+    <Compile Include="MenuPrincipal\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuPrincipal.Designer.cs">
+    <Compile Include="MenuPrincipal\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAlumno.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalApoderado.Designer.cs">
+      <DependentUpon>frmMenuPrincipalApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAuxiliar.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAuxiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalProfesor.Designer.cs">
+      <DependentUpon>frmMenuPrincipalProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.Designer.cs">
+      <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -216,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmIniciarTipoUsuario.resx">
+      <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
       <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
@@ -241,11 +285,29 @@
     <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
       <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuPrincipal.resx">
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAdministrador.resx">
+      <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAlumno.resx">
+      <DependentUpon>frmMenuPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalApoderado.resx">
+      <DependentUpon>frmMenuPrincipalApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAuxiliar.resx">
+      <DependentUpon>frmMenuPrincipalAuxiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalProfesor.resx">
+      <DependentUpon>frmMenuPrincipalProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalSecretario.resx">
+      <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
