@@ -109,19 +109,13 @@
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="frmInscribirUsuario_secretario.cs">
-=======
     <Compile Include="Login\frmIniciarTipoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\frmIniciarTipoUsuario.Designer.cs">
       <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInscribirUsuario%28secretario%29.cs">
->>>>>>> cc85d15c29a88cc43768e3a6ab7960c2834858dc
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frmInscribirUsuario%28secretario%29.cs" />
     <Compile Include="frmInscribirUsuario_secretario.Designer.cs">
       <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
     </Compile>
@@ -203,7 +197,6 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,13 +232,6 @@
     </Compile>
     <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.Designer.cs">
       <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
-=======
-    <Compile Include="frmVerFeedbak%28apoderado%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmVerFeedbak%28apoderado%29.Designer.cs">
-      <DependentUpon>frmVerFeedbak%28apoderado%29.cs</DependentUpon>
->>>>>>> bc45394686b48398d05bb848985ed87d85f02753
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,19 +256,11 @@
     <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmInscribirAlumno_apoderado.resx">
       <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInscribirUsuario_secretario.resx">
       <DependentUpon>frmInscribirUsuario_secretario.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Login\frmIniciarTipoUsuario.resx">
-      <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
-      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
->>>>>>> cc85d15c29a88cc43768e3a6ab7960c2834858dc
     </EmbeddedResource>
     <EmbeddedResource Include="Asistencia\frmAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
@@ -311,7 +289,6 @@
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAdministrador.resx">
       <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,10 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalSecretario.resx">
       <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="frmVerFeedbak%28apoderado%29.resx">
-      <DependentUpon>frmVerFeedbak%28apoderado%29.cs</DependentUpon>
->>>>>>> bc45394686b48398d05bb848985ed87d85f02753
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
