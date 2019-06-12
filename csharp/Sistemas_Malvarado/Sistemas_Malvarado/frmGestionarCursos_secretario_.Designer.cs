@@ -34,9 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,12 +97,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Curso";
             // 
-            // textBox1
+            // btnBuscarUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 13;
+            this.btnBuscarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarUsuario.Image")));
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(358, 16);
+            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
+            this.btnBuscarUsuario.Size = new System.Drawing.Size(36, 33);
+            this.btnBuscarUsuario.TabIndex = 25;
+            this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // comboBox1
             // 
@@ -112,14 +115,12 @@
             this.comboBox1.Size = new System.Drawing.Size(227, 21);
             this.comboBox1.TabIndex = 14;
             // 
-            // btnBuscarUsuario
+            // textBox1
             // 
-            this.btnBuscarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarUsuario.Image")));
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(358, 16);
-            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
-            this.btnBuscarUsuario.Size = new System.Drawing.Size(36, 33);
-            this.btnBuscarUsuario.TabIndex = 25;
-            this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(125, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 20);
+            this.textBox1.TabIndex = 13;
             // 
             // FormGestionarCursos
             // 

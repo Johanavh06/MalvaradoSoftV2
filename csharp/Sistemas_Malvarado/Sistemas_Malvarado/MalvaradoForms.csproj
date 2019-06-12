@@ -61,6 +61,12 @@
     <Compile Include="frmEditarAlumno%28apoderado%29.Designer.cs">
       <DependentUpon>frmEditarAlumno%28apoderado%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGestionarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarAsistencia.Designer.cs">
+      <DependentUpon>frmGestionarAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionarCursoPorSeccion%28Secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +79,11 @@
     <Compile Include="FormGestionarProfesor.Designer.cs">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarCursos%28secretario%29.cs">
+    <Compile Include="frmGestionarCursos_secretario_.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarCursos%28secretario%29.Designer.cs">
-      <DependentUpon>frmGestionarCursos%28secretario%29.cs</DependentUpon>
+    <Compile Include="frmGestionarCursos_secretario_.Designer.cs">
+      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscarAlumno.cs">
       <SubType>Form</SubType>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="frmMenuInscribirAlumno_Apoderado.Designer.cs">
       <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReestablecerContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReestablecerContraseña.Designer.cs">
+      <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmIniciarTipoUsuario.cs">
       <SubType>Form</SubType>
@@ -243,8 +255,8 @@
     <EmbeddedResource Include="FormGestionarProfesor.resx">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarCursos%28secretario%29.resx">
-      <DependentUpon>frmGestionarCursos%28secretario%29.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionarCursos_secretario_.resx">
+      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarAlumno.resx">
       <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
@@ -337,7 +349,7 @@
     <Folder Include="Apoderado\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plus %281%29.png" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus %282%29.png" />

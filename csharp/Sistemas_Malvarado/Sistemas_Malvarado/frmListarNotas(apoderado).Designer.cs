@@ -174,6 +174,7 @@
             this.Enabled = false;
             this.Name = "frmListarNotas_apoderado_";
             this.Text = "Listar notas";
+            this.Load += new System.EventHandler(this.frmListarNotas_apoderado__Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

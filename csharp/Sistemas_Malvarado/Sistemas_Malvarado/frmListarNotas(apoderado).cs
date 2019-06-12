@@ -29,5 +29,10 @@ namespace Sistemas_Malvarado
         {
             this.Close();
         }
+
+        private void frmListarNotas_apoderado__Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

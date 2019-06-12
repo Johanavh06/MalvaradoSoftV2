@@ -56,8 +56,7 @@
             this.label2.TabIndex = 2;
             // 
             // btnAdd1
-            // 
-            this.btnAdd1.Image = global::Sistemas_Malvarado.Properties.Resources.plus__1_;
+            //             
             this.btnAdd1.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.InitialImage")));
             this.btnAdd1.Location = new System.Drawing.Point(217, 32);
             this.btnAdd1.Name = "btnAdd1";

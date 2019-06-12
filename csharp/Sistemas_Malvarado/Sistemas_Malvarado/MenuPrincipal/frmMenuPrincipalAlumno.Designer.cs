@@ -37,14 +37,17 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.btnInscribir = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnRepositorio = new System.Windows.Forms.Button();
-            this.btnTalleres = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnProfesores = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblcorreo = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnAjustes = new System.Windows.Forms.Button();
+            this.panelFormularios.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -53,10 +56,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFormularios
             // 
+            this.panelFormularios.Controls.Add(this.lblRol);
+            this.panelFormularios.Controls.Add(this.pictureBox2);
+            this.panelFormularios.Controls.Add(this.lblcorreo);
+            this.panelFormularios.Controls.Add(this.lblUser);
             this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormularios.Location = new System.Drawing.Point(250, 50);
             this.panelFormularios.Name = "panelFormularios";
@@ -146,12 +154,10 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.MenuVertical.Controls.Add(this.btnInscribir);
             this.MenuVertical.Controls.Add(this.btnCerrarSesion);
-            this.MenuVertical.Controls.Add(this.btnRepositorio);
-            this.MenuVertical.Controls.Add(this.btnTalleres);
             this.MenuVertical.Controls.Add(this.btnCursos);
             this.MenuVertical.Controls.Add(this.btnProfesores);
+            this.MenuVertical.Controls.Add(this.btnAjustes);
             this.MenuVertical.Controls.Add(this.btnAlumnos);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -159,22 +165,6 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(250, 611);
             this.MenuVertical.TabIndex = 5;
-            // 
-            // btnInscribir
-            // 
-            this.btnInscribir.FlatAppearance.BorderSize = 0;
-            this.btnInscribir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnInscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscribir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInscribir.ForeColor = System.Drawing.Color.White;
-            this.btnInscribir.Image = ((System.Drawing.Image)(resources.GetObject("btnInscribir.Image")));
-            this.btnInscribir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscribir.Location = new System.Drawing.Point(0, 116);
-            this.btnInscribir.Name = "btnInscribir";
-            this.btnInscribir.Size = new System.Drawing.Size(250, 38);
-            this.btnInscribir.TabIndex = 6;
-            this.btnInscribir.Text = "Inscribir";
-            this.btnInscribir.UseVisualStyleBackColor = true;
             // 
             // btnCerrarSesion
             // 
@@ -192,38 +182,6 @@
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnRepositorio
-            // 
-            this.btnRepositorio.FlatAppearance.BorderSize = 0;
-            this.btnRepositorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnRepositorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepositorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepositorio.ForeColor = System.Drawing.Color.White;
-            this.btnRepositorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRepositorio.Image")));
-            this.btnRepositorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRepositorio.Location = new System.Drawing.Point(0, 466);
-            this.btnRepositorio.Name = "btnRepositorio";
-            this.btnRepositorio.Size = new System.Drawing.Size(250, 38);
-            this.btnRepositorio.TabIndex = 4;
-            this.btnRepositorio.Text = "Repositorio";
-            this.btnRepositorio.UseVisualStyleBackColor = true;
-            // 
-            // btnTalleres
-            // 
-            this.btnTalleres.FlatAppearance.BorderSize = 0;
-            this.btnTalleres.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnTalleres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTalleres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTalleres.ForeColor = System.Drawing.Color.White;
-            this.btnTalleres.Image = ((System.Drawing.Image)(resources.GetObject("btnTalleres.Image")));
-            this.btnTalleres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTalleres.Location = new System.Drawing.Point(0, 393);
-            this.btnTalleres.Name = "btnTalleres";
-            this.btnTalleres.Size = new System.Drawing.Size(250, 38);
-            this.btnTalleres.TabIndex = 3;
-            this.btnTalleres.Text = "Talleres";
-            this.btnTalleres.UseVisualStyleBackColor = true;
             // 
             // btnCursos
             // 
@@ -283,6 +241,66 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Location = new System.Drawing.Point(339, 212);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(84, 25);
+            this.lblRol.TabIndex = 16;
+            this.lblRol.Text = "Alumno";
+            this.lblRol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblcorreo
+            // 
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.Location = new System.Drawing.Point(349, 313);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(73, 25);
+            this.lblcorreo.TabIndex = 15;
+            this.lblcorreo.Text = "correo";
+            this.lblcorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(349, 261);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(57, 25);
+            this.lblUser.TabIndex = 14;
+            this.lblUser.Text = "User";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(322, 68);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnAjustes
+            // 
+            this.btnAjustes.FlatAppearance.BorderSize = 0;
+            this.btnAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjustes.ForeColor = System.Drawing.Color.White;
+            this.btnAjustes.Image = ((System.Drawing.Image)(resources.GetObject("btnAjustes.Image")));
+            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAjustes.Location = new System.Drawing.Point(0, 118);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(250, 38);
+            this.btnAjustes.TabIndex = 17;
+            this.btnAjustes.Text = "Ajustes";
+            this.btnAjustes.UseVisualStyleBackColor = true;
+            // 
             // frmMenuPrincipalAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +312,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuPrincipalAlumno";
             this.Text = "frmMenuPrincipalAlumno";
+            this.panelFormularios.ResumeLayout(false);
+            this.panelFormularios.PerformLayout();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -302,6 +322,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,13 +337,15 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnSlide;
         private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.Button btnInscribir;
         private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnRepositorio;
-        private System.Windows.Forms.Button btnTalleres;
         private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnProfesores;
         private System.Windows.Forms.Button btnAlumnos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblcorreo;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnAjustes;
     }
 }

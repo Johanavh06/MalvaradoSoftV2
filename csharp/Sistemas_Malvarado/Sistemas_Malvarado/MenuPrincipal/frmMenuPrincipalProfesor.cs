@@ -127,9 +127,18 @@ namespace Sistemas_Malvarado.MenuPrincipal
             this.Close();
         }
 
-        private void btnProfesores_Click(object sender, EventArgs e)
+        private void btnCursos_Click(object sender, EventArgs e)
         {
-            OpenForm<FormGestionarProfesor>();
+            OpenForm<frmRegistrarNotas>();
+        }
+
+        private void btnProfesores_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProfesores_Click(object sender, EventArgs e)
+        {            
         }
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]

@@ -66,7 +66,10 @@ namespace Sistemas_Malvarado
             this.Close();
         }
 
-  
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            frmGestionarTipoNota_secretario_ ventanaGestionarTipoNota = new frmGestionarTipoNota_secretario_();
+        }
     }
 
     public class tempCurso

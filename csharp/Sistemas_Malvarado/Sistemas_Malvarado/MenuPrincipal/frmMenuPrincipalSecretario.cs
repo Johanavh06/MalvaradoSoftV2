@@ -127,7 +127,32 @@ namespace Sistemas_Malvarado.MenuPrincipal
             this.Close();
         }
 
-        private void btnProfesores_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            OpenForm<frmReestablecerContraseña>();
+        }
+
+        private void btnInscribir_Click(object sender, EventArgs e)
+        {
+            //OpenForm<frmInscribirUsuario_secretario_>();
+        }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            OpenForm<FormGestionarCursos>();
+        }
+
+        private void btnProfesores_Click_1(object sender, EventArgs e)
+        {
+            OpenForm<frmGestionarSeccion_secretario_>();
+        }
+
+        private void btnSecciones_Click(object sender, EventArgs e)
         {
             OpenForm<FormGestionarProfesor>();
         }

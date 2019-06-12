@@ -126,10 +126,17 @@ namespace Sistemas_Malvarado.MenuPrincipal
             this.Close();
         }
 
-        private void btnProfesores_Click(object sender, EventArgs e)
+        private void btnAsistencia_Click(object sender, EventArgs e)
         {
-            OpenForm<FormGestionarProfesor>();
+            OpenForm<frmGestionarAsistencia>();
         }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            OpenForm<frmReestablecerContraseña>();
+        }
+
+       
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
