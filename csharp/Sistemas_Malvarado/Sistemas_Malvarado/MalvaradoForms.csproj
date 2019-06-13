@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBuscarCurso%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCurso%28secretario%29.Designer.cs">
+      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditarAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBuscarCurso%28secretario%29.resx">
+      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarCursoPorSeccion%28Secretario%29.resx">
       <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
     </EmbeddedResource>
