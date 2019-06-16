@@ -6,6 +6,8 @@
 package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.AnyTypePermission;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
