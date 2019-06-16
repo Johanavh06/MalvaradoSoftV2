@@ -3,25 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/TeacherXYear.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/CourseSchedule.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/GradeXStudent.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Student.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/ClassSection.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Condition.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Attendance.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/StudentXAttendance.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Bimester.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Event.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Year.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/UserType.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Classroom.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/UserTypeXUser.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/BimesterXStudentXYear.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Grade.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/StudentXYear.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Course.java</file>
-            <file>file:/C:/Users/lenovo/Documents/JOEL_2019/Colegio/repo_Johana/MalvaradoSoftV2/netbeans/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/User.java</file>
+            <file>file:/E:/johana/Cursos/Séptimo%20ciclo/LP2/TA/final%20Netbeans/version1/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/StudentXYear.java</file>
+            <file>file:/E:/johana/Cursos/Séptimo%20ciclo/LP2/TA/final%20Netbeans/version1/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Student.java</file>
         </group>
     </open-files>
 </project-private>
