@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.edu.pucp.inf.malvaradosoft.model.bean;
+package pe.edu.pucp.inf.malvaradosoft.controller.dao;
 
 /**
  *
- * @author lenovo
+ * @author Johana Vergara Hernández 20135184
  */
-public class UserTypeXUser {
+public interface DAOStudent {
     
 }

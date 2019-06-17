@@ -22,7 +22,11 @@ public class DBManager {
         xstream.addPermission(AnyTypePermission.ANY);
         FileReader reader;
         try{
+<<<<<<< HEAD
             reader = new FileReader("src/pe/edu/pucp/inf/config/config.xml");
+=======
+            reader = new FileReader("src/pe/edu/pucp/inf/lp2/config/config.xml");
+>>>>>>> 138933a3c4c4777bc8191fb9329f1c52bb41c5f8
             ConnectionParameters connParam =
             (ConnectionParameters) xstream.fromXML(reader);
             url = connParam.getUrl();
@@ -63,9 +67,16 @@ public class DBManager {
         this.password = password;
     }
 
+<<<<<<< HEAD
     public static DBManager getDbManager() {
         return dbManager;
     }
     
     
+=======
+    public static DBManager getdbManager() {
+        return dbManager;
+    }
+    
+>>>>>>> 138933a3c4c4777bc8191fb9329f1c52bb41c5f8
 }
