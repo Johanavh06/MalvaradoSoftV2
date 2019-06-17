@@ -6,7 +6,13 @@
 package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserType;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudent;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudentXYear;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUser;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserType;
 
 public class MySQLDAOFactory extends DAOFactory{
     
@@ -16,6 +22,18 @@ public class MySQLDAOFactory extends DAOFactory{
     
     public DAOStudent getStudentDAO(){
         return new MySQLStudent();
+    }
+    
+    public DAOUser getUserDAO(){
+        return new MySQLUser();
+    }
+
+    public DAOUserType getUserTypeDAO() {
+        return new MySQLUserType();
+    }
+
+    public DAOStudentXYear getStudentXYearDAO() {
+        return new MySQLStudentXYear();
     }
     
     
