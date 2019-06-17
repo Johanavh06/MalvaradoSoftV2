@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Sistemas_Malvarado.MenuPrincipal;
-
+using Sistemas_Malvarado.Login;
 
 namespace Sistemas_Malvarado
 {
@@ -245,6 +245,12 @@ namespace Sistemas_Malvarado
                 btnAcceder.Enabled = true;
             }
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRecuperarContraseña recuperarContraseña = new frmRecuperarContraseña();
+            recuperarContraseña.Show();
         }
 
         private void msgError (string msgError)

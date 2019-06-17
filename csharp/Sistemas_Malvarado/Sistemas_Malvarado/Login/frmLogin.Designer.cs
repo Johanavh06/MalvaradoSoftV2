@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSegundos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblMinutos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,6 +66,15 @@
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 213);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // label6
             // 
@@ -121,15 +130,6 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Su cuenta esta bloqueado";
             this.label2.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 213);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // txtUser
             // 
@@ -196,6 +196,7 @@
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Ha olvidado su contraseña?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btnCerrar
             // 

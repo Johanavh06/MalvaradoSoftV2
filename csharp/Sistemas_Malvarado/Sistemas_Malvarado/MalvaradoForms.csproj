@@ -33,15 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -204,6 +195,12 @@
     </Compile>
     <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.Designer.cs">
       <DependentUpon>frmResportEstadisticoEvaluacion%28profesor%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmRecuperarContraseña.Designer.cs">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
