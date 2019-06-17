@@ -5,13 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
-<<<<<<< HEAD
-/**
- *
- * @author alulab14
- */
-=======
->>>>>>> 138933a3c4c4777bc8191fb9329f1c52bb41c5f8
+
 public class ConnectionParameters {
     private String url;
     private String user;
@@ -42,8 +36,4 @@ public class ConnectionParameters {
     }
     
     
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 138933a3c4c4777bc8191fb9329f1c52bb41c5f8

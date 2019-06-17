@@ -8,7 +8,7 @@ package pe.edu.pucp.inf.malvaradosoft.controller.config;
 public abstract class DAOFactory {
     
     public static DAOFactory getDAOFactory(){
-        if(DBManager.getdbManager().getUrl().contains("mysql")){
+        if(DBManager.getDbManager().getUrl().contains("mysql")){
                 return new MySQLDAOFactory();
         }
         else{
