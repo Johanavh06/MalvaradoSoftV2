@@ -20,8 +20,8 @@ public class Student extends User{
     public Student() {
     }
 
-    public Student(int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes) {
-        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, userTypes);
+    public Student(int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes, int nAtt) {
+        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, userTypes,nAtt);
     }
 
     public Student(User guardian, Object birthCertificate, Object studyCertificate) {
@@ -30,8 +30,8 @@ public class Student extends User{
         this.studyCertificate = studyCertificate;
     }
 
-    public Student(User guardian, Object birthCertificate, Object studyCertificate, int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes) {
-        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, userTypes);
+    public Student(User guardian, Object birthCertificate, Object studyCertificate, int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes, int nAtt) {
+        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, userTypes,nAtt);
         this.guardian = guardian;
         this.birthCertificate = birthCertificate;
         this.studyCertificate = studyCertificate;

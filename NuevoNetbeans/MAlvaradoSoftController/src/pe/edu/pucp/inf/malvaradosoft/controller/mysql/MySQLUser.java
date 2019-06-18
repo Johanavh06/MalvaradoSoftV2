@@ -20,6 +20,8 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.UserType;
  *
  * @author Johana Vergara Hernández 20135184
  */
+
+
 public class MySQLUser implements DAOUser{
 
     @Override
@@ -196,7 +198,7 @@ public class MySQLUser implements DAOUser{
     public int deleteUser(User user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+        
     public User queryUserLogin(String username, String password){
         User user = new User();
         try{
@@ -222,19 +224,25 @@ public class MySQLUser implements DAOUser{
                 UserType ut = new UserType();
                 ut.setIdUserType(rs.getInt("idUserType"));
                 ut.setDescription(rs.getString("description"));
-                user.setUserTypes(ut);                                
-                user.setnAttempts("nAttempts");
-                if (password == user.getPassword()){
-                    
+                user.setUserTypes(ut);    
+                user.setnAttempts(rs.getInt("nAttempts"));
+                if (password == user.getPassword()){ //Usuario y contraseña correcta
+                    con.close();
+                    return user;
                 }else{ //Contraseña incorrecta
-                    int nAtt = user.get
+                    int nAtt = user.getnAttempts();
+                    if (nAtt > 5)
+                        user.setBlocked(true);
+                    //updateAttempts(user.getIdUser(),nAtt + 1, user.isBlocked());
+                    con.close();
+                    return null;
                 }
-                
-                
-            }else{ //No existe el usuario
+            }
+            else{ //No existe el usuario
+                con.close();
                 return null;
             }
-            con.close();
+            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

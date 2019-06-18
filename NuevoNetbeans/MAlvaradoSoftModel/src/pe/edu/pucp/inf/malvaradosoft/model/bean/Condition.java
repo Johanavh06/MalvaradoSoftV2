@@ -10,5 +10,32 @@ package pe.edu.pucp.inf.malvaradosoft.model.bean;
  * @author lenovo
  */
 public class Condition {
+    private int idCondition;
+    private String description;
+
+    public Condition() {
+    }
+
+    public Condition(int idCondition, String description) {
+        this.idCondition = idCondition;
+        this.description = description;
+    }
+
+    public int getIdCondition() {
+        return idCondition;
+    }
+
+    public void setIdCondition(int idCondition) {
+        this.idCondition = idCondition;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
     
 }
