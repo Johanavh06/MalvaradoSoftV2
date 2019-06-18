@@ -8,7 +8,10 @@ package pe.edu.pucp.inf.malvaradosoft.controller.config;
 import java.time.Year;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.ClassSection;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Classroom;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Condition;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.CourseSchedule;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Student;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.StudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
@@ -124,5 +127,65 @@ public abstract class DBController {
     
     public int deleteStudentXYear(StudentXYear studentXYear){
         return daoFactory.getStudentXYearDAO().deleteStudentXYear(studentXYear);
+    }
+    public static ArrayList<Course> queryAllCourse(){
+        return daoFactory.getCourseDAO().queryAll();
+    }
+    public static ArrayList<Course> queryAllCourseByLevel(int level){
+        return daoFactory.getCourseDAO().queryAllCourseByLevel(level);
+    }
+    public static int insertCourse(Course course){
+        return daoFactory.getCourseDAO().insert(course);
+    }
+    public static int updateCourse(Course course){
+        return daoFactory.getCourseDAO().update(course);
+    }
+    public static int deleteCourse(int id){
+        return daoFactory.getCourseDAO().delete(id);
+    }
+    
+    public static ArrayList<CourseSchedule> queryAllCourseSchedule(){
+        return daoFactory.getCourseScheduleDAO().queryAll();
+    }
+    public static ArrayList<CourseSchedule> queryAllCourseById(int idCourse, int idClassSection){
+        return daoFactory.getCourseScheduleDAO().queryById(idCourse, idClassSection);
+    }
+    public static int insertCourseSchedule(CourseSchedule courseSchedule){
+        return daoFactory.getCourseScheduleDAO().insert(courseSchedule);
+    }
+    public static int updateCourseSchedule(CourseSchedule courseSchedule){
+        return daoFactory.getCourseScheduleDAO().update(courseSchedule);
+    }
+    public static int deleteCourseSchedule(int id){
+        return daoFactory.getCourseScheduleDAO().delete(id);
+    }
+    
+    public static ArrayList<ClassSection> queryAllClassSection(){
+        return daoFactory.getClassSectionDAO().queryAll();
+    }
+    public static ArrayList<ClassSection> queryAllCourseById(int level){
+        return daoFactory.getClassSectionDAO().queryByLevel(level);
+    }
+    public static int insertClassSection(ClassSection classSection){
+        return daoFactory.getClassSectionDAO().insert(classSection);
+    }
+    public static int updateClassSection(ClassSection classSection){
+        return daoFactory.getClassSectionDAO().update(classSection);
+    }
+    public static int deleteClassSection(int id){
+        return daoFactory.getClassSectionDAO().delete(id);
+    }
+    
+    public static ArrayList<Classroom> queryAllCourseById(){
+        return daoFactory.getClassroomDAO().queryAll();
+    }
+    public static int insertClassroom(Classroom classroom){
+        return daoFactory.getClassroomDAO().insert(classroom);
+    }
+    public static int updateClassroom(Classroom classroom){
+        return daoFactory.getClassroomDAO().update(classroom);
+    }
+    public static int deleteClassroom(int id){
+        return daoFactory.getClassroomDAO().delete(id);
     }
 }        
