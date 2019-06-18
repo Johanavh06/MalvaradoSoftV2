@@ -77,6 +77,22 @@ public abstract class DBController {
         return daoFactory.getUserTypeDAO().deleteUserType(userType);
     }
     
+    public static ArrayList<UserType> queryAllTypesXUser(User user){
+        return daoFactory.getUserTypeXUserDAO().queryAllTypesXUser(user);
+    }
+    
+    public static int insertUserTypeXUser(User user,UserType userType){
+        return daoFactory.getUserTypeXUserDAO().insertUserTypeXUser(user, userType);
+    }
+    
+    public static int deleteUserTypeXUser(User user,UserType userType){
+        return daoFactory.getUserTypeXUserDAO().insertUserTypeXUser(user, userType);
+    }
+    
+    public static int updateUserTypeXUser(User user,UserType userType){
+        return daoFactory.getUserTypeXUserDAO().deleteUserTypeXUser(user, userType);
+    }
+    
     public static ArrayList<Student> queryAllStudents(){
         return daoFactory.getStudentDAO().queryAllStudents();
     }

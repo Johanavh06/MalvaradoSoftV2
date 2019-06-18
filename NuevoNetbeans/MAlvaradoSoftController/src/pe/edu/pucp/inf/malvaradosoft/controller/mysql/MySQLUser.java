@@ -345,38 +345,13 @@ public class MySQLUser implements DAOUser{
             cs.setTime(12, user.getBlockTime());
             cs.setInt(13, user.getnAttempts());
             
+            UserType ut = new UserType();
             for(int i=0; i<user.getArrayUserTypes().size() ;i++ ){
-                user.getUserType(i);
+                ut=user.getUserType(i);
+                DBController.insertUserTypeXUser(user,ut);
             }
-//            cs.setInt(14, user.getUserTypes().);
-//            
-//            cs.setInt(2, pokemon.getType().getIdTypePokemon());
-//            cs.setString(3, pokemon.getName());
-//            cs.setDouble(4, pokemon.getHeight());
-//            cs.setDouble(5, pokemon.getWeight());
-//            cs.setString(6, pokemon.getDescription());
-//            
-//            
-//                u.setIdUser(rs.getInt("idUser"));
-//                u.setNames(rs.getString("names"));
-//                u.setFirstLastName(rs.getString("firstLastName"));
-//                u.setSecondLastName(rs.getString("secondLastName"));
-//                u.setDni(rs.getString("dni"));
-//                u.setAddress(rs.getString("address"));
-//                u.setCellPhone(rs.getInt("cellphone"));
-//                u.setEmail(rs.getString("email"));
-//                u.setUsername(rs.getString("userName"));
-//                u.setPassword(rs.getString("password"));
-//                u.setBlocked(rs.getBoolean("blocked"));
-//                u.setBlockTime(rs.getTime("blockTime"));
-//                u.setnAttempts(rs.getInt("nAttemps"));
-//                UserType ut = new UserType();
-//                ut.setIdUserType(rs.getInt("idUserType"));
-//                ut.setDescription(rs.getString("description"));
-//                u.setUserTypes(ut);
             
             result = cs.executeUpdate();
-            //pokemon.setId(cs.getInt("_ID_STUDENT"));
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

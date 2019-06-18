@@ -169,5 +169,4 @@ public class User {
     public void setnAttempts(int nAttempts) {
         this.nAttempts = nAttempts;
     }
-    
 }
