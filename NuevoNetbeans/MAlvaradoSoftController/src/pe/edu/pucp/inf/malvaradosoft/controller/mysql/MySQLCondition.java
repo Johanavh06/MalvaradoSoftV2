@@ -92,7 +92,7 @@ public class MySQLCondition implements DAOCondition{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             CallableStatement cs = con.prepareCall(""
-                    + "{call MSDELETECONDITION(?)}");
+                    + "{call MS_DELETECONDITION(?)}");
             cs.setInt(1, id);
             result= cs.executeUpdate();
             con.close();
