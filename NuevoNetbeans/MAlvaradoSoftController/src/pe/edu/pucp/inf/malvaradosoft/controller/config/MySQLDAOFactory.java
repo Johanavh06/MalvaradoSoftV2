@@ -46,11 +46,11 @@ public class MySQLDAOFactory extends DAOFactory{
         return new MySQLStudentXYear();
     }
 
-<<<<<<< HEAD
+
     public DAOUserTypeXUser getUserTypeXUserDAO() {
         return new MySQLUserTypeXUser();
     }
-=======
+
     @Override
     public DAOCourse getCourseDAO() {
         return new MySQLCourse();
@@ -71,6 +71,6 @@ public class MySQLDAOFactory extends DAOFactory{
         return new MySQLClassroom();
     }
     
->>>>>>> d20f80c07609ffc9b365ffa05dab38ad547048e1
+
     
 }
