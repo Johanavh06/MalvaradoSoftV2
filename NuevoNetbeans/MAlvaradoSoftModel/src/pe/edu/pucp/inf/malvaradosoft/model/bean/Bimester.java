@@ -10,5 +10,31 @@ package pe.edu.pucp.inf.malvaradosoft.model.bean;
  * @author lenovo
  */
 public class Bimester {
+    private int idBimester;
+    private int valorBimester;
+
+    public Bimester() {
+    }
+
+    public Bimester(int idBimester, int valorBimester) {
+        this.idBimester = idBimester;
+        this.valorBimester = valorBimester;
+    }
+
+    public int getIdBimester() {
+        return idBimester;
+    }
+
+    public void setIdBimester(int idBimester) {
+        this.idBimester = idBimester;
+    }
+
+    public int getValorBimester() {
+        return valorBimester;
+    }
+
+    public void setValorBimester(int valorBimester) {
+        this.valorBimester = valorBimester;
+    }
     
 }

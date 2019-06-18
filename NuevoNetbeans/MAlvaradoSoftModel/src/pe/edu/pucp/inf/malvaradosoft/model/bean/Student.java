@@ -20,23 +20,26 @@ public class Student extends User{
     public Student() {
     }
 
-    public Student(int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes) {
-        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, userTypes);
+    public Student(int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, int nAttemps, ArrayList<UserType> userTypes) {
+        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, nAttemps, userTypes);
     }
 
+    
     public Student(User guardian, Object birthCertificate, Object studyCertificate) {
         this.guardian = guardian;
         this.birthCertificate = birthCertificate;
         this.studyCertificate = studyCertificate;
     }
 
-    public Student(User guardian, Object birthCertificate, Object studyCertificate, int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes) {
-        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, userTypes);
-        this.guardian = guardian;
+    
+    public Student(Object birthCertificate, Object studyCertificate, int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, int nAttemps, ArrayList<UserType> userTypes) {
+        super(idUser, names, firstLastName, SecondLastName, dni, address, cellPhone, email, username, password, blocked, blockTime, nAttemps, userTypes);
         this.birthCertificate = birthCertificate;
         this.studyCertificate = studyCertificate;
     }
-
+    
+    
+    
     public User getGuardian() {
         return guardian;
     }
