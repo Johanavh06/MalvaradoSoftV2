@@ -9,6 +9,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourse;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourseSchedule;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOGrade;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
@@ -19,6 +20,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLCourse;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLCourseSchedule;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLGrade;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUser;
@@ -74,5 +76,10 @@ public class MySQLDAOFactory extends DAOFactory{
     @Override
     public DAOUserTypeXUser getUserTypeXUserDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DAOGrade getGradeDAO() {
+        return new MySQLGrade();
     }
 }

@@ -9,6 +9,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourse;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourseSchedule;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOGrade;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
@@ -36,4 +37,5 @@ public abstract class DAOFactory {
     public abstract DAOCourseSchedule getCourseScheduleDAO();
     public abstract DAOClassSection getClassSectionDAO();
     public abstract DAOClassroom getClassroomDAO();
+    public abstract DAOGrade getGradeDAO();
 }
