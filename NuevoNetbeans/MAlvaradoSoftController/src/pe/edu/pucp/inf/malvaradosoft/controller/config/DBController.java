@@ -216,7 +216,7 @@ public abstract class DBController {
         return daoFactory.getGradeDAO().delete(grade.getIdGrade());
     }
     public static ArrayList<Grade> queryAllGrades(){
-        return daoFactory.getGradeDAO().queryAllGrades();
+        return  daoFactory.getGradeDAO().queryAllGrades();
     }
     public static ArrayList<Grade> queryGradesByCourseId(Course course){
         return daoFactory.getGradeDAO().queryGradesByCourseId(course);
