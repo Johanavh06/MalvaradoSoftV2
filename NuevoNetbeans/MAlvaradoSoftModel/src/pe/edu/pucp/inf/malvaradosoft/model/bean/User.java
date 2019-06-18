@@ -27,7 +27,6 @@ public class User {
     private Time blockTime;
     private int nAttempts;
     private ArrayList<UserType> userTypes;
-    private int nAttempts;
 
     public User() {
         this.userTypes = new ArrayList<>();
@@ -154,8 +153,12 @@ public class User {
         userTypes.add(userType);
     }
 
-    public UserType getUserTypes(int pos) {
+    public UserType getUserType(int pos) {
         return userTypes.get(pos);
+    }
+    
+    public ArrayList<UserType> getArrayUserTypes() {
+        return userTypes;
     }
 
     public int getnAttempts() {

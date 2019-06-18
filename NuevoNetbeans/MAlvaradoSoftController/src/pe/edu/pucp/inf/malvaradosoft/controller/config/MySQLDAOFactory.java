@@ -9,10 +9,12 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserType;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserTypeXUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserType;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserTypeXUser;
 
 public class MySQLDAOFactory extends DAOFactory{
     
@@ -35,6 +37,9 @@ public class MySQLDAOFactory extends DAOFactory{
     public DAOStudentXYear getStudentXYearDAO() {
         return new MySQLStudentXYear();
     }
-    
+
+    public DAOUserTypeXUser getUserTypeXUserDAO() {
+        return new MySQLUserTypeXUser();
+    }
     
 }
