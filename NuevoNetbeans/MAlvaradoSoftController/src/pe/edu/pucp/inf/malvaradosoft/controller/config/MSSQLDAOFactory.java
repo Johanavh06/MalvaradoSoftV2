@@ -13,14 +13,19 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserType;
+
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserTypeXUser;
+
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLCourse;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLCourseSchedule;
+
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLUserType;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserTypeXUser;
 
 public class MSSQLDAOFactory extends DAOFactory{
     public MSSQLDAOFactory(){
@@ -43,6 +48,11 @@ public class MSSQLDAOFactory extends DAOFactory{
     public DAOStudentXYear getStudentXYearDAO() {
         return new MSSQLStudentXYear();
     }
+<<<<<<< HEAD
+    
+    public DAOUserTypeXUser getUserTypeXUserDAO() {
+        return new MySQLUserTypeXUser();
+=======
 
     @Override
     public DAOCourse getCourseDAO() {
@@ -62,6 +72,7 @@ public class MSSQLDAOFactory extends DAOFactory{
     @Override
     public DAOClassroom getClassroomDAO() {
         return new MSSQLClassroom();
+>>>>>>> d20f80c07609ffc9b365ffa05dab38ad547048e1
     }
 }
 

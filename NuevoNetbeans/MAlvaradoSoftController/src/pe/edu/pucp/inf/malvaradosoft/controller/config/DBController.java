@@ -128,6 +128,7 @@ public abstract class DBController {
     public int deleteStudentXYear(StudentXYear studentXYear){
         return daoFactory.getStudentXYearDAO().deleteStudentXYear(studentXYear);
     }
+
     public static ArrayList<Course> queryAllCourse(){
         return daoFactory.getCourseDAO().queryAll();
     }

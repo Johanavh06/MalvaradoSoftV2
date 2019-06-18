@@ -15,8 +15,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
  */
 public interface DAOTeacherXYear {
     int insertTeacherXYear (TeacherXYear txy);
-    int deleteTeacherXYear (int id);
+    int deleteTeacherXYear (TeacherXYear id);
     ArrayList<TeacherXYear> queryAllTeachersXYear(Year_ y);
     ArrayList<TeacherXYear> queryAllTeachers();
-    
 }

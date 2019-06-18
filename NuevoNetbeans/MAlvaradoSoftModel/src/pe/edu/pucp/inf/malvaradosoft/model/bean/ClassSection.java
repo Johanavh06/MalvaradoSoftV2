@@ -5,11 +5,13 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
+
 /**
  *
  * @author lenovo
  */
-public class ClassSection {
+public class ClassSection implements Serializable{
     private int id;
     private int total;
     private String name;
