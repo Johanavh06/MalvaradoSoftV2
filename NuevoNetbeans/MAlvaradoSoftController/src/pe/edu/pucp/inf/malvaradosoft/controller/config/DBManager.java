@@ -22,7 +22,7 @@ public class DBManager {
         xstream.addPermission(AnyTypePermission.ANY);
         FileReader reader;
         try{
-            reader = new FileReader("src/pe/edu/pucp/inf/malvaradosoft/config/config.xml");
+            reader = new FileReader(DBManager.class.getResource("/pe/edu/pucp/inf/malvaradosoft/config/config.xml").getFile()); //ERROR
             ConnectionParameters connParam =
             (ConnectionParameters) xstream.fromXML(reader);
             url = connParam.getUrl();

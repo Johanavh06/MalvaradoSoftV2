@@ -12,6 +12,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Classroom;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Condition;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.CourseSchedule;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Student;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.StudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
@@ -208,5 +209,23 @@ public abstract class DBController {
     }
     public static int deleteClassroom(int id){
         return daoFactory.getClassroomDAO().delete(id);
+    }
+    public static int insertGrade(Grade grade){
+        return daoFactory.getGradeDAO().insert(grade);
+    }
+    public static int updateGrade(Grade grade){
+        return daoFactory.getGradeDAO().update(grade);
+    }
+    public static int deleteGrade(Grade grade){
+        return daoFactory.getGradeDAO().delete(grade.getIdGrade());
+    }
+    public static ArrayList<Grade> queryAllGrades(){
+        return  daoFactory.getGradeDAO().queryAllGrades();
+    }
+    public static ArrayList<Grade> queryGradesByCourseId(Course course){
+        return daoFactory.getGradeDAO().queryGradesByCourseId(course);
+    }
+    public static ArrayList<Grade> queryGradesSearchByName(String description, Course course){
+        return daoFactory.getGradeDAO().queryGradesSearchByName(description, course);
     }
 }        

@@ -9,6 +9,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourse;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourseSchedule;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOGrade;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
@@ -73,6 +74,11 @@ public class MSSQLDAOFactory extends DAOFactory{
     public DAOClassroom getClassroomDAO() {
         return new MSSQLClassroom();
 
+    }
+
+    @Override
+    public DAOGrade getGradeDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 
