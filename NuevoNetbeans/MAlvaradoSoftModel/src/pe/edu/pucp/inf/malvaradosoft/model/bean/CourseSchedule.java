@@ -5,11 +5,13 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
+
 /**
  *
  * @author lenovo
  */
-public class CourseSchedule {
+public class CourseSchedule implements Serializable{
     private int id;
     private Classroom classroom;
     private Course course;

@@ -64,7 +64,7 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
                 csc.setId(rs.getInt("idCourseSchedule"));
                 csc.getClassSection().setId(rs.getInt("idClassSection"));
                 csc.getClassroom().setId(rs.getInt("idClassroom"));
-                csc.getTeacherXyear.setId(rs.getInt("idTeacher"));
+                csc.getTeacherXyear().setIdTeacherXYear(rs.getInt("idTeacher"));
                 csc.getCourse().setId(rs.getInt("idCourse"));                
                 courseSchedules.add(csc);
 
