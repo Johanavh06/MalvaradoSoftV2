@@ -14,12 +14,12 @@ public class StudentXYear {
     private Condition condition;
     private String ticketEnrollment;
     private ClassSection classSection;
-    private Year year;
+    private Year_ year;
 
     public StudentXYear() {
     }
 
-    public StudentXYear(Student student, Condition condition, String ticketEnrollment, ClassSection classSection, Year year) {
+    public StudentXYear(Student student, Condition condition, String ticketEnrollment, ClassSection classSection, Year_ year) {
         this.student = student;
         this.condition = condition;
         this.ticketEnrollment = ticketEnrollment;
@@ -59,7 +59,7 @@ public class StudentXYear {
         this.classSection = classSection;
     }
 
-    public Year getYear() {
+    public Year_ getYear() {
         return year;
     }
 

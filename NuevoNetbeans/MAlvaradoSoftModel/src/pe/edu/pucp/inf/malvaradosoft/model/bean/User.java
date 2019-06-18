@@ -25,13 +25,18 @@ public class User {
     private String password;
     private boolean blocked;
     private Time blockTime;
+    private int nAttempts;
     private ArrayList<UserType> userTypes;
 
     public User() {
         this.userTypes = new ArrayList<>();
     }
 
-    public User(int idUser, String names, String firstLastName, String SecondLastName, String dni, String address, int cellPhone, String email, String username, String password, boolean blocked, Time blockTime, ArrayList<UserType> userTypes) {
+    public User(int idUser, String names, String firstLastName, 
+            String SecondLastName, String dni, String address, 
+            int cellPhone, String email, String username,
+            String password, boolean blocked, Time blockTime, 
+            int nAttemps, ArrayList<UserType> userTypes) {
         this.idUser = idUser;
         this.names = names;
         this.firstLastName = firstLastName;
@@ -44,6 +49,7 @@ public class User {
         this.password = password;
         this.blocked = blocked;
         this.blockTime = blockTime;
+        this.nAttempts = nAttemps;
         this.userTypes = this.userTypes;
     }
 
@@ -147,7 +153,16 @@ public class User {
         userTypes.add(userType);
     }
 
-    public ArrayList<UserType> getUserTypes() {
-        return userTypes;
+    public UserType getUserTypes(int pos) {
+        return userTypes.get(pos);
     }
+
+    public int getnAttempts() {
+        return nAttempts;
+    }
+
+    public void setnAttempts(int nAttempts) {
+        this.nAttempts = nAttempts;
+    }
+    
 }
