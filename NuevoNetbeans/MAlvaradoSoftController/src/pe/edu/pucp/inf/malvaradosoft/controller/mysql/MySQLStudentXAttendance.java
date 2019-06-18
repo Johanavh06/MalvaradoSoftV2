@@ -46,7 +46,7 @@ public class MySQLStudentXAttendance implements DAOStudentXAttendance{
             dbManager.getPassword());
             CallableStatement cs = con.prepareCall("{call MS_INSERTSTUDENTXATTENDANCE(?,?,?,?)}");
             
-            cs.registerOutParameter("_IDATTENDANCE", studentXAttendance.getAttendance().getIdAttendance());
+            cs.setInt("_IDATTENDANCE", studentXAttendance.getAttendance().getIdAttendance());
             cs.setString("_OBSERVATION", studentXAttendance.getObservation());
             cs.setDouble("_IDYEAR", studentXAttendance.getYear().getIdYear());
             cs.setInt("_IDSTUDENT", studentXAttendance.getStudent().getIdUser());
@@ -62,12 +62,50 @@ public class MySQLStudentXAttendance implements DAOStudentXAttendance{
 
     @Override
     public int update(StudentXAttendance studentXAttendance) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result = 0;
+        try{
+            DBManager dbManager = DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(
+            dbManager.getUrl(), 
+            dbManager.getUser(), 
+            dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_UPDATESTUDENTXATTENDANCE(?,?,?,?)}");
+            
+            cs.setInt("_IDATTENDANCE", studentXAttendance.getAttendance().getIdAttendance());
+            cs.setString("_OBSERVATION", studentXAttendance.getObservation());
+            cs.setDouble("_IDYEAR", studentXAttendance.getYear().getIdYear());
+            cs.setInt("_IDSTUDENT", studentXAttendance.getStudent().getIdUser());
+            
+            result = cs.executeUpdate();
+            
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
 
     @Override
-    public int delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int delete(int idAttendance, int idStudent) {
+        int result = 0;
+        try{
+            DBManager dbManager = DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(
+            dbManager.getUrl(), 
+            dbManager.getUser(), 
+            dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_DELETESTUDENTXATTENDANCE(?,?)}");
+            
+            cs.setInt("_IDATTENDANCE", idAttendance);
+            cs.setInt("_IDSTUDENT", idStudent);
+            
+            result = cs.executeUpdate();
+            
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
     
 }

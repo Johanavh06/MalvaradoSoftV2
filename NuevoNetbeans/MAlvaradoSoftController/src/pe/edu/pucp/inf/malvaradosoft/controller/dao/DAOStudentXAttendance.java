@@ -19,5 +19,5 @@ public interface DAOStudentXAttendance {
     ArrayList <StudentXAttendance> queryByStudentObservation(Student student, String observation);
     int insert(StudentXAttendance studentXAttendance);
     int update(StudentXAttendance studentXAttendance);
-    int delete(int id);
+    int delete(int idAttendance, int idStudent);
 }

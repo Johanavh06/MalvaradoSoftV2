@@ -99,7 +99,7 @@ public class MySQLAttendance implements DAOAttendance {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call MS_DELETEATTENDANCE(?,?)}");
+            CallableStatement cs = con.prepareCall("{call MS_DELETEATTENDANCE(?)}");
             
             cs.setInt("_ID", id);
             

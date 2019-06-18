@@ -92,7 +92,7 @@ public class MySQLGrade implements DAOGrade {
             dbManager.getUrl(), 
             dbManager.getUser(), 
             dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call MS_DELETEGRADE(?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call MS_DELETEGRADE(?)}");
             
             cs.setInt("_ID", id);
             

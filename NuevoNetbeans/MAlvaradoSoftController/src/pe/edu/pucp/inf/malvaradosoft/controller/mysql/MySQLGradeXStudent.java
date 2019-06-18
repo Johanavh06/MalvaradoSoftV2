@@ -11,6 +11,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Bimester;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.GradeXStudent;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Student;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
 
 /**
  *
@@ -28,10 +29,6 @@ public class MySQLGradeXStudent implements DAOGradeXStudent {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public ArrayList<GradeXStudent> queryByStudentCourseBimester(Student student, Course course, Bimester bimester) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public int insert(GradeXStudent gradeXStudent) {
@@ -44,7 +41,12 @@ public class MySQLGradeXStudent implements DAOGradeXStudent {
     }
 
     @Override
-    public int delete(int id) {
+    public ArrayList<GradeXStudent> queryByStudentCourseBimester(Student student, Course course, Bimester bimester, Year_ year) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int delete(int idGrade, int idStudent, int idCourse, int idBimester, int idYear) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
