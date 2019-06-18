@@ -25,6 +25,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLUserType;
+import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLUserTypeXUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserTypeXUser;
 
 public class MSSQLDAOFactory extends DAOFactory{
@@ -49,9 +50,8 @@ public class MSSQLDAOFactory extends DAOFactory{
         return new MSSQLStudentXYear();
     }
 
-    
-    public DAOUserTypeXUser getUserTypeXUserDAO() {
-        return new MySQLUserTypeXUser();
+    public DAOUserTypeXUser getUserTypeXUserDAO(){
+        return new MSSQLUserTypeXUser();
     }
 
     @Override
