@@ -63,7 +63,7 @@ public class StudentXYear {
         return year;
     }
 
-    public void setYear(Year year) {
+    public void setYear(Year_ year) {
         this.year = year;
     }
 }

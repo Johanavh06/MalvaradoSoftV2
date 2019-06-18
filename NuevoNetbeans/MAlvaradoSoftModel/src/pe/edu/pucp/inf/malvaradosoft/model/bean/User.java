@@ -26,8 +26,7 @@ public class User {
     private boolean blocked;
     private Time blockTime;
     private int nAttempts;
-    private ArrayList<UserType> userTypes;
-    private int nAttempts;
+    private ArrayList<UserType> userTypes;    
 
     public User() {
         this.userTypes = new ArrayList<>();
