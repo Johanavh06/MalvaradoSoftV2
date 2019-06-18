@@ -53,7 +53,7 @@ public class MySQLCourse implements DAOCourse{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call insertCourse(?)}");
+            CallableStatement cs = con.prepareCall("{call MS_QUERYALLCOURSEBYLEVEL(?)}");
             cs.setInt("_LEVEL", level);
             ResultSet rs = cs.executeQuery();
             while(rs.next()){

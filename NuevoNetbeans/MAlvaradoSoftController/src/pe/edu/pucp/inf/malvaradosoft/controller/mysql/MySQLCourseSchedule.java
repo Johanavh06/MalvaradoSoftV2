@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.mysql;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -35,7 +36,7 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
                 cs.setId(rs.getInt("idCourseSchedule"));
                 cs.getClassSection().setId(rs.getInt("idClassSection"));
                 cs.getClassroom().setId(rs.getInt("idClassroom"));
-                //cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
+                cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
                 cs.getCourse().setId(rs.getInt("idCourse"));                
                 courseSchedules.add(cs);
             }
@@ -48,14 +49,15 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
     }
 
     @Override
-    public ArrayList<CourseSchedule> queryById(int idCourse, int idSchedule) {
+    public ArrayList<CourseSchedule> queryById(int idCourse, int idClassSection) {
          ArrayList<CourseSchedule> courseSchedules = new ArrayList<CourseSchedule>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            String sql = "SELECT * FROM SchedulexCourse WHERE active=1 AND idCourse=" + ""+idCourse 
-                    + " AND " + ""+idSchedule;
-            Statement st = con.createStatement();
+            CallableStatement cs = con.prepareCall("{call MS_QUERYALLBYIDCOURSEIDSCHEDULE(?,?)}");
+            cs.setInt("_IDCOURSE", idCourse);
+            cs.setInt("_IDCOURSE", idCourse);
+            ResultSet rs = cs.executeQuery();
             
             ResultSet rs = st.executeQuery(sql);
             
