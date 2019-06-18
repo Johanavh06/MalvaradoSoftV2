@@ -5,11 +5,13 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
+
 /**
  *
  * @author lenovo
  */
-public class BimesterXStudentXYear {
+public class BimesterXStudentXYear implements Serializable{
     private Bimester bimester;
     private Year_ year;
     private Student student;
