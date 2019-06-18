@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftController/src/pe/edu/pucp/inf/malvaradosoft/controller/dao/DAOGradeXStudent.java</file>
-            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftController/src/pe/edu/pucp/inf/malvaradosoft/controller/mysql/MySQLGrade.java</file>
-            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftController/src/pe/edu/pucp/inf/malvaradosoft/controller/mysql/MySQLGradeXStudent.java</file>
-            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftController/src/pe/edu/pucp/inf/malvaradosoft/controller/dao/DAOStudentXAttendance.java</file>
-            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftController/src/pe/edu/pucp/inf/malvaradosoft/controller/mysql/MySQLAttendance.java</file>
-            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftController/src/pe/edu/pucp/inf/malvaradosoft/controller/mysql/MySQLStudentXAttendance.java</file>
-			
-        </group>
+        <group/>
     </open-files>
 </project-private>

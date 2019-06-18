@@ -7,6 +7,7 @@ package pe.edu.pucp.inf.malvaradosoft.config;
 
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
 
 /**
@@ -15,7 +16,9 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
  */
 public class testeo {
     public static void main(String[] args){
-        ArrayList<Grade> grades = DBController.queryAllGrades();
+        Course course = new Course ();
+        course.setId(1);
+        ArrayList<Grade> grades = DBController.queryGradesByCourseId(course);
         for (Grade grade : grades) {
             System.out.println("Grade description: " + grade.getDescription());
             

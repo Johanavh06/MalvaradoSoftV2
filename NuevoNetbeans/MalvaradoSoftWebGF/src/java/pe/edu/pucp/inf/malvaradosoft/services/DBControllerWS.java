@@ -10,6 +10,7 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
 
 /**
@@ -30,5 +31,12 @@ public class DBControllerWS {
     @WebMethod(operationName = "queryAllGrades")
     public ArrayList<Grade> queryAllGrades(){
         return DBController.queryAllGrades();
+    }
+    
+    @WebMethod(operationName = "queryGradesByCourseId")
+    public ArrayList<Grade> queryAllGradesByCourse(int idCourse){
+        Course course = new Course();
+        course.setId(idCourse);
+        return DBController.queryGradesByCourseId(course);
     }
 }
