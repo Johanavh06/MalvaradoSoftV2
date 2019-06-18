@@ -9,6 +9,6 @@ package pe.edu.pucp.inf.malvaradosoft.model.bean;
  *
  * @author lenovo
  */
-public class Year {
+public class Year_ {
     
 }

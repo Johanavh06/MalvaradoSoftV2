@@ -36,7 +36,7 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
                 cs.setId(rs.getInt("idCourseSchedule"));
                 cs.getClassSection().setId(rs.getInt("idClassSection"));
                 cs.getClassroom().setId(rs.getInt("idClassroom"));
-                cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
+                //cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
                 cs.getCourse().setId(rs.getInt("idCourse"));                
                 courseSchedules.add(cs);
             }
@@ -59,16 +59,16 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
             cs.setInt("_IDCOURSE", idCourse);
             ResultSet rs = cs.executeQuery();
             
-            ResultSet rs = st.executeQuery(sql);
+            //ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
-                CourseSchedule cs = new CourseSchedule();
-                cs.setId(rs.getInt("idCourseSchedule"));
-                cs.getClassSection().setId(rs.getInt("idClassSection"));
-                cs.getClassroom().setId(rs.getInt("idClassroom"));
+                //CourseSchedule cs = new CourseSchedule();
+                //cs.setId(rs.getInt("idCourseSchedule"));
+                //cs.getClassSection().setId(rs.getInt("idClassSection"));
+                //cs.getClassroom().setId(rs.getInt("idClassroom"));
                 //cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
-                cs.getCourse().setId(rs.getInt("idCourse"));                
-                courseSchedules.add(cs);
+                //cs.getCourse().setId(rs.getInt("idCourse"));                
+                //courseSchedules.add(cs);
             }
             con.close();
             
