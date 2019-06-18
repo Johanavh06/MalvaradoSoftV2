@@ -13,7 +13,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Attendance;
  * @author alulab14
  */
 public interface DAOAttendance {
-    ArrayList <Attendance> queryAll();
+    ArrayList <Attendance> queryAllAttendance();
     int insert(Attendance attendance);
     int update(Attendance attendance);
     int delete(int id);

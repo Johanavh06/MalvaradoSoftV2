@@ -14,9 +14,9 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
  * @author alulab14
  */
 public interface DAOGrade {
-    ArrayList <Grade> queryAll();
+    ArrayList <Grade> queryAllGrades();
     ArrayList <Grade> queryGradesByCourseId(Course course);
-    ArrayList <Grade> querySearchByName(String description, Course course); // busca por nombre
+    ArrayList <Grade> queryGradesSearchByName(String description, Course course); // busca por nombre
     int insert(Grade grade);
     int update(Grade grade);
     int delete(int id);

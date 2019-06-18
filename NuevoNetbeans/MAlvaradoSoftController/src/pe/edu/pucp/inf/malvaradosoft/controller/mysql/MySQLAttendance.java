@@ -22,7 +22,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Attendance;
 public class MySQLAttendance implements DAOAttendance {
 
     @Override
-    public ArrayList<Attendance> queryAll() {
+    public ArrayList<Attendance> queryAllAttendance() {
         ArrayList<Attendance> attendances = new ArrayList<Attendance>();
         try{
             DBManager dbManager= DBManager.getDbManager();

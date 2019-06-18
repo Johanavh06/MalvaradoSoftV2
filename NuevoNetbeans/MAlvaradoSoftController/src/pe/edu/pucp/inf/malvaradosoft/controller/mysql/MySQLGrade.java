@@ -23,7 +23,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
 public class MySQLGrade implements DAOGrade {
 
     @Override
-    public ArrayList<Grade> queryAll() {
+    public ArrayList<Grade> queryAllGrades() {
         ArrayList<Grade> grades = new ArrayList<Grade>();
         try{
             DBManager dbManager= DBManager.getDbManager();
@@ -78,7 +78,7 @@ public class MySQLGrade implements DAOGrade {
     }
 
     @Override
-    public ArrayList<Grade> querySearchByName(String description, Course course) {
+    public ArrayList<Grade> queryGradesSearchByName(String description, Course course) {
         ArrayList<Grade> grades = new ArrayList<Grade>();
         try{
             DBManager dbManager= DBManager.getDbManager();

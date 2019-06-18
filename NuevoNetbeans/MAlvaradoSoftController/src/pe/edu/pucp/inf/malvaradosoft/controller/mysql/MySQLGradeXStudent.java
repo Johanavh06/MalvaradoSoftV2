@@ -26,7 +26,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
 public class MySQLGradeXStudent implements DAOGradeXStudent {
 
     @Override
-    public ArrayList<GradeXStudent> queryAll() {
+    public ArrayList<GradeXStudent> queryAllGXS() {
         ArrayList<GradeXStudent> gxss = new ArrayList<GradeXStudent>();
         try{
             DBManager dbManager= DBManager.getDbManager();
@@ -56,12 +56,12 @@ public class MySQLGradeXStudent implements DAOGradeXStudent {
     }
 
     @Override
-    public ArrayList<GradeXStudent> queryByStudentCourse(Student student, Course course, Year_ year) {
+    public ArrayList<GradeXStudent> queryAllGXSByStudentCourse(Student student, Course course, Year_ year) {
         ArrayList<GradeXStudent> gxss = new ArrayList<GradeXStudent>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call MS_QUERYGRADESBYSTUDENTANDCOURSE(?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call MS_QUERYGXSBYSTUDENTCOURSE(?,?,?)}");
             cs.setInt("_IDSTUDENT", student.getIdUser());
             cs.setInt("_IDCOURSE", course.getId());
             cs.setInt("_IDYEAR", year.getIdYear());
@@ -145,12 +145,12 @@ public class MySQLGradeXStudent implements DAOGradeXStudent {
     }
 
     @Override
-    public ArrayList<GradeXStudent> queryByStudentCourseBimester(Student student, Course course, Bimester bimester, Year_ year) {
+    public ArrayList<GradeXStudent> queryAllGXSByStudentCourseBimester(Student student, Course course, Bimester bimester, Year_ year) {
         ArrayList<GradeXStudent> gxss = new ArrayList<GradeXStudent>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call MS_QUERYGRADESBYSTUDENTANDCOURSEANDCIMESTER(?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call MS_QUERYGXSBYSTUDENTCOURSEBIMESTER(?,?,?,?)}");
             cs.setInt("_IDSTUDENT", student.getIdUser());
             cs.setInt("_IDCOURSE", course.getId());
             cs.setInt("_IDBIMESTER", bimester.getIdBimester());

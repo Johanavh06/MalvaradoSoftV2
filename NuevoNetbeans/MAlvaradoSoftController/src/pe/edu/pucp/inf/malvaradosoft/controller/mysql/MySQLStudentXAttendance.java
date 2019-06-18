@@ -23,7 +23,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.StudentXAttendance;
 public class MySQLStudentXAttendance implements DAOStudentXAttendance{
 
     @Override
-    public ArrayList<StudentXAttendance> queryAll() {
+    public ArrayList<StudentXAttendance> queryAllSXA() {
         ArrayList<StudentXAttendance> sxas = new ArrayList<StudentXAttendance>();
         try{
             DBManager dbManager= DBManager.getDbManager();
@@ -50,12 +50,12 @@ public class MySQLStudentXAttendance implements DAOStudentXAttendance{
     }
 
     @Override
-    public ArrayList<StudentXAttendance> queryByStudent(Student student) {
+    public ArrayList<StudentXAttendance> queryAllSXAByStudent(Student student) {
         ArrayList<StudentXAttendance> sxas = new ArrayList<StudentXAttendance>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call MS_QUERYATTENDACEBYSTUDENT(?)}");
+            CallableStatement cs = con.prepareCall("{call MS_QUERYSXAEBYSTUDENT(?)}");
             cs.setInt("_IDSTUDENT", student.getIdUser());
             
             ResultSet rs = cs.executeQuery();
@@ -79,12 +79,12 @@ public class MySQLStudentXAttendance implements DAOStudentXAttendance{
     }
 
     @Override
-    public ArrayList<StudentXAttendance> queryByStudentObservation(Student student, String observation) {
+    public ArrayList<StudentXAttendance> queryAllSXAByStudentObservation(Student student, String observation) {
         ArrayList<StudentXAttendance> sxas = new ArrayList<StudentXAttendance>();
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call MS_QUERYATTENDACEBYSTUDENTANDOBS(?,?)}");
+            CallableStatement cs = con.prepareCall("{call MS_QUERYSXABYSTUDENTOBS(?,?)}");
             cs.setInt("_IDSTUDENT", student.getIdUser());
             cs.setString("_OBSERVATION", observation);
             

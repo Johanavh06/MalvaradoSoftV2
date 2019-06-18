@@ -14,9 +14,9 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.StudentXAttendance;
  * @author alulab14
  */
 public interface DAOStudentXAttendance {
-    ArrayList <StudentXAttendance> queryAll();
-    ArrayList <StudentXAttendance> queryByStudent(Student student);
-    ArrayList <StudentXAttendance> queryByStudentObservation(Student student, String observation);
+    ArrayList <StudentXAttendance> queryAllSXA();
+    ArrayList <StudentXAttendance> queryAllSXAByStudent(Student student);
+    ArrayList <StudentXAttendance> queryAllSXAByStudentObservation(Student student, String observation);
     int insert(StudentXAttendance studentXAttendance);
     int update(StudentXAttendance studentXAttendance);
     int delete(int idAttendance, int idStudent);
