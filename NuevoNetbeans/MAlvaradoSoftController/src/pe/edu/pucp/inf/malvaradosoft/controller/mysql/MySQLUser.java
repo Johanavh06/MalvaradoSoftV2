@@ -373,7 +373,7 @@ public class MySQLUser implements DAOUser{
             result = cs.executeUpdate();
             //pokemon.setId(cs.getInt("_ID_STUDENT"));
             con.close();
-        }catch(SQLException ex){
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return result;

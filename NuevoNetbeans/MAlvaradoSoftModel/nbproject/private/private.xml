@@ -2,12 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/D:/Users/alulab14.INF/Downloads/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Student.java</file>
+            <file>file:/T:/temp/lp2/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Event.java</file>
+            <file>file:/T:/temp/lp2/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/StudentXAttendance.java</file>
+            <file>file:/T:/temp/lp2/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/Year_.java</file>
+            <file>file:/T:/temp/lp2/MalvaradoSoftV2/NuevoNetbeans/MAlvaradoSoftModel/src/pe/edu/pucp/inf/malvaradosoft/model/bean/TeacherXYear.java</file>
         </group>
->>>>>>> ca2afc3dcfa3780af537fb9ff752dda315d906fd
     </open-files>
 </project-private>

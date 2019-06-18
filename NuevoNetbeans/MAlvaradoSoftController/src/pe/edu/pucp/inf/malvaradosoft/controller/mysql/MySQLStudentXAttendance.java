@@ -48,7 +48,7 @@ public class MySQLStudentXAttendance implements DAOStudentXAttendance{
             
             cs.registerOutParameter("_IDATTENDANCE", studentXAttendance.getAttendance().getIdAttendance());
             cs.setString("_OBSERVATION", studentXAttendance.getObservation());
-            cs.setDouble("_IDYEAR", studentXAttendance.getYear().getId());
+            cs.setDouble("_IDYEAR", studentXAttendance.getYear().getIdYear());
             cs.setInt("_IDSTUDENT", studentXAttendance.getStudent().getIdUser());
             
             result = cs.executeUpdate();
