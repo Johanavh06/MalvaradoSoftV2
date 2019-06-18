@@ -11,13 +11,13 @@ package pe.edu.pucp.inf.malvaradosoft.model.bean;
  */
 public class BimesterXStudentXYear {
     private Bimester bimester;
-    private Year year;
+    private Year_ year;
     private Student student;
 
     public BimesterXStudentXYear() {
     }
 
-    public BimesterXStudentXYear(Bimester bimester, Year year, Student student) {
+    public BimesterXStudentXYear(Bimester bimester, Year_ year, Student student) {
         this.bimester = bimester;
         this.year = year;
         this.student = student;
@@ -31,11 +31,11 @@ public class BimesterXStudentXYear {
         this.bimester = bimester;
     }
 
-    public Year getYear() {
+    public Year_ getYear() {
         return year;
     }
 
-    public void setYear(Year year) {
+    public void setYear(Year_ year) {
         this.year = year;
     }
 
