@@ -24,6 +24,12 @@ public class GradeXStudent implements Serializable{
     private Course course ; // idCourse
 
     public GradeXStudent() {
+        registerDate = new Date();
+        bimester = new Bimester();
+        year = new Year_();
+        student = new Student();
+        grade = new Grade();
+        course = new Course();
     }
     
     

@@ -18,6 +18,7 @@ public class Grade implements Serializable {
     private Course course;
 
     public Grade() {
+        course = new Course();
     }
     
     

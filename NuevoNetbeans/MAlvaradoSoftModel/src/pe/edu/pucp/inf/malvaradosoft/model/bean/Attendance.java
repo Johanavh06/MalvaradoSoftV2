@@ -17,6 +17,7 @@ public class Attendance implements Serializable {
     private Date date;
 
     public Attendance() {
+        date = new Date();
     }
     
     

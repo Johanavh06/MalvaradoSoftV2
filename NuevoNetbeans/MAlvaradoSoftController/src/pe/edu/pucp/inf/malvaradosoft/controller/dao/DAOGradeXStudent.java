@@ -18,7 +18,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
  */
 public interface DAOGradeXStudent {
     ArrayList <GradeXStudent> queryAll();
-    ArrayList <GradeXStudent> queryByStudentCourse(Student student, Course course);
+    ArrayList <GradeXStudent> queryByStudentCourse(Student student, Course course, Year_ year);
     ArrayList <GradeXStudent> queryByStudentCourseBimester(Student student, Course course, Bimester bimester, Year_ year);
     int insert(GradeXStudent gradeXStudent);
     int update(GradeXStudent gradeXStudent);

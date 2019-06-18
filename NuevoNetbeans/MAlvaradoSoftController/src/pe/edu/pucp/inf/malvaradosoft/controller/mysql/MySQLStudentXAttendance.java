@@ -8,6 +8,8 @@ package pe.edu.pucp.inf.malvaradosoft.controller.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBManager;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXAttendance;
@@ -22,17 +24,88 @@ public class MySQLStudentXAttendance implements DAOStudentXAttendance{
 
     @Override
     public ArrayList<StudentXAttendance> queryAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<StudentXAttendance> sxas = new ArrayList<StudentXAttendance>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            String sql = "SELECT * FROM MS_STUDENTXATTENDANCE WHERE active=1";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                StudentXAttendance sxa = new StudentXAttendance();
+                sxa.getAttendance().setIdAttendance(rs.getInt("idAttendance"));
+                sxa.setObservation(rs.getString("observation"));
+                sxa.getYear().setIdYear(rs.getInt("idYear"));
+                sxa.getStudent().setIdUser(rs.getInt("idStudent"));
+                                
+                sxas.add(sxa);
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return sxas;
     }
 
     @Override
     public ArrayList<StudentXAttendance> queryByStudent(Student student) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<StudentXAttendance> sxas = new ArrayList<StudentXAttendance>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_QUERYATTENDACEBYSTUDENT(?)}");
+            cs.setInt("_IDSTUDENT", student.getIdUser());
+            
+            ResultSet rs = cs.executeQuery();
+                        
+            while(rs.next()){
+                StudentXAttendance sxa = new StudentXAttendance();
+                sxa.getAttendance().setIdAttendance(rs.getInt("idAttendance"));
+                sxa.setObservation(rs.getString("observation"));
+                sxa.getYear().setIdYear(rs.getInt("idYear"));
+                sxa.getStudent().setIdUser(rs.getInt("idStudent"));
+                                
+                sxas.add(sxa);
+
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    return sxas;
     }
 
     @Override
     public ArrayList<StudentXAttendance> queryByStudentObservation(Student student, String observation) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<StudentXAttendance> sxas = new ArrayList<StudentXAttendance>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_QUERYATTENDACEBYSTUDENTANDOBS(?,?)}");
+            cs.setInt("_IDSTUDENT", student.getIdUser());
+            cs.setString("_OBSERVATION", observation);
+            
+            ResultSet rs = cs.executeQuery();
+                        
+            while(rs.next()){
+                StudentXAttendance sxa = new StudentXAttendance();
+                sxa.getAttendance().setIdAttendance(rs.getInt("idAttendance"));
+                sxa.setObservation(rs.getString("observation"));
+                sxa.getYear().setIdYear(rs.getInt("idYear"));
+                sxa.getStudent().setIdUser(rs.getInt("idStudent"));
+                                
+                sxas.add(sxa);
+
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    return sxas;
     }
 
     @Override

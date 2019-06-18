@@ -8,6 +8,8 @@ package pe.edu.pucp.inf.malvaradosoft.controller.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBManager;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOGrade;
@@ -22,17 +24,86 @@ public class MySQLGrade implements DAOGrade {
 
     @Override
     public ArrayList<Grade> queryAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Grade> grades = new ArrayList<Grade>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            String sql = "SELECT * FROM MS_GRADE WHERE active=1";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                Grade g = new Grade();
+                g.setIdGrade(rs.getInt("idGrade"));
+                g.setDescription(rs.getString("description"));
+                g.setWeight(rs.getDouble("weight"));
+                g.getCourse().setId(rs.getInt("idCourse"));
+                                
+                grades.add(g);
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return grades;
     }
 
     @Override
     public ArrayList<Grade> queryGradesByCourseId(Course course) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Grade> grades = new ArrayList<Grade>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_QUERYGRADESBYCOURSEID(?)}");
+            cs.setInt("_IDCOURSE", course.getId());
+            
+            ResultSet rs = cs.executeQuery();
+                        
+            while(rs.next()){
+                Grade g = new Grade();
+                g.setIdGrade(rs.getInt("idGrade"));
+                g.setDescription(rs.getString("description"));
+                g.setWeight(rs.getDouble("weight"));
+                g.getCourse().setId(rs.getInt("idCourse"));                
+                grades.add(g);
+
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    return grades;
     }
 
     @Override
     public ArrayList<Grade> querySearchByName(String description, Course course) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Grade> grades = new ArrayList<Grade>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_SEARCHGRADEBYNAMEXCOURSE(?, ?)}");
+            cs.setInt("_IDCOURSE", course.getId());
+            cs.setString("_DESCRIPTION", description);
+            
+            ResultSet rs = cs.executeQuery();
+                        
+            while(rs.next()){
+                Grade g = new Grade();
+                g.setIdGrade(rs.getInt("idGrade"));
+                g.setDescription(rs.getString("description"));
+                g.setWeight(rs.getDouble("weight"));
+                g.getCourse().setId(rs.getInt("idCourse"));                
+                grades.add(g);
+
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    return grades;
     }
 
     @Override

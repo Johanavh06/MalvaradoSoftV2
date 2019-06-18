@@ -19,6 +19,9 @@ public class StudentXAttendance implements Serializable{
     private Student student;
 
     public StudentXAttendance() {
+        attendance = new Attendance();
+        year = new Year_();
+        student = new Student();
     }
     
     public Attendance getAttendance() {
