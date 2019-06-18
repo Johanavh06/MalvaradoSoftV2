@@ -15,6 +15,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.UserType;
  */
 public interface DAOUser {
     ArrayList<User> queryAllUsers();
+    User queryAllUsersByID(int idUser);
     ArrayList<User> queryAllUsersByUserType(UserType userType);
     User queryAllUsersByDNI(String dni);
     ArrayList<User> queryAllUsersByName(String name);

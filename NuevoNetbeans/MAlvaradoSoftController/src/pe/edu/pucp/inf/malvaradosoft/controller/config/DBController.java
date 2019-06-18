@@ -25,6 +25,10 @@ public abstract class DBController {
         return daoFactory.getUserDAO().queryAllUsers();
     }
     
+    public static User queryAllUsersByID(int idUser){
+        return daoFactory.getUserDAO().queryAllUsersByID(idUser);
+    }
+    
     public static ArrayList<User> queryAllUsersByUserType(UserType userType){
         return daoFactory.getUserDAO().queryAllUsersByUserType(userType);
     }

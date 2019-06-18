@@ -8,8 +8,8 @@ package pe.edu.pucp.inf.malvaradosoft.controller.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBManager;
@@ -329,7 +329,7 @@ public class MySQLUser implements DAOUser{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{ call MS_INSERTUSER(?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{ call MS_INSERTUSER(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             
             cs.registerOutParameter(1, java.sql.Types.INTEGER);
             cs.setString(2, user.getNames());
@@ -361,12 +361,52 @@ public class MySQLUser implements DAOUser{
 
     @Override
     public int updateUser(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result = 0;
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_UPDATEUSER(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            
+            cs.setInt(1, user.getIdUser());
+            cs.setString(2, user.getNames());
+            cs.setString(3, user.getFirstLastName());
+            cs.setString(4, user.getSecondLastName());
+            cs.setString(5, user.getDni());
+            cs.setString(6, user.getAddress());
+            cs.setInt(7, user.getCellPhone());
+            cs.setString(8, user.getEmail());
+            cs.setString(9, user.getUsername());
+            cs.setString(10, user.getPassword());
+            cs.setBoolean(11, user.isBlocked());
+            cs.setTime(12, user.getBlockTime());
+            cs.setInt(13, user.getnAttempts());
+            UserType ut = new UserType();
+            for(int i=0; i<user.getArrayUserTypes().size() ;i++ ){
+                ut=user.getUserType(i);
+                DBController.insertUserTypeXUser(user,ut);
+            }
+            result = cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
 
     @Override
     public int deleteUser(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result=0;
+        try {
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_DELETEUSER(?)}");
+            
+            cs.setInt(1, user.getIdUser());
+            result = cs.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;	
     }
         
     public User queryUserLogin(String username, String password){
@@ -419,5 +459,8 @@ public class MySQLUser implements DAOUser{
         return user;
     }
 
-    
+    @Override
+    public User queryAllUsersByID(int idUser) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
