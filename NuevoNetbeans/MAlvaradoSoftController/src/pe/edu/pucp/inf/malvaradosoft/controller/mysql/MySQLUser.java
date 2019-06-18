@@ -197,4 +197,48 @@ public class MySQLUser implements DAOUser{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public User queryUserLogin(String username, String password){
+        User user = new User();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_QUERYBYUSERNAME(?)}");
+            cs.setString(1,username);
+            ResultSet rs = cs.executeQuery();
+            
+            if (rs.next()){
+                user.setIdUser(rs.getInt("idUser"));
+                user.setNames(rs.getString("names"));
+                user.setFirstLastName(rs.getString("firstLastName"));
+                user.setSecondLastName(rs.getString("secondLastName"));
+                user.setDni(rs.getString("dni"));
+                user.setAddress(rs.getString("address"));
+                user.setCellPhone(rs.getInt("cellphone"));
+                user.setEmail(rs.getString("email"));
+                user.setUsername(rs.getString("userName"));
+                user.setPassword(rs.getString("password"));
+                user.setBlocked(rs.getBoolean("blocked"));
+                user.setBlockTime(rs.getTime("blockTime"));
+                UserType ut = new UserType();
+                ut.setIdUserType(rs.getInt("idUserType"));
+                ut.setDescription(rs.getString("description"));
+                user.setUserTypes(ut);                                
+                user.setnAttempts("nAttempts");
+                if (password == user.getPassword()){
+                    
+                }else{ //Contraseña incorrecta
+                    int nAtt = user.get
+                }
+                
+                
+            }else{ //No existe el usuario
+                return null;
+            }
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return user;
+    }
+    
 }

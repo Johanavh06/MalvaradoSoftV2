@@ -24,4 +24,5 @@ public interface DAOUser {
     int InsertUser(User user);
     int updateUser(User user);
     int deleteUser(User user);
+    User queryUserLogin(String name, String password);
 }
