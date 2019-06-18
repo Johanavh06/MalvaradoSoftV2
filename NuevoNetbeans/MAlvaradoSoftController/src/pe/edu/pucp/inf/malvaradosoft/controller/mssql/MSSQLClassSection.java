@@ -5,30 +5,39 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.mssql;
 
-import java.time.Year;
 import java.util.ArrayList;
-import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOYear;
-import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.ClassSection;
 
 /**
  *
  * @author alulab14
  */
-public class MSSQLYear implements DAOYear {
+public class MSSQLClassSection implements DAOClassSection{
 
     @Override
-    public int insertYear(Year_ y) {
+    public ArrayList<ClassSection> queryAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Year_> queryAllYears() {
+    public ArrayList<ClassSection> queryByLevel(int level) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int deleteYear(int idYear) {
+    public int insert(ClassSection classSection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public int update(ClassSection classSection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int delete(int idclassSection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

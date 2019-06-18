@@ -65,7 +65,19 @@ public class MySQLYear implements DAOYear{
 
     @Override
     public int deleteYear(int idYear) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result= 0;
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall(""
+                    + "{call MS_DELETEYEAR(?)}");
+            cs.setInt(1, idYear);
+            result= cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
     
 }

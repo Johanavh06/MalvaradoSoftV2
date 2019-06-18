@@ -6,14 +6,15 @@
 package pe.edu.pucp.inf.malvaradosoft.controller.dao;
 
 import java.util.ArrayList;
-import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Attendance;
 
 /**
  *
  * @author alulab14
  */
-public interface DAOYear {
-    int insertYear(Year_ y);
-    ArrayList<Year_> queryAllYears();
-    int deleteYear(int idYear);
+public interface DAOAttendance {
+    ArrayList <Attendance> queryAll();
+    int insert(Attendance attendance);
+    int update(Attendance attendance);
+    int delete(int id);
 }

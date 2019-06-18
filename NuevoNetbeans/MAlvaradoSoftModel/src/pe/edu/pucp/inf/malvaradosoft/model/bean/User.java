@@ -28,6 +28,7 @@ public class User {
     private int nAttempts;
     private ArrayList<UserType> userTypes;
 
+
     public User() {
         this.userTypes = new ArrayList<>();
     }
