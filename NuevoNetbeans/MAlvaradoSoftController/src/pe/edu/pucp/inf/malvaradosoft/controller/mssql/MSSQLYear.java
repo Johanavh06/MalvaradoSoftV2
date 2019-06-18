@@ -8,6 +8,7 @@ package pe.edu.pucp.inf.malvaradosoft.controller.mssql;
 import java.time.Year;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOYear;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.Year_;
 
 /**
  *
@@ -16,12 +17,12 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOYear;
 public class MSSQLYear implements DAOYear {
 
     @Override
-    public int insertYear(Year y) {
+    public int insertYear(Year_ y) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Year> queryAllYears() {
+    public ArrayList<Year_> queryAllYears() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -29,5 +30,5 @@ public class MSSQLYear implements DAOYear {
     public int deleteYear(int idYear) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
