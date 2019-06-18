@@ -26,7 +26,8 @@ public class User {
     private boolean blocked;
     private Time blockTime;
     private int nAttempts;
-    private ArrayList<UserType> userTypes;    
+    private ArrayList<UserType> userTypes;
+
 
     public User() {
         this.userTypes = new ArrayList<>();
@@ -153,8 +154,12 @@ public class User {
         userTypes.add(userType);
     }
 
-    public UserType getUserTypes(int pos) {
+    public UserType getUserType(int pos) {
         return userTypes.get(pos);
+    }
+    
+    public ArrayList<UserType> getArrayUserTypes() {
+        return userTypes;
     }
 
     public int getnAttempts() {

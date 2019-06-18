@@ -11,6 +11,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBManager;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
@@ -343,6 +344,10 @@ public class MySQLUser implements DAOUser{
             cs.setBoolean(11, user.isBlocked());
             cs.setTime(12, user.getBlockTime());
             cs.setInt(13, user.getnAttempts());
+            
+            for(int i=0; i<user.getArrayUserTypes().size() ;i++ ){
+                user.getUserType(i);
+            }
 //            cs.setInt(14, user.getUserTypes().);
 //            
 //            cs.setInt(2, pokemon.getType().getIdTypePokemon());

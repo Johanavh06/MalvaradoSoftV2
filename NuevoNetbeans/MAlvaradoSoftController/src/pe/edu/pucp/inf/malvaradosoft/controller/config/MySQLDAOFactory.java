@@ -13,6 +13,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserType;
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserTypeXUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLCourse;
@@ -21,6 +22,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudent;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserType;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserTypeXUser;
 
 public class MySQLDAOFactory extends DAOFactory{
     
@@ -44,6 +46,11 @@ public class MySQLDAOFactory extends DAOFactory{
         return new MySQLStudentXYear();
     }
 
+<<<<<<< HEAD
+    public DAOUserTypeXUser getUserTypeXUserDAO() {
+        return new MySQLUserTypeXUser();
+    }
+=======
     @Override
     public DAOCourse getCourseDAO() {
         return new MySQLCourse();
@@ -64,5 +71,6 @@ public class MySQLDAOFactory extends DAOFactory{
         return new MySQLClassroom();
     }
     
+>>>>>>> d20f80c07609ffc9b365ffa05dab38ad547048e1
     
 }
