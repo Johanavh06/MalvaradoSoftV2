@@ -36,7 +36,7 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
                 cs.setId(rs.getInt("idCourseSchedule"));
                 cs.getClassSection().setId(rs.getInt("idClassSection"));
                 cs.getClassroom().setId(rs.getInt("idClassroom"));
-                cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
+                //cs.getTeacherXyear.setId(rs.getInt("idTeacher"));
                 cs.getCourse().setId(rs.getInt("idCourse"));                
                 courseSchedules.add(cs);
             }
@@ -67,6 +67,7 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
                 csc.getTeacherXyear.setId(rs.getInt("idTeacher"));
                 csc.getCourse().setId(rs.getInt("idCourse"));                
                 courseSchedules.add(csc);
+
             }
             con.close();
             

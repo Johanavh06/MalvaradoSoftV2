@@ -21,7 +21,9 @@ public interface DAOUser {
     ArrayList<User> queryAllUsersByFirstLastName(String firstLastName);
     ArrayList<User> queryAllUsersBySecondLastName(String secondLastName);
     ArrayList<User> queryAllUsersBlocked();
+    User queryAllUsersByUsername(String username);
     int InsertUser(User user);
     int updateUser(User user);
     int deleteUser(User user);
+    User queryUserLogin(String name, String password);
 }
