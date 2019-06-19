@@ -53,6 +53,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Cursos\frmBuscarCurso%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmBuscarCurso%28secretario%29.Designer.cs">
+      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursoPorSeccion%28Secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursoPorSeccion%28Secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursos_secretario_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursos_secretario_.Designer.cs">
+      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarHorario%28Secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarHorario%28Secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarHorario%28Secretario%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadosFrmGestionarTipoNota.cs" />
     <Compile Include="frmEditarAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
@@ -84,11 +108,17 @@
     <Compile Include="frmBuscarUsuario%28todos%29.Designer.cs">
       <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarSeccion%28secretario%29.cs">
+    <Compile Include="frmCrearSeccion%28secretario%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarSeccion%28secretario%29.Designer.cs">
-      <DependentUpon>frmGestionarSeccion%28secretario%29.cs</DependentUpon>
+    <Compile Include="frmCrearSeccion%28secretario%29.Designer.cs">
+      <DependentUpon>frmCrearSeccion%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarSec.Designer.cs">
+      <DependentUpon>frmGestionarSec.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarTipoNota%28secretario%29.cs">
       <SubType>Form</SubType>
@@ -236,6 +266,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cursos\frmBuscarCurso%28secretario%29.resx">
+      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmGestionarCursoPorSeccion%28Secretario%29.resx">
+      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmGestionarCursos_secretario_.resx">
+      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmGestionarHorario%28Secretario%29.resx">
+      <DependentUpon>frmGestionarHorario%28Secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGestionarProfesor.resx">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarUsuario%28todos%29.resx">
       <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearSeccion%28secretario%29.resx">
+      <DependentUpon>frmCrearSeccion%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarSec.resx">
+      <DependentUpon>frmGestionarSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
