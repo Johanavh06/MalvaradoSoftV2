@@ -30,14 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlumnosInscritos = new System.Windows.Forms.DataGridView();
+            this.btnInscribir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apel_Paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ap_Materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matricular = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnInscribir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.Condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosInscritos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,15 +64,45 @@
             this.nombre,
             this.Apel_Paterno,
             this.Ap_Materno,
-            this.matricular});
+            this.matricular,
+            this.Condicion});
             this.dgvAlumnosInscritos.Location = new System.Drawing.Point(37, 89);
             this.dgvAlumnosInscritos.Name = "dgvAlumnosInscritos";
             this.dgvAlumnosInscritos.ReadOnly = true;
             this.dgvAlumnosInscritos.RowHeadersVisible = false;
             this.dgvAlumnosInscritos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAlumnosInscritos.Size = new System.Drawing.Size(575, 194);
+            this.dgvAlumnosInscritos.Size = new System.Drawing.Size(687, 194);
             this.dgvAlumnosInscritos.TabIndex = 1;
             this.dgvAlumnosInscritos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnosInscritos_CellContentClick);
+            // 
+            // btnInscribir
+            // 
+            this.btnInscribir.Location = new System.Drawing.Point(745, 106);
+            this.btnInscribir.Name = "btnInscribir";
+            this.btnInscribir.Size = new System.Drawing.Size(97, 23);
+            this.btnInscribir.TabIndex = 2;
+            this.btnInscribir.Text = "Inscribir Alumno";
+            this.btnInscribir.UseVisualStyleBackColor = true;
+            this.btnInscribir.Click += new System.EventHandler(this.btnInscribir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(745, 174);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(97, 23);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Editar Inscripción";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(745, 242);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(97, 23);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar Inscripción";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // DNI
             // 
@@ -119,41 +150,18 @@
             this.matricular.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.matricular.Width = 114;
             // 
-            // btnInscribir
+            // Condicion
             // 
-            this.btnInscribir.Location = new System.Drawing.Point(639, 106);
-            this.btnInscribir.Name = "btnInscribir";
-            this.btnInscribir.Size = new System.Drawing.Size(97, 23);
-            this.btnInscribir.TabIndex = 2;
-            this.btnInscribir.Text = "Inscribir Alumno";
-            this.btnInscribir.UseVisualStyleBackColor = true;
-            this.btnInscribir.Click += new System.EventHandler(this.btnInscribir_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(639, 174);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(97, 23);
-            this.btnEditar.TabIndex = 3;
-            this.btnEditar.Text = "Editar Inscripción";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(639, 242);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(97, 23);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar Inscripción";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.Condicion.HeaderText = "Condicion";
+            this.Condicion.Name = "Condicion";
+            this.Condicion.ReadOnly = true;
             // 
             // frmMenuInscribirAlumno_Apoderado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(755, 319);
+            this.ClientSize = new System.Drawing.Size(864, 319);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnInscribir);
@@ -179,5 +187,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Apel_Paterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ap_Materno;
         private System.Windows.Forms.DataGridViewButtonColumn matricular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Condicion;
     }
 }

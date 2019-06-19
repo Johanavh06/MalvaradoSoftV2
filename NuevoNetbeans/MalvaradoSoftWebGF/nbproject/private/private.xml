@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/T:/temp/lp2/MalvaradoSoftV2/NuevoNetbeans/MalvaradoSoftWebGF/src/java/pe/edu/pucp/inf/malvaradosoft/services/DBControllerWS.java</file>
             <file>file:/T:/temp/lp2/MalvaradoSoftV2/NuevoNetbeans/MalvaradoSoftWebGF/src/java/pe/edu/pucp/inf/malvaradosoft/config/testeo.java</file>
+=======
+            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MalvaradoSoftWebGF/web/WEB-INF/web.xml</file>
+            <file>file:/T:/joel/MalvaradoSoftV2/NuevoNetbeans/MalvaradoSoftWebGF/src/java/pe/edu/pucp/inf/malvaradosoft/services/DBControllerWS.java</file>
+>>>>>>> b32e8b6b7c4ffc11eb8a0455431d97dab66505f7
         </group>
     </open-files>
 </project-private>

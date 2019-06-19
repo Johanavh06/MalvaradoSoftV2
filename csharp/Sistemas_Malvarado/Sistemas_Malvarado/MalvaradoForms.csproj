@@ -126,6 +126,12 @@
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInscribirUsuario%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInscribirUsuario%28secretario%29.Designer.cs">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuInscribirAlumno_Apoderado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     <EmbeddedResource Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListarAlumnos%28apoderado%29.resx">
       <DependentUpon>frmListarAlumnos%28apoderado%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMatricularAlumno%28Apoderado%29.resx">
       <DependentUpon>frmMatricularAlumno%28Apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatricularAlumnos%28secretario%29.resx">
+      <DependentUpon>frmMatricularAlumnos%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuInscribirAlumno_Apoderado.resx">
       <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
@@ -370,7 +382,16 @@
     <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse.datasource">
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.course.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.courseSchedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse.datasource">
@@ -379,10 +400,16 @@
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.grade.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.helloResponse.datasource">
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.helloResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse.datasource">
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllCourseSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllCoursesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse.datasource">
@@ -391,10 +418,26 @@
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+<<<<<<< HEAD
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesSearchByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.user.datasource">
+=======
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse.datasource">
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse.datasource">
@@ -417,9 +460,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apoderado\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\plus.png" />
   </ItemGroup>

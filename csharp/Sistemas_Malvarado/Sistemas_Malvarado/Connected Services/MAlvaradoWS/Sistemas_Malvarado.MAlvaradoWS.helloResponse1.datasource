@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="updateGRadeResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse, Connected Services.MAlvaradoWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+<GenericObjectDataSource DisplayName="helloResponse1" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>Sistemas_Malvarado.MAlvaradoWS.helloResponse1</TypeInfo>
 </GenericObjectDataSource>

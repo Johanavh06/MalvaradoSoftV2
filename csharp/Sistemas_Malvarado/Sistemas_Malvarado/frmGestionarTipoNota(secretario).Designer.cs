@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +39,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,23 +55,9 @@
             this.dgvCursos.Location = new System.Drawing.Point(12, 159);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
-            this.dgvCursos.Size = new System.Drawing.Size(366, 170);
+            this.dgvCursos.Size = new System.Drawing.Size(366, 246);
             this.dgvCursos.TabIndex = 0;
             this.dgvCursos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editarGrade);
-            // 
-            // colDescription
-            // 
-            this.colDescription.DataPropertyName = "description";
-            this.colDescription.HeaderText = "Descripción";
-            this.colDescription.Name = "colDescription";
-            this.colDescription.ReadOnly = true;
-            // 
-            // colWeight
-            // 
-            this.colWeight.DataPropertyName = "weight";
-            this.colWeight.HeaderText = "Peso";
-            this.colWeight.Name = "colWeight";
-            this.colWeight.ReadOnly = true;
             // 
             // label1
             // 
@@ -102,6 +88,7 @@
             // 
             // txtNombreCurso
             // 
+            this.txtNombreCurso.Enabled = false;
             this.txtNombreCurso.Location = new System.Drawing.Point(120, 27);
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.Size = new System.Drawing.Size(184, 20);
@@ -129,10 +116,11 @@
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(280, 335);
+            this.btnEliminar.Location = new System.Drawing.Point(280, 411);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 8;
@@ -160,11 +148,26 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // colDescription
+            // 
+            this.colDescription.DataPropertyName = "description";
+            this.colDescription.HeaderText = "Descripción";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.ReadOnly = true;
+            this.colDescription.Width = 200;
+            // 
+            // colWeight
+            // 
+            this.colWeight.DataPropertyName = "weight";
+            this.colWeight.HeaderText = "Peso";
+            this.colWeight.Name = "colWeight";
+            this.colWeight.ReadOnly = true;
+            // 
             // frmGestionarTipoNota_secretario_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 366);
+            this.ClientSize = new System.Drawing.Size(390, 446);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEliminar);

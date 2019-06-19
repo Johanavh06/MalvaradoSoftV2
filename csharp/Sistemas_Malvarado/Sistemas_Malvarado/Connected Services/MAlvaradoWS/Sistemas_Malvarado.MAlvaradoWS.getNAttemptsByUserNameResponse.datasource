@@ -6,5 +6,9 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="getNAttemptsByUserNameResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+<<<<<<< HEAD
+   <TypeInfo>Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse, Sistemas_Malvarado, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+=======
    <TypeInfo>Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse, Connected Services.MAlvaradoWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1
 </GenericObjectDataSource>
