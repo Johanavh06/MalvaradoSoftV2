@@ -30,7 +30,7 @@ T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\S
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.pdb
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.exe
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.pdb
-<<<<<<< HEAD
+
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.exe.config
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.exe
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.pdb
@@ -68,7 +68,7 @@ T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debu
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\MalvaradoForms.csproj.CoreCompileInputs.cache
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.exe
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.pdb
-=======
+
 T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.exe.config
 T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.exe
 T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.pdb
@@ -106,13 +106,15 @@ T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Deb
 T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\MalvaradoForms.csproj.CoreCompileInputs.cache
 T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.exe
 T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.pdb
->>>>>>> a4a250377e2dc530e9e7e89c883c980142ca332a
+
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.frmBuscarCurso_secretario_.resources
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.frmGestionarCursoPorSeccion.resources
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.FormGestionarCursos.resources
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.frmGestionarHorario_Secretario_.resources
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmGestionarSeccion_secretario_.resources
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmGestionarSec.resources
->>>>>>> f810a5846a76cb7bad32dc13d0f13a1fba636b96
+
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmMatricularAlumno_Apoderado_.resources
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Login.frmRecuperarContraseña.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmMatricularAlumno_Apoderado_.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Login.frmRecuperarContraseña.resources

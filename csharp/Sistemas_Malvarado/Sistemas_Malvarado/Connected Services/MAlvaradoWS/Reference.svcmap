@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f7c0370b-07b3-43d4-8777-ec174bab40a0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e73aabf5-ca1b-40c5-ab83-7e3572e4af9d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="fdbcf71f-cf31-4161-a5b2-c6ffca6de579" SourceId="1" SourceUrl="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?xsd=1" />
-    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="ca607bbf-ef47-4bbf-b0e0-61e2ecc37eee" SourceId="1" SourceUrl="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" />
+    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="0db1aca4-b7e4-4de5-9001-030443610bf4" SourceId="1" SourceUrl="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?xsd=1" />
+    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="e053a696-2527-43b9-82bf-41472d94f043" SourceId="1" SourceUrl="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

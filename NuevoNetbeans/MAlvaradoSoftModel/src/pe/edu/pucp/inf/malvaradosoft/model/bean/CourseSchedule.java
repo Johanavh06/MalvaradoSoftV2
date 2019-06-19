@@ -19,6 +19,10 @@ public class CourseSchedule implements Serializable{
     private TeacherXYear teacherXyear;
 
     public CourseSchedule() {
+        classroom = new Classroom();
+        course = new Course();
+        classSection = new ClassSection();
+        teacherXyear = new TeacherXYear();
     }
 
     public CourseSchedule(int id, Classroom classroom, Course course, ClassSection classSection, TeacherXYear teacherXyear) {

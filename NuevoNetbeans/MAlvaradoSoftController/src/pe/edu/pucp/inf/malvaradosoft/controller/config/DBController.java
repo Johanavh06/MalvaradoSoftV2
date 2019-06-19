@@ -173,6 +173,11 @@ public abstract class DBController {
     public static ArrayList<CourseSchedule> queryAllCourseById(int idCourse, int idClassSection){
         return daoFactory.getCourseScheduleDAO().queryById(idCourse, idClassSection);
     }
+    
+    public static ArrayList<CourseSchedule> queryAllCourseScheduleByTeacherId(int idTeacher){
+        return daoFactory.getCourseScheduleDAO().queryByTeacherId(idTeacher);
+    }
+    
     public static int insertCourseSchedule(CourseSchedule courseSchedule){
         return daoFactory.getCourseScheduleDAO().insert(courseSchedule);
     }

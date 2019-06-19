@@ -15,6 +15,8 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.CourseSchedule;
 public interface DAOCourseSchedule {
     ArrayList <CourseSchedule> queryAll();
     ArrayList <CourseSchedule> queryById(int idCourse, int idClassSection);
+    ArrayList <CourseSchedule> queryByTeacherId( int idTeacher);
+    
     int insert(CourseSchedule courseSchedule);
     int update(CourseSchedule courseSchedule);
     int delete(int idCourseSchedule);
