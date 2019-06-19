@@ -82,5 +82,10 @@ namespace Sistemas_Malvarado
         {
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
         }
+
+        private void frmGestionarTipoNota_secretario__Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
