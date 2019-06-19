@@ -39,4 +39,19 @@ public class DBControllerWS {
         course.setId(idCourse);
         return DBController.queryGradesByCourseId(course);
     }
+    
+    @WebMethod(operationName = "insertGRade")
+    public int insertGrade(@WebParam(name = "grade") Grade grade) {
+        return DBController.insertGrade(grade);
+    }
+    
+    @WebMethod(operationName = "updateGRade")
+    public int updateGrade(@WebParam(name = "grade") Grade grade) {
+        return DBController.updateGrade(grade);
+    }
+    
+    @WebMethod(operationName = "deleteGRade")
+    public int deleteGrade(@WebParam(name = "grade") Grade grade) {
+        return DBController.deleteGrade(grade);
+    }
 }

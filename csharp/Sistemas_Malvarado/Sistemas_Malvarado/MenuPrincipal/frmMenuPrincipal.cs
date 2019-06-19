@@ -120,7 +120,7 @@ namespace Sistemas_Malvarado
 
         private void btnCursos_Click(object sender, EventArgs e)
         {
-            OpenForm<FormGestionarCursos>();
+            //OpenForm<FormGestionarCursos>();
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

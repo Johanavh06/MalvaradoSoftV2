@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,41 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBuscarCurso%28secretario%29.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Connected Services\MAlvaradoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarCurso%28secretario%29.Designer.cs">
-      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
-    </Compile>
+    <Compile Include="EstadosFrmGestionarTipoNota.cs" />
     <Compile Include="frmEditarAlumno%28apoderado%29.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditarAlumno%28apoderado%29.Designer.cs">
       <DependentUpon>frmEditarAlumno%28apoderado%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarAsistencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarAsistencia.Designer.cs">
-      <DependentUpon>frmGestionarAsistencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGestionarCursoPorSeccion%28Secretario%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarCursoPorSeccion%28Secretario%29.Designer.cs">
-      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormGestionarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGestionarProfesor.Designer.cs">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGestionarCursos_secretario_.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarCursos_secretario_.Designer.cs">
-      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscarAlumno.cs">
       <SubType>Form</SubType>
@@ -252,17 +236,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBuscarCurso%28secretario%29.resx">
-      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarCursoPorSeccion%28Secretario%29.resx">
-      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormGestionarProfesor.resx">
       <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarCursos_secretario_.resx">
-      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarAlumno.resx">
       <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
@@ -337,6 +312,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.wsdl" />
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.grade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -362,6 +362,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MAlvaradoWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MAlvaradoWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MAlvaradoWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MAlvaradoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
