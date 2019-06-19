@@ -113,18 +113,7 @@ namespace Sistemas_Malvarado
         }
 
 
-        /* ************** CONTRASEÑA = "123" ************** 
-                  * Usuario 1: admin
-                  * Usuario 2: secretario
-                  * Usuario 3: profesor
-                  * Usuario 4: auxiliar
-                  * Usuario 5: apoderado
-                  * Usuario 6: alumno
-                  * Usuario 7: profesor_apoderado
-                  * Usuario 8: auxiliar_apoderado
-                  * Usuario 9: secretario_apoderado
-        */
-
+        
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             if (user == "USUARIO" || password == "CONTRASEÑA")
@@ -136,10 +125,7 @@ namespace Sistemas_Malvarado
                 Validacion = false;
                 Contador = 100;
                 btnAcceder.Enabled = false;
-                //frmBloqueo = new frmTiempoBloqueado();
-
-                //frmBloqueo.FormClosed += Logout;
-                //frmBloqueo.Show();
+                
                 timer1.Enabled = true;
             }
 

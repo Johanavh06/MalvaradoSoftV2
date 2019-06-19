@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
 
 /**
  *
@@ -16,20 +17,22 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
  */
 public class testeo {
     public static void main(String[] args){
-        Course course = new Course ();
-        course.setId(1);
-        //ArrayList<Grade> grades = DBController.queryGradesByCourseId(course);
-        //for (Grade grade : grades) {
-        //    System.out.println("Grade description: " + grade.getDescription());
-            
-        //}
-        Grade grade = new Grade();
-        grade.getCourse().setId(course.getId());
-        grade.setDescription("Extr1");
-        grade.setWeight((Double)(0.69));
-        
-        int r = DBController.insertGrade(grade);
-        System.out.println("Resultado: " + r);
+//        Course course = new Course ();
+//        course.setId(1);
+//        ArrayList<Grade> grades = DBController.queryGradesByCourseId(course);
+//        for (Grade grade : grades) {
+//            System.out.println("Grade description: " + grade.getDescription());
+//            
+//        }
+//        Grade grade = new Grade();
+//        grade.getCourse().setId(course.getId());
+//        grade.setDescription("Extr1");
+//        grade.setWeight((Double)(0.69));
+//        
+//        int r = DBController.insertGrade(grade);
+//        System.out.println("Resultado: " + r);
+        User u = DBController.queryUserLogin("Jaco", "000");
+        System.out.println("funciona:" + u.getUsername() + u.getPassword());
     }
     
 }

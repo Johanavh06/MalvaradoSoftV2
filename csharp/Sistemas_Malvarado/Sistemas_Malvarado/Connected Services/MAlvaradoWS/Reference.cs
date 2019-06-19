@@ -16,6 +16,32 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
     public interface DBControllerWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updatePasswordUserRe" +
+            "quest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updatePasswordUserRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse updatePasswordUser(Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updatePasswordUserRe" +
+            "quest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updatePasswordUserRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse> updatePasswordUserAsync(Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNa" +
+            "meRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNa" +
+            "meResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse getNAttemptsByUserName(Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNa" +
+            "meRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNa" +
+            "meResponse")]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse> getNAttemptsByUserNameAsync(Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryGradesByCourseI" +
             "dRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryGradesByCourseI" +
             "dResponse")]
@@ -29,13 +55,13 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse> queryGradesByCourseIdAsync(Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse insertGRade(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request);
+        Sistemas_Malvarado.MAlvaradoWS.helloResponse hello(Sistemas_Malvarado.MAlvaradoWS.helloRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeResponse")]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse> insertGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse")]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.helloResponse> helloAsync(Sistemas_Malvarado.MAlvaradoWS.helloRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllGradesReques" +
@@ -51,13 +77,35 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> queryAllGradesAsync(Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sistemas_Malvarado.MAlvaradoWS.helloResponse hello(Sistemas_Malvarado.MAlvaradoWS.helloRequest request);
+        Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse deleteGRade(Sistemas_Malvarado.MAlvaradoWS.deleteGRadeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse")]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.helloResponse> helloAsync(Sistemas_Malvarado.MAlvaradoWS.helloRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeResponse")]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse> deleteGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.deleteGRadeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginReques" +
+            "t", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse queryUserLogin(Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginReques" +
+            "t", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginRespon" +
+            "se")]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse> queryUserLoginAsync(Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse insertGRade(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeResponse")]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse> insertGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeResponse")]
@@ -67,15 +115,83 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeResponse")]
         System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse> updateGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePasswordUser", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updatePasswordUserRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse deleteGRade(Sistemas_Malvarado.MAlvaradoWS.deleteGRadeRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string email;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeResponse")]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse> deleteGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.deleteGRadeRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
+        public updatePasswordUserRequest() {
+        }
+        
+        public updatePasswordUserRequest(string email, string password) {
+            this.email = email;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePasswordUserResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updatePasswordUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updatePasswordUserResponse() {
+        }
+        
+        public updatePasswordUserResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getNAttemptsByUserName", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class getNAttemptsByUserNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        public getNAttemptsByUserNameRequest() {
+        }
+        
+        public getNAttemptsByUserNameRequest(string username) {
+            this.username = username;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getNAttemptsByUserNameResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class getNAttemptsByUserNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public getNAttemptsByUserNameResponse() {
+        }
+        
+        public getNAttemptsByUserNameResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -212,6 +328,224 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/")]
+    public partial class time : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/")]
+    public partial class user : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string addressField;
+        
+        private time blockTimeField;
+        
+        private bool blockedField;
+        
+        private int cellPhoneField;
+        
+        private string dniField;
+        
+        private string emailField;
+        
+        private string firstLastNameField;
+        
+        private int idUserField;
+        
+        private string namesField;
+        
+        private string passwordField;
+        
+        private string secondLastNameField;
+        
+        private string usernameField;
+        
+        private int nAttemptsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+                this.RaisePropertyChanged("address");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public time blockTime {
+            get {
+                return this.blockTimeField;
+            }
+            set {
+                this.blockTimeField = value;
+                this.RaisePropertyChanged("blockTime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public bool blocked {
+            get {
+                return this.blockedField;
+            }
+            set {
+                this.blockedField = value;
+                this.RaisePropertyChanged("blocked");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int cellPhone {
+            get {
+                return this.cellPhoneField;
+            }
+            set {
+                this.cellPhoneField = value;
+                this.RaisePropertyChanged("cellPhone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string firstLastName {
+            get {
+                return this.firstLastNameField;
+            }
+            set {
+                this.firstLastNameField = value;
+                this.RaisePropertyChanged("firstLastName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int idUser {
+            get {
+                return this.idUserField;
+            }
+            set {
+                this.idUserField = value;
+                this.RaisePropertyChanged("idUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string names {
+            get {
+                return this.namesField;
+            }
+            set {
+                this.namesField = value;
+                this.RaisePropertyChanged("names");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string secondLastName {
+            get {
+                return this.secondLastNameField;
+            }
+            set {
+                this.secondLastNameField = value;
+                this.RaisePropertyChanged("secondLastName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+                this.RaisePropertyChanged("username");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public int nAttempts {
+            get {
+                return this.nAttemptsField;
+            }
+            set {
+                this.nAttemptsField = value;
+                this.RaisePropertyChanged("nAttempts");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -244,70 +578,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         }
         
         public queryGradesByCourseIdResponse(Sistemas_Malvarado.MAlvaradoWS.grade[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertGRade", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertGRadeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sistemas_Malvarado.MAlvaradoWS.grade grade;
-        
-        public insertGRadeRequest() {
-        }
-        
-        public insertGRadeRequest(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
-            this.grade = grade;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertGRadeResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertGRadeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertGRadeResponse() {
-        }
-        
-        public insertGRadeResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllGrades", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllGradesRequest {
-        
-        public queryAllGradesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllGradesResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllGradesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sistemas_Malvarado.MAlvaradoWS.grade[] @return;
-        
-        public queryAllGradesResponse() {
-        }
-        
-        public queryAllGradesResponse(Sistemas_Malvarado.MAlvaradoWS.grade[] @return) {
             this.@return = @return;
         }
     }
@@ -351,35 +621,27 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateGRade", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateGRadeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllGrades", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllGradesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Sistemas_Malvarado.MAlvaradoWS.grade grade;
-        
-        public updateGRadeRequest() {
-        }
-        
-        public updateGRadeRequest(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
-            this.grade = grade;
+        public queryAllGradesRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateGRadeResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateGRadeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllGradesResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllGradesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sistemas_Malvarado.MAlvaradoWS.grade[] @return;
         
-        public updateGRadeResponse() {
+        public queryAllGradesResponse() {
         }
         
-        public updateGRadeResponse(int @return) {
+        public queryAllGradesResponse(Sistemas_Malvarado.MAlvaradoWS.grade[] @return) {
             this.@return = @return;
         }
     }
@@ -420,6 +682,119 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserLogin", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryUserLoginRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
+        public queryUserLoginRequest() {
+        }
+        
+        public queryUserLoginRequest(string username, string password) {
+            this.username = username;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserLoginResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryUserLoginResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sistemas_Malvarado.MAlvaradoWS.user @return;
+        
+        public queryUserLoginResponse() {
+        }
+        
+        public queryUserLoginResponse(Sistemas_Malvarado.MAlvaradoWS.user @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertGRade", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertGRadeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sistemas_Malvarado.MAlvaradoWS.grade grade;
+        
+        public insertGRadeRequest() {
+        }
+        
+        public insertGRadeRequest(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
+            this.grade = grade;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertGRadeResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertGRadeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertGRadeResponse() {
+        }
+        
+        public insertGRadeResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateGRade", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateGRadeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Sistemas_Malvarado.MAlvaradoWS.grade grade;
+        
+        public updateGRadeRequest() {
+        }
+        
+        public updateGRadeRequest(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
+            this.grade = grade;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateGRadeResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateGRadeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateGRadeResponse() {
+        }
+        
+        public updateGRadeResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DBControllerWSChannel : Sistemas_Malvarado.MAlvaradoWS.DBControllerWS, System.ServiceModel.IClientChannel {
     }
@@ -448,6 +823,54 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.updatePasswordUser(Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest request) {
+            return base.Channel.updatePasswordUser(request);
+        }
+        
+        public int updatePasswordUser(string email, string password) {
+            Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest();
+            inValue.email = email;
+            inValue.password = password;
+            Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).updatePasswordUser(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.updatePasswordUserAsync(Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest request) {
+            return base.Channel.updatePasswordUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse> updatePasswordUserAsync(string email, string password) {
+            Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserRequest();
+            inValue.email = email;
+            inValue.password = password;
+            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).updatePasswordUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.getNAttemptsByUserName(Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest request) {
+            return base.Channel.getNAttemptsByUserName(request);
+        }
+        
+        public int getNAttemptsByUserName(string username) {
+            Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest();
+            inValue.username = username;
+            Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).getNAttemptsByUserName(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.getNAttemptsByUserNameAsync(Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest request) {
+            return base.Channel.getNAttemptsByUserNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse> getNAttemptsByUserNameAsync(string username) {
+            Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameRequest();
+            inValue.username = username;
+            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).getNAttemptsByUserNameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryGradesByCourseId(Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdRequest request) {
             return base.Channel.queryGradesByCourseId(request);
         }
@@ -468,50 +891,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
             Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdRequest();
             inValue.arg0 = arg0;
             return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryGradesByCourseIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.insertGRade(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request) {
-            return base.Channel.insertGRade(request);
-        }
-        
-        public int insertGRade(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
-            Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest();
-            inValue.grade = grade;
-            Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).insertGRade(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.insertGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request) {
-            return base.Channel.insertGRadeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse> insertGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
-            Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest();
-            inValue.grade = grade;
-            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).insertGRadeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryAllGrades(Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest request) {
-            return base.Channel.queryAllGrades(request);
-        }
-        
-        public Sistemas_Malvarado.MAlvaradoWS.grade[] queryAllGrades() {
-            Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest();
-            Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryAllGrades(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryAllGradesAsync(Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest request) {
-            return base.Channel.queryAllGradesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> queryAllGradesAsync() {
-            Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest();
-            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryAllGradesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -538,26 +917,24 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.updateGRade(Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest request) {
-            return base.Channel.updateGRade(request);
+        Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryAllGrades(Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest request) {
+            return base.Channel.queryAllGrades(request);
         }
         
-        public int updateGRade(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
-            Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest();
-            inValue.grade = grade;
-            Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).updateGRade(inValue);
+        public Sistemas_Malvarado.MAlvaradoWS.grade[] queryAllGrades() {
+            Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest();
+            Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryAllGrades(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.updateGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest request) {
-            return base.Channel.updateGRadeAsync(request);
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryAllGradesAsync(Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest request) {
+            return base.Channel.queryAllGradesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse> updateGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
-            Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest();
-            inValue.grade = grade;
-            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).updateGRadeAsync(inValue);
+        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> queryAllGradesAsync() {
+            Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest();
+            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryAllGradesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -581,6 +958,77 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
             Sistemas_Malvarado.MAlvaradoWS.deleteGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.deleteGRadeRequest();
             inValue.grade = grade;
             return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).deleteGRadeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryUserLogin(Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest request) {
+            return base.Channel.queryUserLogin(request);
+        }
+        
+        public Sistemas_Malvarado.MAlvaradoWS.user queryUserLogin(string username, string password) {
+            Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest();
+            inValue.username = username;
+            inValue.password = password;
+            Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryUserLogin(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.queryUserLoginAsync(Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest request) {
+            return base.Channel.queryUserLoginAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse> queryUserLoginAsync(string username, string password) {
+            Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryUserLoginRequest();
+            inValue.username = username;
+            inValue.password = password;
+            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryUserLoginAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.insertGRade(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request) {
+            return base.Channel.insertGRade(request);
+        }
+        
+        public int insertGRade(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
+            Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest();
+            inValue.grade = grade;
+            Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).insertGRade(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.insertGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest request) {
+            return base.Channel.insertGRadeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse> insertGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
+            Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.insertGRadeRequest();
+            inValue.grade = grade;
+            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).insertGRadeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.updateGRade(Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest request) {
+            return base.Channel.updateGRade(request);
+        }
+        
+        public int updateGRade(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
+            Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest();
+            inValue.grade = grade;
+            Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).updateGRade(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.updateGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest request) {
+            return base.Channel.updateGRadeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse> updateGRadeAsync(Sistemas_Malvarado.MAlvaradoWS.grade grade) {
+            Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.updateGRadeRequest();
+            inValue.grade = grade;
+            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).updateGRadeAsync(inValue);
         }
     }
 }

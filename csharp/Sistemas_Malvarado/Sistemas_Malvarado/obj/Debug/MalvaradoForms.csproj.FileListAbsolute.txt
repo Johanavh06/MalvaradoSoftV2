@@ -116,3 +116,4 @@ T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\S
 >>>>>>> f810a5846a76cb7bad32dc13d0f13a1fba636b96
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmMatricularAlumno_Apoderado_.resources
 T:\temp\TA\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Login.frmRecuperarContraseña.resources
+T:\temp\lp2\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmMatricularAlumno_Apoderado_.resources

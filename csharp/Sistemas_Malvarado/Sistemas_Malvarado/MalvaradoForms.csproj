@@ -366,11 +366,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.wsdl" />
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.xsd">
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.wsdl" />
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.grade.datasource">
@@ -388,7 +391,16 @@
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.user.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
