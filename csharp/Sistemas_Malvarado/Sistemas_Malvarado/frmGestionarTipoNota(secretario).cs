@@ -31,7 +31,8 @@ namespace Sistemas_Malvarado
 
             dgvCursos.AutoGenerateColumns = false;
             dgvCursos.DataSource = controller.queryAllGrades();
-            
+            dgvCursos.DataSource = controller.queryGradesByCourseId(curso.id);
+
 
         }
 
