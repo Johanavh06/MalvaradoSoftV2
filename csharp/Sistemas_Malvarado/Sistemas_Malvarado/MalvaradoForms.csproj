@@ -360,8 +360,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.wsdl" />
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.xsd">
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.wsdl" />
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse.datasource">

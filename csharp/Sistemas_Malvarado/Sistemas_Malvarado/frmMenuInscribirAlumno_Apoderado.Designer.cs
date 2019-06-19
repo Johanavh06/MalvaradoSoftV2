@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuInscribirAlumno_Apoderado));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAdd1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd1)).BeginInit();
+            this.dgvAlumnosInscritos = new System.Windows.Forms.DataGridView();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apel_Paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ap_Materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matricular = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnInscribir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosInscritos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,47 +51,117 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Inscripción de alumnos:";
             // 
-            // label2
+            // dgvAlumnosInscritos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(220, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 2;
+            this.dgvAlumnosInscritos.AllowUserToDeleteRows = false;
+            this.dgvAlumnosInscritos.AllowUserToResizeColumns = false;
+            this.dgvAlumnosInscritos.AllowUserToResizeRows = false;
+            this.dgvAlumnosInscritos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAlumnosInscritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnosInscritos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DNI,
+            this.nombre,
+            this.Apel_Paterno,
+            this.Ap_Materno,
+            this.matricular});
+            this.dgvAlumnosInscritos.Location = new System.Drawing.Point(37, 89);
+            this.dgvAlumnosInscritos.Name = "dgvAlumnosInscritos";
+            this.dgvAlumnosInscritos.ReadOnly = true;
+            this.dgvAlumnosInscritos.RowHeadersVisible = false;
+            this.dgvAlumnosInscritos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAlumnosInscritos.Size = new System.Drawing.Size(575, 194);
+            this.dgvAlumnosInscritos.TabIndex = 1;
+            this.dgvAlumnosInscritos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnosInscritos_CellContentClick);
             // 
-            // btnAdd1
-            //             
-            this.btnAdd1.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.InitialImage")));
-            this.btnAdd1.Location = new System.Drawing.Point(217, 32);
-            this.btnAdd1.Name = "btnAdd1";
-            this.btnAdd1.Size = new System.Drawing.Size(32, 32);
-            this.btnAdd1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnAdd1.TabIndex = 4;
-            this.btnAdd1.TabStop = false;
-            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
+            // DNI
             // 
-            // button1
+            this.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DNI.Frozen = true;
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            this.DNI.Width = 113;
             // 
-            this.button1.Location = new System.Drawing.Point(37, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nombre.Frozen = true;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 115;
+            // 
+            // Apel_Paterno
+            // 
+            this.Apel_Paterno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Apel_Paterno.Frozen = true;
+            this.Apel_Paterno.HeaderText = "Apel. Paterno";
+            this.Apel_Paterno.Name = "Apel_Paterno";
+            this.Apel_Paterno.ReadOnly = true;
+            this.Apel_Paterno.Width = 114;
+            // 
+            // Ap_Materno
+            // 
+            this.Ap_Materno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Ap_Materno.Frozen = true;
+            this.Ap_Materno.HeaderText = "Ap. Materno";
+            this.Ap_Materno.Name = "Ap_Materno";
+            this.Ap_Materno.ReadOnly = true;
+            this.Ap_Materno.Width = 116;
+            // 
+            // matricular
+            // 
+            this.matricular.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.matricular.HeaderText = "Matricular";
+            this.matricular.Name = "matricular";
+            this.matricular.ReadOnly = true;
+            this.matricular.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.matricular.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.matricular.Width = 114;
+            // 
+            // btnInscribir
+            // 
+            this.btnInscribir.Location = new System.Drawing.Point(639, 106);
+            this.btnInscribir.Name = "btnInscribir";
+            this.btnInscribir.Size = new System.Drawing.Size(97, 23);
+            this.btnInscribir.TabIndex = 2;
+            this.btnInscribir.Text = "Inscribir Alumno";
+            this.btnInscribir.UseVisualStyleBackColor = true;
+            this.btnInscribir.Click += new System.EventHandler(this.btnInscribir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(639, 174);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(97, 23);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Editar Inscripción";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(639, 242);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(97, 23);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar Inscripción";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // frmMenuInscribirAlumno_Apoderado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAdd1);
-            this.Controls.Add(this.label2);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(755, 319);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnInscribir);
+            this.Controls.Add(this.dgvAlumnosInscritos);
             this.Controls.Add(this.label1);
             this.Name = "frmMenuInscribirAlumno_Apoderado";
             this.Text = "frmMenuInscribirAlumno_Apoderado";
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosInscritos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,8 +170,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox btnAdd1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInscribir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView dgvAlumnosInscritos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apel_Paterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ap_Materno;
+        private System.Windows.Forms.DataGridViewButtonColumn matricular;
     }
 }

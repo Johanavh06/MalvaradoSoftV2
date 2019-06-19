@@ -19,13 +19,13 @@ namespace Sistemas_Malvarado
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
 
-            MAlvaradoWS.course curso = new MAlvaradoWS.course();
-            curso.id = 1;
-            curso.name = "Test";
-            Application.Run(new frmGestionarTipoNota_secretario_(curso));
+            //MAlvaradoWS.course curso = new MAlvaradoWS.course();
+            //curso.id = 1;
+            //curso.name = "Test";
+            //Application.Run(new frmGestionarTipoNota_secretario_(curso));
             
 
-            //Application.Run(new FormInscribirUsuario());
+            Application.Run(new frmMenuInscribirAlumno_Apoderado());
             //Application.Run(new FormSeccionesACargo());
         }
     }

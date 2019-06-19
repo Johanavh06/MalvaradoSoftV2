@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.207.104:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="24a52af4-aec0-430a-b2bf-cc2aaf571b76" SourceId="1" SourceUrl="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?xsd=1" />
-    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="3ee68561-538b-46e9-8680-80c28f400fda" SourceId="1" SourceUrl="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" />
+    <MetadataFile FileName="DBControllerWS1.wsdl" MetadataType="Wsdl" ID="c17f7a3f-369b-4b94-8aca-04b220addc9c" SourceId="1" SourceUrl="http://192.168.207.104:8080/MalvaradoSoftWebGF/DBControllerWS?WSDL" />
+    <MetadataFile FileName="DBControllerWS1.xsd" MetadataType="Schema" ID="3a7999a9-ddda-4656-9fbc-ac048802af07" SourceId="1" SourceUrl="http://192.168.207.104:8080/MalvaradoSoftWebGF/DBControllerWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

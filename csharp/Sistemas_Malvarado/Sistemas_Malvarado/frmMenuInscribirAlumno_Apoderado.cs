@@ -12,23 +12,38 @@ namespace Sistemas_Malvarado
 {
     public partial class frmMenuInscribirAlumno_Apoderado : Form
     {
+        //private Student _student;
         public frmMenuInscribirAlumno_Apoderado()
         {
             InitializeComponent();
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
-        private void btnAdd1_Click(object sender, EventArgs e)
+        private void btnInscribir_Click(object sender, EventArgs e)
         {
-            btnAdd1.Visible = false;
-            crearUnAlumno();
+            frmInscribirAlumno_apoderado formulario = new frmInscribirAlumno_apoderado();
+            if (formulario.ShowDialog() == DialogResult.OK) { 
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
         }
 
-        public void crearUnAlumno()
+        private void dgvAlumnosInscritos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Button btn = new Button();
-            btn.Text = " ";
-
+            int posActual = dgvAlumnosInscritos.CurrentCell.ColumnIndex;
+            //_student.DNI= dgvAlumnosInscritos.Rows[posActual].Cells[0].Value;
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmInscribirAlumno_apoderado formulario = new frmInscribirAlumno_apoderado();
+            if (formulario.ShowDialog() == DialogResult.OK)
+            {
+                //DBController.queryStudentByID(_student.getIdStudent)
+            }
+        }
+
 
     }
 }
