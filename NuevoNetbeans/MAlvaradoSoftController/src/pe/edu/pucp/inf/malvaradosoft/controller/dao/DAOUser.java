@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.dao;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.UserType;
@@ -28,5 +29,6 @@ public interface DAOUser {
     int deleteUser(User user);
     User queryUserLogin(String name, String password);
     int getNAttemptsByUserName(String username);
+    String getBlockTime (String username);
     int updatePassword(String email, String password);
 }

@@ -7,9 +7,16 @@ package pe.edu.pucp.inf.malvaradosoft.controller.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBManager;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
@@ -494,7 +501,7 @@ public class MySQLUser implements DAOUser{
     
     @Override
     public int getNAttemptsByUserName(String username){
-        int result = -2;
+        int result = -1;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
@@ -503,6 +510,25 @@ public class MySQLUser implements DAOUser{
             ResultSet rs = cs.executeQuery();
             if (rs.next()){
                 result = rs.getInt("nAttempts");
+            }
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
+    
+    @Override
+    public String getBlockTime (String username){
+        String result ="";
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_QUERYBLOCKTIMEBYUSERNAME(?)}");
+            cs.setString(1, username);
+            ResultSet rs = cs.executeQuery();
+            if (rs.next()){
+                result = rs.getTime("blockTime").toString();
             }
             con.close();
         }catch(Exception ex){

@@ -247,6 +247,11 @@ public abstract class DBController {
     public static int getNAttemptsByUserName(String username){
         return daoFactory.getUserDAO().getNAttemptsByUserName(username);
     }
+    
+    public static String getBlockTimeByUserName(String username){
+        return daoFactory.getUserDAO().getBlockTime(username);
+    }
+    
     public static User queryUserLogin(String username, String password){
         return daoFactory.getUserDAO().queryUserLogin(username, password);
     }

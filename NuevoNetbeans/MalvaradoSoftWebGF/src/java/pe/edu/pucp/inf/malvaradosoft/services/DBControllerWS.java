@@ -66,6 +66,11 @@ public class DBControllerWS {
     public int getNAttemptsByUserName(@WebParam(name = "username")String username){
         return DBController.getNAttemptsByUserName(username);
     }
+    
+    @WebMethod(operationName = "getTimeBlockedByUserName")
+    public String  getTimeBlockedByUserName(@WebParam(name = "username")String username){
+        return DBController.getBlockTimeByUserName(username);
+    }
     @WebMethod(operationName = "queryUserLogin")
     public User queryUserLogin(@WebParam(name = "username")String username, @WebParam(name = "password") String password){
         return DBController.queryUserLogin(username, password);

@@ -90,4 +90,9 @@ public class MSSQLUser implements DAOUser{
     public int getNAttemptsByUserName(String username) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public String getBlockTime(String username) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -16,18 +16,15 @@ namespace Sistemas_Malvarado
     public partial class frmLogin : Form
     {
         frmRecuperarContraseña recuperarContraseña;
-        String user, password;
         private int intentos = 0;
-        private bool validacion = false;        
         private int contador = 100;
-
-        public int Contador { get => contador; set => contador = value; }
-
-        public int Intentos { get => intentos; set => intentos = value; }
-        public bool Validacion { get => validacion; set => validacion = value; }
+        private MAlvaradoWS.DBControllerWSClient controller;
+        private MAlvaradoWS.user user;
 
         public frmLogin()
         {
+            controller = new MAlvaradoWS.DBControllerWSClient();
+            user = new MAlvaradoWS.user();
             InitializeComponent();
         }
 
@@ -116,14 +113,17 @@ namespace Sistemas_Malvarado
         
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if (user == "USUARIO" || password == "CONTRASEÑA")
-                msgError("Ingrese un usuario y/o contraseña valida.");
 
-            if (this.Intentos > 6)
+            if (txtUser.Text == "USUARIO" || txtPassword.Text == "CONTRASEÑA") {
+                msgError("Ingrese un usuario y/o contraseña valida.");
+                return;
+            }
+
+            intentos = controller.getNAttemptsByUserName(txtUser.Text);
+            if (intentos > 6)
             {
                 MessageBox.Show("Ha excedido el numero de intentos posibles. Su cuenta ha sido bloqueada", "IMPORTANTE!");
-                Validacion = false;
-                Contador = 100;
+                contador = 100;
                 btnAcceder.Enabled = false;
                 
                 timer1.Enabled = true;
@@ -132,7 +132,7 @@ namespace Sistemas_Malvarado
             int []tipo = new int[6] { 0, 0, 0, 0, 0 ,0 };
             
             //VALIDACION DE ROLES
-            user = txtUser.Text;
+            /*user = txtUser.Text;
             password = txtPassword.Text;
             if (user == "admin" && password == "123") { tipo[0] = 1; Validacion = true; }
             else if (user == "secretario" && password == "123") { tipo[1] = 1; Validacion = true; }
@@ -198,7 +198,7 @@ namespace Sistemas_Malvarado
                         frmMenuPrincipalAlumno menu = new frmMenuPrincipalAlumno();
                         menu.FormClosed += Logout;
                         menu.Show();
-                    }
+                    }*/
                 }
                 this.Hide();
             }
@@ -238,7 +238,6 @@ namespace Sistemas_Malvarado
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
             recuperarContraseña = new frmRecuperarContraseña();
             recuperarContraseña.Show();
         }
