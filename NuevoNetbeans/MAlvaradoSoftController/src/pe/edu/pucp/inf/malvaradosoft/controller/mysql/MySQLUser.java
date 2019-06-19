@@ -8,7 +8,6 @@ package pe.edu.pucp.inf.malvaradosoft.controller.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
@@ -409,6 +408,7 @@ public class MySQLUser implements DAOUser{
         return result;	
     }
         
+    @Override
     public User queryUserLogin(String username, String password){
         User user = new User();
         try{
@@ -437,13 +437,16 @@ public class MySQLUser implements DAOUser{
                 user.setUserTypes(ut);    
                 user.setnAttempts(rs.getInt("nAttempts"));
                 if (password == user.getPassword()){ //Usuario y contraseña correcta
+                    user.setnAttempts(0);
+                    updateUser(user);
                     con.close();
                     return user;
                 }else{ //Contraseña incorrecta
                     int nAtt = user.getnAttempts();
-                    if (nAtt > 5)
+                    if (nAtt > 5){ //Numero excedido de intentos, bloquear constraseña
                         user.setBlocked(true);
-                    //updateAttempts(user.getIdUser(),nAtt + 1, user.isBlocked());
+                        updateUser(user);
+                    }
                     con.close();
                     return null;
                 }
@@ -462,5 +465,48 @@ public class MySQLUser implements DAOUser{
     @Override
     public User queryAllUsersByID(int idUser) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int updatePassword(String email, String password) {
+        int result = 0;
+        int idUser = -1;
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_QUERYALLUSERSBYEMAIL(?)}");
+            cs.setString(1,email);
+            ResultSet rs = cs.executeQuery();
+            if (rs.next()){
+                idUser = rs.getInt("idUser");
+            }
+            CallableStatement cs_1 = con.prepareCall("{ call MS_UPDATEPASSWORDBYIDUSER(?,?)}");
+            cs_1.setInt(1, idUser);
+            cs_1.setString(2, password);
+            
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
+    }
+    
+    @Override
+    public int getNAttemptsByUserName(String username){
+        int result = 0;
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_QUERYALLNATTEMPTSBYUSERNAME(?)}");
+            cs.setString(1, username);
+            ResultSet rs = cs.executeQuery();
+            if (rs.next()){
+                result = cs.getInt("nAttempts");
+            }            
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
 }

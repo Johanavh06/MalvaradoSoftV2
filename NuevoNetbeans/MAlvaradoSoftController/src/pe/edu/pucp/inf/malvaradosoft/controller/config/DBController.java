@@ -241,4 +241,13 @@ public abstract class DBController {
     public static int deleteBimesterXStudentXYear(BimesterXStudentXYear bimesterXStudentXYear){
         return daoFactory.getBimesterXStudentXYearDAO().delete(bimesterXStudentXYear);
     }
+    public static int updatePasswordUser(String email, String password){
+        return daoFactory.getUserDAO().updatePassword(email, password);
+    }
+    public static int getNAttemptsByUserName(String username){
+        return daoFactory.getUserDAO().getNAttemptsByUserName(username);
+    }
+    public static User queryUserLogin(String username, String password){
+        return daoFactory.getUserDAO().queryUserLogin(username, password);
+    }
 }        

@@ -27,4 +27,6 @@ public interface DAOUser {
     int updateUser(User user);
     int deleteUser(User user);
     User queryUserLogin(String name, String password);
+    int getNAttemptsByUserName(String username);
+    int updatePassword(String email, String password);
 }

@@ -12,6 +12,7 @@ import javax.jws.WebParam;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
 
 /**
  *
@@ -53,5 +54,20 @@ public class DBControllerWS {
     @WebMethod(operationName = "deleteGRade")
     public int deleteGrade(@WebParam(name = "grade") Grade grade) {
         return DBController.deleteGrade(grade);
+    }
+    
+    @WebMethod(operationName = "updatePasswordUser")
+    public int updatePasswordUser (@WebParam(name = "email") String email,
+                                    @WebParam(name = "password") String password) {
+        return DBController.updatePasswordUser(email, password);
+    }
+    
+    @WebMethod(operationName = "getNAttemptsByUserName")
+    public int getNAttemptsByUserName(@WebParam(name = "username")String username){
+        return DBController.getNAttemptsByUserName(username);
+    }
+    @WebMethod(operationName = "getNAttemptsByUserName")
+    public User queryUserLogin(@WebParam(name = "username")String username, @WebParam(name = "password") String password){
+        return DBController.queryUserLogin(username, password);
     }
 }
