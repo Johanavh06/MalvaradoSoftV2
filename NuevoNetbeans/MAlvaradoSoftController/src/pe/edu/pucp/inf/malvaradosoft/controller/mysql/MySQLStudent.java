@@ -118,9 +118,7 @@ public class MySQLStudent implements  DAOStudent{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{ call MS_UPDATEUSER(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
-            
-            cs.setInt(1, student.getIdUser());
+            CallableStatement cs = con.prepareCall("{ call MS_UPDATESTUDENT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setString(2, student.getNames());
             cs.setString(3, student.getFirstLastName());
             cs.setString(4, student.getSecondLastName());
@@ -138,6 +136,11 @@ public class MySQLStudent implements  DAOStudent{
                 ut=student.getUserType(i);
                 DBController.insertUserTypeXUser(student,ut);
             }
+            cs.setInt(14,student.getGuardian().getIdUser());
+            Blob pdf1 = new SerialBlob((byte[])student.getBirthCertificate());
+            cs.setBlob(15, pdf1);
+            Blob pdf2 = new SerialBlob((byte[])student.getStudyCertificate());
+            cs.setBlob(16, pdf2);
             result = cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -148,7 +151,18 @@ public class MySQLStudent implements  DAOStudent{
 
     @Override
     public int deleteStudent(Student student) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int result=0;
+        try {
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_DELETESTUDENT(?)}");
+            
+            cs.setInt(1, student.getIdUser());
+            result = cs.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;	
     }
     
 }
