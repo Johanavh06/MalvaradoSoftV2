@@ -25,7 +25,7 @@ namespace Sistemas_Malvarado
             //Application.Run(new frmGestionarTipoNota_secretario_(curso));
             
 
-            Application.Run(new frmMenuInscribirAlumno_Apoderado());
+            //Application.Run(new frmMenuInscribirAlumno_Apoderado());
             //Application.Run(new FormSeccionesACargo());
         }
     }

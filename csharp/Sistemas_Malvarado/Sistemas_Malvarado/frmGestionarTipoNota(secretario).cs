@@ -14,12 +14,16 @@ namespace Sistemas_Malvarado
     {
 
         EstadosFrmGestionarTipoNota estado = EstadosFrmGestionarTipoNota.Buscar;
+        MAlvaradoWS.grade grade = new MAlvaradoWS.grade();
+         
 
         private MAlvaradoWS.DBControllerWSClient controller;
 
         public frmGestionarTipoNota_secretario_(MAlvaradoWS.course curso)
         {
             InitializeComponent();
+            this.grade.course = new MAlvaradoWS.course();
+            this.grade.course.id = curso.id;
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
             txtNombreCurso.Text = curso.name;
             
@@ -31,34 +35,38 @@ namespace Sistemas_Malvarado
 
         }
 
-        private void cambiarEstado(EstadosFrmGestionarTipoNota estado)
+        private void cambiarEstado(EstadosFrmGestionarTipoNota e)
         {
-            if(estado == EstadosFrmGestionarTipoNota.Buscar)
+            if(e == EstadosFrmGestionarTipoNota.Buscar)
             {
+                this.estado = EstadosFrmGestionarTipoNota.Buscar;
                 txtPeso.Enabled = false;
                 btnNuevo.Enabled = true;
                 btnAgregar.Enabled = false;
-                btnEliminar.Enabled = false;
                 btnAgregar.Text = "&Agregar";
+                btnEliminar.Enabled = false;
+                
             }
-            else if(estado == EstadosFrmGestionarTipoNota.Nuevo)
+            else if(e == EstadosFrmGestionarTipoNota.Nuevo)
             {
+                this.estado = EstadosFrmGestionarTipoNota.Nuevo;
                 txtDescripcion.Text = "";
                 txtPeso.Enabled = true;
-                btnEliminar.Enabled = false;
+                txtPeso.Text = "";
                 btnNuevo.Enabled = false;
                 btnAgregar.Enabled = true;
-                
-                txtPeso.Text = "";
                 btnAgregar.Text = "&Agregar";
+                btnEliminar.Enabled = false;
 
             }
-            else if(estado == EstadosFrmGestionarTipoNota.Editar)
+            else if(e == EstadosFrmGestionarTipoNota.Editar)
             {
+                this.estado = EstadosFrmGestionarTipoNota.Editar;
                 txtPeso.Enabled = true;
-                btnEliminar.Enabled = true;
-                btnAgregar.Text = "&Actualizar";
+                btnNuevo.Enabled = false;
                 btnAgregar.Enabled = true;
+                btnAgregar.Text = "&Actualizar";
+                btnEliminar.Enabled = true;
 
             }
         }
@@ -71,15 +79,42 @@ namespace Sistemas_Malvarado
         private void editarGrade(object sender, DataGridViewCellEventArgs e)
         {
             cambiarEstado(EstadosFrmGestionarTipoNota.Editar);
+            this.grade = (MAlvaradoWS.grade) dgvCursos.CurrentRow.DataBoundItem;
+            txtDescripcion.Text = grade.description;
+            txtPeso.Text = grade.weight.ToString();
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
+            if(this.estado == EstadosFrmGestionarTipoNota.Nuevo)
+            {
+                this.grade.description = txtDescripcion.Text;
+                this.grade.weight = Double.Parse( txtPeso.Text);
+                var result = MessageBox.Show("¿Está seguro que desea agregar el nuevo tipo de nota?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                    controller.insertGRade(this.grade);
+
+            }else if(this.estado == EstadosFrmGestionarTipoNota.Editar)
+            {
+                this.grade.description = txtDescripcion.Text;
+                this.grade.weight = Double.Parse(txtPeso.Text);
+                var result = MessageBox.Show("¿Está seguro que desea actualizar el tipo de nota?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                    controller.updateGRade(this.grade);
+            }
+            dgvCursos.DataSource = controller.queryAllGrades();
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            this.grade = (MAlvaradoWS.grade)dgvCursos.CurrentRow.DataBoundItem;
+            var result = MessageBox.Show("¿Está seguro que desea eliminar el tipo de nota?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                controller.deleteGRade(grade);
+            dgvCursos.DataSource = controller.queryAllGrades();
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
         }
     }
