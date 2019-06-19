@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="PNCUYncjwYToTQYRmp71FJrahAI=">
+=======
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="6zYZgMs8qloAQe7TWc+E1hgYysU=">
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="DBControllerWSPortBinding">
       <properties>
@@ -112,10 +116,14 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
+<<<<<<< HEAD
     <endpoint name="DBControllerWSPort" contract="MAlvaradoWS.DBControllerWS" bindingType="basicHttpBinding" address="http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS" bindingConfiguration="DBControllerWSPortBinding">
+=======
+    <endpoint name="DBControllerWSPort1" contract="MAlvaradoWS.DBControllerWS" bindingType="basicHttpBinding" address="http://192.168.207.207:8080/MalvaradoSoftWebGF/DBControllerWS" bindingConfiguration="DBControllerWSPortBinding1">
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/MalvaradoSoftWebGF/DBControllerWS</serializedValue>
+          <serializedValue>http://192.168.207.207:8080/MalvaradoSoftWebGF/DBControllerWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
