@@ -17,7 +17,7 @@ namespace Sistemas_Malvarado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLogin());
+            Application.Run(new frmLogin());
 
             //MAlvaradoWS.course curso = new MAlvaradoWS.course();
             //curso.id = 1;

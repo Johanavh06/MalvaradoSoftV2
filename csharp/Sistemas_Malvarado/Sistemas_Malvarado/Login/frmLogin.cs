@@ -15,6 +15,7 @@ namespace Sistemas_Malvarado
 {
     public partial class frmLogin : Form
     {
+        frmRecuperarContraseña recuperarContraseña;
         String user, password;
         private int intentos = 0;
         private bool validacion = false;        
@@ -100,6 +101,8 @@ namespace Sistemas_Malvarado
         private void btnOcultarContraseña_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
+            btnMostrarContraseña.Visible = true;
+            btnOcultarContraseña.Visible = false;
         }
 
         private void btnMostrarContraseña_Click(object sender, EventArgs e)
@@ -249,8 +252,14 @@ namespace Sistemas_Malvarado
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmRecuperarContraseña recuperarContraseña = new frmRecuperarContraseña();
+            
+            recuperarContraseña = new frmRecuperarContraseña();
             recuperarContraseña.Show();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void msgError (string msgError)

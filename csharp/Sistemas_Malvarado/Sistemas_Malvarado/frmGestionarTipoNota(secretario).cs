@@ -117,5 +117,10 @@ namespace Sistemas_Malvarado
             dgvCursos.DataSource = controller.queryAllGrades();
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
         }
+
+        private void frmGestionarTipoNota_secretario__Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

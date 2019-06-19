@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvCursos = new System.Windows.Forms.DataGridView();
+            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,20 @@
             this.dgvCursos.Size = new System.Drawing.Size(366, 170);
             this.dgvCursos.TabIndex = 0;
             this.dgvCursos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editarGrade);
+            // 
+            // colDescription
+            // 
+            this.colDescription.DataPropertyName = "description";
+            this.colDescription.HeaderText = "Descripción";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.ReadOnly = true;
+            // 
+            // colWeight
+            // 
+            this.colWeight.DataPropertyName = "weight";
+            this.colWeight.HeaderText = "Peso";
+            this.colWeight.Name = "colWeight";
+            this.colWeight.ReadOnly = true;
             // 
             // label1
             // 
@@ -146,20 +160,6 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // colDescription
-            // 
-            this.colDescription.DataPropertyName = "description";
-            this.colDescription.HeaderText = "Descripción";
-            this.colDescription.Name = "colDescription";
-            this.colDescription.ReadOnly = true;
-            // 
-            // colWeight
-            // 
-            this.colWeight.DataPropertyName = "weight";
-            this.colWeight.HeaderText = "Peso";
-            this.colWeight.Name = "colWeight";
-            this.colWeight.ReadOnly = true;
-            // 
             // frmGestionarTipoNota_secretario_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +178,7 @@
             this.Controls.Add(this.dgvCursos);
             this.Name = "frmGestionarTipoNota_secretario_";
             this.Text = "Gestionar tipo de nota";
+            this.Load += new System.EventHandler(this.frmGestionarTipoNota_secretario__Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

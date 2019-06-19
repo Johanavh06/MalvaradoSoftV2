@@ -326,6 +326,9 @@
     <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
       <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmRecuperarContraseña.resx">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
