@@ -20,6 +20,11 @@ namespace Sistemas_Malvarado
             btnEliminar.Enabled = false;
         }
 
+        private void refreshDGV()
+        {
+            //dgvAlumnosInscritos.DataSource = ;
+        }
+
         private void btnInscribir_Click(object sender, EventArgs e)
         {
             frmInscribirAlumno_apoderado formulario = new frmInscribirAlumno_apoderado();
@@ -31,10 +36,19 @@ namespace Sistemas_Malvarado
 
         private void dgvAlumnosInscritos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posActual = dgvAlumnosInscritos.CurrentCell.ColumnIndex;
             //_student.DNI= dgvAlumnosInscritos.Rows[posActual].Cells[0].Value;
 
-            //if(posActual)
+            int columnaActual = dgvAlumnosInscritos.CurrentCell.ColumnIndex;
+            if (columnaActual == 4)
+            {
+                frmMatricularAlumno_Apoderado_ formulario = new frmMatricularAlumno_Apoderado_();
+                if (formulario.ShowDialog() == DialogResult.OK)
+                {
+                    //int filaActual = dgvAlumnosInscritos.CurrentCell.ColumnIndex;
+
+                    refreshDGV();
+                }
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

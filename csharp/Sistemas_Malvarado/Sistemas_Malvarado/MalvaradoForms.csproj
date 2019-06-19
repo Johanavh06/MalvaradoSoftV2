@@ -126,6 +126,12 @@
     <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
       <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInscribirUsuario%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInscribirUsuario%28secretario%29.Designer.cs">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuInscribirAlumno_Apoderado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     <EmbeddedResource Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.resx">
       <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInscribirUsuario%28secretario%29.resx">
+      <DependentUpon>frmInscribirUsuario%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListarAlumnos%28apoderado%29.resx">
       <DependentUpon>frmListarAlumnos%28apoderado%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMatricularAlumno%28Apoderado%29.resx">
       <DependentUpon>frmMatricularAlumno%28Apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatricularAlumnos%28secretario%29.resx">
+      <DependentUpon>frmMatricularAlumnos%28secretario%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuInscribirAlumno_Apoderado.resx">
       <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
@@ -405,9 +417,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apoderado\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\plus.png" />
   </ItemGroup>

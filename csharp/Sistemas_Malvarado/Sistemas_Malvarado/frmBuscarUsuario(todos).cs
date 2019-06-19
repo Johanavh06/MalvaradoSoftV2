@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sistemas_Malvarado
 {
-    public partial class FormBuscarUsuario : Form
+    public partial class frmBuscarUsuario : Form
     {
-        public FormBuscarUsuario()
+        public frmBuscarUsuario()
         {
             InitializeComponent();
         }
