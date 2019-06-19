@@ -320,6 +320,9 @@
     <EmbeddedResource Include="frmListarNotas%28apoderado%29.resx">
       <DependentUpon>frmListarNotas%28apoderado%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMatricularAlumno%28Apoderado%29.resx">
+      <DependentUpon>frmMatricularAlumno%28Apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuInscribirAlumno_Apoderado.resx">
       <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,8 +366,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.wsdl" />
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.xsd">
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.wsdl" />
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse.datasource">
@@ -407,12 +410,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus %283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -26,7 +26,7 @@ namespace Sistemas_Malvarado.Login
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            controller = new MAlvaradoWS.DBControllerWSClient();
+            //controller = new MAlvaradoWS.DBControllerWSClient();
             EnviarCorreoContraseña(txtCorreo.Text,"123");
         }
         private void EnviarCorreoContraseña(String email, String newPassword)

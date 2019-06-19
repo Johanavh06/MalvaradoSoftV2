@@ -33,6 +33,8 @@ namespace Sistemas_Malvarado
         {
             int posActual = dgvAlumnosInscritos.CurrentCell.ColumnIndex;
             //_student.DNI= dgvAlumnosInscritos.Rows[posActual].Cells[0].Value;
+
+            //if(posActual)
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

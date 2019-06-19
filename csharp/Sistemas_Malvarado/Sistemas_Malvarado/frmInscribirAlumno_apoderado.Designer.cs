@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInscribirAlumno_apoderado));
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtApMat = new System.Windows.Forms.TextBox();
@@ -57,16 +55,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnHelpBoleta = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
             // 
-            this.gbDatosGenerales.Controls.Add(this.comboBox1);
-            this.gbDatosGenerales.Controls.Add(this.label10);
             this.gbDatosGenerales.Controls.Add(this.txtEmail);
             this.gbDatosGenerales.Controls.Add(this.txtTel);
             this.gbDatosGenerales.Controls.Add(this.txtApMat);
@@ -83,53 +76,36 @@
             this.gbDatosGenerales.Controls.Add(this.label2);
             this.gbDatosGenerales.Location = new System.Drawing.Point(24, 44);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(615, 233);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(615, 275);
             this.gbDatosGenerales.TabIndex = 8;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales del Alumno";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 154);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 157);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Grado";
-            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(124, 190);
+            this.txtEmail.Location = new System.Drawing.Point(110, 223);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(182, 20);
+            this.txtEmail.Size = new System.Drawing.Size(191, 20);
             this.txtEmail.TabIndex = 10;
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(359, 154);
+            this.txtTel.Location = new System.Drawing.Point(110, 190);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(182, 20);
+            this.txtTel.Size = new System.Drawing.Size(191, 20);
             this.txtTel.TabIndex = 9;
             // 
             // txtApMat
             // 
-            this.txtApMat.Location = new System.Drawing.Point(124, 91);
+            this.txtApMat.Location = new System.Drawing.Point(110, 124);
             this.txtApMat.Name = "txtApMat";
-            this.txtApMat.Size = new System.Drawing.Size(417, 20);
+            this.txtApMat.Size = new System.Drawing.Size(431, 20);
             this.txtApMat.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 126);
+            this.label8.Location = new System.Drawing.Point(16, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 8;
@@ -138,7 +114,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(260, 157);
+            this.label7.Location = new System.Drawing.Point(16, 226);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 7;
@@ -146,15 +122,15 @@
             // 
             // txtApDir
             // 
-            this.txtApDir.Location = new System.Drawing.Point(124, 123);
+            this.txtApDir.Location = new System.Drawing.Point(110, 156);
             this.txtApDir.Name = "txtApDir";
-            this.txtApDir.Size = new System.Drawing.Size(417, 20);
+            this.txtApDir.Size = new System.Drawing.Size(431, 20);
             this.txtApDir.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 193);
+            this.label6.Location = new System.Drawing.Point(16, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 6;
@@ -162,29 +138,29 @@
             // 
             // txtApPat
             // 
-            this.txtApPat.Location = new System.Drawing.Point(124, 59);
+            this.txtApPat.Location = new System.Drawing.Point(110, 92);
             this.txtApPat.Name = "txtApPat";
-            this.txtApPat.Size = new System.Drawing.Size(417, 20);
+            this.txtApPat.Size = new System.Drawing.Size(431, 20);
             this.txtApPat.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(124, 27);
+            this.txtNombre.Location = new System.Drawing.Point(110, 60);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(417, 20);
+            this.txtNombre.Size = new System.Drawing.Size(431, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(359, 190);
+            this.txtDNI.Location = new System.Drawing.Point(110, 25);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(181, 20);
+            this.txtDNI.Size = new System.Drawing.Size(159, 20);
             this.txtDNI.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 30);
+            this.label5.Location = new System.Drawing.Point(16, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 3;
@@ -193,7 +169,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 62);
+            this.label4.Location = new System.Drawing.Point(16, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 2;
@@ -202,7 +178,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 94);
+            this.label3.Location = new System.Drawing.Point(16, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 1;
@@ -211,7 +187,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 193);
+            this.label2.Location = new System.Drawing.Point(16, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 0;
@@ -219,7 +195,7 @@
             // 
             // btnUploadStudyCertificate
             // 
-            this.btnUploadStudyCertificate.Location = new System.Drawing.Point(25, 314);
+            this.btnUploadStudyCertificate.Location = new System.Drawing.Point(25, 357);
             this.btnUploadStudyCertificate.Name = "btnUploadStudyCertificate";
             this.btnUploadStudyCertificate.Size = new System.Drawing.Size(167, 23);
             this.btnUploadStudyCertificate.TabIndex = 9;
@@ -230,7 +206,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 293);
+            this.label1.Location = new System.Drawing.Point(22, 335);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 13);
             this.label1.TabIndex = 10;
@@ -238,7 +214,7 @@
             // 
             // btnBirthCertificate
             // 
-            this.btnBirthCertificate.Location = new System.Drawing.Point(25, 343);
+            this.btnBirthCertificate.Location = new System.Drawing.Point(433, 358);
             this.btnBirthCertificate.Name = "btnBirthCertificate";
             this.btnBirthCertificate.Size = new System.Drawing.Size(167, 23);
             this.btnBirthCertificate.TabIndex = 12;
@@ -251,7 +227,7 @@
             this.btnHelpCE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnHelpCE.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnHelpCE.Image = ((System.Drawing.Image)(resources.GetObject("btnHelpCE.Image")));
-            this.btnHelpCE.Location = new System.Drawing.Point(198, 314);
+            this.btnHelpCE.Location = new System.Drawing.Point(198, 357);
             this.btnHelpCE.Name = "btnHelpCE";
             this.btnHelpCE.Size = new System.Drawing.Size(24, 24);
             this.btnHelpCE.TabIndex = 14;
@@ -276,7 +252,7 @@
             // btnHelpCN
             // 
             this.btnHelpCN.Image = ((System.Drawing.Image)(resources.GetObject("btnHelpCN.Image")));
-            this.btnHelpCN.Location = new System.Drawing.Point(198, 343);
+            this.btnHelpCN.Location = new System.Drawing.Point(615, 356);
             this.btnHelpCN.Name = "btnHelpCN";
             this.btnHelpCN.Size = new System.Drawing.Size(24, 24);
             this.btnHelpCN.TabIndex = 15;
@@ -293,7 +269,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(320, 388);
+            this.btnCancelar.Location = new System.Drawing.Point(294, 398);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 32;
@@ -302,7 +278,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(564, 388);
+            this.btnGuardar.Location = new System.Drawing.Point(563, 398);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 33;
@@ -311,50 +287,18 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(25, 388);
+            this.btnEliminar.Location = new System.Drawing.Point(25, 398);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 34;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(241, 317);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(136, 13);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Número de boleta de pago:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(384, 315);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "  ";
-            // 
-            // btnHelpBoleta
-            // 
-            this.btnHelpBoleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHelpBoleta.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnHelpBoleta.Image = ((System.Drawing.Image)(resources.GetObject("btnHelpBoleta.Image")));
-            this.btnHelpBoleta.Location = new System.Drawing.Point(615, 314);
-            this.btnHelpBoleta.Name = "btnHelpBoleta";
-            this.btnHelpBoleta.Size = new System.Drawing.Size(24, 24);
-            this.btnHelpBoleta.TabIndex = 37;
-            this.btnHelpBoleta.UseVisualStyleBackColor = true;
-            this.btnHelpBoleta.Click += new System.EventHandler(this.btnHelpBoleta_Click);
-            // 
             // frmInscribirAlumno_apoderado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 435);
-            this.Controls.Add(this.btnHelpBoleta);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(675, 438);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -403,10 +347,5 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnHelpBoleta;
     }
 }
