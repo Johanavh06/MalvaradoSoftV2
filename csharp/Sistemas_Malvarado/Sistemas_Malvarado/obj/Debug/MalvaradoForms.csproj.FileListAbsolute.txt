@@ -30,3 +30,9 @@ T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\S
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\bin\Debug\Sistemas_Malvarado.pdb
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.exe
 T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.pdb
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.frmBuscarCurso_secretario_.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.frmGestionarCursoPorSeccion.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.FormGestionarCursos.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.Cursos.frmGestionarHorario_Secretario_.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmGestionarSeccion_secretario_.resources
+T:\joel\MalvaradoSoftV2\csharp\Sistemas_Malvarado\Sistemas_Malvarado\obj\Debug\Sistemas_Malvarado.frmGestionarSec.resources
