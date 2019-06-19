@@ -16,12 +16,12 @@ public class ClassSection implements Serializable{
     private int total;
     private String name;
     private int level;
-    private byte schedulePDF;
+    private Object schedulePDF;
 
     public ClassSection() {
     }
 
-    public ClassSection(int id, int total, String name, int level, byte schedulePDF) {
+    public ClassSection(int id, int total, String name, int level, Object schedulePDF) {
         this.id = id;
         this.total = total;
         this.name = name;
@@ -61,11 +61,11 @@ public class ClassSection implements Serializable{
         this.level = level;
     }
 
-    public byte getSchedulePDF() {
+    public Object getSchedulePDF() {
         return schedulePDF;
     }
 
-    public void setSchedulePDF(byte schedulePDF) {
+    public void setSchedulePDF(Object schedulePDF) {
         this.schedulePDF = schedulePDF;
     }
     

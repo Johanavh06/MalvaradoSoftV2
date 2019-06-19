@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOBimesterXStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourse;
@@ -38,4 +39,5 @@ public abstract class DAOFactory {
     public abstract DAOClassSection getClassSectionDAO();
     public abstract DAOClassroom getClassroomDAO();
     public abstract DAOGrade getGradeDAO();
+    public abstract DAOBimesterXStudentXYear getBimesterXStudentXYearDAO();
 }

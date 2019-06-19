@@ -14,5 +14,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.BimesterXStudentXYear;
  */
 public interface DAOBimesterXStudentXYear {
     ArrayList<BimesterXStudentXYear> queryAll();
-    
+    int insert(BimesterXStudentXYear bimesterXStudentXYear);
+    int update(BimesterXStudentXYear bimesterXStudentXYear);
+    int delete(BimesterXStudentXYear bimesterXStudentXYear);
 }

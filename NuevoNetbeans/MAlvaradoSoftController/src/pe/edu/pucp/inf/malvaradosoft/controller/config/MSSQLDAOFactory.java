@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOBimesterXStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourse;
@@ -16,6 +17,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserType;
 
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserTypeXUser;
+import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLBimesterXStudentXYear;
 
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLClassroom;
@@ -79,6 +81,11 @@ public class MSSQLDAOFactory extends DAOFactory{
     @Override
     public DAOGrade getGradeDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DAOBimesterXStudentXYear getBimesterXStudentXYearDAO() {
+        return new MSSQLBimesterXStudentXYear();
     }
 }
 

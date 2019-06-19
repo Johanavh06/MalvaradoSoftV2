@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
+import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOBimesterXStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOCourse;
@@ -16,6 +17,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserType;
 import pe.edu.pucp.inf.malvaradosoft.controller.dao.DAOUserTypeXUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mssql.MSSQLUserTypeXUser;
+import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLBimesterXStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLClassSection;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLClassroom;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLCourse;
@@ -26,6 +28,7 @@ import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUser;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserType;
 import pe.edu.pucp.inf.malvaradosoft.controller.mysql.MySQLUserTypeXUser;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.BimesterXStudentXYear;
 
 public class MySQLDAOFactory extends DAOFactory{
     
@@ -81,5 +84,10 @@ public class MySQLDAOFactory extends DAOFactory{
     @Override
     public DAOGrade getGradeDAO() {
         return new MySQLGrade();
+    }
+
+    @Override
+    public DAOBimesterXStudentXYear getBimesterXStudentXYearDAO() {
+        return new MySQLBimesterXStudentXYear();
     }
 }

@@ -7,6 +7,7 @@ package pe.edu.pucp.inf.malvaradosoft.controller.config;
 
 import java.time.Year;
 import java.util.ArrayList;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.BimesterXStudentXYear;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.ClassSection;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Classroom;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Condition;
@@ -227,5 +228,17 @@ public abstract class DBController {
     }
     public static ArrayList<Grade> queryGradesSearchByName(String description, Course course){
         return daoFactory.getGradeDAO().queryGradesSearchByName(description, course);
+    }
+    public static ArrayList<BimesterXStudentXYear> queryAllBimesterXStudentXYear(){
+        return daoFactory.getBimesterXStudentXYearDAO().queryAll();
+    }
+    public static int insertBimesterXStudentXYear(BimesterXStudentXYear bimesterXStudentXYear){
+        return daoFactory.getBimesterXStudentXYearDAO().insert(bimesterXStudentXYear);
+    }
+    public static int updateBimesterXStudentXYear(BimesterXStudentXYear bimesterXStudentXYear){
+        return daoFactory.getBimesterXStudentXYearDAO().update(bimesterXStudentXYear);
+    }
+    public static int deleteBimesterXStudentXYear(BimesterXStudentXYear bimesterXStudentXYear){
+        return daoFactory.getBimesterXStudentXYearDAO().delete(bimesterXStudentXYear);
     }
 }        
