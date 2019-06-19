@@ -19,10 +19,20 @@ namespace Sistemas_Malvarado
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
 
+<<<<<<< HEAD
             //MAlvaradoWS.course curso = new MAlvaradoWS.course();
             //curso.id = 1;
             //curso.name = "Test";
             //Application.Run(new frmGestionarTipoNota_secretario_(curso));
+=======
+
+            //Prueba Gestionar Tipo Nota
+            MAlvaradoWS.course curso = new MAlvaradoWS.course();
+            curso.id = 1;
+            curso.name = "Test";
+            Application.Run(new frmGestionarTipoNota_secretario_(curso));
+            
+>>>>>>> 3ce7557002c846a245b6699e3b44bc131f90650f
 
             Application.Run(new frmInscribirUsuario_secretario_());
             //Application.Run(new frmMenuInscribirAlumno_Apoderado());

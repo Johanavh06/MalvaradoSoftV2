@@ -11,6 +11,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.inf.malvaradosoft.controller.config.DBController;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.CourseSchedule;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
 
@@ -41,6 +42,28 @@ public class DBControllerWS {
         return DBController.queryGradesByCourseId(course);
     }
     
+    @WebMethod(operationName = "queryGradesSearchByName")
+    public ArrayList<Grade> queryGradesSearchByName(String description,int idCourse){
+        Course course = new Course();
+        course.setId(idCourse);
+        return DBController.queryGradesSearchByName(description, course);
+    }
+    
+    @WebMethod(operationName = "queryAllCourses")
+    public ArrayList<Course> queryAllCourses(){
+        return DBController.queryAllCourse();
+    }
+    
+    @WebMethod(operationName = "queryAllCourseSchedules")
+    public ArrayList<CourseSchedule> queryAllCourseSchedule(){
+        return DBController.queryAllCourseSchedule();
+    }
+    
+    @WebMethod(operationName = "queryAllCourseSchedulesByTeacherId")
+    public ArrayList<CourseSchedule> queryAllCourseSchedule(int idTeacher){
+        return DBController.queryAllCourseScheduleByTeacherId(idTeacher);
+    }
+    
     @WebMethod(operationName = "insertGRade")
     public int insertGrade(@WebParam(name = "grade") Grade grade) {
         return DBController.insertGrade(grade);
@@ -66,7 +89,7 @@ public class DBControllerWS {
     public int getNAttemptsByUserName(@WebParam(name = "username")String username){
         return DBController.getNAttemptsByUserName(username);
     }
-    @WebMethod(operationName = "getNAttemptsByUserName")
+    @WebMethod(operationName = "queryUserLogin")
     public User queryUserLogin(@WebParam(name = "username")String username, @WebParam(name = "password") String password){
         return DBController.queryUserLogin(username, password);
     }

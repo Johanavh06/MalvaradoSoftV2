@@ -414,7 +414,7 @@ public class MySQLUser implements DAOUser{
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{ call MS_QUERYBYUSERNAME(?)}");
+            CallableStatement cs = con.prepareCall("{ call MS_QUERYALLUSERSBYUSERNAME(?)}");
             cs.setString(1,username);
             ResultSet rs = cs.executeQuery();
             
@@ -436,7 +436,7 @@ public class MySQLUser implements DAOUser{
                 ut.setDescription(rs.getString("description"));
                 user.setUserTypes(ut);    
                 user.setnAttempts(rs.getInt("nAttempts"));
-                if (password == user.getPassword()){ //Usuario y contraseña correcta
+                if (password.equals(user.getPassword())){ //Usuario y contraseña correcta
                     user.setnAttempts(0);
                     updateUser(user);
                     con.close();
@@ -480,10 +480,11 @@ public class MySQLUser implements DAOUser{
             if (rs.next()){
                 idUser = rs.getInt("idUser");
             }
+            //System.out.println(idUser);
             CallableStatement cs_1 = con.prepareCall("{ call MS_UPDATEPASSWORDBYIDUSER(?,?)}");
             cs_1.setInt(1, idUser);
             cs_1.setString(2, password);
-            
+            cs_1.executeQuery();
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -493,7 +494,7 @@ public class MySQLUser implements DAOUser{
     
     @Override
     public int getNAttemptsByUserName(String username){
-        int result = 0;
+        int result = -2;
         try{
             DBManager dbManager= DBManager.getDbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
@@ -501,8 +502,8 @@ public class MySQLUser implements DAOUser{
             cs.setString(1, username);
             ResultSet rs = cs.executeQuery();
             if (rs.next()){
-                result = cs.getInt("nAttempts");
-            }            
+                result = rs.getInt("nAttempts");
+            }
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

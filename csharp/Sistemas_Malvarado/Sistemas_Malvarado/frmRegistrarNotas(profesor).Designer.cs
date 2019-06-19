@@ -30,9 +30,9 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.dgvRegistroNotas = new System.Windows.Forms.DataGridView();
             this.colNombreAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPC2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,9 +40,9 @@
             this.colPC3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPC4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEx2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cboCursos = new System.Windows.Forms.ComboBox();
+            this.cboGradoSeccion = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroNotas)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -63,28 +63,28 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Grado y seccion:";
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(84, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(84, 114);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnGuardar
             // 
-            this.button2.Location = new System.Drawing.Point(386, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Guardar cambios";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(386, 114);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(108, 23);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar cambios";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvRegistroNotas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRegistroNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistroNotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombreAlumno,
             this.colPC1,
             this.colPC2,
@@ -92,11 +92,11 @@
             this.colPC3,
             this.colPC4,
             this.colEx2});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 199);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ingresarFeedback);
+            this.dgvRegistroNotas.Location = new System.Drawing.Point(12, 155);
+            this.dgvRegistroNotas.Name = "dgvRegistroNotas";
+            this.dgvRegistroNotas.Size = new System.Drawing.Size(538, 199);
+            this.dgvRegistroNotas.TabIndex = 5;
+            this.dgvRegistroNotas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ingresarFeedback);
             // 
             // colNombreAlumno
             // 
@@ -141,37 +141,37 @@
             this.colEx2.Name = "colEx2";
             this.colEx2.Width = 30;
             // 
-            // comboBox1
+            // cboCursos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cboCursos.FormattingEnabled = true;
+            this.cboCursos.Location = new System.Drawing.Point(111, 28);
+            this.cboCursos.Name = "cboCursos";
+            this.cboCursos.Size = new System.Drawing.Size(175, 21);
+            this.cboCursos.TabIndex = 6;
             // 
-            // comboBox2
+            // cboGradoSeccion
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(111, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(175, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cboGradoSeccion.FormattingEnabled = true;
+            this.cboGradoSeccion.Location = new System.Drawing.Point(111, 65);
+            this.cboGradoSeccion.Name = "cboGradoSeccion";
+            this.cboGradoSeccion.Size = new System.Drawing.Size(175, 21);
+            this.cboGradoSeccion.TabIndex = 7;
             // 
             // frmRegistrarNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 363);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cboGradoSeccion);
+            this.Controls.Add(this.cboCursos);
+            this.Controls.Add(this.dgvRegistroNotas);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "frmRegistrarNotas";
             this.Text = "Registrar notas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroNotas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,11 +180,11 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridView dgvRegistroNotas;
+        private System.Windows.Forms.ComboBox cboCursos;
+        private System.Windows.Forms.ComboBox cboGradoSeccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPC1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPC2;

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.malvaradosoft.inf.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DBControllerWS" targetNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.207.207:8080/MalvaradoSoftWebGF/DBControllerWS?xsd=1" namespace="http://services.malvaradosoft.inf.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+  <message name="getNAttemptsByUserName">
+    <part name="parameters" element="tns:getNAttemptsByUserName" />
+  </message>
+  <message name="getNAttemptsByUserNameResponse">
+    <part name="parameters" element="tns:getNAttemptsByUserNameResponse" />
+  </message>
+=======
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+  <message name="updatePasswordUser">
+    <part name="parameters" element="tns:updatePasswordUser" />
+  </message>
+  <message name="updatePasswordUserResponse">
+    <part name="parameters" element="tns:updatePasswordUserResponse" />
+  </message>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+  <message name="queryAllCourseSchedules">
+    <part name="parameters" element="tns:queryAllCourseSchedules" />
+  </message>
+  <message name="queryAllCourseSchedulesResponse">
+    <part name="parameters" element="tns:queryAllCourseSchedulesResponse" />
+=======
+  <message name="getNAttemptsByUserName">
+    <part name="parameters" element="tns:getNAttemptsByUserName" />
+  </message>
+  <message name="getNAttemptsByUserNameResponse">
+    <part name="parameters" element="tns:getNAttemptsByUserNameResponse" />
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+  </message>
+  <message name="queryGradesByCourseId">
+    <part name="parameters" element="tns:queryGradesByCourseId" />
+  </message>
+  <message name="queryGradesByCourseIdResponse">
+    <part name="parameters" element="tns:queryGradesByCourseIdResponse" />
+  </message>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+  <message name="queryGradesSearchByName">
+    <part name="parameters" element="tns:queryGradesSearchByName" />
+  </message>
+  <message name="queryGradesSearchByNameResponse">
+    <part name="parameters" element="tns:queryGradesSearchByNameResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+=======
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="queryAllGrades">
+    <part name="parameters" element="tns:queryAllGrades" />
+  </message>
+  <message name="queryAllGradesResponse">
+    <part name="parameters" element="tns:queryAllGradesResponse" />
+  </message>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+  <message name="queryAllCourses">
+    <part name="parameters" element="tns:queryAllCourses" />
+  </message>
+  <message name="queryAllCoursesResponse">
+    <part name="parameters" element="tns:queryAllCoursesResponse" />
+=======
+  <message name="deleteGRade">
+    <part name="parameters" element="tns:deleteGRade" />
+  </message>
+  <message name="deleteGRadeResponse">
+    <part name="parameters" element="tns:deleteGRadeResponse" />
+  </message>
+  <message name="queryUserLogin">
+    <part name="parameters" element="tns:queryUserLogin" />
+  </message>
+  <message name="queryUserLoginResponse">
+    <part name="parameters" element="tns:queryUserLoginResponse" />
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+  </message>
+  <message name="insertGRade">
+    <part name="parameters" element="tns:insertGRade" />
+  </message>
+  <message name="insertGRadeResponse">
+    <part name="parameters" element="tns:insertGRadeResponse" />
+  </message>
+  <message name="updateGRade">
+    <part name="parameters" element="tns:updateGRade" />
+  </message>
+  <message name="updateGRadeResponse">
+    <part name="parameters" element="tns:updateGRadeResponse" />
+  </message>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+  <message name="queryUserLogin">
+    <part name="parameters" element="tns:queryUserLogin" />
+  </message>
+  <message name="queryUserLoginResponse">
+    <part name="parameters" element="tns:queryUserLoginResponse" />
+  </message>
+  <message name="deleteGRade">
+    <part name="parameters" element="tns:deleteGRade" />
+  </message>
+  <message name="deleteGRadeResponse">
+    <part name="parameters" element="tns:deleteGRadeResponse" />
+  </message>
+  <portType name="DBControllerWS">
+    <operation name="getNAttemptsByUserName">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNameRequest" message="tns:getNAttemptsByUserName" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNameResponse" message="tns:getNAttemptsByUserNameResponse" />
+    </operation>
+=======
+  <portType name="DBControllerWS">
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+    <operation name="updatePasswordUser">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updatePasswordUserRequest" message="tns:updatePasswordUser" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updatePasswordUserResponse" message="tns:updatePasswordUserResponse" />
+    </operation>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+    <operation name="queryAllCourseSchedules">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllCourseSchedulesRequest" message="tns:queryAllCourseSchedules" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllCourseSchedulesResponse" message="tns:queryAllCourseSchedulesResponse" />
+=======
+    <operation name="getNAttemptsByUserName">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNameRequest" message="tns:getNAttemptsByUserName" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/getNAttemptsByUserNameResponse" message="tns:getNAttemptsByUserNameResponse" />
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+    </operation>
+    <operation name="queryGradesByCourseId">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryGradesByCourseIdRequest" message="tns:queryGradesByCourseId" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryGradesByCourseIdResponse" message="tns:queryGradesByCourseIdResponse" />
+    </operation>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+    <operation name="queryGradesSearchByName">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryGradesSearchByNameRequest" message="tns:queryGradesSearchByName" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryGradesSearchByNameResponse" message="tns:queryGradesSearchByNameResponse" />
+    </operation>
+=======
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+    <operation name="hello">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="queryAllGrades">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllGradesRequest" message="tns:queryAllGrades" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllGradesResponse" message="tns:queryAllGradesResponse" />
+    </operation>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+    <operation name="queryAllCourses">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllCoursesRequest" message="tns:queryAllCourses" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllCoursesResponse" message="tns:queryAllCoursesResponse" />
+=======
+    <operation name="deleteGRade">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeRequest" message="tns:deleteGRade" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeResponse" message="tns:deleteGRadeResponse" />
+    </operation>
+    <operation name="queryUserLogin">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginRequest" message="tns:queryUserLogin" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginResponse" message="tns:queryUserLoginResponse" />
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+    </operation>
+    <operation name="insertGRade">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeRequest" message="tns:insertGRade" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/insertGRadeResponse" message="tns:insertGRadeResponse" />
+    </operation>
+    <operation name="updateGRade">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeRequest" message="tns:updateGRade" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeResponse" message="tns:updateGRadeResponse" />
+    </operation>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+    <operation name="queryUserLogin">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginRequest" message="tns:queryUserLogin" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryUserLoginResponse" message="tns:queryUserLoginResponse" />
+    </operation>
+    <operation name="deleteGRade">
+      <input wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeRequest" message="tns:deleteGRade" />
+      <output wsam:Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/deleteGRadeResponse" message="tns:deleteGRadeResponse" />
+    </operation>
+  </portType>
+  <binding name="DBControllerWSPortBinding" type="tns:DBControllerWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getNAttemptsByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updatePasswordUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCourseSchedules">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryGradesByCourseId">
+=======
+  </portType>
+  <binding name="DBControllerWSPortBinding" type="tns:DBControllerWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="updatePasswordUser">
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.wsdl
+    <operation name="queryGradesSearchByName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+=======
+    <operation name="getNAttemptsByUserName">
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.wsdl
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryGradesByCourseId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCourses">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertGRade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllGrades">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryUserLogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteGRade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryUserLogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertGRade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateGRade">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DBControllerWS">
+    <port name="DBControllerWSPort" binding="tns:DBControllerWSPortBinding">
+      <soap:address location="http://192.168.207.207:8080/MalvaradoSoftWebGF/DBControllerWS" />
+    </port>
+  </service>
+</definitions>

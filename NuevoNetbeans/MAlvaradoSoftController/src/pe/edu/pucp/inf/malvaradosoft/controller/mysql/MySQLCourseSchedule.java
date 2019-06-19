@@ -47,6 +47,35 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
         }
     return courseSchedules;
     }
+    
+    @Override
+    public ArrayList<CourseSchedule> queryByTeacherId(int idTeacher) {
+        ArrayList<CourseSchedule> courseSchedules = new ArrayList<CourseSchedule>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{call MS_QUERYCOURSESCHEDULEBYTEACHERID(?)}");
+            cs.setInt("_IDTEACHER", idTeacher);
+            
+            ResultSet rs = cs.executeQuery();
+                        
+            while(rs.next()){
+                CourseSchedule csc = new CourseSchedule();
+                csc.setId(rs.getInt("idCourseSchedule"));
+                csc.getClassSection().setId(rs.getInt("idClassSection"));
+                csc.getClassroom().setId(rs.getInt("idClassroom"));
+                csc.getTeacherXyear().setIdTeacherXYear(rs.getInt("idTeacher"));
+                csc.getCourse().setId(rs.getInt("idCourse"));                
+                courseSchedules.add(csc);
+
+            }
+            con.close();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    return courseSchedules;
+    }
 
     @Override
     public ArrayList<CourseSchedule> queryById(int idCourse, int idClassSection) {
@@ -143,6 +172,8 @@ public class MySQLCourseSchedule implements DAOCourseSchedule{
         }
         return result;
     }
+
+    
  }
     
 

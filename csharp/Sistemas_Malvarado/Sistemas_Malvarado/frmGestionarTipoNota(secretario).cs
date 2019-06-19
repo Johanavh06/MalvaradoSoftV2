@@ -14,24 +14,27 @@ namespace Sistemas_Malvarado
     {
 
         EstadosFrmGestionarTipoNota estado = EstadosFrmGestionarTipoNota.Buscar;
+        MAlvaradoWS.course curso = new MAlvaradoWS.course();
         MAlvaradoWS.grade grade = new MAlvaradoWS.grade();
          
 
         private MAlvaradoWS.DBControllerWSClient controller;
 
-        public frmGestionarTipoNota_secretario_(MAlvaradoWS.course curso)
+        public frmGestionarTipoNota_secretario_(MAlvaradoWS.course c)
         {
             InitializeComponent();
+            this.curso = c;
             this.grade.course = new MAlvaradoWS.course();
-            this.grade.course.id = curso.id;
+            this.grade.course = this.curso;
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
             txtNombreCurso.Text = curso.name;
             
             controller = new MAlvaradoWS.DBControllerWSClient();
 
             dgvCursos.AutoGenerateColumns = false;
-            dgvCursos.DataSource = controller.queryAllGrades();
-            
+            //dgvCursos.DataSource = controller.queryAllGrades();
+            dgvCursos.DataSource = controller.queryGradesByCourseId(this.curso.id);
+
 
         }
 
@@ -104,7 +107,8 @@ namespace Sistemas_Malvarado
                 if (result == DialogResult.Yes)
                     controller.updateGRade(this.grade);
             }
-            dgvCursos.DataSource = controller.queryAllGrades();
+            //dgvCursos.DataSource = controller.queryAllGrades();
+            dgvCursos.DataSource = controller.queryGradesByCourseId(this.curso.id);
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
         }
 
@@ -114,13 +118,19 @@ namespace Sistemas_Malvarado
             var result = MessageBox.Show("¿Está seguro que desea eliminar el tipo de nota?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
                 controller.deleteGRade(grade);
-            dgvCursos.DataSource = controller.queryAllGrades();
+            //dgvCursos.DataSource = controller.queryAllGrades();
+            dgvCursos.DataSource = controller.queryGradesByCourseId(this.curso.id);
             cambiarEstado(EstadosFrmGestionarTipoNota.Buscar);
         }
 
         private void frmGestionarTipoNota_secretario__Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvCursos.DataSource = controller.queryGradesSearchByName(txtDescripcion.Text, this.curso.id);
         }
     }
 }

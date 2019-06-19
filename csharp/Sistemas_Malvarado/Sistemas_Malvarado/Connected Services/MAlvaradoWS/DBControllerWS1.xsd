@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.malvaradosoft.inf.pucp.edu.pe/" targetNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="deleteGRade" type="tns:deleteGRade" />
+  <xs:element name="deleteGRadeResponse" type="tns:deleteGRadeResponse" />
+  <xs:element name="getNAttemptsByUserName" type="tns:getNAttemptsByUserName" />
+  <xs:element name="getNAttemptsByUserNameResponse" type="tns:getNAttemptsByUserNameResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:element name="insertGRade" type="tns:insertGRade" />
+  <xs:element name="insertGRadeResponse" type="tns:insertGRadeResponse" />
+  <xs:element name="queryAllCourseSchedules" type="tns:queryAllCourseSchedules" />
+  <xs:element name="queryAllCourseSchedulesResponse" type="tns:queryAllCourseSchedulesResponse" />
+  <xs:element name="queryAllCourses" type="tns:queryAllCourses" />
+  <xs:element name="queryAllCoursesResponse" type="tns:queryAllCoursesResponse" />
+  <xs:element name="queryAllGrades" type="tns:queryAllGrades" />
+  <xs:element name="queryAllGradesResponse" type="tns:queryAllGradesResponse" />
+  <xs:element name="queryGradesByCourseId" type="tns:queryGradesByCourseId" />
+  <xs:element name="queryGradesByCourseIdResponse" type="tns:queryGradesByCourseIdResponse" />
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.xsd
+  <xs:element name="queryGradesSearchByName" type="tns:queryGradesSearchByName" />
+  <xs:element name="queryGradesSearchByNameResponse" type="tns:queryGradesSearchByNameResponse" />
+=======
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.xsd
+  <xs:element name="queryUserLogin" type="tns:queryUserLogin" />
+  <xs:element name="queryUserLoginResponse" type="tns:queryUserLoginResponse" />
+  <xs:element name="updateGRade" type="tns:updateGRade" />
+  <xs:element name="updateGRadeResponse" type="tns:updateGRadeResponse" />
+  <xs:element name="updatePasswordUser" type="tns:updatePasswordUser" />
+  <xs:element name="updatePasswordUserResponse" type="tns:updatePasswordUserResponse" />
+  <xs:complexType name="deleteGRade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="grade" type="tns:grade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="grade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="course" type="tns:course" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="idGrade" type="xs:int" />
+      <xs:element name="weight" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="course">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="level" type="xs:int" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteGRadeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateGRade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="grade" type="tns:grade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateGRadeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+<<<<<<< HEAD:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS.xsd
+  <xs:complexType name="queryAllCourseSchedules">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllCourseSchedulesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:courseSchedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="courseSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="classSection" type="tns:classSection" />
+      <xs:element minOccurs="0" name="classroom" type="tns:classroom" />
+      <xs:element minOccurs="0" name="course" type="tns:course" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="teacherXyear" type="tns:teacherXYear" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="classSection">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="level" type="xs:int" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="schedulePDF" type="xs:anyType" />
+      <xs:element name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="classroom">
+    <xs:sequence>
+      <xs:element name="capacity" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="teacherXYear">
+    <xs:sequence>
+      <xs:element name="idTeacherXYear" type="xs:int" />
+      <xs:element minOccurs="0" name="year" type="tns:year" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="year">
+    <xs:sequence>
+      <xs:element name="idYear" type="xs:int" />
+      <xs:element name="year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+=======
+>>>>>>> 04d25c950e84c074033f9af9c1f48e6308c6e3b1:csharp/Sistemas_Malvarado/Sistemas_Malvarado/Connected Services/MAlvaradoWS/DBControllerWS1.xsd
+  <xs:complexType name="getNAttemptsByUserName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNAttemptsByUserNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updatePasswordUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updatePasswordUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryUserLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryUserLoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string" />
+      <xs:element minOccurs="0" name="blockTime" type="tns:time" />
+      <xs:element name="blocked" type="xs:boolean" />
+      <xs:element name="cellPhone" type="xs:int" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="firstLastName" type="xs:string" />
+      <xs:element name="idUser" type="xs:int" />
+      <xs:element minOccurs="0" name="names" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="secondLastName" type="xs:string" />
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element name="nAttempts" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="time">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertGRade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="grade" type="tns:grade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertGRadeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllCourses">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllCoursesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:course" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryGradesByCourseId">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryGradesByCourseIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:grade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryGradesSearchByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryGradesSearchByNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:grade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllGrades">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllGradesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:grade" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
