@@ -35,5 +35,10 @@ public class MSSQLUserTypeXUser implements DAOUserTypeXUser{
     public int updateUserTypeXUser(User user, UserType userType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public ArrayList<UserType> queryAllTypesXUserByID(int idUser) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -14,6 +14,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.Course;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.CourseSchedule;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.Grade;
 import pe.edu.pucp.inf.malvaradosoft.model.bean.User;
+import pe.edu.pucp.inf.malvaradosoft.model.bean.UserType;
 
 /**
  *
@@ -98,4 +99,10 @@ public class DBControllerWS {
     public User queryUserLogin(@WebParam(name = "username")String username, @WebParam(name = "password") String password){
         return DBController.queryUserLogin(username, password);
     }
+    
+    @WebMethod(operationName = "queryAllTypesXIDUser")
+    public ArrayList<UserType> queryAllTypesXIDUser(@WebParam(name = "username")Integer idUser){
+        return DBController.queryAllTypesXUserByID(idUser);
+    }
+    
 }

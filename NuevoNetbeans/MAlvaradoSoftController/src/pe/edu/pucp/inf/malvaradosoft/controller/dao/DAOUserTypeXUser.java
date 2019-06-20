@@ -15,6 +15,7 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.UserType;
  */
 public interface DAOUserTypeXUser {
     ArrayList<UserType> queryAllTypesXUser(User user);
+    ArrayList<UserType> queryAllTypesXUserByID(int idUser);
     int insertUserTypeXUser(User user,UserType userType);
     int deleteUserTypeXUser(User user,UserType userType);
     int updateUserTypeXUser(User user,UserType userType);

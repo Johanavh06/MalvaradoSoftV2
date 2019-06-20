@@ -14,9 +14,11 @@ namespace Sistemas_Malvarado.Login
 {
     public partial class frmRecuperarContraseña : Form
     {
+        MAlvaradoWS.DBControllerWSClient controller;
         public frmRecuperarContraseña()
         {
             InitializeComponent();
+            controller = new MAlvaradoWS.DBControllerWSClient();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,8 +28,13 @@ namespace Sistemas_Malvarado.Login
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            //controller = new MAlvaradoWS.DBControllerWSClient();
-            EnviarCorreoContraseña(txtCorreo.Text,"123");
+            
+            Random rd = new Random(DateTime.Now.Millisecond);
+            String newPassword = (rd.Next(10000, 99999)).ToString();
+            //Actualizo la nueva contraseña del usuario
+            controller.updatePasswordUser(txtCorreo.Text, newPassword);
+
+            EnviarCorreoContraseña(txtCorreo.Text, newPassword);
         }
         private void EnviarCorreoContraseña(String email, String newPassword)
         {

@@ -39,5 +39,10 @@ public class MSSQLCourseSchedule implements DAOCourseSchedule{
     public int delete(int idCourse) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public ArrayList<CourseSchedule> queryByTeacherId(int idTeacher) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

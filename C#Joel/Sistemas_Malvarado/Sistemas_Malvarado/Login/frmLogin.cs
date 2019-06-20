@@ -16,19 +16,16 @@ namespace Sistemas_Malvarado
     public partial class frmLogin : Form
     {
         frmRecuperarContraseña recuperarContraseña;
-        String user, password;
-        private int intentos = 0;
-        private bool validacion = false;        
+        private int intentos;
         private int contador = 100;
-
-        public int Contador { get => contador; set => contador = value; }
-
-        public int Intentos { get => intentos; set => intentos = value; }
-        public bool Validacion { get => validacion; set => validacion = value; }
+        MAlvaradoWS.DBControllerWSClient controller;
+        MAlvaradoWS.user user;
 
         public frmLogin()
         {
             InitializeComponent();
+            controller = new MAlvaradoWS.DBControllerWSClient();
+            user = new MAlvaradoWS.user();
         }
 
         //Para movilizar el form
@@ -127,96 +124,79 @@ namespace Sistemas_Malvarado
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if (user == "USUARIO" || password == "CONTRASEÑA")
-                msgError("Ingrese un usuario y/o contraseña valida.");
-
-            if (this.Intentos > 6)
+            if (String.Equals(txtUser.Text, "USUARIO") || String.Equals(txtPassword.Text, "CONTRASEÑA"))
             {
-                MessageBox.Show("Ha excedido el numero de intentos posibles. Su cuenta ha sido bloqueada", "IMPORTANTE!");
-                Validacion = false;
-                Contador = 100;
-                btnAcceder.Enabled = false;
-                //frmBloqueo = new frmTiempoBloqueado();
-
-                //frmBloqueo.FormClosed += Logout;
-                //frmBloqueo.Show();
-                timer1.Enabled = true;
+                msgError("Ingrese un usuario y/o contraseña valida.");
+                return;
             }
 
-            int []tipo = new int[6] { 0, 0, 0, 0, 0 ,0 };
-            
-            //VALIDACION DE ROLES
-            user = txtUser.Text;
-            password = txtPassword.Text;
-            if (user == "admin" && password == "123") { tipo[0] = 1; Validacion = true; }
-            else if (user == "secretario" && password == "123") { tipo[1] = 1; Validacion = true; }
-            else if (user == "profesor" && password == "123") { tipo[2] = 1; Validacion = true; }
-            else if (user == "auxiliar" && password == "123") { tipo[3] = 1; Validacion = true; }
-            else if (user == "apoderado" && password == "123") { tipo[4] = 1; Validacion = true; }
-            else if (user == "alumno" && password == "123") { tipo[5] = 1; Validacion = true; }
-            else if (user == "profesor_apoderado" && password == "123") { tipo[2] = 1; tipo[4] = 1; Validacion = true; }
-            else if (user == "auxiliar_apoderado" && password == "123") { tipo[3] = 1; tipo[4] = 1; Validacion = true; }
-            else if (user == "secretario_apoderado" && password == "123") { tipo[1] = 1; tipo[4] = 1; Validacion = true; }
-            else
-            {
-                this.Intentos++;
-                msgError("Ingrese un usuario y/o contraseña valida.");
-            }
+            user = controller.queryUserLogin(txtUser.Text, txtPassword.Text);
+            intentos = user.nAttempts;
 
-            if (Validacion == true)
+            if (user != null)
             {
-                int contador = 0;
-                for (int i = 0; i < tipo.Length; i++)
-                    if (tipo[i] == 1) contador++;
-                if (contador > 1)
+                if (intentos > 5)
                 {
-                    frmIniciarTipoUsuario frmTipo = new frmIniciarTipoUsuario();
-                    frmTipo.Permisos = tipo;
-                    frmTipo.FormClosed += Logout;
-                    frmTipo.Show();                    
+                    MessageBox.Show("Ha excedido el numero de intentos posibles. Su cuenta ha sido bloqueada", "IMPORTANTE!");
+                    contador = 100;
+                    btnAcceder.Enabled = false;
+                    timer1.Enabled = true;
                 }
-                else
+
+
+                //SI ES UN USUARIO EXISTENTE
+                if (String.Equals(txtPassword.Text, user.password))
                 {
-                    if (tipo[0] == 1)
+                    Array<MAlvaradoWS types_ = controller.queryAllTypesXIDUser(user.idUser);
+                    if (types_> 1)
                     {
-                        frmMenuPrincipalAdministrador menu = new frmMenuPrincipalAdministrador();
-                        menu.FormClosed += Logout;
-                        menu.Show();
+                        frmIniciarTipoUsuario frmTipo = new frmIniciarTipoUsuario();
+                        frmTipo.Permisos = tipo;
+                        frmTipo.FormClosed += Logout;
+                        frmTipo.Show();
                     }
-                    else if (tipo[1] == 1)
+                    else
                     {
-                        frmMenuPrincipalSecretario menu = new frmMenuPrincipalSecretario();
-                        menu.FormClosed += Logout;
-                        menu.Show();
-                    }
-                    else if (tipo[2] == 1)
-                    {
-                        frmMenuPrincipalProfesor menu = new frmMenuPrincipalProfesor();
-                        menu.FormClosed += Logout;
-                        menu.Show();
-                    }
-                    else if (tipo[3] == 1)
-                    {
-                        frmMenuPrincipalAuxiliar menu = new frmMenuPrincipalAuxiliar();
-                        menu.FormClosed += Logout;
-                        menu.Show();
-                    }
-                    else if (tipo[4] == 1)
-                    {
-                        frmMenuPrincipalApoderado menu = new frmMenuPrincipalApoderado();
-                        menu.FormClosed += Logout;
-                        menu.Show();
-                    }
-                    else if (tipo[5] == 1)
-                    {
-                        frmMenuPrincipalAlumno menu = new frmMenuPrincipalAlumno();
-                        menu.FormClosed += Logout;
-                        menu.Show();
+                        if (tipo[0] == 1)
+                        {
+                            frmMenuPrincipalAdministrador menu = new frmMenuPrincipalAdministrador();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (tipo[1] == 1)
+                        {
+                            frmMenuPrincipalSecretario menu = new frmMenuPrincipalSecretario();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (tipo[2] == 1)
+                        {
+                            frmMenuPrincipalProfesor menu = new frmMenuPrincipalProfesor();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (tipo[3] == 1)
+                        {
+                            frmMenuPrincipalAuxiliar menu = new frmMenuPrincipalAuxiliar();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (tipo[4] == 1)
+                        {
+                            frmMenuPrincipalApoderado menu = new frmMenuPrincipalApoderado();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (tipo[5] == 1)
+                        {
+                            frmMenuPrincipalAlumno menu = new frmMenuPrincipalAlumno();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
                     }
                 }
                 this.Hide();
             }
-
         }
 
         private void Logout(object sender, FormClosedEventArgs e)

@@ -260,4 +260,8 @@ public abstract class DBController {
     public static User queryUserLogin(String username, String password){
         return daoFactory.getUserDAO().queryUserLogin(username, password);
     }
+    public static ArrayList<UserType> queryAllTypesXUserByID(int idUser){
+        return daoFactory.getUserTypeXUserDAO().queryAllTypesXUserByID(idUser);
+    }
 }        
+

@@ -22,7 +22,28 @@ import pe.edu.pucp.inf.malvaradosoft.model.bean.UserType;
  * @author alulab14
  */
 public class MySQLUserTypeXUser implements DAOUserTypeXUser{
-
+    @Override
+    public ArrayList<UserType> queryAllTypesXUserByID(int idUser){
+        ArrayList<UserType> typeList = new ArrayList<>();
+        try{
+            DBManager dbManager= DBManager.getDbManager();
+            Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
+            CallableStatement cs = con.prepareCall("{ call MS_QUERYALLUSERTYPESBYUSER(?)}");
+            cs.setInt(1,idUser);
+            ResultSet rs = cs.executeQuery();
+            while(rs.next()){
+                UserType u = new UserType();
+                u.setIdUserType(rs.getInt("idUserType"));
+                u.setDescription(rs.getString("description"));
+                typeList.add(u);
+            }
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return typeList;
+    }
+    
     @Override
     public ArrayList<UserType> queryAllTypesXUser(User user) {
         ArrayList<UserType> typeList = new ArrayList<>();

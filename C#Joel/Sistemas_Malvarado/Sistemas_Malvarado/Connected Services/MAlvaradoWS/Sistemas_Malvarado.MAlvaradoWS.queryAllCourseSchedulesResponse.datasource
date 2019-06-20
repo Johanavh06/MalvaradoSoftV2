@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="queryAllCourseSchedulesResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>Sistemas_Malvarado.MAlvaradoWS.queryAllCourseSchedulesResponse</TypeInfo>
+   <TypeInfo>Sistemas_Malvarado.MAlvaradoWS.queryAllCourseSchedulesResponse, Connected Services.MAlvaradoWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
