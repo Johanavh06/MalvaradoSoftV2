@@ -147,49 +147,44 @@ namespace Sistemas_Malvarado
                 //SI ES UN USUARIO EXISTENTE
                 if (String.Equals(txtPassword.Text, user.password))
                 {
-                    Array<MAlvaradoWS types_ = controller.queryAllTypesXIDUser(user.idUser);
-                    if (types_> 1)
+                    MAlvaradoWS.userType [] types = controller.queryAllTypesXIDUser(user.idUser);
+
+                    if (types.Length> 1)
                     {
                         frmIniciarTipoUsuario frmTipo = new frmIniciarTipoUsuario();
-                        frmTipo.Permisos = tipo;
+                        types.CopyTo(frmTipo.Permisos,0);
                         frmTipo.FormClosed += Logout;
                         frmTipo.Show();
                     }
                     else
                     {
-                        if (tipo[0] == 1)
-                        {
-                            frmMenuPrincipalAdministrador menu = new frmMenuPrincipalAdministrador();
-                            menu.FormClosed += Logout;
-                            menu.Show();
-                        }
-                        else if (tipo[1] == 1)
+                        if (types[0].idUserType == 1)
                         {
                             frmMenuPrincipalSecretario menu = new frmMenuPrincipalSecretario();
                             menu.FormClosed += Logout;
                             menu.Show();
                         }
-                        else if (tipo[2] == 1)
-                        {
-                            frmMenuPrincipalProfesor menu = new frmMenuPrincipalProfesor();
-                            menu.FormClosed += Logout;
-                            menu.Show();
-                        }
-                        else if (tipo[3] == 1)
-                        {
-                            frmMenuPrincipalAuxiliar menu = new frmMenuPrincipalAuxiliar();
-                            menu.FormClosed += Logout;
-                            menu.Show();
-                        }
-                        else if (tipo[4] == 1)
+                        else if (types[0].idUserType == 2)
                         {
                             frmMenuPrincipalApoderado menu = new frmMenuPrincipalApoderado();
                             menu.FormClosed += Logout;
                             menu.Show();
                         }
-                        else if (tipo[5] == 1)
+                        else if (types[0].idUserType == 3)
+                        {
+                            frmMenuPrincipalProfesor menu = new frmMenuPrincipalProfesor();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (types[0].idUserType == 4)
                         {
                             frmMenuPrincipalAlumno menu = new frmMenuPrincipalAlumno();
+                            menu.FormClosed += Logout;
+                            menu.Show();
+                        }
+                        else if (types[0].idUserType == 5)
+                        {
+                            frmMenuPrincipalAuxiliar menu = new frmMenuPrincipalAuxiliar();
                             menu.FormClosed += Logout;
                             menu.Show();
                         }

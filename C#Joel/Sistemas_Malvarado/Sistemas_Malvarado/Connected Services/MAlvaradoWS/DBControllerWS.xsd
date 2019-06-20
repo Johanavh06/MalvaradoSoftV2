@@ -18,6 +18,8 @@
   <xs:element name="queryAllCoursesResponse" type="tns:queryAllCoursesResponse" />
   <xs:element name="queryAllGrades" type="tns:queryAllGrades" />
   <xs:element name="queryAllGradesResponse" type="tns:queryAllGradesResponse" />
+  <xs:element name="queryAllTypesXIDUser" type="tns:queryAllTypesXIDUser" />
+  <xs:element name="queryAllTypesXIDUserResponse" type="tns:queryAllTypesXIDUserResponse" />
   <xs:element name="queryGradesByCourseId" type="tns:queryGradesByCourseId" />
   <xs:element name="queryGradesByCourseIdResponse" type="tns:queryGradesByCourseIdResponse" />
   <xs:element name="queryGradesSearchByName" type="tns:queryGradesSearchByName" />
@@ -100,14 +102,20 @@
       <xs:element name="year" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="hello">
+  <xs:complexType name="queryAllTypesXIDUser">
     <xs:sequence>
-      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="username" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="helloResponse">
+  <xs:complexType name="queryAllTypesXIDUserResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:userType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="idUserType" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryUserLogin">
@@ -140,6 +148,16 @@
   </xs:complexType>
   <xs:complexType name="time">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertGRade">
     <xs:sequence>
