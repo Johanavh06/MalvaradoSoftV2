@@ -366,8 +366,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.wsdl" />
-    <None Include="Connected Services\MAlvaradoWS\DBControllerWS1.xsd">
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.wsdl" />
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.course.datasource">
@@ -382,13 +382,10 @@
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getTimeBlockedByUserNameResponse1.datasource">
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getTimeBlockedByUserNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.grade.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.helloResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse1.datasource">
@@ -406,6 +403,9 @@
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllTypesXIDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -418,10 +418,13 @@
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse1.datasource">
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.user.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.userType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />

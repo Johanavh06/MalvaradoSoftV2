@@ -26,10 +26,6 @@ public class DBControllerWS {
     /**
      * This is a sample web service operation
      */
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
     
     @WebMethod(operationName = "queryAllGrades")
     public ArrayList<Grade> queryAllGrades(){
@@ -92,7 +88,7 @@ public class DBControllerWS {
     }
     
     @WebMethod(operationName = "getTimeBlockedByUserName")
-    public String  getTimeBlockedByUserName(@WebParam(name = "username")String username){
+    public String getTimeBlockedByUserName(@WebParam(name = "username")String username){
         return DBController.getBlockTimeByUserName(username);
     }
     @WebMethod(operationName = "queryUserLogin")
@@ -104,5 +100,4 @@ public class DBControllerWS {
     public ArrayList<UserType> queryAllTypesXIDUser(@WebParam(name = "username")Integer idUser){
         return DBController.queryAllTypesXUserByID(idUser);
     }
-    
 }

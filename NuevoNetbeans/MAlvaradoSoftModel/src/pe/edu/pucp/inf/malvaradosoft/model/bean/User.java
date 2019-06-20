@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.ArrayList;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author lenovo
  */
-public class User {
+public class User implements Serializable {
     private int idUser;
     private String names;
     private String firstLastName;

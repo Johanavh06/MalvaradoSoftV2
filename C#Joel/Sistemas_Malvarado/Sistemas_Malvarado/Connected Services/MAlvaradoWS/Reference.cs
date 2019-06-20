@@ -60,8 +60,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -95,8 +93,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -130,8 +126,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -165,8 +159,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -200,8 +192,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -235,8 +225,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -270,8 +258,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -305,8 +291,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -338,8 +322,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -371,8 +353,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -386,37 +366,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
             "t", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/queryAllGradesRespon" +
             "se")]
         System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> queryAllGradesAsync(Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCourses))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTimeBlockedByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getTimeBlockedByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePasswordUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePasswordUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getNAttemptsByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getNAttemptsByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteGRadeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllGrades))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesSearchByName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCourseSchedulesByTeacherId))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateGRadeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateGRade))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Sistemas_Malvarado.MAlvaradoWS.helloResponse1 hello(Sistemas_Malvarado.MAlvaradoWS.helloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/helloResponse")]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.helloResponse1> helloAsync(Sistemas_Malvarado.MAlvaradoWS.helloRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeRequest", ReplyAction="http://services.malvaradosoft.inf.pucp.edu.pe/DBControllerWS/updateGRadeResponse")]
@@ -435,8 +384,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -466,8 +413,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryGradesByCourseId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRadeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertGRade))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(helloResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(hello))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLoginResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserLogin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllTypesXIDUser))]
@@ -711,9 +656,9 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    //[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/")]
     public partial class getTimeBlockedByUserNameResponse : object, System.ComponentModel.INotifyPropertyChanged {
@@ -721,8 +666,8 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         private string returnField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string @return {
+        //[System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        /*public string @return {
             get {
                 return this.returnField;
             }
@@ -730,7 +675,7 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
                 this.returnField = value;
                 this.RaisePropertyChanged("return");
             }
-        }
+        }*/
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -775,9 +720,9 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    //[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    //[System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/")]
     public partial class updatePasswordUserResponse : object, System.ComponentModel.INotifyPropertyChanged {
@@ -785,8 +730,8 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         private int returnField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int @return {
+        //[System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        /*public int @return {
             get {
                 return this.returnField;
             }
@@ -794,7 +739,7 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
                 this.returnField = value;
                 this.RaisePropertyChanged("return");
             }
-        }
+        }*/
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1127,70 +1072,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
             set {
                 this.gradeField = value;
                 this.RaisePropertyChanged("grade");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/")]
-    public partial class helloResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/")]
-    public partial class hello : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
             }
         }
         
@@ -2373,42 +2254,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class helloRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string name;
-        
-        public helloRequest() {
-        }
-        
-        public helloRequest(string name) {
-            this.name = name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class helloResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.malvaradosoft.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public helloResponse1() {
-        }
-        
-        public helloResponse1(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="updateGRade", WrapperNamespace="http://services.malvaradosoft.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class updateGRadeRequest {
         
@@ -2781,29 +2626,6 @@ namespace Sistemas_Malvarado.MAlvaradoWS {
         public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse> queryAllGradesAsync() {
             Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.queryAllGradesRequest();
             return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).queryAllGradesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sistemas_Malvarado.MAlvaradoWS.helloResponse1 Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.hello(Sistemas_Malvarado.MAlvaradoWS.helloRequest request) {
-            return base.Channel.hello(request);
-        }
-        
-        public string hello(string name) {
-            Sistemas_Malvarado.MAlvaradoWS.helloRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.helloRequest();
-            inValue.name = name;
-            Sistemas_Malvarado.MAlvaradoWS.helloResponse1 retVal = ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).hello(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.helloResponse1> Sistemas_Malvarado.MAlvaradoWS.DBControllerWS.helloAsync(Sistemas_Malvarado.MAlvaradoWS.helloRequest request) {
-            return base.Channel.helloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sistemas_Malvarado.MAlvaradoWS.helloResponse1> helloAsync(string name) {
-            Sistemas_Malvarado.MAlvaradoWS.helloRequest inValue = new Sistemas_Malvarado.MAlvaradoWS.helloRequest();
-            inValue.name = name;
-            return ((Sistemas_Malvarado.MAlvaradoWS.DBControllerWS)(this)).helloAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

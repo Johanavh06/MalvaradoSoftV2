@@ -5,13 +5,14 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
 import java.sql.Time;
 
 /**
  *
  * @author lenovo
  */
-public class Event {
+public class Event implements Serializable {
     private int idEvent;
     private Time startTime;    
     private Time endTime;
