@@ -16,5 +16,14 @@ namespace Sistemas_Malvarado
         {
             InitializeComponent();
         }
+
+        private void btnSeleccionarTodo_Click(object sender, EventArgs e)
+        {
+            int nf = dgvMatricula.RowCount;
+            for (int i = 0; i < nf; i++)
+            {
+
+            }
+        }
     }
 }

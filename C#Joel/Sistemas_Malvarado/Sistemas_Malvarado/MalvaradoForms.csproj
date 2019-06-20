@@ -78,12 +78,6 @@
       <DependentUpon>frmGestionarHorario%28Secretario%29.cs</DependentUpon>
     </Compile>
     <Compile Include="EstadosFrmGestionarTipoNota.cs" />
-    <Compile Include="frmEditarAlumno%28apoderado%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditarAlumno%28apoderado%29.Designer.cs">
-      <DependentUpon>frmEditarAlumno%28apoderado%29.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormGestionarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
