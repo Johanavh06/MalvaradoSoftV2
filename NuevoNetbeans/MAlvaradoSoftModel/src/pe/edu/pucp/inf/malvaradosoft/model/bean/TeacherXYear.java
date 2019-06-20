@@ -5,11 +5,13 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
+
 /**
  *
  * @author lenovo
  */
-public class TeacherXYear {
+public class TeacherXYear implements Serializable {
     private int idTeacherXYear;
     private Year_ year;
 

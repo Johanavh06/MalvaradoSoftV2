@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.inf.malvaradosoft.model.bean;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.ArrayList;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author lenovo
  */
-public class Student extends User{
+public class Student extends User implements Serializable {
     private User guardian;
     private Object birthCertificate;
     private Object studyCertificate;

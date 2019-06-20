@@ -129,7 +129,7 @@ namespace Sistemas_Malvarado.MenuPrincipal
 
         private void btnCursos_Click(object sender, EventArgs e)
         {
-            OpenForm<frmRegistrarNotas>();
+            //OpenForm<frmRegistrarNotas>();
         }
 
         private void btnProfesores_Click_1(object sender, EventArgs e)

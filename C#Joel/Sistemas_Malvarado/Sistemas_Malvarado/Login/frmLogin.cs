@@ -110,18 +110,6 @@ namespace Sistemas_Malvarado
         }
 
 
-        /* ************** CONTRASEÑA = "123" ************** 
-                  * Usuario 1: admin
-                  * Usuario 2: secretario
-                  * Usuario 3: profesor
-                  * Usuario 4: auxiliar
-                  * Usuario 5: apoderado
-                  * Usuario 6: alumno
-                  * Usuario 7: profesor_apoderado
-                  * Usuario 8: auxiliar_apoderado
-                  * Usuario 9: secretario_apoderado
-        */
-
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             if (String.Equals(txtUser.Text, "USUARIO") || String.Equals(txtPassword.Text, "CONTRASEÑA"))
@@ -133,7 +121,7 @@ namespace Sistemas_Malvarado
             user = controller.queryUserLogin(txtUser.Text, txtPassword.Text);
             intentos = user.nAttempts;
 
-            if (user != null)
+            if (user != null) //Si existe el usuario
             {
                 if (intentos > 5)
                 {
@@ -210,11 +198,11 @@ namespace Sistemas_Malvarado
             label6.Visible = true;
             label4.Visible = true;
 
-            if (Contador > 0)
+            if (contador > 0)
             {
-                Contador--;
-                int min = Contador / 60;
-                int seg = Contador - min * 60;
+                contador--;
+                int min = contador / 60;
+                int seg = contador - min * 60;
                 lblSegundos.Text = seg.ToString();
                 lblMinutos.Text = min.ToString();
             }
@@ -230,11 +218,6 @@ namespace Sistemas_Malvarado
             
             recuperarContraseña = new frmRecuperarContraseña();
             recuperarContraseña.Show();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void msgError (string msgError)
