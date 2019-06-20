@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02523B74-BB17-4600-8D64-3277571615ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistemas_Malvarado</RootNamespace>
+    <AssemblyName>Sistemas_Malvarado</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\MAlvaradoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmBuscarCurso%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmBuscarCurso%28secretario%29.Designer.cs">
+      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursoPorSeccion%28Secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursoPorSeccion%28Secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursos_secretario_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarCursos_secretario_.Designer.cs">
+      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarHorario%28Secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos\frmGestionarHorario%28Secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarHorario%28Secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadosFrmGestionarTipoNota.cs" />
+    <Compile Include="frmEditarAlumno%28apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarAlumno%28apoderado%29.Designer.cs">
+      <DependentUpon>frmEditarAlumno%28apoderado%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionarProfesor.Designer.cs">
+      <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarAlumno.Designer.cs">
+      <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscarApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarApoderado.Designer.cs">
+      <DependentUpon>FormBuscarApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarUsuario%28todos%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarUsuario%28todos%29.Designer.cs">
+      <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearSeccion%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearSeccion%28secretario%29.Designer.cs">
+      <DependentUpon>frmCrearSeccion%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarSec.Designer.cs">
+      <DependentUpon>frmGestionarSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarTipoNota%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarTipoNota%28secretario%29.Designer.cs">
+      <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuInscribirAlumno_Apoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuInscribirAlumno_Apoderado.Designer.cs">
+      <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReestablecerContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReestablecerContraseña.Designer.cs">
+      <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmIniciarTipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmIniciarTipoUsuario.Designer.cs">
+      <DependentUpon>frmIniciarTipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia\frmAsistencia%28auxiliar%29.Designer.cs">
+      <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeedback%28profesor%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeedback%28profesor%29.Designer.cs">
+      <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.Designer.cs">
+      <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInscribirAlumno_apoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInscribirAlumno_apoderado.Designer.cs">
+      <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarAlumnos%28apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarAlumnos%28apoderado%29.Designer.cs">
+      <DependentUpon>frmListarAlumnos%28apoderado%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarCursos%28apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarCursos%28apoderado%29.Designer.cs">
+      <DependentUpon>frmListarCursos%28apoderado%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarNotas%28apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarNotas%28apoderado%29.Designer.cs">
+      <DependentUpon>frmListarNotas%28apoderado%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMatricularAlumno%28Apoderado%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMatricularAlumno%28Apoderado%29.Designer.cs">
+      <DependentUpon>frmMatricularAlumno%28Apoderado%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMatricularAlumnos%28secretario%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMatricularAlumnos%28secretario%29.Designer.cs">
+      <DependentUpon>frmMatricularAlumnos%28secretario%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarNotas%28profesor%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarNotas%28profesor%29.Designer.cs">
+      <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResportEstadisticoEvaluacion%28profesor%29.Designer.cs">
+      <DependentUpon>frmResportEstadisticoEvaluacion%28profesor%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmRecuperarContraseña.Designer.cs">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAdministrador.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAlumno.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalApoderado.Designer.cs">
+      <DependentUpon>frmMenuPrincipalApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalAuxiliar.Designer.cs">
+      <DependentUpon>frmMenuPrincipalAuxiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalProfesor.Designer.cs">
+      <DependentUpon>frmMenuPrincipalProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\frmMenuPrincipalSecretario.Designer.cs">
+      <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cursos\frmBuscarCurso%28secretario%29.resx">
+      <DependentUpon>frmBuscarCurso%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmGestionarCursoPorSeccion%28Secretario%29.resx">
+      <DependentUpon>frmGestionarCursoPorSeccion%28Secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmGestionarCursos_secretario_.resx">
+      <DependentUpon>frmGestionarCursos_secretario_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos\frmGestionarHorario%28Secretario%29.resx">
+      <DependentUpon>frmGestionarHorario%28Secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionarProfesor.resx">
+      <DependentUpon>FormGestionarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarAlumno.resx">
+      <DependentUpon>FormBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarApoderado.resx">
+      <DependentUpon>FormBuscarApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarUsuario%28todos%29.resx">
+      <DependentUpon>frmBuscarUsuario%28todos%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearSeccion%28secretario%29.resx">
+      <DependentUpon>frmCrearSeccion%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarSec.resx">
+      <DependentUpon>frmGestionarSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarTipoNota%28secretario%29.resx">
+      <DependentUpon>frmGestionarTipoNota%28secretario%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInscribirAlumno_apoderado.resx">
+      <DependentUpon>frmInscribirAlumno_apoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia\frmAsistencia%28auxiliar%29.resx">
+      <DependentUpon>frmAsistencia%28auxiliar%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeedback%28profesor%29.resx">
+      <DependentUpon>frmFeedback%28profesor%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asistencia\frmGestionarAsistencia%28auxiliar%29.resx">
+      <DependentUpon>frmGestionarAsistencia%28auxiliar%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarAlumnos%28apoderado%29.resx">
+      <DependentUpon>frmListarAlumnos%28apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarCursos%28apoderado%29.resx">
+      <DependentUpon>frmListarCursos%28apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarNotas%28apoderado%29.resx">
+      <DependentUpon>frmListarNotas%28apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatricularAlumno%28Apoderado%29.resx">
+      <DependentUpon>frmMatricularAlumno%28Apoderado%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuInscribirAlumno_Apoderado.resx">
+      <DependentUpon>frmMenuInscribirAlumno_Apoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarNotas%28profesor%29.resx">
+      <DependentUpon>frmRegistrarNotas%28profesor%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmRecuperarContraseña.resx">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAdministrador.resx">
+      <DependentUpon>frmMenuPrincipalAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAlumno.resx">
+      <DependentUpon>frmMenuPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalApoderado.resx">
+      <DependentUpon>frmMenuPrincipalApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalAuxiliar.resx">
+      <DependentUpon>frmMenuPrincipalAuxiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalProfesor.resx">
+      <DependentUpon>frmMenuPrincipalProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal\frmMenuPrincipalSecretario.resx">
+      <DependentUpon>frmMenuPrincipalSecretario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.wsdl" />
+    <None Include="Connected Services\MAlvaradoWS\DBControllerWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.course.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.courseSchedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.deleteGRadeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.getNAttemptsByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.grade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.helloResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.insertGRadeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllCourseSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllCoursesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryAllGradesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesByCourseIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryGradesSearchByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.queryUserLoginResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updateGRadeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.updatePasswordUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MAlvaradoWS\Sistemas_Malvarado.MAlvaradoWS.user.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apoderado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MAlvaradoWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MAlvaradoWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MAlvaradoWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MAlvaradoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
